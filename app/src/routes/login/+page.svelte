@@ -51,7 +51,7 @@
 		</form>
 
 		<p class="auth-footer">
-			¿No tenés cuenta? <a href="/register">Registrarse</a>
+			Contactá al administrador para obtener una cuenta.
 		</p>
 	</div>
 </div>
@@ -155,13 +155,4 @@
 		margin-bottom: 0;
 	}
 
-	.auth-footer a {
-		color: #1F4E79;
-		text-decoration: none;
-		font-weight: 600;
-	}
-
-	.auth-footer a:hover {
-		text-decoration: underline;
-	}
 </style>

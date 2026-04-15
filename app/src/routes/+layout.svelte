@@ -14,10 +14,14 @@
 		<a href="/" class="nav-brand">Gilead Bolivia</a>
 		<div class="nav-links">
 			<a href="/" class="nav-link">Formularios</a>
+			{#if user?.role === 'admin'}
+				<a href="/users" class="nav-link">Usuarios</a>
+				<a href="/forms/manage" class="nav-link">Gestión</a>
+			{/if}
 		</div>
 		<div class="nav-auth">
 			{#if user}
-				<span class="nav-username">{user.displayName || user.username}</span>
+				<a href="/account" class="nav-link nav-account">{user.displayName || user.username}</a>
 				<form method="POST" action="/logout" style="display:inline">
 					<button type="submit" class="btn-logout">Cerrar Sesión</button>
 				</form>
@@ -83,9 +87,8 @@
 		gap: 10px;
 	}
 
-	.nav-username {
-		color: rgba(255, 255, 255, 0.9);
-		font-size: 14px;
+	.nav-account {
+		font-weight: 500;
 	}
 
 	.btn-logout {

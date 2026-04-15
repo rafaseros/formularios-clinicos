@@ -1,24 +1,27 @@
-import { fail, redirect } from '@sveltejs/kit';
+import { fail, redirect, error } from '@sveltejs/kit';
 import { db, schema } from '$lib/server/db';
 import { eq } from 'drizzle-orm';
-import { hashPassword, createSession } from '$lib/server/auth';
+import { hashPassword } from '$lib/server/auth';
 import type { Actions, PageServerLoad } from './$types';
 
 export const load: PageServerLoad = async ({ locals }) => {
-	if (locals.user) {
-		redirect(302, '/');
+	if (!locals.user || locals.user.role !== 'admin') {
+		throw error(403, 'Solo administradores pueden registrar usuarios.');
 	}
 	return {};
 };
 
 export const actions: Actions = {
-	default: async ({ request, cookies }) => {
+	default: async ({ request, locals }) => {
+		if (!locals.user || locals.user.role !== 'admin') {
+			return fail(403, { error: 'No tenés permisos para registrar usuarios.', username: '', displayName: '' });
+		}
+
 		const data = await request.formData();
 		const username = (data.get('username') as string | null)?.trim() ?? '';
 		const password = (data.get('password') as string | null) ?? '';
 		const displayName = (data.get('displayName') as string | null)?.trim() ?? '';
 
-		// Validation
 		if (!username) {
 			return fail(400, { error: 'El nombre de usuario es requerido.', username, displayName });
 		}
@@ -30,7 +33,6 @@ export const actions: Actions = {
 			});
 		}
 
-		// Check uniqueness
 		const existing = db
 			.select({ id: schema.users.id })
 			.from(schema.users)
@@ -47,25 +49,15 @@ export const actions: Actions = {
 
 		const passwordHash = await hashPassword(password);
 
-		const result = db
-			.insert(schema.users)
+		db.insert(schema.users)
 			.values({
 				username,
 				passwordHash,
 				displayName: displayName || username,
 				role: 'user',
 			})
-			.returning({ id: schema.users.id })
-			.get();
+			.run();
 
-		const token = createSession(result.id);
-		cookies.set('session', token, {
-			path: '/',
-			httpOnly: true,
-			sameSite: 'lax',
-			maxAge: 60 * 60 * 24 * 7,
-		});
-
-		redirect(302, '/');
+		redirect(302, '/users');
 	},
 };

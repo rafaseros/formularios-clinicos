@@ -2,7 +2,7 @@ import { redirect } from '@sveltejs/kit';
 import type { LayoutServerLoad } from './$types';
 
 // Public routes — no auth required
-const PUBLIC_PATHS = ['/login', '/register'];
+const PUBLIC_PATHS = ['/login'];
 
 export const load: LayoutServerLoad = async ({ locals, url }) => {
 	const { pathname } = url;

@@ -1,61 +1,73 @@
 <script lang="ts">
 	import { enhance } from '$app/forms';
 
-	let { form } = $props();
+	let { data, form } = $props();
 </script>
 
 <svelte:head>
-	<title>Registrar Usuario — Gilead Bolivia</title>
+	<title>Mi Cuenta — Gilead Bolivia</title>
 </svelte:head>
 
 <div class="page-container">
 	<div class="form-card">
-		<a href="/users" class="back-link">← Volver a usuarios</a>
-		<h1>Registrar Nuevo Usuario</h1>
+		<h1>Mi Cuenta</h1>
+
+		<div class="info-row">
+			<span class="label">Usuario:</span>
+			<span class="value">{data.username}</span>
+		</div>
+		<div class="info-row">
+			<span class="label">Nombre:</span>
+			<span class="value">{data.displayName || '—'}</span>
+		</div>
+
+		<hr />
+
+		<h2>Cambiar Contraseña</h2>
 
 		{#if form?.error}
 			<div class="error-box">{form.error}</div>
 		{/if}
 
+		{#if form?.success}
+			<div class="success-box">Contraseña actualizada correctamente.</div>
+		{/if}
+
 		<form method="POST" use:enhance>
 			<div class="field">
-				<label for="username">Usuario</label>
+				<label for="currentPassword">Contraseña actual</label>
 				<input
-					id="username"
-					name="username"
-					type="text"
-					autocomplete="username"
-					value={form?.username ?? ''}
-					placeholder="nombre de usuario"
+					id="currentPassword"
+					name="currentPassword"
+					type="password"
+					autocomplete="current-password"
 					required
 				/>
 			</div>
 
 			<div class="field">
-				<label for="displayName">Nombre completo <span class="optional">(opcional)</span></label>
+				<label for="newPassword">Nueva contraseña <span class="optional">(mínimo 4 caracteres)</span></label>
 				<input
-					id="displayName"
-					name="displayName"
-					type="text"
-					autocomplete="name"
-					value={form?.displayName ?? ''}
-					placeholder="ej. Dr. Juan Pérez"
-				/>
-			</div>
-
-			<div class="field">
-				<label for="password">Contraseña <span class="optional">(mínimo 4 caracteres)</span></label>
-				<input
-					id="password"
-					name="password"
+					id="newPassword"
+					name="newPassword"
 					type="password"
 					autocomplete="new-password"
-					placeholder="••••••••"
 					required
 				/>
 			</div>
 
-			<button type="submit" class="btn-primary">Crear Usuario</button>
+			<div class="field">
+				<label for="confirmPassword">Confirmar nueva contraseña</label>
+				<input
+					id="confirmPassword"
+					name="confirmPassword"
+					type="password"
+					autocomplete="new-password"
+					required
+				/>
+			</div>
+
+			<button type="submit" class="btn-primary">Cambiar Contraseña</button>
 		</form>
 	</div>
 </div>
@@ -74,20 +86,39 @@
 		padding: 32px;
 	}
 
-	.back-link {
-		color: #1F4E79;
-		text-decoration: none;
-		font-size: 14px;
-	}
-
-	.back-link:hover {
-		text-decoration: underline;
-	}
-
 	h1 {
 		color: #1F4E79;
 		font-size: 20px;
-		margin: 12px 0 24px;
+		margin: 0 0 20px;
+	}
+
+	h2 {
+		color: #333;
+		font-size: 16px;
+		margin: 0 0 16px;
+	}
+
+	hr {
+		border: none;
+		border-top: 1px solid #eee;
+		margin: 20px 0;
+	}
+
+	.info-row {
+		display: flex;
+		gap: 8px;
+		margin-bottom: 8px;
+		font-size: 14px;
+	}
+
+	.info-row .label {
+		color: #888;
+		min-width: 80px;
+	}
+
+	.info-row .value {
+		color: #333;
+		font-weight: 500;
 	}
 
 	.error-box {
@@ -97,7 +128,17 @@
 		font-size: 14px;
 		padding: 10px 14px;
 		border-radius: 4px;
-		margin-bottom: 20px;
+		margin-bottom: 16px;
+	}
+
+	.success-box {
+		background: #E8F5E9;
+		border-left: 4px solid #4CAF50;
+		color: #1B5E20;
+		font-size: 14px;
+		padding: 10px 14px;
+		border-radius: 4px;
+		margin-bottom: 16px;
 	}
 
 	.field {
