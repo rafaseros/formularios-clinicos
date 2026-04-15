@@ -27,33 +27,22 @@ export const formTemplates = sqliteTable('form_templates', {
   updatedAt: text('updated_at').notNull().$defaultFn(() => new Date().toISOString()),
 });
 
-export const patients = sqliteTable('patients', {
+export const users = sqliteTable('users', {
   id: integer('id').primaryKey({ autoIncrement: true }),
-  docNumber: text('doc_number').notNull(),
-  docExtension: text('doc_extension').notNull().default(''),
-  firstName: text('first_name').notNull(),
-  paternalLastName: text('paternal_last_name').notNull(),
-  maternalLastName: text('maternal_last_name').notNull().default(''),
-  birthDate: text('birth_date'),
-  gender: text('gender', { enum: ['M', 'F'] }),
-  phone: text('phone').notNull().default(''),
-  address: text('address').notNull().default(''),
-  city: text('city').notNull().default(''),
-  clinicalRecordNumber: text('clinical_record_number'),
-  status: text('status', { enum: ['active', 'discharged', 'transferred'] }).notNull().default('active'),
+  username: text('username').notNull(),
+  passwordHash: text('password_hash').notNull(),
+  displayName: text('display_name').notNull().default(''),
+  role: text('role', { enum: ['user', 'admin'] }).notNull().default('user'),
   createdAt: text('created_at').notNull().$defaultFn(() => new Date().toISOString()),
-  updatedAt: text('updated_at').notNull().$defaultFn(() => new Date().toISOString()),
 }, (table) => [
-  uniqueIndex('idx_patients_doc').on(table.docNumber, table.docExtension),
+  uniqueIndex('idx_users_username').on(table.username),
 ]);
 
-export const formInstances = sqliteTable('form_instances', {
+export const formComments = sqliteTable('form_comments', {
   id: integer('id').primaryKey({ autoIncrement: true }),
-  patientId: integer('patient_id').notNull().references(() => patients.id),
   formTemplateId: integer('form_template_id').notNull().references(() => formTemplates.id),
-  data: text('data', { mode: 'json' }).$type<Record<string, unknown>>(),
-  status: text('status', { enum: ['draft', 'completed', 'archived'] }).notNull().default('draft'),
-  notes: text('notes').notNull().default(''),
+  userId: integer('user_id').notNull().references(() => users.id),
+  content: text('content').notNull(),
+  status: text('status', { enum: ['open', 'resolved'] }).notNull().default('open'),
   createdAt: text('created_at').notNull().$defaultFn(() => new Date().toISOString()),
-  updatedAt: text('updated_at').notNull().$defaultFn(() => new Date().toISOString()),
 });

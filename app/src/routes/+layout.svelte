@@ -1,7 +1,8 @@
 <script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 
-	let { children } = $props();
+	let { data, children } = $props();
+	const user = $derived(data.user);
 </script>
 
 <svelte:head>
@@ -13,7 +14,16 @@
 		<a href="/" class="nav-brand">Gilead Bolivia</a>
 		<div class="nav-links">
 			<a href="/" class="nav-link">Formularios</a>
-			<a href="/patients" class="nav-link">Pacientes</a>
+		</div>
+		<div class="nav-auth">
+			{#if user}
+				<span class="nav-username">{user.displayName || user.username}</span>
+				<form method="POST" action="/logout" style="display:inline">
+					<button type="submit" class="btn-logout">Cerrar Sesión</button>
+				</form>
+			{:else}
+				<a href="/login" class="nav-link">Iniciar Sesión</a>
+			{/if}
 		</div>
 	</div>
 </nav>
@@ -64,5 +74,32 @@
 	.nav-link:hover {
 		background-color: rgba(255, 255, 255, 0.15);
 		color: white;
+	}
+
+	.nav-auth {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	.nav-username {
+		color: rgba(255, 255, 255, 0.9);
+		font-size: 14px;
+	}
+
+	.btn-logout {
+		background: rgba(255, 255, 255, 0.15);
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		color: white;
+		font-size: 13px;
+		padding: 4px 12px;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: background-color 0.15s;
+	}
+
+	.btn-logout:hover {
+		background: rgba(255, 255, 255, 0.25);
 	}
 </style>
