@@ -40,22 +40,7 @@
 			</div>
 		</div>
 		<div class="header-actions">
-			<a
-				href="/api/forms/{form.id}/pdf"
-				target="_blank"
-				rel="noopener"
-				class="btn btn-pdf"
-			>
-				Descargar PDF
-			</a>
-			<a
-				href="/forms/{form.id}/print"
-				target="_blank"
-				rel="noopener"
-				class="btn btn-print"
-			>
-				Imprimir / PDF
-			</a>
+			<!-- Print/PDF buttons disabled for now -->
 		</div>
 	</header>
 
@@ -63,6 +48,7 @@
 		<LetterVisualizer
 			formId={form.id}
 			orientation={pageConfig.orientation}
+			margins={pageConfig.margins}
 		/>
 	</div>
 
@@ -197,36 +183,6 @@
 		font-size: 12px;
 		color: #888;
 		margin: 0;
-	}
-
-	.btn-pdf {
-		display: inline-block;
-		padding: 8px 20px;
-		background-color: #2E7D32;
-		color: white;
-		text-decoration: none;
-		border-radius: 4px;
-		font-size: 14px;
-		transition: background-color 0.2s;
-	}
-
-	.btn-pdf:hover {
-		background-color: #1B5E20;
-	}
-
-	.btn-print {
-		display: inline-block;
-		padding: 8px 20px;
-		background-color: #1F4E79;
-		color: white;
-		text-decoration: none;
-		border-radius: 4px;
-		font-size: 14px;
-		transition: background-color 0.2s;
-	}
-
-	.btn-print:hover {
-		background-color: #1565C0;
 	}
 
 	.viewer-body {
