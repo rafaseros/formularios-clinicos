@@ -4,10 +4,14 @@ import { resolve, join } from 'path';
 import Database from 'better-sqlite3';
 import { mkdirSync, existsSync } from 'fs';
 
-const ROOT = resolve(import.meta.dirname, '..', '..');
-const FORMS_DIR = join(ROOT, 'forms');
-const CSS_PATH = join(ROOT, 'css', 'common.css');
-const LOGO_PATH = join(ROOT, 'logo.png');
+// Support both local dev (../forms) and Docker (/source/forms)
+const LOCAL_ROOT = resolve(import.meta.dirname, '..', '..');
+const DOCKER_SOURCE = '/source';
+const SOURCE_ROOT = existsSync(join(DOCKER_SOURCE, 'forms')) ? DOCKER_SOURCE : LOCAL_ROOT;
+
+const FORMS_DIR = join(SOURCE_ROOT, 'forms');
+const CSS_PATH = join(SOURCE_ROOT, 'css', 'common.css');
+const LOGO_PATH = join(SOURCE_ROOT, 'logo.png');
 const DB_PATH = resolve(import.meta.dirname, '..', 'data', 'forms.db');
 
 // Ensure data dir exists
