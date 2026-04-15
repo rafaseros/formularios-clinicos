@@ -14,7 +14,7 @@ WORKDIR /build/app
 RUN npm ci
 
 COPY app/ ./
-RUN npm run build
+RUN npx svelte-kit sync && npm run build
 
 # Stage 2: Production
 FROM node:20-slim
