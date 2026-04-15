@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Admisión - PGB-F002</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #212121; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #212121; text-transform: uppercase; }
+        h2 { background-color: #f5f5f5; padding: 5px 10px; border-left: 5px solid #212121; font-size: 11pt; margin-top: 15px; }
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; background: #ffcdd2; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE ADMISIÓN CLÍNICA</div>
+            <div class="subtitle">Formulario: PGB-F002 (Anverso y Reverso)</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-002</div>
+    </div>
+
+    <h2>1. INSTRUCCIONES DE IMPRESIÓN (DÚPLEX)</h2>
+    <div style="background-color: #e3f2fd; padding: 10px; border: 1px solid #2196f3;">
+        Este formulario consta de DOS páginas diseñadas para imprimirse en <b>UNA SOLA HOJA</b> (Doble faz / Dúplex).
+        <ul>
+            <li><b>Cara A (Anverso):</b> Datos Administrativos y Relato del paciente.</li>
+            <li><b>Cara B (Reverso):</b> Examen Físico, Mental y Plan Médico.</li>
+        </ul>
+        <span class="alert">NO IMPRIMIR EN HOJAS SEPARADAS</span> para evitar pérdidas de información.
+    </div>
+
+    <h2>2. SECCIÓN 4.1: MAPA DE LESIONES (REVERSO)</h2>
+    <div class="instruction-box">
+        <div class="field-name">OBJETIVO LEGAL</div>
+        <div class="field-desc">
+            Este apartado protege a la institución de denuncias por maltrato. Se debe registrar exhaustivamente cualquier marca física PREVIA al ingreso.
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">CÓMO LLENAR</div>
+        <div class="field-desc">
+            Marque con una (X) la zona afectada y describa abajo los detalles (ej: "Cicatriz de corte antiguo en antebrazo izquierdo de aprox 5cm").
+        </div>
+    </div>
+
+    <h2>3. FIRMAS (VALIDACIÓN)</h2>
+    <div class="instruction-box">
+        <div class="field-name">RESPONSABILIDAD</div>
+        <div class="field-desc">
+            La firma del paciente (o familiar responsable) al final del REVERSO certifica que está de acuerdo con el examen físico realizado y que no tiene otras lesiones que declarar.
+        </div>
+    </div>
+
+</body>
+</html>

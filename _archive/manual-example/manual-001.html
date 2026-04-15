@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F001 (Con Normativa)</title>
+    <style>
+        /* ESTILOS DE IMPRESIÓN Y FORMATO */
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        /* ENCABEZADO */
+        .header-box { border-bottom: 2px solid #004d40; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #004d40; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+
+        /* TÍTULOS DE SECCIÓN */
+        h2 { background-color: #e0f2f1; padding: 5px 10px; border-left: 5px solid #004d40; font-size: 11pt; margin-top: 15px; page-break-after: avoid; }
+        
+        /* CAJAS DE INSTRUCCIÓN */
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .field-desc { font-size: 9.5pt; }
+        
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffebee; padding: 2px 5px; border-radius: 3px; }
+        .example { color: #1565c0; font-style: italic; font-size: 9pt; }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { margin: 5px 0 0 20px; padding: 0; }
+
+        /* TABLA NORMATIVA */
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { background-color: #004d40; color: white; padding: 5px; text-align: left; }
+        .legal-table td { border: 1px solid #ddd; padding: 5px; vertical-align: top; }
+        .legal-link { color: #00695c; text-decoration: none; font-weight: bold; }
+        .legal-link:hover { text-decoration: underline; }
+
+        /* PIE DE PÁGINA */
+        .footer { margin-top: 30px; font-size: 8pt; text-align: center; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F001 "Hoja Frontal de Identificación"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-001<br>
+            <b>Versión:</b> 1.1 (Con Base Legal)
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+        </ul>
+    </div>
+
+    <h2>1. ENCABEZADO Y DATOS DE FILIACIÓN (SECCIÓN A)</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Código numérico único asignado al paciente.
+            <br><span class="alert">CRÍTICO: Ver Art. 12 D.S. 28562. No puede haber duplicados.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha Apertura</div>
+        <div class="field-desc">Fecha del <u>primer contacto</u> o primera admisión del paciente. Formato: DD/MM/AAAA.</div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Apellidos y Nombres</div>
+        <div class="field-desc">Copiar tal cual figura en la Cédula de Identidad (C.I.). No usar apodos ni abreviaturas.</div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Auto-pertenencia</div>
+        <div class="field-desc">
+            Preguntar: "¿Cómo se identifica usted culturalmente?". <span class="example">Ej: Mestizo, Quechua.</span>
+            <br>(Requisito Política SAFCI - D.S. 29601).
+        </div>
+    </div>
+
+    <h2>2. RESPONSABLE / TUTOR LEGAL (SECCIÓN B)</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre Completo</div>
+        <div class="field-desc">
+            Persona mayor de edad que firmará el Consentimiento Informado.
+            <br><span class="alert">LEGAL: Obligatorio según Ley 3131 para validar internación.</span>
+        </div>
+    </div>
+
+    <h2>3. ALERTAS MÉDICAS (SECCIÓN C)</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">⚠ ALERGIAS</div>
+        <div class="field-desc">
+            Registrar en letras GRANDES. Si no tiene, escribir: <b>"NIEGA ALERGIAS CONOCIDAS"</b>.
+            <br><span class="alert">SEGURIDAD DEL PACIENTE: Nunca dejar en blanco.</span>
+        </div>
+    </div>
+
+    <h2>4. HISTORIAL DE ADMISIONES (SECCIÓN D)</h2>
+
+    <div class="instruction-box">
+        <div class="field-name">INGRESO (F/H)</div>
+        <div class="field-desc"><b>F:</b> Fecha (DD/MM/AA). <b>H:</b> Hora (24hrs). Dato médico-legal para establecer inicio de custodia.</div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">CIE-10</div>
+        <div class="field-desc">
+            Código internacional del diagnóstico (Ej: F10.2). Requisito R.M. 0090 para estadística SNIS.
+        </div>
+    </div>
+
+    <h2>5. BASE NORMATIVA Y LEGAL (REFERENCIAS ONLINE)</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia. Haga clic en los enlaces para verificación oficial:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Enlace de Verificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Define que el Expediente Clínico es un documento médico-legal y establece la obligatoriedad de la identificación unívoca (Sección A) y el uso de CIE-10.</td>
+                <td><a href="https://www.minsalud.gob.bo/images/Documentacion/redes_salud/NORMA%20TECNICA%20PARA%20EL%20MANEJO%20DEL%20EXPEDIENTE%20CLINICO.pdf" target="_blank" class="legal-link">🔗 Ver PDF MinSalud</a></td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 3131</b><br>Ejercicio Profesional Médico</td>
+                <td>Art. 12: Instituye el Expediente Clínico como prueba documental. Art 9: Exige matrícula profesional en sellos.</td>
+                <td><a href="https://www.minsalud.gob.bo/images/Documentacion/normativa/Ley%203131%20Ejercicio%20Mdico.pdf" target="_blank" class="legal-link">🔗 Ver Ley 3131</a></td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 14: Regula el Consentimiento Informado (vinculado a la Sección B: Responsable Legal).</td>
+                <td><a href="https://www.lexivox.org/norms/BO-DS-28562.html" target="_blank" class="legal-link">🔗 Ver en Lexivox</a></td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 29601</b><br>Modelo SAFCI</td>
+                <td>Establece la obligatoriedad del enfoque intercultural (Campos: Auto-pertenencia cultural e Idioma Materno).</td>
+                <td><a href="https://www.lexivox.org/norms/BO-DS-29601.html" target="_blank" class="legal-link">🔗 Ver Decreto SAFCI</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.
+    </div>
+
+</body>
+</html>

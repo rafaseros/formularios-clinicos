@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F005 Contrato de Prestación de Servicios</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F005 "Contrato de Prestación de Servicios"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-005<br>
+            <b>Versión:</b> 1.1
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+            <li><b>Documento Legal:</b> Este es un documento contractual legal vinculante. Debe ser completado con extremo cuidado y precisión.</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F005</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">2 (Anverso y Reverso - Dúplex)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Formato</div>
+        <div class="field-desc">Tamaño carta (21.59 × 27.94 cm)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Personal de Administración</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        El Contrato de Prestación de Servicios es un <b>acuerdo legal bilateral</b> que establece las condiciones contractuales entre el PROYECTO GILEAD BOLIVIA y el CONTRATANTE (responsable/tutor del paciente) para la prestación de servicios de rehabilitación. Este documento:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Establece las obligaciones y derechos de ambas partes</li>
+        <li>Define los aspectos económicos del servicio</li>
+        <li>Especifica las condiciones de prestación del servicio</li>
+        <li>Establece las causales de rescisión del contrato</li>
+        <li>Tiene carácter de instrumento público según Código Civil</li>
+    </ul>
+    <div class="warning-box">
+        <b>⚠️ IMPORTANTE - DOCUMENTO LEGAL:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            Este documento tiene <b>valor legal contractual</b> y puede ser utilizado como prueba en procesos judiciales. 
+            Debe ser completado con precisión y todas las firmas deben ser auténticas.
+        </p>
+    </div>
+
+    <h2>3. RESPONSABLES</h2>
+    <ul style="font-size: 9.5pt;">
+        <li><b>Llenado:</b> Personal de Administración</li>
+        <li><b>Verificación:</b> Supervisor de Administración</li>
+        <li><b>Firma del Proyecto:</b> Representante Legal del Proyecto (obligatorio con sello)</li>
+        <li><b>Firma del Contratante:</b> Responsable/Tutor del paciente (obligatorio)</li>
+        <li><b>Firma del Testigo:</b> Opcional pero recomendado</li>
+    </ul>
+
+    <h2>4. CUÁNDO SE USA</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Momento</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Acción</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Antes de la internación</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Secciones A, B, C, D y E (Página 1)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Durante la explicación contractual</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Explicar obligaciones, derechos y aspectos económicos al contratante</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al momento de la firma</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Sección F (Obligaciones) y Sección G (Firmas) - Página 2</td>
+        </tr>
+    </table>
+
+    <h2>5. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: IDENTIFICACIÓN DE LAS PARTES</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre del Proyecto</div>
+        <div class="field-desc">
+            Pre-llenado: <b>PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS</b>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Representante legal</div>
+        <div class="field-desc">
+            Nombre completo del representante legal del proyecto.
+            <br><span class="example">Ejemplo: Mgr. Lic. Juan Carlos Chávez Ramírez</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Dirección</div>
+        <div class="field-desc">
+            Pre-llenado: <b>Calle Antofagasta N.º 333, Zona Cruce Taquiña, Cochabamba</b>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">NIT</div>
+        <div class="field-desc">Número de Identificación Tributaria del proyecto (si aplica).</div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: DATOS DEL CONTRATANTE</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre completo</div>
+        <div class="field-desc">
+            Nombre completo del contratante (responsable/tutor del paciente).
+            <br><span class="example">Ejemplo: María Elena Apaza de Huarachi</span>
+            <br><span class="alert">OBLIGATORIO: Debe ser mayor de edad y tener capacidad legal.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">
+            Número de carnet y extensión del contratante.
+            <br><span class="example">Ejemplo: 4512367 CBBA</span>
+            <br><span class="alert">OBLIGATORIO: Verificar documento original.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Parentesco con paciente</div>
+        <div class="field-desc">Relación con el paciente. <span class="example">Ejemplo: Madre, Padre, Cónyuge, Tutor legal</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Dirección / Teléfono</div>
+        <div class="field-desc">Dirección completa y número de teléfono del contratante. <span class="example">Ejemplo: Av. América #1234, 70012345</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: DATOS DEL BENEFICIARIO (PACIENTE)</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre completo</div>
+        <div class="field-desc">Nombre completo del paciente según F001. <span class="example">Ejemplo: Carlos Alberto Huarachi Apaza</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">Número de carnet y extensión del paciente. <span class="example">Ejemplo: 8523614 CBBA</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Debe ser el mismo número asignado en F001, F002, F003 y F004.
+            <br><span class="example">Ejemplo: HC-2025-0042</span>
+            <br><span class="alert">CRÍTICO: Verificar que coincida con otros formularios del expediente.</span>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN D: OBJETO DEL CONTRATO</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Descripción del servicio</div>
+        <div class="field-desc">
+            Describir de manera clara y completa el servicio de rehabilitación que se prestará.
+            <br><span class="example">Ejemplo: "Programa de rehabilitación residencial integral que incluye: desintoxicación médica, terapia psicológica individual y grupal, actividades recreativas, talleres ocupacionales y seguimiento ambulatorio"</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Duración del tratamiento</div>
+        <div class="field-desc">
+            Tiempo estimado del tratamiento. Si hay fases, especificarlas.
+            <br><span class="example">Ejemplo: "90 días (primera fase), con posible extensión según evolución"</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de inicio</div>
+        <div class="field-desc">Fecha de inicio del contrato en formato DD/MM/AAAA. <span class="example">Ejemplo: 15/12/2025</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN E: ASPECTOS ECONÓMICOS</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Costo mensual</div>
+        <div class="field-desc">
+            Costo mensual del servicio en Bolivianos.
+            <br><span class="example">Ejemplo: 2,600.00 Bs.</span>
+            <br><span class="alert">IMPORTANTE: Verificar montos actualizados con administración.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Costo total</div>
+        <div class="field-desc">
+            Costo total estimado del tratamiento (si se conoce).
+            <br><span class="example">Ejemplo: 7,800.00 Bs. (3 meses)</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Forma de pago</div>
+        <div class="field-desc">
+            Modalidad de pago acordada.
+            <br><span class="example">Ejemplo: "Depósito bancario directo, mes adelantado, Banco Bisa"</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de pago</div>
+        <div class="field-desc">Fecha acordada para el pago mensual. <span class="example">Ejemplo: "Día 1 de cada mes"</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Depósito de garantía</div>
+        <div class="field-desc">Monto de depósito de garantía (si aplica). <span class="example">Ejemplo: 2,600.00 Bs.</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN F: OBLIGACIONES DE LAS PARTES (Página 2)</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Obligaciones del Proyecto</div>
+        <div class="field-desc">
+            Describir las obligaciones del PROYECTO de manera clara y específica.
+            <br>Puede incluir:
+            <ul style="margin-top: 5px;">
+                <li>Brindar servicios de diagnóstico y tratamiento</li>
+                <li>Proporcionar atención médica, psicológica y de enfermería</li>
+                <li>Informar sobre el progreso del paciente</li>
+                <li>Mantener confidencialidad</li>
+                <li>Otros servicios acordados</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Obligaciones del Contratante</div>
+        <div class="field-desc">
+            Describir las obligaciones del CONTRATANTE de manera clara y específica.
+            <br>Puede incluir:
+            <ul style="margin-top: 5px;">
+                <li>Pago oportuno de las mensualidades</li>
+                <li>Proveer información relevante sobre el paciente</li>
+                <li>Proveer medicamentos solicitados</li>
+                <li>Presentarse cuando sea requerido</li>
+                <li>Cumplir con las indicaciones del equipo</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Causales de rescisión</div>
+        <div class="field-desc">
+            Describir las condiciones bajo las cuales el contrato puede ser rescindido.
+            <br>Puede incluir:
+            <ul style="margin-top: 5px;">
+                <li>Incumplimiento de pagos</li>
+                <li>Incumplimiento de obligaciones</li>
+                <li>Alta médica del paciente</li>
+                <li>Retiro voluntario</li>
+                <li>Fuga del paciente</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN G: FIRMAS (Página 2)</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Lugar y Fecha</div>
+        <div class="field-desc">
+            Lugar: Generalmente "Cochabamba"
+            <br>Fecha: Fecha de firma del contrato en formato DD/MM/AAAA.
+            <br><span class="example">Ejemplo: Cochabamba, 15/12/2025</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Firma del Contratante</div>
+        <div class="field-desc">
+            <b>OBLIGATORIA</b> - El contratante debe:
+            <ul style="margin-top: 5px;">
+                <li>Firmar el documento</li>
+                <li>Registrar su nombre completo</li>
+                <li>Registrar su C.I.</li>
+                <li>Imprimir su huella dactilar (recomendado)</li>
+            </ul>
+            <span class="alert">CRÍTICO: Sin esta firma, el contrato NO es válido.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Firma y Sello del Representante Legal</div>
+        <div class="field-desc">
+            <b>OBLIGATORIA</b> - El representante legal del proyecto debe:
+            <ul style="margin-top: 5px;">
+                <li>Firmar el documento</li>
+                <li>Colocar su sello profesional</li>
+                <li>Registrar su nombre completo</li>
+                <li>Registrar su cargo</li>
+            </ul>
+            <span class="alert">LEGAL: Según Código Civil, la firma y sello del representante legal son obligatorios.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Firma del Testigo</div>
+        <div class="field-desc">
+            <b>OPCIONAL</b> pero recomendado para mayor validez legal.
+            <br>El testigo debe registrar su nombre completo y C.I.
+        </div>
+    </div>
+
+    <h2>6. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            CONTRATO DE PRESTACIÓN DE SERVICIOS<br>
+            PGB-F005 v1.1
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>PÁGINA 1 - SECCIÓN A: IDENTIFICACIÓN DE LAS PARTES</b><br>
+            Nombre del Proyecto: <u>PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS</u><br>
+            Representante legal: <u>Dr. Roberto Méndez Quiroga</u><br>
+            Dirección: <u>Calle Antofagasta N.º 333, Zona Cruce Taquiña, Cochabamba</u><br>
+            NIT: <u>1234567890123</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN B: DATOS DEL CONTRATANTE</b><br>
+            Nombre completo: <u>María Elena Apaza de Huarachi</u><br>
+            Cédula de Identidad: <u>4512367</u>  Ext.: <u>CBBA</u>     Parentesco con paciente: <u>Madre</u><br>
+            Dirección: <u>Av. América #1234</u><br>
+            Teléfono: <u>70012345</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN C: DATOS DEL BENEFICIARIO (PACIENTE)</b><br>
+            Nombre completo: <u>Carlos Alberto Huarachi Apaza</u><br>
+            Cédula de Identidad: <u>8523614</u>  Ext.: <u>CBBA</u><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN D: OBJETO DEL CONTRATO</b><br>
+            Descripción del servicio:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Servicios de rehabilitación integral para tratamiento de dependencia a sustancias, incluyendo internación, atención médica, psicológica, actividades terapéuticas y seguimiento ambulatorio.</u>
+            </div>
+            Duración del tratamiento: <u>90 días (primera fase)</u><br>
+            Fecha de inicio: <u>15/12/2025</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN E: ASPECTOS ECONÓMICOS</b><br>
+            Costo mensual: <u>Bs. 2,500.00</u>     Costo total: <u>Bs. 7,500.00</u><br>
+            Forma de pago: <u>Pago mensual anticipado</u><br>
+            Fecha de pago: <u>Día 5 de cada mes</u><br>
+            Depósito de garantía: <u>Bs. 500.00</u>
+        </div>
+        
+        <div style="margin-top: 15px; border-top: 2px solid #000; padding-top: 10px;">
+            <b>PÁGINA 2 - SECCIÓN F: OBLIGACIONES DE LAS PARTES</b><br>
+            <b>Obligaciones del Proyecto:</b><br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1.5cm; background-color: white;">
+                <u>Proporcionar servicios de rehabilitación de calidad, atención médica y psicológica, alimentación, alojamiento, actividades terapéuticas y seguimiento según protocolo establecido.</u>
+            </div>
+            <br>
+            <b>Obligaciones del Contratante:</b><br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1.5cm; background-color: white;">
+                <u>Cumplir con los pagos establecidos, colaborar con el tratamiento, asistir a reuniones familiares programadas y seguir las indicaciones del equipo terapéutico.</u>
+            </div>
+            <br>
+            <b>Causales de rescisión:</b><br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1.5cm; background-color: white;">
+                <u>Incumplimiento de pagos, conducta inadecuada del paciente que ponga en riesgo a otros, abandono del tratamiento, o por mutuo acuerdo.</u>
+            </div>
+        </div>
+        
+        <div style="margin-top: 10px;">
+            <b>SECCIÓN G: FIRMAS</b><br>
+            Lugar: <u>Cochabamba</u>     Fecha: <u>15/12/2025</u><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; width: 33%; vertical-align: top;">
+                        <b>FIRMA DEL CONTRATANTE</b><br>
+                        Nombre: <u>María Elena Apaza de Huarachi</u><br>
+                        C.I.: <u>4512367 CBBA</u><br>
+                        Firma: ___________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 8px; width: 33%; vertical-align: top;">
+                        <b>FIRMA Y SELLO - REPRESENTANTE LEGAL</b><br>
+                        Nombre: <u>Dr. Roberto Méndez Quiroga</u><br>
+                        Matrícula: <u>54321</u><br>
+                        Firma: ___________________<br>
+                        Sello: [SELLO]
+                    </td>
+                    <td style="border: 1px solid #000; padding: 8px; width: 34%; vertical-align: top;">
+                        <b>FIRMA DEL TESTIGO</b><br>
+                        Nombre: <u>Lic. Ana María López</u><br>
+                        C.I.: <u>7890123 CBBA</u><br>
+                        Firma: ___________________
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7.5pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F005 v1.1 | Página 2 de 2
+        </div>
+    </div>
+
+    <h2>7. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Datos incompletos del contratante</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Contrato inválido legalmente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar todos los datos con documento original</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Montos incorrectos o no actualizados</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Disputas contractuales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar montos actualizados con administración</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Falta firma del representante legal</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Contrato inválido según Código Civil</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar que representante firme y selle</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Obligaciones no especificadas claramente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Disputas y malentendidos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Ser específico y claro en las obligaciones</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Nº Historia Clínica diferente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Inconsistencia en expediente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar que coincida con otros formularios</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Fecha de inicio incorrecta</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Problemas en cálculo de pagos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar fecha exacta de inicio del servicio</td>
+        </tr>
+    </table>
+
+    <h2>8. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Datos del proyecto completos y correctos</li>
+            <li>Representante legal identificado</li>
+            <li>Datos del contratante completos y verificados</li>
+            <li>C.I. del contratante verificada con documento original</li>
+            <li>Parentesco del contratante registrado</li>
+            <li>Datos del paciente completos</li>
+            <li>Nº Historia Clínica coincide con otros formularios</li>
+            <li>Objeto del contrato descrito claramente</li>
+            <li>Duración del tratamiento especificada</li>
+            <li>Fecha de inicio registrada</li>
+            <li>Montos económicos correctos y actualizados</li>
+            <li>Forma de pago especificada</li>
+            <li>Obligaciones del proyecto descritas claramente</li>
+            <li>Obligaciones del contratante descritas claramente</li>
+            <li>Causales de rescisión especificadas</li>
+            <li>Lugar y fecha de firma registrados</li>
+            <li>Firma del contratante presente con huella</li>
+            <li>Firma y sello del representante legal presentes</li>
+            <li>Firma del testigo (si aplica)</li>
+            <li>Formulario impreso en dúplex (2 páginas en 1 hoja)</li>
+        </ul>
+    </div>
+
+    <h2>9. INSTRUCCIONES DE IMPRESIÓN (DÚPLEX)</h2>
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE - FORMATO DÚPLEX:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            Este formulario consta de DOS páginas diseñadas para imprimirse en <b>UNA SOLA HOJA</b> (Doble faz / Dúplex).
+        </p>
+        <ul style="margin-top: 5px;">
+            <li><b>Cara A (Anverso - Página 1):</b> Secciones A, B, C, D, E - Identificación de partes, datos y aspectos económicos</li>
+            <li><b>Cara B (Reverso - Página 2):</b> Secciones F y G - Obligaciones y firmas</li>
+        </ul>
+        <p style="margin-top: 5px; color: #d32f2f; font-weight: bold;">
+            NO IMPRIMIR EN HOJAS SEPARADAS para evitar pérdidas de información y mantener la integridad del documento legal.
+        </p>
+    </div>
+
+    <h2>10. BASE NORMATIVA Y LEGAL</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Código Civil Boliviano</b></td>
+                <td>Art. 519: Regula los contratos de prestación de servicios. Establece los requisitos formales y de contenido para contratos de servicios.</td>
+                <td>Art. 519</td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 12: Establece la obligatoriedad de registrar el Nº Historia Clínica en documentos contractuales relacionados con atención médica.</td>
+                <td>Art. 12</td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 3131</b><br>Ejercicio Profesional Médico</td>
+                <td>Art. 8: Establece los derechos del paciente y la necesidad de documentación contractual adecuada para servicios de salud.</td>
+                <td>Art. 8</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>11. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>Contrato de Prestación de Servicios:</b> Acuerdo legal bilateral mediante el cual una parte (PROYECTO) se obliga a prestar un servicio a otra parte (CONTRATANTE) a cambio de una contraprestación económica.</p>
+        <p><b>Contratante:</b> Persona que contrata el servicio, generalmente el responsable/tutor legal del paciente.</p>
+        <p><b>Beneficiario:</b> Persona que recibe el servicio, en este caso el paciente.</p>
+        <p><b>Representante Legal:</b> Persona autorizada legalmente para representar a una institución o empresa.</p>
+        <p><b>Instrumento Público:</b> Documento que tiene valor probatorio y fuerza ejecutiva, generalmente requiere firma de notario o autoridad competente.</p>
+        <p><b>Rescisión:</b> Acto de dar por terminado un contrato antes de su cumplimiento natural.</p>
+        <p><b>Depósito de Garantía:</b> Suma de dinero que se entrega como garantía del cumplimiento de las obligaciones contractuales.</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.1 | Enero 2026
+    </div>
+
+</body>
+</html>

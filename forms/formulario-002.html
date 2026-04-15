@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F002 Hoja de Ingreso</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        .label { font-size: 8.5pt; color: #444; margin-right: 5px; font-weight: bold; }
+        .input-line { border-bottom: 1px dotted #000; flex-grow: 1; margin-left: 5px; }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F002 v1.1<br>
+                <b>Nº Historia Clínica:</b> ___________
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; margin: 5px 0; padding: 3px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">HOJA DE INGRESO</div>
+
+        <div class="section-title" style="margin-top: 5px;">A. IDENTIFICACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 bold">Nº Historia Clínica:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-3">Fecha de Ingreso:</div>
+            <div class="cell span-3 center">___/___/______</div>
+
+            <div class="cell span-3">Hora de Ingreso:</div>
+            <div class="cell span-3 center">___:___</div>
+            <div class="cell span-3">Nº de Internación:</div>
+            <div class="cell span-3"></div>
+
+            <div class="cell span-2 small">Apellido Paterno:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Apellido Materno:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-2 small">Nombres:</div>
+            <div class="cell span-10"></div>
+
+            <div class="cell span-2 small">Fecha de Nacimiento:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-1 small">Edad:</div>
+            <div class="cell span-1"></div>
+            <div class="cell span-2 small">Lugar de Nacimiento:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-1 small">C.I.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">Ext.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">Sexo: <span class="checkbox"></span>M <span class="checkbox"></span>F</div>
+            <div class="cell span-4 small">Estado Civil: <span class="checkbox"></span>Solt <span class="checkbox"></span>Cas <span class="checkbox"></span>Conv <span class="checkbox"></span>Div <span class="checkbox"></span>Viudo</div>
+
+            <div class="cell span-2 small">Grupo Sanguíneo:</div>
+            <div class="cell span-4 small"><span class="checkbox"></span>O+ <span class="checkbox"></span>O- <span class="checkbox"></span>A+ <span class="checkbox"></span>A- <span class="checkbox"></span>B+ <span class="checkbox"></span>B- <span class="checkbox"></span>AB+ <span class="checkbox"></span>AB-</div>
+            <div class="cell span-2 small">Ocupación:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-2 small">Nivel de Instrucción:</div>
+            <div class="cell span-10 small"><span class="checkbox"></span>Ninguno <span class="checkbox"></span>Primaria <span class="checkbox"></span>Secundaria <span class="checkbox"></span>Técnico <span class="checkbox"></span>Universitario</div>
+        </div>
+
+        <div class="section-title">B. DATOS DE CONTACTO</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Dirección:</div>
+            <div class="cell span-10"></div>
+            <div class="cell span-1 small">Zona/Barrio:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Localidad/Ciudad:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-1 small">Municipio:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">Departamento:</div>
+            <div class="cell span-10"></div>
+            <div class="cell span-2 small">Teléfono:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Celular:</div>
+            <div class="cell span-4"></div>
+        </div>
+
+        <div class="section-title">C. RESPONSABLE DEL PACIENTE</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nombre del Responsable:</div>
+            <div class="cell span-9"></div>
+            <div class="cell span-2 small">C.I. del Responsable:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">Ext.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">Parentesco:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Teléfono del Responsable:</div>
+            <div class="cell span-10"></div>
+            <div class="cell span-2 small">Dirección del Responsable:</div>
+            <div class="cell span-10"></div>
+        </div>
+
+        <div class="section-title">D. MOTIVO DE INGRESO</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 2.0cm;">
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+            <div class="cell span-2 small">Referido por:</div>
+            <div class="cell span-10"></div>
+        </div>
+
+        <div class="section-title" style="margin-top: 5px;">E. REGISTRO</div>
+        <div style="margin-top: 5px;">
+            <div class="signature-registro" style="min-height: 2.5cm;">
+                <div class="signature-title">FIRMA</div>
+                <div class="signature-subtitle">PERSONAL DE REGISTRO</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Cargo: ____________________________</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F002 v1.1</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">HOJA DE INGRESO (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________
+            </div>
+        </div>
+
+        <div class="section-title">F. OBSERVACIONES ADICIONALES</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 4.0cm;">
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+        </div>
+
+        <div class="section-title">G. VALIDACIÓN Y FIRMAS</div>
+        <div class="signatures-container">
+            <div class="signature-medico">
+                <div class="signature-title">FIRMA Y SELLO</div>
+                <div class="signature-subtitle">MÉDICO DE ADMISIÓN</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+            <div class="signature-paciente">
+                <div class="signature-title">FIRMA</div>
+                <div class="signature-subtitle">PACIENTE / RESPONSABLE</div>
+                <div class="signature-note">(Conformidad con registro)</div>
+                <div class="signature-fields">
+                    <div class="fingerprint-box"></div>
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">C.I.: _____________________________</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F002 v1.1</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F007 Nota de Ingreso Médica</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- PÁGINA 1 -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F007 v1.0<br>
+                <b>Nº Historia Clínica:</b> ___________<br>
+                <b>Hoja:</b> 1 / 2
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; margin: 10px 0; padding: 5px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">NOTA DE INGRESO MÉDICA</div>
+
+        <div class="section-title">A. IDENTIFICACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nº Historia Clínica:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Fecha de ingreso:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-1 small">Hora:</div>
+            <div class="cell span-1 center">___:___</div>
+
+            <div class="cell span-2 small">Nombre del paciente:</div>
+            <div class="cell span-10"></div>
+
+            <div class="cell span-1 small">Edad:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">años</div>
+            <div class="cell span-2 small">C.I.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">Ext.:</div>
+            <div class="cell span-3"></div>
+        </div>
+
+        <div class="section-title">B. EVALUACIÓN INICIAL</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Motivo de ingreso:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Estado de conciencia:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Lúcido <span class="checkbox"></span>Confuso <span class="checkbox"></span>Estuporoso <span class="checkbox"></span>Coma</div>
+
+            <div class="cell span-3 small">Orientación:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Persona <span class="checkbox"></span>Lugar <span class="checkbox"></span>Tiempo <span class="checkbox"></span>Desorientado</div>
+
+            <div class="cell span-3 small">Signos de intoxicación:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-3 small">Signos de abstinencia:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-3 small">Ideación suicida:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-6"></div>
+        </div>
+
+        <div class="section-title">C. SIGNOS VITALES</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Presión arterial:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">mmHg</div>
+            <div class="cell span-2 small">Frecuencia cardíaca:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">lpm</div>
+
+            <div class="cell span-2 small">Frecuencia respiratoria:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">rpm</div>
+            <div class="cell span-2 small">Temperatura:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">°C</div>
+
+            <div class="cell span-2 small">Saturación O2:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">%</div>
+            <div class="cell span-2 small">Peso:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">kg</div>
+
+            <div class="cell span-2 small">Talla:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">cm</div>
+            <div class="cell span-2 small">IMC:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2"></div>
+        </div>
+
+        <div class="section-title">D. EXAMEN FÍSICO BREVE</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Aspecto general:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Piel y mucosas:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Cabeza y cuello:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Tórax:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Abdomen:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Extremidades:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Neurológico breve:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F007 v1.0</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">NOTA DE INGRESO MÉDICA (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 2 / 2
+            </div>
+        </div>
+
+        <div class="section-title">E. ANTECEDENTES RELEVANTES</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Alergias:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Medicamentos actuales:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Enfermedades crónicas:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;">
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Última sustancia:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Tiempo desde último uso:</div>
+            <div class="cell span-9"></div>
+        </div>
+
+        <div class="section-title">F. DIAGNÓSTICO INICIAL</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Diagnóstico presuntivo:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Código CIE-10:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-6"></div>
+        </div>
+
+        <div class="section-title">G. PLAN DE MANEJO INMEDIATO</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Indicaciones:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Medicación inicial:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                <div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+
+            <div class="cell span-3 small">Nivel de vigilancia:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Intensiva <span class="checkbox"></span>Especial</div>
+
+            <div class="cell span-3 small">Interconsultas:</div>
+            <div class="cell span-9"></div>
+        </div>
+
+        <div class="section-title">H. FIRMA</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nombre del médico:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Matrícula profesional:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-6"></div>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <div class="signature-medico">
+                <div class="signature-title">FIRMA Y SELLO</div>
+                <div class="signature-subtitle">MÉDICO DE ADMISIÓN</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F007 v1.0</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+</body>
+</html>

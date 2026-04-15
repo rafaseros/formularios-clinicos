@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F009 Signos Vitales</title>
+    <style>
+        @page {
+            size: Letter landscape; 
+            margin: 1.0cm 1.0cm 1.0cm 3.0cm; /* Margen Izq 3cm para historia clínica */
+        }
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 9pt;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .page-container { width: 100%; height: 19.5cm; display: flex; flex-direction: column; }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            height: 2.0cm;
+        }
+
+        /* DATOS PACIENTE */
+        .patient-box {
+            border: 1px solid #000;
+            padding: 5px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            background-color: #f5f5f5;
+        }
+
+        /* TABLA PRINCIPAL */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9pt;
+        }
+
+        th {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 8pt;
+        }
+
+        td {
+            border: 1px solid #000;
+            height: 0.65cm; /* Altura cómoda para escritura manual */
+            padding: 0 5px;
+            text-align: center;
+        }
+
+        /* Columnas específicas */
+        .col-fecha { width: 8%; }
+        .col-hora { width: 6%; }
+        .col-sv { width: 7%; } /* T, P, R, PA */
+        .col-sat { width: 7%; }
+        .col-ingresos { width: 10%; background-color: #e8f5e9; }
+        .col-egresos { width: 10%; background-color: #ffebee; }
+        .col-obs { width: 20%; text-align: left; }
+        .col-firma { width: 15%; }
+
+        .footer {
+            margin-top: auto;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 7pt;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" style="height: 50px; margin-right: 15px;">
+                <div>
+                    <div style="font-size: 16pt; font-weight: bold;">HOJA DE SIGNOS VITALES</div>
+                    <div style="font-size: 10pt;">REGISTRO CLÍNICO DIARIO</div>
+                </div>
+            </div>
+            <div style="text-align: right; border: 1px solid #000; padding: 5px;">
+                <b>CÓDIGO:</b> PGB-F009 v1.0<br>
+                <b>ÁREA:</b> ENFERMERÍA
+            </div>
+        </div>
+
+        <div class="patient-box">
+            <div style="width: 40%;"><b>PACIENTE:</b> __________________________________________________</div>
+            <div style="width: 20%;"><b>EDAD:</b> _______</div>
+            <div style="width: 20%;"><b>CAMA:</b> _______</div>
+            <div style="width: 20%;"><b>Nº H.C.:</b> _______</div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">FECHA</th>
+                    <th rowspan="2">HORA</th>
+                    <th colspan="4">PARÁMETROS FISIOLÓGICOS</th>
+                    <th rowspan="2">SatO2<br>(%)</th>
+                    <th rowspan="2">PESO<br>(Kg)</th>
+                    <th rowspan="2">DIURESIS<br>(ml)</th>
+                    <th rowspan="2">CATARSIS<br>(Dep.)</th>
+                    <th rowspan="2">OBSERVACIONES</th>
+                    <th rowspan="2">FIRMA<br>RESPONSABLE</th>
+                </tr>
+                <tr>
+                    <th>Tº<br>(°C)</th>
+                    <th>F.C.<br>(lpm)</th>
+                    <th>F.R.<br>(rpm)</th>
+                    <th>P.A.<br>(mmHg)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td class="col-obs"></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <div>F.C.: Frecuencia Cardíaca | F.R.: Frecuencia Respiratoria | P.A.: Presión Arterial</div>
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>Página ___ de ___</div>
+        </div>
+
+    </div>
+</body>
+</html>

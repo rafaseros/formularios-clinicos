@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F010 Kardex Final v1.3</title>
+    <style>
+        /* 1. CONFIGURACIÓN DE PÁGINA */
+        @page {
+            size: Letter landscape; 
+            margin: 0.5cm 1.0cm 0.5cm 3.0cm; 
+        }
+
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 8pt;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            box-sizing: border-box;
+        }
+
+        /* 2. CONTENEDOR FLUIDO */
+        .page-container {
+            width: 100%;
+            height: 18.5cm; /* Mantenemos altura segura */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start; /* Alineamos todo arriba */
+            position: relative;
+        }
+        
+        /* HEADER COMPACTO */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 2px;
+            height: 1.8cm; /* Reducido */
+        }
+        
+        /* ALERTAS */
+        .alert-box {
+            border: 1px solid #000;
+            padding: 1px 5px;
+            font-weight: bold;
+            font-size: 7pt;
+            text-align: center;
+            height: 30px;
+        }
+        .bg-red { background-color: #ffcdd2; }
+        .bg-yellow { background-color: #fff9c4; }
+        .bg-green { background-color: #c8e6c9; }
+
+        /* TABLAS COMPACTAS */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 2px; }
+        th, td { border: 1px solid #000; padding: 0 3px; vertical-align: middle; }
+        th { background-color: #eeeeee; font-size: 7pt; text-align: center; height: 0.6cm; }
+        
+        /* ALTURA DE FILA REDUCIDA */
+        td { height: 0.50cm; font-size: 8pt; } 
+
+        .section-title {
+            background-color: #37474f;
+            color: white;
+            padding: 1px;
+            font-weight: bold;
+            font-size: 8pt;
+            text-align: center;
+            margin-top: 2px;
+            border: 1px solid #000;
+        }
+
+        /* DATOS PACIENTE */
+        .patient-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            border: 1px solid #000;
+            margin-bottom: 2px;
+        }
+        .p-cell {
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+            height: 0.5cm;
+            font-size: 8pt;
+        }
+        .p-label { font-weight: bold; color: #444; margin-right: 5px; }
+        .span-2 { grid-column: span 2; } .span-4 { grid-column: span 4; } .span-6 { grid-column: span 6; } .span-8 { grid-column: span 8; }
+
+        /* FOOTER PEGADO AL FONDO */
+        .footer {
+            position: absolute; /* Fijamos posición absoluta al fondo del contenedor */
+            bottom: 0;
+            width: 100%;
+            height: 0.5cm;
+            border-top: 1px solid #000;
+            padding-top: 2px;
+            font-size: 7pt;
+            display: flex;
+            justify-content: space-between;
+            background-color: white; /* Evita transparencia si algo se colara */
+        }
+    </style>
+</head>
+<body>
+    <div class="page-container">
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" style="height: 35px; margin-right: 10px;">
+                <div>
+                    <div style="font-size: 12pt; font-weight: bold;">KARDEX DE ENFERMERÍA</div>
+                    <div style="font-size: 8pt;">PLAN DE CUIDADOS DIARIO (24 HORAS)</div>
+                </div>
+            </div>
+            <div style="display: flex; gap: 5px; align-items: center;">
+                <div class="alert-box bg-red" style="width: 100px;">ALERGIAS:<br></div>
+                <div class="alert-box bg-yellow" style="width: 80px;">RIESGO CAÍDA:<br></div>
+                <div class="alert-box bg-green" style="width: 80px;">DIETA:<br></div>
+            </div>
+            <div style="text-align: right;">
+                <div style="font-weight: bold; font-size: 9pt;">CAMA / HABITACIÓN</div>
+                <div style="font-size: 14pt; border: 2px solid #000; text-align: center; width: 50px; margin-left: auto; height: 25px;"></div>
+            </div>
+        </div>
+
+        <div class="patient-grid">
+            <div class="p-cell span-6"><span class="p-label">PACIENTE:</span> </div>
+            <div class="p-cell span-2"><span class="p-label">EDAD:</span> </div>
+            <div class="p-cell span-4"><span class="p-label">MÉDICO:</span> </div>
+            <div class="p-cell span-8"><span class="p-label">DIAGNÓSTICO:</span> </div>
+            <div class="p-cell span-4"><span class="p-label">FECHA:</span> </div>
+        </div>
+
+        <div class="section-title">I. PLAN TERAPÉUTICO (MEDICACIÓN)</div>
+        <table>
+            <colgroup>
+                <col style="width: 25%;"> <col style="width: 8%;"> <col style="width: 8%;"> <col style="width: 8%;"> <col style="width: 5%;">
+                <col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;">
+                <col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;"><col style="width: 3.5%;">
+                <col style="width: 3.5%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th rowspan="2">MEDICAMENTO / SOLUCIÓN</th>
+                    <th rowspan="2">DOSIS</th>
+                    <th rowspan="2">VÍA</th>
+                    <th rowspan="2">FREC.</th>
+                    <th rowspan="2">INICIO</th>
+                    <th colspan="12">HORARIOS DE ADMINISTRACIÓN</th>
+                    <th rowspan="2">SUSP.</th>
+                </tr>
+                <tr><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th></tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div style="display: flex; gap: 10px; height: 5.0cm;">
+            <div style="width: 50%;">
+                <div class="section-title">II. CUIDADOS DE ENFERMERÍA</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 40%;">ACTIVIDAD</th>
+                            <th style="width: 15%;">FREC.</th>
+                            <th>MAÑANA</th><th>TARDE</th><th>NOCHE</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Control Signos Vitales</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Higiene / Baño</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Control Diuresis/Dep.</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Cambio de Posición</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Curación Heridas</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td>Control de Peso</td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                        <tr><td></td><td></td><td></td><td></td><td></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div style="width: 50%; display: flex; flex-direction: column;">
+                <div class="section-title">III. OBSERVACIONES</div>
+                <div style="border: 1px solid #000; flex-grow: 1; margin-bottom: 2px; padding: 2px;">
+                    <div style="border-bottom: 1px dotted #ccc; height: 14px;"></div>
+                    <div style="border-bottom: 1px dotted #ccc; height: 14px;"></div>
+                    <div style="border-bottom: 1px dotted #ccc; height: 14px;"></div>
+                    <div style="border-bottom: 1px dotted #ccc; height: 14px;"></div>
+                    <div style="border-bottom: 1px dotted #ccc; height: 14px;"></div>
+                </div>
+                <div class="section-title">IV. RESPONSABLES</div>
+                <div style="border: 1px solid #000; display: flex; height: 1.5cm;"> <div style="width: 33%; border-right: 1px solid #000;"></div>
+                    <div style="width: 33%; border-right: 1px solid #000;"></div>
+                    <div style="width: 34%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div><b>Cód:</b> PGB-F010 v1.3</div>
+            <div>PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS</div>
+            <div>Página 1 de 1</div>
+        </div>
+    </div>
+</body>
+</html>

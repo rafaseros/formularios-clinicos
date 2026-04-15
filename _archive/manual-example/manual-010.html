@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Kardex - PGB-F010</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        
+        .header-box { border-bottom: 2px solid #2e7d32; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #2e7d32; text-transform: uppercase; }
+        
+        h2 { background-color: #e8f5e9; padding: 5px 10px; border-left: 5px solid #2e7d32; font-size: 11pt; margin-top: 15px; }
+        
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; background: #ffcdd2; padding: 2px 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE KARDEX DE ENFERMERÍA</div>
+            <div class="subtitle">Formulario: PGB-F010 "Plan de Cuidados"</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-010</div>
+    </div>
+
+    <h2>1. CONCEPTO Y USO</h2>
+    <div style="background-color: #fffde7; padding: 10px; border: 1px solid #fff9c4; margin-bottom: 10px;">
+        El Kardex es un instrumento de <b>PLANIFICACIÓN Y COMUNICACIÓN</b>. Permite visualizar las órdenes médicas vigentes para las 24 horas.<br>
+        <b>Material de escritura:</b> 
+        <ul>
+            <li><b>Datos Fijos (Nombre, Alergias, Medicamento):</b> Bolígrafo (Negro/Azul).</li>
+            <li><b>Datos Variables (Horarios, Fechas):</b> Lápiz Rojo/Negro (permite actualización diaria).</li>
+        </ul>
+    </div>
+
+    <h2>2. SECCIÓN ALERTAS (ENCABEZADO)</h2>
+    <div class="instruction-box">
+        <div class="field-name">ALERGIAS</div>
+        <div class="field-desc">
+            <span class="alert">ROJO:</span> Escribir en letras grandes cualquier alergia a medicamentos o alimentos. Si no tiene, escribir "NIEGA".
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">DIETA</div>
+        <div class="field-desc">
+            Debe coincidir con la orden médica actual. <br><i>Ej: General, Blanda, Hiposódica, Diabética.</i>
+        </div>
+    </div>
+
+    <h2>3. PLAN DE MEDICACIÓN</h2>
+    <div class="instruction-box">
+        <div class="field-name">Horarios</div>
+        <div class="field-desc">
+            En las 12 columnas vacías, anote la hora de administración programada.<br>
+            <i>Ej: Si es cada 8 horas, anote: 08:00 | 16:00 | 24:00.</i>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Código de Colores</div>
+        <div class="field-desc">
+            Según norma interna:<br>
+            - <b>Turno Mañana (07-13):</b> Tinta Azul.<br>
+            - <b>Turno Tarde (13-19):</b> Tinta Verde.<br>
+            - <b>Turno Noche (19-07):</b> Tinta Roja.
+        </div>
+    </div>
+
+    <h2>4. VALIDACIÓN DE TURNO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Firmas</div>
+        <div class="field-desc">
+            Al finalizar el turno, la enfermera responsable debe firmar y sellar, certificando que el Kardex está actualizado y que la guardia entrante recibe la información correcta (Saneamiento del Kardex).
+        </div>
+    </div>
+
+</body>
+</html>

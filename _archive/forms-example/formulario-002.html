@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F002 Admisión (2 Hojas Exactas)</title>
+    <style>
+        @page {
+            size: Letter;
+            /* Margen Top/Bottom reducidos a 1.5cm para ganar espacio vertical */
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm; 
+        }
+
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 10pt;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            box-sizing: border-box;
+        }
+
+        /* CONTENEDOR DE PÁGINA INDIVIDUAL */
+        .page {
+            width: 100%;
+            height: 24.5cm; /* Altura máxima útil disponible */
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            /* border: 1px solid red;  <-- Descomentar para ver límites en pruebas */
+        }
+
+        /* SALTO DE PÁGINA OBLIGATORIO */
+        .page-break {
+            page-break-before: always;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            height: 2.0cm;
+        }
+
+        /* TÍTULOS */
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px; /* Padding reducido */
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 8px; /* Margen reducido */
+            text-transform: uppercase;
+        }
+
+        /* GRILLA */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            border-left: 1px solid #000;
+            border-top: 1px solid #000;
+        }
+
+        .cell {
+            border-right: 1px solid #000;
+            border-bottom: 1px solid #000;
+            padding: 3px 5px;
+            display: flex;
+            align-items: center;
+            min-height: 22px;
+        }
+
+        /* UTILIDADES */
+        .span-2 { grid-column: span 2; } .span-4 { grid-column: span 4; } 
+        .span-6 { grid-column: span 6; } .span-8 { grid-column: span 8; } 
+        .span-12 { grid-column: span 12; }
+
+        .bold { font-weight: bold; }
+        .label { font-size: 8.5pt; color: #444; margin-right: 5px; font-weight: bold; }
+        .input-line { border-bottom: 1px dotted #000; flex-grow: 1; margin-left: 5px; }
+        .checkbox { display: inline-block; width: 11px; height: 11px; border: 1px solid #000; margin-right: 3px; margin-left: 0px; }
+
+        /* TEXTO GRANDE CONTROLADO */
+        .text-area {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+        }
+        .guide-line { border-bottom: 1px dotted #ccc; height: 1px; width: 100%; }
+
+        /* MAPA CORPORAL COMPACTO */
+        .body-map-box {
+            border: 1px solid #000;
+            padding: 5px;
+            height: 3.0cm; /* Reducido de 3.5 a 3.0 cm */
+            font-size: 8.5pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            background-color: #f9f9f9;
+        }
+        
+        .body-col {
+            width: 25%; 
+            height: 100%;
+            text-align: left;
+            padding-left: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        /* FOOTER AL FONDO */
+        .footer {
+            margin-top: auto;
+            border-top: 1px solid #000;
+            padding-top: 5px;
+            font-size: 8pt;
+            display: flex;
+            justify-content: space-between;
+            height: 1.0cm;
+        }
+        .page-indicator { font-weight: bold; background: #000; color: #fff; padding: 2px 6px; }
+    </style>
+</head>
+<body>
+
+    <div class="page">
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" style="height: 50px; margin-right: 15px;">
+                <div>
+                    <div style="font-size: 16pt; font-weight: bold;">HOJA DE ADMISIÓN CLÍNICA</div>
+                    <div style="font-size: 10pt;">PARTE I: ADMISIÓN Y ANTECEDENTES</div>
+                </div>
+            </div>
+            <div style="text-align: right;">
+                <b>CÓDIGO:</b> PGB-F002 v1.3<br>
+                <b>EXPEDIENTE Nº:</b> ___________
+            </div>
+        </div>
+
+        <div class="section-title">1. DATOS DE ADMISIÓN Y LLEGADA</div>
+        <div class="grid">
+            <div class="cell span-8"><span class="label">PACIENTE:</span> </div>
+            <div class="cell span-4"><span class="label">C.I.:</span></div>
+
+            <div class="cell span-4"><span class="label">FECHA INGRESO:</span> ___/___/______</div>
+            <div class="cell span-4"><span class="label">HORA:</span> ___:___</div>
+            <div class="cell span-4"><span class="label">EDAD:</span> ____ años</div>
+
+            <div class="cell span-12">
+                <span class="label">FORMA DE LLEGADA:</span>
+                <span class="checkbox"></span>Ambulatorio 
+                <span class="checkbox"></span>Silla de Ruedas 
+                <span class="checkbox"></span>Camilla 
+                <span class="checkbox"></span>Sedado (Detallar: __________)
+            </div>
+            <div class="cell span-12">
+                <span class="label">ACOMPAÑANTE / RESPONSABLE:</span>
+            </div>
+            <div class="cell span-12">
+                <span class="label">REFERIDO POR:</span>
+                <span class="checkbox"></span>Propia Voluntad 
+                <span class="checkbox"></span>Familia 
+                <span class="checkbox"></span>Orden Judicial 
+                <span class="checkbox"></span>Otra Inst.: ________________
+            </div>
+        </div>
+
+        <div class="section-title">2. MOTIVO DE CONSULTA / RELATO DE INGRESO</div>
+        <div class="grid">
+            <div class="cell span-12 text-area" style="height: 3.5cm;"> <div class="guide-line"></div><div class="guide-line"></div>
+                <div class="guide-line"></div><div class="guide-line"></div>
+                <div class="guide-line"></div>
+            </div>
+        </div>
+
+        <div class="section-title">3. ANTECEDENTES DE CONSUMO RECIENTE</div>
+        <div class="grid">
+            <div class="cell span-4 bold" style="background-color:#f5f5f5; text-align: center;">SUSTANCIA PRINCIPAL</div>
+            <div class="cell span-4 bold" style="background-color:#f5f5f5; text-align: center;">FRECUENCIA / CANTIDAD</div>
+            <div class="cell span-4 bold" style="background-color:#f5f5f5; text-align: center;">ÚLTIMO CONSUMO (Fecha/Hora)</div>
+
+            <div class="cell span-4" style="height: 0.8cm;">1.</div> <div class="cell span-4"></div> <div class="cell span-4"></div>
+            <div class="cell span-4" style="height: 0.8cm;">2.</div> <div class="cell span-4"></div> <div class="cell span-4"></div>
+            <div class="cell span-4" style="height: 0.8cm;">3.</div> <div class="cell span-4"></div> <div class="cell span-4"></div>
+        </div>
+        
+        <div style="font-size: 8pt; margin-top: 5px; color: #666; font-style: italic;">
+            * Nota: Los antecedentes patológicos completos se detallan en la Historia Clínica (F006). Esta hoja registra el estado inmediato de llegada.
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div class="page-indicator">ANVERSO (Página 1 de 2)</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="page">
+        <div class="header" style="height: 1.5cm; margin-bottom: 5px;">
+            <div style="font-size: 11pt; font-weight: bold;">HOJA DE ADMISIÓN (Continuación)</div>
+            <div style="text-align: right;">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________
+            </div>
+        </div>
+
+        <div class="section-title">4. EXAMEN FÍSICO DE INGRESO</div>
+        <div class="grid">
+            <div class="cell span-2 label">P.A.</div> <div class="cell span-2"></div>
+            <div class="cell span-2 label">F.C.</div> <div class="cell span-2"></div>
+            <div class="cell span-2 label">Tº</div> <div class="cell span-2"></div>
+            <div class="cell span-2 label">F.R.</div> <div class="cell span-2"></div>
+            <div class="cell span-2 label">SatO2</div> <div class="cell span-2"></div>
+            <div class="cell span-2 label">PESO</div> <div class="cell span-2"></div>
+        </div>
+
+        <div style="margin-top: 8px; font-weight: bold; font-size: 9pt; border-bottom: 1px solid #000;">4.1. MAPA DE LESIONES (Obligatorio)</div>
+        <div class="body-map-box">
+            <div class="body-col" style="border-right: 1px dotted #999;">
+                <b>CABEZA/CUELLO</b><br>
+                <div><span class="checkbox"></span>Sin Lesiones</div>
+                <div><span class="checkbox"></span>Hematoma</div>
+                <div><span class="checkbox"></span>Cicatriz</div>
+            </div>
+            <div class="body-col" style="border-right: 1px dotted #999;">
+                <b>TORAX/ABDOMEN</b><br>
+                <div><span class="checkbox"></span>Sin Lesiones</div>
+                <div><span class="checkbox"></span>Hematoma</div>
+                <div><span class="checkbox"></span>Cirugías</div>
+            </div>
+            <div class="body-col" style="border-right: 1px dotted #999;">
+                <b>EXT. SUPERIOR</b><br>
+                <div><span class="checkbox"></span>Sin Lesiones</div>
+                <div><span class="checkbox"></span>Punciones</div>
+                <div><span class="checkbox"></span>Cortes</div>
+            </div>
+            <div class="body-col">
+                <b>EXT. INFERIOR</b><br>
+                <div><span class="checkbox"></span>Sin Lesiones</div>
+                <div><span class="checkbox"></span>Edema</div>
+                <div><span class="checkbox"></span>Heridas</div>
+            </div>
+        </div>
+        
+        <div class="grid">
+            <div class="cell span-12">
+                <span class="label">DESCRIPCIÓN DE HALLAZGOS:</span>
+            </div>
+            <div class="cell span-12 text-area" style="height: 2.2cm;"> <div class="guide-line"></div><div class="guide-line"></div><div class="guide-line"></div>
+            </div>
+        </div>
+
+        <div class="section-title">5. EXAMEN MENTAL BREVE</div>
+        <div class="grid">
+            <div class="cell span-12">
+                <span class="label">CONCIENCIA:</span>
+                <span class="checkbox"></span>Alerta <span class="checkbox"></span>Somnoliento <span class="checkbox"></span>Estupor <span class="checkbox"></span>Confuso
+            </div>
+            <div class="cell span-12">
+                <span class="label">ORIENTACIÓN:</span>
+                <span class="checkbox"></span>Global <span class="checkbox"></span>Desorientado Tiempo/Espacio
+            </div>
+            <div class="cell span-12">
+                <span class="label">CONDUCTA:</span>
+                <span class="checkbox"></span>Colaborador <span class="checkbox"></span>Ansioso <span class="checkbox"></span>Agresivo <span class="checkbox"></span>Alucinatorio
+            </div>
+        </div>
+
+        <div class="section-title">6. DIAGNÓSTICO INGRESO (CIE-10)</div>
+        <div class="grid">
+            <div class="cell span-2 label">DG. 1:</div> <div class="cell span-8"></div> <div class="cell span-2 label">CIE:</div>
+            <div class="cell span-2 label">DG. 2:</div> <div class="cell span-8"></div> <div class="cell span-2 label">CIE:</div>
+        </div>
+
+        <div class="section-title">7. PLAN INICIAL</div>
+        <div class="grid">
+            <div class="cell span-12">
+                <span class="checkbox"></span>Internación <span class="checkbox"></span>Observación <span class="checkbox"></span>Referencia
+            </div>
+            <div class="cell span-12 text-area" style="height: 2.5cm;"> <span class="label">INDICACIONES INMEDIATAS:</span>
+                <div class="guide-line"></div><div class="guide-line"></div><div class="guide-line"></div>
+            </div>
+        </div>
+
+        <div style="display: flex; justify-content: space-around; margin-top: auto; padding-bottom: 10px;">
+            <div style="text-align: center; width: 40%; border-top: 1px solid #000; font-size: 8pt; padding-top: 5px;">
+                FIRMA Y SELLO<br><b>MÉDICO DE ADMISIÓN</b>
+            </div>
+            <div style="text-align: center; width: 40%; border-top: 1px solid #000; font-size: 8pt; padding-top: 5px;">
+                FIRMA<br><b>PACIENTE / RESPONSABLE</b><br>
+                <span style="font-size: 7pt; font-style: italic;">(Conformidad con examen físico)</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div class="page-indicator">REVERSO (Página 2 de 2)</div>
+        </div>
+    </div>
+
+</body>
+</html>

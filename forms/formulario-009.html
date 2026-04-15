@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F009 Hoja de Signos Vitales</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter landscape;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 18.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 8px;
+            text-transform: uppercase;
+        }
+        .chart-container {
+            border: 1px solid #000;
+            padding: 5px;
+            margin: 5px 0;
+        }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: 60px repeat(9, 1fr);
+            gap: 2px;
+            font-size: 7pt;
+        }
+        .chart-cell {
+            border: 1px solid #ccc;
+            padding: 2px;
+            text-align: center;
+            min-height: 0.4cm;
+        }
+        .chart-header {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F009 v1.0<br>
+                <b>Nº Historia Clínica:</b> ___________<br>
+                <b>Hoja:</b> 1 / 1
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; margin: 10px 0; padding: 5px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">HOJA DE SIGNOS VITALES</div>
+
+        <div class="section-title">A. IDENTIFICACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Apellido Paterno:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Apellido Materno:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Nombres:</div>
+            <div class="cell span-10"></div>
+        </div>
+
+        <div class="section-title">B. DATOS ANTROPOMÉTRICOS</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Talla:</div>
+            <div class="cell span-1"></div>
+            <div class="cell span-1 small">cm</div>
+            <div class="cell span-2 small">Peso al ingreso:</div>
+            <div class="cell span-1"></div>
+            <div class="cell span-1 small">kg</div>
+            <div class="cell span-2 small">IMC:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold bg-alert-yellow">ALERGIAS:</div>
+            <div class="cell span-10 bg-alert-yellow"></div>
+        </div>
+
+        <div class="section-title">C. GRÁFICA DE TEMPERATURA (35-41°C)</div>
+        <div class="chart-container">
+            <div class="chart-grid">
+                <div class="chart-cell chart-header">DÍA</div>
+                <div class="chart-cell chart-header">1</div>
+                <div class="chart-cell chart-header">2</div>
+                <div class="chart-cell chart-header">3</div>
+                <div class="chart-cell chart-header">4</div>
+                <div class="chart-cell chart-header">5</div>
+                <div class="chart-cell chart-header">6</div>
+                <div class="chart-cell chart-header">7</div>
+                <div class="chart-cell chart-header">8</div>
+                <div class="chart-cell chart-header">9</div>
+                <div class="chart-cell chart-header">M</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">T</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">N</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+            </div>
+        </div>
+
+        <div class="section-title">D. GRÁFICA DE PULSO (40-160 lpm)</div>
+        <div class="chart-container">
+            <div class="chart-grid">
+                <div class="chart-cell chart-header">DÍA</div>
+                <div class="chart-cell chart-header">1</div>
+                <div class="chart-cell chart-header">2</div>
+                <div class="chart-cell chart-header">3</div>
+                <div class="chart-cell chart-header">4</div>
+                <div class="chart-cell chart-header">5</div>
+                <div class="chart-cell chart-header">6</div>
+                <div class="chart-cell chart-header">7</div>
+                <div class="chart-cell chart-header">8</div>
+                <div class="chart-cell chart-header">9</div>
+                <div class="chart-cell chart-header">M</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">T</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">N</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+            </div>
+        </div>
+
+        <div class="section-title">E. GRÁFICA DE PRESIÓN ARTERIAL (60-200 mmHg)</div>
+        <div class="chart-container">
+            <div class="chart-grid">
+                <div class="chart-cell chart-header">DÍA</div>
+                <div class="chart-cell chart-header">1</div>
+                <div class="chart-cell chart-header">2</div>
+                <div class="chart-cell chart-header">3</div>
+                <div class="chart-cell chart-header">4</div>
+                <div class="chart-cell chart-header">5</div>
+                <div class="chart-cell chart-header">6</div>
+                <div class="chart-cell chart-header">7</div>
+                <div class="chart-cell chart-header">8</div>
+                <div class="chart-cell chart-header">9</div>
+                <div class="chart-cell chart-header">M</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">T</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">N</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+            </div>
+        </div>
+
+        <div class="section-title">F. GRÁFICA DE FRECUENCIA RESPIRATORIA (10-40 rpm)</div>
+        <div class="chart-container">
+            <div class="chart-grid">
+                <div class="chart-cell chart-header">DÍA</div>
+                <div class="chart-cell chart-header">1</div>
+                <div class="chart-cell chart-header">2</div>
+                <div class="chart-cell chart-header">3</div>
+                <div class="chart-cell chart-header">4</div>
+                <div class="chart-cell chart-header">5</div>
+                <div class="chart-cell chart-header">6</div>
+                <div class="chart-cell chart-header">7</div>
+                <div class="chart-cell chart-header">8</div>
+                <div class="chart-cell chart-header">9</div>
+                <div class="chart-cell chart-header">M</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">T</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell chart-header">N</div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+                <div class="chart-cell"></div>
+            </div>
+        </div>
+
+        <div class="section-title">G. TABLA DE DATOS ADICIONALES</div>
+        <div class="grid-container">
+            <div class="cell span-1 small bold center bg-gray">DÍA</div>
+            <div class="cell span-3 small bold center bg-gray">PESO (kg)</div>
+            <div class="cell span-4 small bold center bg-gray">SAT O2 (%)</div>
+            <div class="cell span-4 small bold center bg-gray">GLUCEMIA (mg/dl)</div>
+            
+            <div class="cell span-1 center">1</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">2</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">3</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">4</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">5</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">6</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">7</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">8</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+            
+            <div class="cell span-1 center">9</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-4"></div>
+            <div class="cell span-4"></div>
+        </div>
+
+        <div class="section-title">H. OBSERVACIONES</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 1.5cm;"></div>
+        </div>
+
+        <div class="section-title">I. RESPONSABLES POR TURNO</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Turno Mañana (M):</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-3 small">Turno Tarde (T):</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-3 small">Turno Noche (N):</div>
+            <div class="cell span-3"></div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F009 v1.0</div>
+            <div>Página 1 de 1</div>
+        </div>
+    </div>
+</body>
+</html>

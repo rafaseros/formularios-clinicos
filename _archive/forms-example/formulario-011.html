@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F011 Administración Medicamentos</title>
+    <style>
+        /* CONFIGURACIÓN DE PÁGINA HORIZONTAL */
+        @page {
+            size: Letter landscape; 
+            margin: 0.5cm 1.0cm 0.5cm 3.0cm; /* Margen Izq 3.0cm para archivado */
+        }
+
+        body {
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            font-size: 8pt;
+            margin: 0;
+            padding: 0;
+            -webkit-print-color-adjust: exact;
+            box-sizing: border-box;
+        }
+
+        .page-container {
+            width: 100%;
+            height: 18.5cm; /* Altura segura */
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 2px;
+            margin-bottom: 5px;
+            height: 1.8cm;
+        }
+
+        /* DATOS PACIENTE */
+        .patient-box {
+            display: flex;
+            border: 1px solid #000;
+            margin-bottom: 5px;
+            background-color: #f5f5f5;
+            padding: 2px;
+        }
+        .p-field {
+            padding: 2px 5px;
+            border-right: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+        }
+        .p-label { font-weight: bold; margin-right: 5px; }
+
+        /* TABLA PRINCIPAL */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.5pt;
+        }
+
+        th {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 2px;
+            text-align: center;
+            font-weight: bold;
+            height: 0.8cm;
+        }
+
+        td {
+            border: 1px solid #000;
+            height: 0.75cm; /* Altura para firmar/inicial */
+            text-align: center;
+            padding: 0;
+        }
+
+        /* ANCHOS DE COLUMNA */
+        .col-med { width: 20%; text-align: left; padding-left: 5px; } /* Nombre Medicamento */
+        .col-info { width: 5%; } /* Dosis/Via */
+        .col-dia { width: 10.7%; } /* Bloque de 1 día */
+        
+        /* SUB-COLUMNAS TURNO */
+        .sub-turn {
+            width: 33.33%;
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px dotted #999;
+        }
+        .sub-turn:last-child { border-right: none; }
+
+        /* FONDOS TURNO */
+        .th-m { background-color: #e3f2fd; } /* Azul suave */
+        .th-t { background-color: #f1f8e9; } /* Verde suave */
+        .th-n { background-color: #ffebee; } /* Rojo suave */
+
+        /* FOOTER */
+        .footer {
+            margin-top: auto;
+            border-top: 1px solid #000;
+            padding-top: 2px;
+            font-size: 7pt;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+
+        <div class="header">
+            <div style="display: flex; align-items: center;">
+                <img src="logo.png" style="height: 35px; margin-right: 10px;">
+                <div>
+                    <div style="font-size: 14pt; font-weight: bold;">HOJA DE ADMINISTRACIÓN DE MEDICAMENTOS</div>
+                    <div style="font-size: 9pt;">CONTROL SEMANAL DE TRATAMIENTO</div>
+                </div>
+            </div>
+            <div style="text-align: right; border: 1px solid #000; padding: 2px 5px;">
+                <b>CÓDIGO:</b> PGB-F011 v1.0<br>
+                <b>SEMANA DEL:</b> ____ AL ____
+            </div>
+        </div>
+
+        <div class="patient-box">
+            <div class="p-field" style="width: 40%;"><span class="p-label">PACIENTE:</span> </div>
+            <div class="p-field" style="width: 15%;"><span class="p-label">EDAD:</span> </div>
+            <div class="p-field" style="width: 15%;"><span class="p-label">CAMA:</span> </div>
+            <div class="p-field" style="width: 30%; border: none;"><span class="p-label">ALERGIAS:</span> </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2" class="col-med">MEDICAMENTO<br><span style="font-weight:normal; font-size:7pt;">(Nombre Genérico, Concentración)</span></th>
+                    <th rowspan="2" class="col-info">DOSIS<br>VÍA</th>
+                    <th rowspan="2" class="col-info">HORARIO</th>
+                    
+                    <th colspan="3">LUNES / DÍA 1<br>Fecha: ___/___</th>
+                    <th colspan="3">MARTES / DÍA 2<br>Fecha: ___/___</th>
+                    <th colspan="3">MIÉRCOLES / DÍA 3<br>Fecha: ___/___</th>
+                    <th colspan="3">JUEVES / DÍA 4<br>Fecha: ___/___</th>
+                    <th colspan="3">VIERNES / DÍA 5<br>Fecha: ___/___</th>
+                    <th colspan="3">SÁBADO / DÍA 6<br>Fecha: ___/___</th>
+                    <th colspan="3">DOMINGO / DÍA 7<br>Fecha: ___/___</th>
+                </tr>
+                <tr>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                    <th class="th-m">M</th><th class="th-t">T</th><th class="th-n">N</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+                <tr><td class="col-med"></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td> <td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 5px; border: 1px solid #000; display: flex; font-size: 7pt;">
+            <div style="width: 15%; background-color: #e0e0e0; display: flex; align-items: center; justify-content: center; font-weight: bold; border-right: 1px solid #000;">
+                RESPONSABLES<br>DE ENFERMERÍA
+            </div>
+            
+            <div style="flex-grow: 1; border-right: 1px solid #000;">
+                <div style="border-bottom: 1px solid #000; background-color: #e3f2fd; text-align: center;">TURNO MAÑANA</div>
+                <div style="display: flex; height: 1.2cm;">
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%;"></div>
+                </div>
+            </div>
+
+            <div style="flex-grow: 1; border-right: 1px solid #000;">
+                <div style="border-bottom: 1px solid #000; background-color: #f1f8e9; text-align: center;">TURNO TARDE</div>
+                <div style="display: flex; height: 1.2cm;">
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%;"></div>
+                </div>
+            </div>
+
+            <div style="flex-grow: 1;">
+                <div style="border-bottom: 1px solid #000; background-color: #ffebee; text-align: center;">TURNO NOCHE</div>
+                <div style="display: flex; height: 1.2cm;">
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%; border-right: 1px dotted #ccc;"></div>
+                    <div style="width: 14%;"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div><b>LEYENDA:</b> M=Mañana (07-13) | T=Tarde (13-19) | N=Noche (19-07)</div>
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>Página 1 de 1</div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F007 Nota de Ingreso Médica</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #1F4E79; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #1F4E79; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+        h2 { background-color: #E0E0E0; padding: 5px 10px; border-left: 5px solid #1F4E79; font-size: 11pt; margin-top: 15px; page-break-after: avoid; }
+        .instruction-box { display: grid; grid-template-columns: 150px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .field-desc { font-size: 9.5pt; }
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffebee; padding: 2px 5px; border-radius: 3px; }
+        .example { color: #1565c0; font-style: italic; font-size: 9pt; }
+        .general-rules { background-color: #fff3e0; border: 1px solid #ffe0b2; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt; }
+        .general-rules ul { margin: 5px 0 0 20px; padding: 0; }
+        .legal-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-top: 10px; }
+        .legal-table th { background-color: #1F4E79; color: white; padding: 5px; text-align: left; }
+        .legal-table td { border: 1px solid #ddd; padding: 5px; vertical-align: top; }
+        .footer { margin-top: 30px; font-size: 8pt; text-align: center; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+        .checklist { background-color: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-top: 10px; font-size: 9pt; }
+        .checklist ul { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F007 "Nota de Ingreso Médica"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-007<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras.</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar "---".</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F007</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.0</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">2</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Médico</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tiempo estimado</div>
+        <div class="field-desc">15-30 minutos</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        Es el <b>PRIMER documento médico</b> del expediente. Se diferencia de:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li><b>F002:</b> Es administrativo; F007 es valoración médica</li>
+        <li><b>F006:</b> Es completa (4 páginas); F007 es rápida e inicial</li>
+        <li><b>F008:</b> Es evaluación detallada; F007 es screening</li>
+    </ul>
+    <p style="font-size: 9pt; color: #1565c0; font-weight: bold;">
+        SECUENCIA: F007 → F006 → F008
+    </p>
+
+    <h2>3. INSTRUCCIONES DE LLENADO</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: EVALUACIÓN INICIAL</h3>
+    <div class="instruction-box">
+        <div class="field-name">Estado de conciencia</div>
+        <div class="field-desc">Evaluar nivel de alerta. <span class="example">Ejemplo: Alerta</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Orientación</div>
+        <div class="field-desc">Tiempo, espacio, persona. <span class="example">Ejemplo: Orientado x3</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Signos de intoxicación</div>
+        <div class="field-desc">Observar signos específicos. <span class="example">Ejemplo: ☒ No presenta</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Signos de abstinencia</div>
+        <div class="field-desc">Temblor, sudoración, ansiedad. <span class="example">Ejemplo: ☐ Leve</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Ideación suicida</div>
+        <div class="field-desc">Preguntar directamente. <span class="example">Ejemplo: ☐ No presenta</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN G: NIVEL DE VIGILANCIA</h3>
+    <div class="instruction-box">
+        <div class="field-name">Rutina</div>
+        <div class="field-desc">Sin riesgos identificados. Frecuencia control: Cada 8 horas.</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Especial</div>
+        <div class="field-desc">Riesgo de abstinencia. Frecuencia control: Cada 4 horas.</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Intensivo</div>
+        <div class="field-desc">Riesgo alto (suicida/convulsivo). Frecuencia control: Cada 1-2 horas.</div>
+    </div>
+
+    <h2>4. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            NOTA DE INGRESO MÉDICA<br>
+            PGB-F007 v1.0
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>PÁGINA 1 - SECCIÓN A: IDENTIFICACIÓN</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Fecha de ingreso: <u>15/12/2025</u>   Hora: <u>14:30</u><br>
+            Nombre del paciente: <u>Carlos Alberto Huarachi Apaza</u><br>
+            Edad: <u>34</u> años     C.I.: <u>8523614</u>  Ext.: <u>CBBA</u>
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN B: EVALUACIÓN INICIAL</b><br>
+            Motivo de ingreso:<br>
+            <div style="border: 1px solid #000; padding: 3px; min-height: 0.8cm; background-color: white;">
+                <u>Dependencia a múltiples sustancias. Paciente refiere deseo de rehabilitación voluntaria. Último consumo hace 5 días.</u>
+            </div>
+            Estado de conciencia: ☒Lúcido  ☐Confuso  ☐Estuporoso  ☐Coma<br>
+            Orientación: ☒Persona  ☒Lugar  ☒Tiempo  ☐Desorientado<br>
+            Signos de intoxicación: ☐ Sí  ☒ No     Signos de abstinencia: ☒ Sí  ☐ No<br>
+            Ideación suicida: ☐ Sí  ☒ No
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN C: SIGNOS VITALES</b><br>
+            Presión arterial: <u>130/85</u> mmHg     Frecuencia cardíaca: <u>88</u> lpm<br>
+            Frecuencia respiratoria: <u>18</u> rpm     Temperatura: <u>36.5</u> °C<br>
+            Saturación O2: <u>98</u> %     Peso: <u>72</u> kg     Talla: <u>175</u> cm     IMC: <u>23.5</u>
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN D: EXAMEN FÍSICO BREVE</b><br>
+            Aspecto general: <u>Paciente consciente, colaborador, buen estado general</u><br>
+            Piel y mucosas: <u>Normocoloreado, sin lesiones aparentes</u><br>
+            Cabeza y cuello: <u>Sin alteraciones</u><br>
+            Tórax: <u>Ruidos cardíacos rítmicos, murmullo vesicular conservado</u><br>
+            Abdomen: <u>Blando, depresible, sin dolor a la palpación</u><br>
+            Extremidades: <u>Sin alteraciones</u><br>
+            Neurológico breve: <u>Reflejos presentes y simétricos, fuerza conservada</u>
+        </div>
+        
+        <div style="margin-top: 10px; border-top: 1px solid #000; padding-top: 8px;">
+            <b>PÁGINA 2 - SECCIÓN E: ANTECEDENTES RELEVANTES</b><br>
+            Alergias:<br>
+            <div style="border: 1px solid #000; padding: 3px; min-height: 0.5cm; background-color: white;">
+                <u>Penicilina, AINEs</u>
+            </div>
+            Medicamentos actuales:<br>
+            <div style="border: 1px solid #000; padding: 3px; min-height: 0.5cm; background-color: white;">
+                <u>Ninguno</u>
+            </div>
+            Enfermedades crónicas:<br>
+            <div style="border: 1px solid #000; padding: 3px; min-height: 0.5cm; background-color: white;">
+                <u>Hipertensión arterial controlada</u>
+            </div>
+            Última sustancia: <u>Cocaína</u>     Tiempo desde último uso: <u>5 días</u>
+        </div>
+        
+        <div style="margin-top: 6px;">
+            <b>SECCIÓN F: DIAGNÓSTICO INICIAL</b><br>
+            Diagnóstico presuntivo: <u>F14.2 - Dependencia a cocaína</u><br>
+            Código CIE-10: <u>F14.2</u>
+        </div>
+        
+        <div style="margin-top: 6px;">
+            <b>SECCIÓN G: PLAN DE MANEJO INMEDIATO</b><br>
+            Observaciones:<br>
+            <div style="border: 1px solid #000; padding: 3px; min-height: 1cm; background-color: white;">
+                <u>Iniciar protocolo de desintoxicación. Monitoreo de signos vitales cada 4 horas. Valoración psicológica programada para mañana.</u>
+            </div>
+            Nivel de vigilancia: ☐Rutinario  ☒Moderado  ☐Intensivo
+        </div>
+        
+        <div style="margin-top: 8px;">
+            <b>FIRMA Y SELLO DEL MÉDICO</b><br>
+            Nombre: <u>Dr. Roberto Méndez Quiroga</u>     Matrícula: <u>54321</u><br>
+            Firma: ___________________     Sello: [SELLO]
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F007 v1.0 | Página 2 de 2
+        </div>
+    </div>
+
+    <h2>5. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar hora de ingreso</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Dificulta cálculo de estadías</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Registrar siempre fecha y hora</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No evaluar estado de conciencia</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Riesgo para el paciente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre evaluar al ingreso</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Signos vitales incompletos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información insuficiente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Registrar todos los signos vitales</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar alergias</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Riesgo de reacciones adversas</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre preguntar y registrar</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Diagnóstico sin código CIE-10</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento incompleto</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre incluir código CIE-10</td>
+        </tr>
+    </table>
+
+    <h2>6. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Datos de identificación completos</li>
+            <li>Evaluación inicial completa</li>
+            <li>Signos vitales registrados</li>
+            <li>Examen físico breve documentado</li>
+            <li>Antecedentes relevantes (alergias, medicamentos, enfermedades crónicas)</li>
+            <li>Diagnóstico inicial con código CIE-10</li>
+            <li>Plan de manejo inmediato establecido</li>
+            <li>Nivel de vigilancia determinado</li>
+            <li>Firma y sello del médico</li>
+            <li>Matrícula profesional registrada</li>
+        </ul>
+    </div>
+
+    <h2>7. BASE NORMATIVA Y LEGAL</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>D.S. 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 12: Define contenido del expediente clínico.</td>
+                <td>Art. 12</td>
+            </tr>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Define estructura y contenido de la valoración médica inicial.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>D.S. 25235</b><br>Reglamento Ley del Medicamento</td>
+                <td>Art. 1: Reconocimiento de clasificaciones CIE-10 para diagnósticos.</td>
+                <td>Art. 1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.0 | Enero 2026
+    </div>
+</body>
+</html>

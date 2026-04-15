@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F008 Evaluación Psicofísica</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            max-height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+            overflow: hidden;
+        }
+        @media print {
+            .page:last-of-type {
+                page-break-after: avoid !important;
+            }
+            body {
+                height: auto;
+            }
+            html, body {
+                height: auto !important;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <!-- PÁGINA 1 -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F008 v1.0<br>
+                <b>Nº Historia Clínica:</b> ___________<br>
+                <b>Hoja:</b> 1 / 2
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; margin: 5px 0; padding: 3px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">EVALUACIÓN PSICOFÍSICA</div>
+
+        <div class="section-title">A. IDENTIFICACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nº Historia Clínica:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Fecha:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-1 small">Hora:</div>
+            <div class="cell span-1 center">___:___</div>
+
+            <div class="cell span-2 small">Apellidos y Nombres:</div>
+            <div class="cell span-10"></div>
+
+            <div class="cell span-1 small">Edad:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">años</div>
+            <div class="cell span-2 small">Sexo:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>M <span class="checkbox"></span>F</div>
+            <div class="cell span-4"></div>
+        </div>
+
+        <div class="section-title">B. EVALUACIÓN FÍSICA - ANTECEDENTES</div>
+        <div class="grid-container">
+            <div class="cell span-4 small">¿Tiene alguna enfermedad?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">¿Toma medicamentos?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-4 small">¿Tiene alergias?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">¿Ha sido operado?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-4 small">¿Ha tenido convulsiones?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">¿Tiene diabetes?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-4 small">¿Tiene hipertensión?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">¿Tiene VIH/SIDA?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-4 small">¿Tiene hepatitis?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">¿Tiene tuberculosis?</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-3 small">Detalle si SÍ:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+        </div>
+
+        <div class="section-title">C. EXAMEN DEL ESTADO MENTAL</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Apariencia:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Descuidado <span class="checkbox"></span>Extraño <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Actitud:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Colaborador <span class="checkbox"></span>Hostil <span class="checkbox"></span>Resistente <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Psicomotricidad:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Agitado <span class="checkbox"></span>Retardado <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Lenguaje:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Pobre <span class="checkbox"></span>Prolijo <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Afecto:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Eutímico <span class="checkbox"></span>Depresivo <span class="checkbox"></span>Eufórico <span class="checkbox"></span>Irritable <span class="checkbox"></span>Aplanado</div>
+
+            <div class="cell span-3 small">Pensamiento - curso:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Acelerado <span class="checkbox"></span>Retardado <span class="checkbox"></span>Desorganizado</div>
+
+            <div class="cell span-3 small">Pensamiento - contenido:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Ideas delirantes <span class="checkbox"></span>Obsesiones <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Percepción:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Alucinaciones <span class="checkbox"></span>Ilusiones <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Orientación:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Persona <span class="checkbox"></span>Lugar <span class="checkbox"></span>Tiempo <span class="checkbox"></span>Desorientado</div>
+
+            <div class="cell span-3 small">Memoria:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Alterada reciente <span class="checkbox"></span>Alterada remota <span class="checkbox"></span>Amnésico</div>
+
+            <div class="cell span-3 small">Atención:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Distraído <span class="checkbox"></span>Hipervigilante <span class="checkbox"></span>Otro: ___________</div>
+
+            <div class="cell span-3 small">Inteligencia:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Limitada <span class="checkbox"></span>Superior</div>
+
+            <div class="cell span-3 small">Juicio:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Alterado <span class="checkbox"></span>Ausente</div>
+
+            <div class="cell span-3 small">Introspección:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Buena <span class="checkbox"></span>Parcial <span class="checkbox"></span>Ausente</div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F008 v1.0</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page" style="page-break-after: avoid !important; max-height: 24.5cm; overflow: hidden;">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">EVALUACIÓN PSICOFÍSICA (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 2 / 2
+            </div>
+        </div>
+
+        <div class="section-title">D. EVALUACIÓN DE RIESGO</div>
+        <div class="grid-container">
+            <div class="cell span-4 small">Ideas suicidas:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">Intentos previos:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-4 small">Ideas de daño a otros:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-4 small">Riesgo de convulsiones:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+        </div>
+
+        <div class="section-title" style="margin-top: 3px;">E. OBSERVACIONES</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 1.5cm;"></div>
+
+            <div class="cell span-3 small">Impresión general:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Normal <span class="checkbox"></span>Leve alteración <span class="checkbox"></span>Moderada alteración <span class="checkbox"></span>Severa alteración</div>
+        </div>
+
+        <div class="section-title" style="margin-top: 3px;">F. DECLARACIÓN JURADA</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 1.2cm; font-size: 8pt; text-align: justify; padding: 5px;">
+                Declaro bajo juramento que la información proporcionada en esta evaluación es veraz y completa. 
+                Entiendo que la información falsa puede tener consecuencias legales y médicas.
+            </div>
+        </div>
+
+        <div style="margin-top: 3px;">
+            <div class="signatures-container">
+                <div class="signature-paciente" style="min-height: 2.0cm;">
+                    <div class="signature-title">FIRMA</div>
+                    <div class="signature-subtitle">PACIENTE</div>
+                    <div class="signature-fields">
+                        <div class="fingerprint-box"></div>
+                        <div class="signature-line">
+                            <div class="signature-field">Nombre: ___________________________</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="signature-tutor" style="min-height: 2.0cm;">
+                    <div class="signature-title">FIRMA</div>
+                    <div class="signature-subtitle">FAMILIAR / TESTIGO</div>
+                    <div class="signature-fields">
+                        <div class="fingerprint-box"></div>
+                        <div class="signature-line">
+                            <div class="signature-field">Nombre: ___________________________</div>
+                            <div class="signature-field">C.I.: _____________________________</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 3px;">G. FIRMA DEL EVALUADOR</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nombre:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Profesión:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-3 small">Matrícula:</div>
+            <div class="cell span-3"></div>
+
+            <div class="cell span-3 small">Hora de cierre:</div>
+            <div class="cell span-3 center">___:___</div>
+            <div class="cell span-6"></div>
+        </div>
+
+        <div style="margin-top: 3px;">
+            <div class="signature-medico" style="min-height: 2.5cm;">
+                <div class="signature-title">FIRMA Y SELLO</div>
+                <div class="signature-subtitle">EVALUADOR</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Profesión: ________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" style="margin-top: auto; flex-shrink: 0;">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F008 v1.0</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+    
+    <style>
+        @media print {
+            body > div:last-child {
+                page-break-after: avoid !important;
+            }
+            .page:last-child {
+                page-break-after: avoid !important;
+            }
+        }
+    </style>
+</body>
+</html>

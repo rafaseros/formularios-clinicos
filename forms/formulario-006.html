@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F006 Historia Clínica</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 3px 5px;
+            font-weight: bold;
+            font-size: 9pt;
+            margin-top: 5px;
+            text-transform: uppercase;
+        }
+        .critical-section {
+            background-color: #ffebee;
+            border: 2px solid #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <!-- PÁGINA 1 -->
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F006 v1.0<br>
+                <b>Nº Historia Clínica:</b> ___________<br>
+                <b>Hoja:</b> 1 / 4
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 14pt; margin: 10px 0; padding: 5px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">HISTORIA CLÍNICA</div>
+
+        <div class="section-title">A. DATOS DE IDENTIFICACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Nº Historia Clínica:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Fecha elaboración:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-1 small">Hora:</div>
+            <div class="cell span-1 center">___:___</div>
+
+            <div class="cell span-2 small">Apellido Paterno:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Apellido Materno:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-2 small">Nombres:</div>
+            <div class="cell span-10"></div>
+
+            <div class="cell span-2 small">Fecha Nacimiento:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-1 small">Edad:</div>
+            <div class="cell span-1"></div>
+            <div class="cell span-2 small">C.I.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">Ext.:</div>
+            <div class="cell span-1"></div>
+
+            <div class="cell span-2 small">Sexo:</div>
+            <div class="cell span-2 small"><span class="checkbox"></span>M <span class="checkbox"></span>F</div>
+            <div class="cell span-2 small">Grupo Sanguíneo:</div>
+            <div class="cell span-6 small"><span class="checkbox"></span>O+ <span class="checkbox"></span>O- <span class="checkbox"></span>A+ <span class="checkbox"></span>A- <span class="checkbox"></span>B+ <span class="checkbox"></span>B- <span class="checkbox"></span>AB+ <span class="checkbox"></span>AB-</div>
+        </div>
+
+        <div class="section-title">B. ANTECEDENTES PERSONALES NO PATOLÓGICOS</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Lugar de nacimiento:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Escolaridad:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-2 small">Ocupación:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Estado civil:</div>
+            <div class="cell span-4 small"><span class="checkbox"></span>Solt <span class="checkbox"></span>Cas <span class="checkbox"></span>Conv <span class="checkbox"></span>Div <span class="checkbox"></span>Viudo</div>
+
+            <div class="cell span-2 small">Religión:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Vivienda:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-2 small">Alimentación:</div>
+            <div class="cell span-5"></div>
+            <div class="cell span-2 small">Sueño:</div>
+            <div class="cell span-3"></div>
+        </div>
+
+        <div class="section-title">C. ANTECEDENTES FAMILIARES</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Padre - patologías:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Madre - patologías:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Hermanos - patologías:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Abuelos - patologías:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Antec. adicciones familia:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Antec. psiquiátricos fam:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Antec. suicidio familia:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F006 v1.0</div>
+            <div>Página 1 de 4</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">HISTORIA CLÍNICA (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 2 / 4
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 5px;">D. ANTECEDENTES PATOLÓGICOS</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Enfermedades previas:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small bold">Cirugías:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small bold">Hospitalizaciones:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small bold">Traumatismos:</div>
+            <div class="cell span-9 text-area" style="min-height: 0.8cm;"></div>
+
+            <div class="cell span-3 small bold">Alergias:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small">Transfusiones:</div>
+            <div class="cell span-9"></div>
+        </div>
+
+        <div class="section-title" style="margin-top: 5px;">E. MEDICAMENTOS Y ENFERMEDADES CRÓNICAS</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Enfermedades crónicas:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small bold">Medicamentos actuales:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+        </div>
+
+        <div class="section-title" style="margin-top: 5px;">F. FACTORES DE RIESGO</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Tabaquismo:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-3 small">Alcoholismo:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+
+            <div class="cell span-3 small">Drogas:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-3 small">Sedentarismo:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+        </div>
+
+        <div class="section-title critical-section" style="margin-top: 5px;">G. HISTORIA DE CONSUMO DE SUSTANCIAS ⚠️ SECCIÓN CRÍTICA</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Edad de inicio:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">años</div>
+            <div class="cell span-3 small">Sustancia de inicio:</div>
+            <div class="cell span-2"></div>
+
+            <div class="cell span-3 small">Sustancia principal:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Vía de administración:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Inhalada <span class="checkbox"></span>Fumada <span class="checkbox"></span>Inyectada <span class="checkbox"></span>Oral <span class="checkbox"></span>Otra: ___________</div>
+
+            <div class="cell span-3 small">Patrón de consumo:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Frecuencia:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Cantidad:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Última vez que consumió:</div>
+            <div class="cell span-3 center">___/___/______</div>
+            <div class="cell span-2 small">Hora aprox.:</div>
+            <div class="cell span-2 center">___:___</div>
+            <div class="cell span-2 small">Tiempo de consumo:</div>
+            <div class="cell span-12"></div>
+
+            <div class="cell span-3 small">Sínd. de abstinencia:</div>
+            <div class="cell span-3 small"><span class="checkbox"></span>Sí <span class="checkbox"></span>No</div>
+            <div class="cell span-6 small">Si Sí, describir:</div>
+
+            <div class="cell span-12 text-area" style="min-height: 1.2cm;"></div>
+
+            <div class="cell span-3 small bold">Tratamientos previos:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+
+            <div class="cell span-3 small bold">Número de recaídas:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-3 small bold">Complicaciones médicas:</div>
+            <div class="cell span-4"></div>
+
+            <div class="cell span-3 small bold">Otras sustancias:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.0cm;"></div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F006 v1.0</div>
+            <div>Página 2 de 4</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 3 -->
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">HISTORIA CLÍNICA (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 3 / 4
+            </div>
+        </div>
+
+        <div class="section-title">H. MOTIVO DE INTERNACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Motivo de consulta:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;"></div>
+
+            <div class="cell span-3 small">Referido por:</div>
+            <div class="cell span-9"></div>
+        </div>
+
+        <div class="section-title">I. ENFERMEDAD ACTUAL</div>
+        <div class="grid-container">
+            <div class="cell span-12 text-area" style="min-height: 3.0cm;"></div>
+        </div>
+
+        <div class="section-title">J. EXAMEN FÍSICO</div>
+        <div class="grid-container">
+            <div class="cell span-12 small bold center bg-gray">SIGNOS VITALES</div>
+            <div class="cell span-2 small bold">PA:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">FC:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">FR:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">Temp:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">Sat O2:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">Peso:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">Talla:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small bold">IMC:</div>
+            <div class="cell span-2"></div>
+        </div>
+
+        <div class="grid-container" style="margin-top: 5px;">
+            <div class="cell span-12 small bold center bg-light-gray">EXAMEN GENERAL</div>
+            <div class="cell span-12 text-area" style="min-height: 1.8cm;"></div>
+        </div>
+
+        <div class="grid-container" style="margin-top: 5px;">
+            <div class="cell span-12 small bold center bg-light-gray">EXAMEN POR SISTEMAS</div>
+            <div class="cell span-12 text-area" style="min-height: 2.5cm;"></div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F006 v1.0</div>
+            <div>Página 3 de 4</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 4 -->
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">HISTORIA CLÍNICA (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 4 / 4
+            </div>
+        </div>
+
+        <div class="section-title">K. DIAGNÓSTICO E IMPRESIÓN CLÍNICA</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Diagnóstico principal:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small">Código CIE-10:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-6"></div>
+
+            <div class="cell span-3 small bold">Diagnósticos secundarios:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;"></div>
+        </div>
+
+        <div class="section-title">L. PLAN DE TRATAMIENTO INICIAL</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Tratamiento farmacológico:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;"></div>
+
+            <div class="cell span-3 small bold">Indicaciones generales:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.5cm;"></div>
+
+            <div class="cell span-3 small bold">Interconsultas:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small bold">Exámenes solicitados:</div>
+            <div class="cell span-9 text-area" style="min-height: 1.2cm;"></div>
+        </div>
+
+        <div class="section-title">M. REGISTRO Y VALIDACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small bold">Nombre del médico:</div>
+            <div class="cell span-9"></div>
+
+            <div class="cell span-3 small bold">Matrícula profesional:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-3 small bold">Especialidad:</div>
+            <div class="cell span-3"></div>
+        </div>
+
+        <div style="margin-top: 15px;">
+            <div class="signature-medico">
+                <div class="signature-title">FIRMA Y SELLO</div>
+                <div class="signature-subtitle">MÉDICO TRATANTE</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                        <div class="signature-field">Especialidad: _____________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F006 v1.0</div>
+            <div>Página 4 de 4</div>
+        </div>
+    </div>
+</body>
+</html>

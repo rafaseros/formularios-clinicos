@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F002 Hoja de Ingreso</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F002 "Hoja de Ingreso"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-002<br>
+            <b>Versión:</b> 1.1
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+            <li><b>Formato:</b> Este formulario consta de DOS páginas diseñadas para imprimirse en UNA SOLA HOJA (Doble faz / Dúplex).</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F002</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">2 (Anverso y Reverso - Dúplex)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Formato</div>
+        <div class="field-desc">Tamaño carta (21.59 × 27.94 cm)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Personal de Admisión</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        La Hoja de Ingreso es el documento administrativo principal que se completa al momento del ingreso del paciente. Este formulario:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Establece la identidad legal del paciente</li>
+        <li>Registra al responsable/tutor legal</li>
+        <li>Documenta el motivo de ingreso</li>
+        <li>Inicia formalmente el expediente clínico</li>
+        <li>Sirve como base para la valoración médica posterior (F007)</li>
+    </ul>
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE:</b> Este formulario se diferencia de:
+        <ul style="margin-top: 5px;">
+            <li><b>F001:</b> F001 es la carátula visible; F002 es el registro administrativo completo</li>
+            <li><b>F007:</b> F002 es administrativo; F007 es valoración médica inicial</li>
+        </ul>
+    </div>
+
+    <h2>3. RESPONSABLES</h2>
+    <ul style="font-size: 9.5pt;">
+        <li><b>Llenado:</b> Personal de Admisión</li>
+        <li><b>Verificación:</b> Supervisor de Admisión</li>
+        <li><b>Validación:</b> Médico de Admisión (firma en página 2)</li>
+    </ul>
+
+    <h2>4. CUÁNDO SE USA</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Momento</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Acción</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al momento del ingreso del paciente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Secciones A, B, C, D y E (Página 1)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Durante la evaluación inicial</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Sección F (Observaciones) si aplica</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al finalizar el proceso de admisión</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Sección G (Validación y Firmas) - Página 2</td>
+        </tr>
+    </table>
+
+    <h2>5. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: IDENTIFICACIÓN</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Debe ser el mismo número asignado en F001. <span class="example">Ejemplo: HC-2025-0042</span>
+            <br><span class="alert">CRÍTICO: Verificar que coincida con F001.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de Ingreso</div>
+        <div class="field-desc">Fecha actual del ingreso en formato DD/MM/AAAA. <span class="example">Ejemplo: 15/12/2025</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Hora de Ingreso</div>
+        <div class="field-desc">
+            Hora exacta de llegada del paciente en formato 24 horas (HH:MM). 
+            <br><span class="example">Ejemplo: 14:30</span>
+            <br><span class="alert">Registrar inmediatamente al llegar para establecer inicio de custodia.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nº de Internación</div>
+        <div class="field-desc">Número correlativo de internación para este paciente. <span class="example">Ejemplo: 1 (primera internación), 2 (segunda internación)</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Datos Personales</div>
+        <div class="field-desc">Apellidos, nombres, fecha de nacimiento, edad - Copiar exactamente según Cédula de Identidad.</div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Lugar de Nacimiento</div>
+        <div class="field-desc">Ciudad y departamento donde nació el paciente. <span class="example">Ejemplo: Cochabamba, Cochabamba</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">
+            Número de carnet. El formulario incluye un campo separado "Ext." para la extensión (departamento de emisión).
+            <br><span class="example">Ejemplo: 8523614 (en campo C.I.) y CBBA (en campo Ext.)</span>
+            <br><span class="alert">OBLIGATORIO: Verificar documento original. No aceptar copias sin verificar original.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Sexo</div>
+        <div class="field-desc">Marcar casilla correspondiente. <span class="example">☒ M  ☐ F</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Estado Civil</div>
+        <div class="field-desc">
+            Marcar la opción correspondiente. Este campo tiene más espacio para acomodar todas las opciones.
+            <br><span class="example">Opciones: Soltero, Casado, Conviviente, Divorciado, Viudo</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Grupo Sanguíneo</div>
+        <div class="field-desc">Si se conoce, marcar la opción correspondiente. <span class="example">Opciones: O+, O-, A+, A-, B+, B-, AB+, AB-</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Ocupación</div>
+        <div class="field-desc">Ocupación actual o última ocupación. <span class="example">Ejemplo: Albañil, Estudiante, Comerciante</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nivel de Instrucción</div>
+        <div class="field-desc">Último nivel educativo completado. <span class="example">Opciones: Ninguno, Primaria, Secundaria, Técnico, Universitario</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: DATOS DE CONTACTO</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Dirección</div>
+        <div class="field-desc">Dirección completa con calle y número. <span class="example">Ejemplo: Av. América #1234</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Zona/Barrio</div>
+        <div class="field-desc">Zona o barrio de residencia. <span class="example">Ejemplo: Zona Sur</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Localidad/Ciudad</div>
+        <div class="field-desc">Ciudad de residencia. <span class="example">Ejemplo: Cochabamba</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Municipio</div>
+        <div class="field-desc">Municipio de residencia (si aplica). <span class="example">Ejemplo: Cercado</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Departamento</div>
+        <div class="field-desc">Departamento de residencia. <span class="example">Ejemplo: Cochabamba</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Teléfono / Celular</div>
+        <div class="field-desc">Números de contacto del paciente. <span class="example">Ejemplo: 4456789 (fijo), 70012345 (celular)</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: RESPONSABLE DEL PACIENTE</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre del Responsable</div>
+        <div class="field-desc">
+            Nombre completo de la persona responsable/tutor legal.
+            <br><span class="example">Ejemplo: María Elena Apaza de Huarachi</span>
+            <br><span class="alert">LEGAL: Obligatorio según D.S. 28562 Art. 14. Debe ser mayor de edad.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">C.I. del Responsable</div>
+        <div class="field-desc">
+            Número de carnet del responsable. El formulario incluye un campo separado "Ext." para la extensión (departamento de emisión).
+            <br><span class="example">Ejemplo: 4512367 (en campo C.I.) y CBBA (en campo Ext.)</span>
+            <br><span class="alert">OBLIGATORIO: Verificar documento original.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Parentesco</div>
+        <div class="field-desc">Relación con el paciente. <span class="example">Ejemplo: Madre, Padre, Cónyuge, Hermano/a, etc.</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Teléfono del Responsable</div>
+        <div class="field-desc">Número de contacto del responsable (preferentemente celular). <span class="example">Ejemplo: 70012345</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Dirección del Responsable</div>
+        <div class="field-desc">Dirección completa del responsable (si es diferente a la del paciente).</div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN D: MOTIVO DE INGRESO</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Motivo de Internación</div>
+        <div class="field-desc">
+            Describir de manera clara y completa el motivo por el cual el paciente ingresa al centro.
+            <br><span class="example">Ejemplo: "Dependencia a múltiples sustancias (cocaína, alcohol). Paciente presenta deseo de rehabilitación voluntaria."</span>
+            <br>Este es un campo de texto libre, use el espacio disponible para ser descriptivo.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Referido por</div>
+        <div class="field-desc">Persona o institución que refirió al paciente. <span class="example">Ejemplo: Familiar directo, Orden judicial, Otro centro de salud</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN E: REGISTRO</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Bloque de Firma</div>
+        <div class="field-desc">
+            El personal de registro debe completar:
+            <ul style="margin-top: 5px;">
+                <li><b>Nombre:</b> Nombre completo del personal que registra</li>
+                <li><b>Cargo:</b> Cargo o función (Ej: Admisión, Enfermería)</li>
+                <li><b>Firma:</b> Firma del personal de registro</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN F: OBSERVACIONES ADICIONALES (Página 2)</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Observaciones</div>
+        <div class="field-desc">
+            Campo para registrar cualquier observación adicional relevante durante el proceso de ingreso.
+            <br>Puede incluir: estado emocional del paciente, condiciones especiales, información relevante de la familia, etc.
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN G: VALIDACIÓN Y FIRMAS (Página 2)</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Bloque Médico</div>
+        <div class="field-desc">
+            El médico de admisión debe completar:
+            <ul style="margin-top: 5px;">
+                <li><b>Nombre:</b> Nombre completo del médico</li>
+                <li><b>Matrícula:</b> Número de matrícula profesional</li>
+                <li><b>Firma:</b> Firma del médico</li>
+                <li><b>Sello:</b> Sello profesional (obligatorio)</li>
+            </ul>
+            <span class="alert">OBLIGATORIO: Firma y sello según D.S. 28562 Art. 6</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Bloque Paciente/Responsable</div>
+        <div class="field-desc">
+            El paciente o responsable debe completar:
+            <ul style="margin-top: 5px;">
+                <li><b>Huella Dactilar:</b> Impresión de la huella (opcional pero recomendado)</li>
+                <li><b>Nombre:</b> Nombre completo</li>
+                <li><b>C.I.:</b> Cédula de identidad</li>
+                <li><b>Firma:</b> Firma de conformidad con el registro</li>
+            </ul>
+            <span class="example">Nota: "(Conformidad con registro)" indica que el firmante está de acuerdo con los datos registrados.</span>
+        </div>
+    </div>
+
+    <h2>6. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            HOJA DE INGRESO<br>
+            PGB-F002 v1.1
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>PÁGINA 1 - SECCIÓN A: IDENTIFICACIÓN</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Fecha de Ingreso: <u>15/12/2025</u><br>
+            Hora de Ingreso: <u>14:30</u>    Nº de Internación: <u>1</u><br>
+            <br>
+            Apellido Paterno: <u>HUARACHI</u>     Apellido Materno: <u>APAZA</u><br>
+            Nombres: <u>Carlos Alberto</u><br>
+            <br>
+            Fecha de Nacimiento: <u>15/03/1990</u>   Edad: <u>34 años</u><br>
+            Lugar de Nacimiento: <u>Cochabamba, Cochabamba</u><br>
+            C.I.: <u>8523614</u>  Ext.: <u>CBBA</u><br>
+            Sexo: ☒ M  ☐ F     Estado Civil: ☐Solt  ☒Cas  ☐Conv  ☐Div  ☐Viudo<br>
+            Grupo Sanguíneo: ☐O+  ☒O-  ☐A+  ☐A-  ☐B+  ☐B-  ☐AB+  ☐AB-<br>
+            Ocupación: <u>Albañil</u><br>
+            Nivel de Instrucción: ☐Ninguno  ☐Primaria  ☒Secundaria  ☐Técnico  ☐Universitario
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN B: DATOS DE CONTACTO</b><br>
+            Dirección: <u>Av. América #1234</u><br>
+            Zona/Barrio: <u>Zona Sur</u>        Localidad/Ciudad: <u>Cochabamba</u>   Municipio: <u>Cercado</u><br>
+            Departamento: <u>Cochabamba</u><br>
+            Teléfono: <u>4456789</u>     Celular: <u>70012345</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN C: RESPONSABLE DEL PACIENTE</b><br>
+            Nombre del Responsable: <u>María Elena Apaza de Huarachi</u><br>
+            C.I. del Responsable: <u>4512367</u>  Ext.: <u>CBBA</u>     Parentesco: <u>Madre</u><br>
+            Teléfono del Responsable: <u>70012345</u><br>
+            Dirección del Responsable: <u>Av. América #1234</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN D: MOTIVO DE INGRESO</b><br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1.5cm; background-color: white;">
+                <u>Dependencia a múltiples sustancias (cocaína, alcohol). Paciente presenta deseo de rehabilitación voluntaria. Refiere consumo diario desde hace 5 años, afectando relaciones familiares y laborales.</u>
+            </div>
+            Referido por: <u>Familiar directo</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN E: REGISTRO</b><br>
+            Nombre: <u>Lic. Ana María López</u>     Cargo: <u>Personal de Admisión</u><br>
+            Firma: ___________________
+        </div>
+        
+        <div style="margin-top: 15px; border-top: 2px solid #000; padding-top: 10px;">
+            <b>PÁGINA 2 - SECCIÓN F: OBSERVACIONES ADICIONALES</b><br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 2cm; background-color: white;">
+                <u>Paciente llegó acompañado de su madre. Se observa estado de ánimo depresivo pero colaborador. No presenta signos de intoxicación aguda. Se le explicó el programa y aceptó participar voluntariamente.</u>
+            </div>
+        </div>
+        
+        <div style="margin-top: 10px;">
+            <b>SECCIÓN G: VALIDACIÓN Y FIRMAS</b><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; vertical-align: top;">
+                        <b>FIRMA Y SELLO - MÉDICO DE ADMISIÓN</b><br>
+                        Nombre: <u>Dr. Roberto Méndez Quiroga</u><br>
+                        Matrícula: <u>54321</u><br>
+                        Firma: ___________________<br>
+                        Sello: [SELLO]
+                    </td>
+                    <td style="border: 1px solid #000; padding: 5px; width: 50%; vertical-align: top;">
+                        <b>FIRMA - PACIENTE / RESPONSABLE</b><br>
+                        (Conformidad con registro)<br>
+                        Huella: [HUELLA]<br>
+                        Nombre: <u>María Elena Apaza de Huarachi</u><br>
+                        C.I.: <u>4512367 CBBA</u><br>
+                        Firma: ___________________
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7.5pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F002 v1.1 | Página 2 de 2
+        </div>
+    </div>
+
+    <h2>7. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No verificar C.I. original</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Identidad incorrecta, problemas legales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre solicitar y verificar documento original</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Hora de ingreso incorrecta</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Dificulta cálculo de estadías, problemas legales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Registrar inmediatamente al llegar, usar reloj oficial</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Responsable sin C.I.</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento inválido legalmente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Es requisito legal obligatorio, no aceptar sin C.I.</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Motivo de ingreso muy breve</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información insuficiente para tratamiento</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Ser descriptivo, incluir contexto relevante</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Falta firma del médico</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento inválido según normativa</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar que médico firme y selle antes de archivar</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Nº Historia Clínica diferente a F001</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Inconsistencia en expediente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar que coincida exactamente con F001</td>
+        </tr>
+    </table>
+
+    <h2>8. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Nº Historia Clínica coincide con F001</li>
+            <li>Fecha y hora de ingreso registradas correctamente</li>
+            <li>Nº de internación asignado</li>
+            <li>Datos del paciente completos según C.I. original</li>
+            <li>C.I. del paciente verificada con documento original</li>
+            <li>Estado civil marcado correctamente</li>
+            <li>Datos de contacto completos y actualizados</li>
+            <li>Responsable identificado con C.I. verificada</li>
+            <li>Parentesco del responsable registrado</li>
+            <li>Teléfono del responsable actualizado</li>
+            <li>Motivo de ingreso descrito de manera completa</li>
+            <li>Referido por registrado (si aplica)</li>
+            <li>Firma del personal de registro completa</li>
+            <li>Observaciones adicionales registradas (si aplica)</li>
+            <li>Firma y sello del médico de admisión presentes</li>
+            <li>Firma del paciente/responsable presente</li>
+            <li>Formulario impreso en dúplex (2 páginas en 1 hoja)</li>
+        </ul>
+    </div>
+
+    <h2>9. INSTRUCCIONES DE IMPRESIÓN (DÚPLEX)</h2>
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE - FORMATO DÚPLEX:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            Este formulario consta de DOS páginas diseñadas para imprimirse en <b>UNA SOLA HOJA</b> (Doble faz / Dúplex).
+        </p>
+        <ul style="margin-top: 5px;">
+            <li><b>Cara A (Anverso - Página 1):</b> Secciones A, B, C, D, E - Datos administrativos y motivo de ingreso</li>
+            <li><b>Cara B (Reverso - Página 2):</b> Secciones F y G - Observaciones y validación con firmas</li>
+        </ul>
+        <p style="margin-top: 5px; color: #d32f2f; font-weight: bold;">
+            NO IMPRIMIR EN HOJAS SEPARADAS para evitar pérdidas de información.
+        </p>
+    </div>
+
+    <h2>10. BASE NORMATIVA Y LEGAL</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Establece la obligatoriedad de registro completo de datos de identificación, contacto y motivo de ingreso al momento de la admisión.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 12: Define contenido del expediente clínico. Art. 14: Regula datos del responsable legal. Art. 6: Exige firma y sello del profesional.</td>
+                <td>Art. 12, 14, 6</td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 3131</b><br>Ejercicio Profesional Médico</td>
+                <td>Art. 8: Derechos del paciente incluyen identificación correcta. Art. 12: Expediente como prueba documental.</td>
+                <td>Art. 8, 12</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>11. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>Dúplex:</b> Impresión en ambas caras de una hoja de papel.</p>
+        <p><b>Expediente Clínico:</b> Conjunto de documentos que contienen el registro de la atención médica de un paciente.</p>
+        <p><b>Responsable Legal:</b> Persona mayor de edad que asume la responsabilidad legal del paciente, generalmente familiar o tutor.</p>
+        <p><b>Tutor:</b> Persona designada legalmente para representar a un menor de edad o persona incapaz.</p>
+        <p><b>Valoración Médica:</b> Evaluación clínica inicial realizada por el médico al momento del ingreso (diferente a este formulario administrativo).</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.1 | Enero 2026
+    </div>
+
+</body>
+</html>

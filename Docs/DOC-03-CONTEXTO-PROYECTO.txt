@@ -1,0 +1,718 @@
+================================================================================
+DOCUMENTO 3: CONTEXTO DEL PROYECTO - NORMATIVA Y BUENAS PRÁCTICAS
+================================================================================
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos - Expediente Clínico SEDES
+================================================================================
+Fecha: Enero 2026
+Versión: 1.0
+================================================================================
+
+
+============================================================
+PARTE I: INFORMACIÓN DEL PROYECTO
+============================================================
+
+1. DATOS GENERALES DEL PROYECTO
+-----------------------------------
+Cliente:        Proyecto Gilead Bolivia
+Programa:       Hombres Nuevos
+Ubicación:      Calle Antofagasta Nº 333, Zona Cruce Taquiña
+Ciudad:         Cochabamba, Bolivia
+Tipo de Centro: Centro de Rehabilitación de Adicciones
+Modelo:         Comunidad Terapéutica con internación prolongada
+
+2. CARACTERÍSTICAS DEL CENTRO
+-----------------------------------
+- Modelo de comunidad terapéutica con internación prolongada
+- Duración del programa: 45-60 días (fase prueba), ~1 año (programa completo)
+- NO recibe pacientes con intoxicación aguda (se refieren a hospital psiquiátrico)
+- Habilitación SEDES específica para:
+  * Consultorio Psiquiátrico
+  * Consultorio Psicológico
+  * Enfermería
+
+3. MOTIVO PRINCIPAL DE HABILITACIÓN
+-----------------------------------
+El centro requiere habilitación SEDES principalmente para el MANEJO DE
+MEDICAMENTOS PSICOTRÓPICOS, lo cual constituye el punto más crítico
+desde el punto de vista regulatorio.
+
+4. OBJETIVO DEL PROYECTO
+-----------------------------------
+Estandarización del expediente clínico para cumplimiento normativo SEDES,
+incluyendo:
+- Corrección de 10 formularios existentes (47 observaciones identificadas)
+- Creación de 6 formularios faltantes obligatorios
+- Sistema completo de control de psicotrópicos
+- Manuales de usuario para cada formulario
+
+5. ÁREAS REGULADAS POR SEDES
+-----------------------------------
+
+ÁREA                    ACTIVIDADES REGULADAS              DOCUMENTACIÓN
+----------------------  ---------------------------------  ------------------
+Consultorio             Evaluación psiquiátrica,           Historia clínica
+Psiquiátrico            diagnóstico CIE-10,                psiquiátrica, receta
+                        prescripción de psicotrópicos,     de psicotrópicos,
+                        seguimiento y ajuste de            notas de evolución,
+                        medicación                         consentimiento
+
+Consultorio             Evaluación psicológica,            Historia clínica
+Psicológico             aplicación de tests,               psicológica, informes
+                        psicoterapia individual,           de tests, notas de
+                        informes de evolución              evolución, plan
+                                                           terapéutico
+
+Enfermería              Control de signos vitales,         Hoja de signos
+                        administración de medicación,      vitales, kardex,
+                        curaciones, inyecciones,           hoja de medicamentos,
+                        toma de muestras                   registro procedim.
+
+MANEJO DE               Prescripción, dispensación,        Libro de psicotrópicos
+PSICOTRÓPICOS           administración y control de        foliado y sellado,
+(CRÍTICO)               medicamentos psicotrópicos         recetas archivadas,
+                        según listas II, III y IV          informes trimestrales
+
+
+============================================================
+PARTE II: MARCO NORMATIVO COMPLETO
+============================================================
+
+1. NORMATIVA GENERAL DE ESTABLECIMIENTOS DE SALUD
+-----------------------------------
+
+LEY Nº 3131 (08/08/2005)
+Ley del Ejercicio Profesional Médico
+
+Artículo   Contenido
+---------  --------------------------------------------------------
+Art. 4     Matrícula profesional obligatoria para ejercer
+Art. 8     Derechos del paciente:
+           a) Derecho a la información
+           b) Derecho a decidir libremente
+           d) Derecho a designar representante
+
+Enlace: https://www.lexivox.org/norms/BO-L-3131.xhtml
+
+-----------------------------------
+
+DECRETO SUPREMO Nº 28562 (22/12/2005)
+Reglamento a la Ley 3131 - Ejercicio Profesional Médico
+
+Artículo   Contenido
+---------  --------------------------------------------------------
+Art. 6     Receta médica: requisitos, firma y sello obligatorios
+Art. 9     Matrícula profesional: requisitos y validez
+Art. 12    Expediente clínico: definición como historia clínica
+           más documentos relacionados. Establece requisitos
+           de registro y contenido obligatorio.
+Art. 14    Consentimiento informado: requisitos y validez.
+           Manifestación de voluntad del paciente o representante,
+           expresada libremente después de información completa.
+
+Enlace: https://www.lexivox.org/norms/BO-DS-28562.html
+
+-----------------------------------
+
+RESOLUCIÓN MINISTERIAL Nº 0090/2008 (26/02/2008)
+Norma Técnica para el Manejo del Expediente Clínico
+
+Artículo   Contenido
+---------  --------------------------------------------------------
+Art. 5.1   Contenido obligatorio del expediente clínico:
+           - Datos de identificación del paciente
+           - Datos de identificación del responsable
+           - Historia clínica completa
+           - Notas de evolución
+           - Resultados de estudios
+           - Hoja de signos vitales
+           - Consentimiento informado
+           - Nota de egreso/epicrisis
+
+Enlace: https://www.minsalud.gob.bo/images/Documentacion/dgss/
+        Area_de_Calidad/64%20Norma%20expediente%20clinico.pdf
+
+-----------------------------------
+
+DECRETO SUPREMO Nº 18886 (15/03/1982)
+Reglamento de Establecimientos de Salud Públicos y Privados
+
+Establece requisitos de habilitación, infraestructura, personal y
+documentación para establecimientos de salud.
+
+Enlace: https://bolivia.infoleyes.com/norma/3433/reglamento-de-
+        establecimientos-de-salud-públicos-y-privados-respp
+
+
+2. NORMATIVA DE MEDICAMENTOS CONTROLADOS
+-----------------------------------
+
+LEY Nº 1737 (17/12/1996)
+Ley del Medicamento
+
+Artículo   Contenido
+---------  --------------------------------------------------------
+Art. 37    Solo médicos/odontólogos matriculados pueden prescribir
+Art. 47    Prescripción de psicotrópicos y estupefacientes según
+           requisitos establecidos
+
+Enlace: https://www.lexivox.org/norms/BO-L-1737.html
+
+-----------------------------------
+
+DECRETO SUPREMO Nº 25235 (30/11/1998)
+Reglamento a la Ley del Medicamento
+
+Artículo       Contenido
+-------------  --------------------------------------------------------
+Art. 1         Reconocimiento de clasificaciones DSM-IV/CIE-10
+Art. 80        Modalidades de expendio:
+               - Receta VALORADA para estupefacientes
+               - Receta ARCHIVADA para psicotrópicos
+Art. 84-86     Libros obligatorios:
+               - Libro de control foliado y sellado por SEDES
+               - Una página por cada medicamento
+               - Registro de todos los movimientos
+Art. 91        Receta archivada - requisitos:
+               - Datos del prescriptor con matrícula
+               - Datos del paciente con C.I.
+               - Domicilio del paciente
+               - Un solo medicamento por receta
+               - Cantidad en letras y números
+               - Duración máxima: 20 DÍAS
+               - Válida máximo 72 horas
+Art. 112-133   Control de sustancias psicotrópicas
+
+Enlace: https://www.lexivox.org/norms/BO-DS-25235.html
+
+-----------------------------------
+
+RESOLUCIÓN MINISTERIAL Nº 0749 (16/12/2003)
+Manual para la Administración de Psicotrópicos y Estupefacientes
+
+Contenido:
+- Procedimientos de previsión e importación
+- Libro de control: formato y requisitos
+- Informes trimestrales: formato, contenido, plazo
+- Fiscalización y auditoría
+- Procedimientos de baja y destrucción
+
+Enlace: https://www.cifabol.org/index.php?option=com_phocadownload
+        &view=category&download=45:26-manual-para-la-administracion-
+        de-psicotropicos-y-estupefacientes&id=3:normativa
+
+
+3. NORMATIVA ESPECÍFICA DE ADICCIONES
+-----------------------------------
+
+LEY Nº 1008 (19/07/1988)
+Ley del Régimen de la Coca y Sustancias Controladas
+
+Artículo   Contenido
+---------  --------------------------------------------------------
+Art. 49    Tratamiento de consumidores: Los consumidores o
+           dependientes que sean denunciados por terceras
+           personas no serán sometidos a proceso penal,
+           quedando la acción jurisdiccional suspendida hasta
+           que el juez declare que ha sido rehabilitado.
+Art. 136   El Estado creará institutos y centros de tratamiento
+           y rehabilitación para fármacodependientes.
+
+-----------------------------------
+
+DECRETO SUPREMO Nº 3434
+Reglamento a la Ley 1008
+
+Establece procedimientos para centros de rehabilitación y
+tratamiento de dependencia a sustancias.
+
+
+4. RESUMEN DE CAMPOS CRÍTICOS POR NORMATIVA
+-----------------------------------
+
+CAMPO                                    RESPALDO NORMATIVO
+---------------------------------------  ---------------------------
+Firma y sello en TODOS los formularios   D.S. 28562 Art. 6
+Matrícula profesional del responsable    D.S. 28562 Art. 6, 9
+                                         Ley 3131 Art. 4
+Nº de Historia Clínica en cada doc.      D.S. 28562 Art. 12
+                                         R.M. 0090/2008 Art. 5.1
+Cédula de Identidad en recetas psico.    D.S. 25235 Art. 91
+Historia de consumo en historia clínica  D.S. 25235 Art. 1
+                                         Ley 1008 Art. 49
+Código CIE-10 en diagnósticos            D.S. 25235 Art. 1
+                                         R.M. 0090/2008
+Libro control psicotrópicos foliado      D.S. 25235 Art. 85-86
+                                         Manual AGEMED
+Informe trimestral SEDES (5 días háb.)   D.S. 25235 Art. 85-86
+                                         Manual AGEMED
+Duración máxima 20 días prescripción     D.S. 25235 Art. 91
+Consentimiento informado firmado         D.S. 28562 Art. 14
+                                         Ley 3131 Art. 8
+
+
+============================================================
+PARTE III: BUENAS PRÁCTICAS PARA FORMULARIOS IMPRESOS
+============================================================
+
+1. ESPECIFICACIONES DE DISEÑO VISUAL
+-----------------------------------
+
+1.1 FORMATO DE PÁGINA
+
+Elemento              Especificación
+--------------------  ---------------------------------------
+Tamaño de página      Letter (8.5" x 11" = 21.59 × 27.94 cm)
+Orientación           Portrait (vertical) por defecto
+                      Landscape (horizontal) para F009 y tablas
+Márgenes estándar     Superior: 2.5 cm
+                      Inferior: 2.5 cm
+                      Derecho: 2.5 cm
+                      Izquierdo: 3.0 cm (para archivador SEDES)
+
+1.2 SISTEMA DE GRILLA
+
+El diseño utiliza un sistema de 12 columnas similar a Bootstrap:
+
+Concepto              Valor
+--------------------  ---------------------------------------
+Columnas base         12
+Ancho útil            16.09 cm (21.59 - 3.0 - 2.5)
+Ancho por celda       1.34 cm (16.09 / 12)
+Alto fila encabezado  0.8 cm
+Alto fila contenido   0.65 cm mínimo
+Alto fila para firmas 2.5 cm mínimo
+
+IMPORTANTE: Cada fila debe sumar EXACTAMENTE 12 columnas.
+
+1.3 TIPOGRAFÍA
+
+Elemento              Especificación
+--------------------  ---------------------------------------
+Fuente principal      Arial o Arial Narrow
+Fuente alternativa    Times New Roman (solo si es requerido)
+Tamaño título         14 pt (fontSizeLarge)
+Tamaño encabezados    12 pt (fontSize)
+Tamaño contenido      10 pt (fontSizeSmall)
+Tamaño pequeño        8 pt (fontSizeXSmall)
+Tamaño pie de página  7 pt
+
+1.4 COLORES
+
+Elemento              Color (Hex)    Uso
+--------------------  ------------   ---------------------------
+Azul institucional    #1F4E79        Encabezados principales
+Gris secciones        #E0E0E0        Fondo de títulos de sección
+Verde enfermería      #2E7D32        Formularios de enfermería
+Púrpura psicología    #6A1B9A        Formularios de psicología
+Naranja operativo     #E65100        Formularios área operativa
+Blanco                #FFFFFF        Fondo principal
+Negro                 #000000        Texto principal
+Gris borde            #808080        Líneas de tabla
+
+
+2. REQUISITOS PARA LLENADO MANUAL
+-----------------------------------
+
+2.1 ALTURA MÍNIMA DE LÍNEAS
+
+Para escritura manual cómoda, las líneas deben tener altura mínima:
+
+Tipo de campo         Altura mínima    Observación
+--------------------  ---------------  ---------------------------
+Texto corto           0.65 cm (6.5mm)  Nombres, números, fechas
+Texto medio           0.8 cm (8mm)     Descripciones breves
+Texto largo           1.0 cm (10mm)    Narraciones, notas
+Área de firma         2.5 cm (25mm)    Espacio para rúbrica
+Área de sello         2.5 × 2.5 cm     Espacio cuadrado
+
+2.2 ANCHO MÍNIMO DE CAMPOS
+
+Tipo de dato          Ancho mínimo     Ejemplo
+--------------------  ---------------  ---------------------------
+Fecha DD/MM/AAAA      3 cm             15/12/2025
+Hora HH:MM            1.5 cm           14:30
+C.I. con extensión    4 cm             8523614 CBBA
+Nombre completo       8-10 cm          Carlos Alberto Huarachi
+Teléfono              3 cm             70012345
+Checkbox              0.5 cm           ☐ o ☒
+
+2.3 ESPACIADO ENTRE ELEMENTOS
+
+- Separación entre campos: mínimo 0.3 cm
+- Margen interno de celdas: 0.15 cm
+- Espacio después de etiqueta: incluir ":" y espacio
+
+
+3. ELEMENTOS OBLIGATORIOS EN CADA FORMULARIO
+-----------------------------------
+
+3.1 ENCABEZADO INSTITUCIONAL
+
++------------------------------------------------------------------+
+| [LOGO]         PROYECTO GILEAD BOLIVIA              [CÓDIGO]     |
+| 2.5x2.5cm      Programa Hombres Nuevos              PGB-FXXX     |
+|                Calle Antofagasta Nº 333                          |
+|                Cruce Taquiña - Cochabamba                        |
+|                Tel: (4) XXXXXXX                                  |
++------------------------------------------------------------------+
+
+Componentes obligatorios:
+- Logo institucional (esquina superior izquierda)
+- Nombre del proyecto
+- Nombre del programa
+- Dirección completa
+- Teléfono de contacto
+- Código del formulario (esquina superior derecha)
+
+3.2 PIE DE PÁGINA
+
++------------------------------------------------------------------+
+| PGB-F001 v1.1  |  Fecha Aprobación: Dic 2025  |  Página X de Y   |
++------------------------------------------------------------------+
+
+Componentes obligatorios:
+- Código y versión del formulario
+- Fecha de aprobación
+- Paginación (si tiene más de 1 página)
+
+3.3 SECCIÓN DE FIRMAS
+
+Cada formulario clínico debe incluir espacio para:
+
++------------------------------------------------------------------+
+| Nombre del profesional: ________________________________________ |
+| Matrícula profesional: _________________________________________ |
+| Especialidad/Cargo: ___________________________________________ |
+|                                                                  |
+| Firma: ____________________    Sello: [       ]                  |
+|         (mín. 4 cm ancho)            (2.5x2.5 cm)                |
++------------------------------------------------------------------+
+
+
+4. CARACTERES ESPECIALES PARA FORMULARIOS
+-----------------------------------
+
+Carácter   Unicode   Descripción        Uso
+---------  --------  -----------------  ---------------------------
+☐          U+2610    Checkbox vacío     Opciones múltiples
+☑          U+2611    Checkbox marcado   Valores pre-seleccionados
+⚠          U+26A0    Advertencia        Alertas médicas (alergias)
+•          U+2022    Viñeta             Listas
+✓          U+2713    Check              Confirmación
+✗          U+2717    X                  Negación
+→          U+2192    Flecha derecha     Indicar flujo
+
+
+5. CODIFICACIÓN DE FORMULARIOS
+-----------------------------------
+
+Código: PGB-FXXX
+
+Donde:
+- PGB = Proyecto Gilead Bolivia
+- F = Formulario
+- XXX = Número secuencial (001-016)
+
+Listado completo:
+PGB-F001  Hoja Frontal del Expediente
+PGB-F002  Hoja de Ingreso
+PGB-F003  Datos Familiares
+PGB-F004  Consentimiento Informado
+PGB-F005  Contrato de Prestación de Servicios
+PGB-F006  Historia Clínica
+PGB-F007  Nota de Ingreso Médica
+PGB-F008  Evaluación Psicofísica
+PGB-F009  Hoja de Signos Vitales
+PGB-F010  Kardex de Enfermería
+PGB-F011  Hoja de Medicamentos
+PGB-F012  Receta Médica Archivada (Psicotrópicos)
+PGB-F013  Libro de Control de Psicotrópicos
+PGB-F014  Hojas de Evolución (A, B, C, D)
+PGB-F015  Epicrisis / Nota de Egreso
+PGB-F016  Informe Psicológico
+
+
+6. CONTROL DE VERSIONES
+-----------------------------------
+
+Formato de versión: X.Y
+
+Donde:
+- X = Versión mayor (cambios estructurales)
+- Y = Versión menor (correcciones, ajustes)
+
+Ejemplo:
+- v1.0 = Primera versión aprobada
+- v1.1 = Corrección de márgenes para archivado
+- v2.0 = Reestructuración completa del formulario
+
+
+7. IMPRESIÓN Y REPRODUCCIÓN
+-----------------------------------
+
+7.1 CONFIGURACIÓN DE IMPRESIÓN
+
+Parámetro             Valor recomendado
+--------------------  ---------------------------------------
+Tamaño de papel       Carta (Letter)
+Orientación           Según formulario (Portrait/Landscape)
+Escala                100% (sin ajustar)
+Márgenes impresora    Mínimos posibles
+Calidad               Alta (300 dpi mínimo)
+Color                 Color preferido, B/N aceptable
+
+7.2 CONSIDERACIONES PARA FOTOCOPIADO
+
+- Los formularios deben ser legibles en blanco y negro
+- Evitar fondos de color muy oscuros
+- Usar contraste alto en texto
+- Los checkboxes deben verse claramente en B/N
+
+7.3 PERFORACIÓN PARA ARCHIVADOR
+
+- Margen izquierdo de 3 cm permite perforación sin afectar contenido
+- Zona de perforación: primeros 2 cm del margen izquierdo
+- No colocar información crítica cerca del borde izquierdo
+
+
+8. CHECKLIST DE VERIFICACIÓN ANTES DE IMPRIMIR
+-----------------------------------
+
+DISEÑO:
+☐ Cada fila suma exactamente 12 columnas
+☐ Margen izquierdo es 3.0 cm (archivador SEDES)
+☐ cellWidth calculado correctamente (1.34 cm)
+☐ Altura de filas apropiada para escritura manual (≥0.65 cm)
+☐ Áreas de firma tienen mínimo 2.5 cm de alto
+☐ Campos obligatorios según SEDES incluidos
+
+FORMATO:
+☐ Archivo guardado con encoding UTF-8
+☐ Caracteres especiales (☐, ⚠) se muestran correctamente
+☐ Logo configurado correctamente
+☐ Paginación incluida en pie de página
+
+METADATOS:
+☐ Código del formulario (PGB-FXXX) asignado
+☐ Versión del formulario actualizada
+☐ Fecha de aprobación actualizada
+
+CONTENIDO:
+☐ Encabezado institucional completo
+☐ Pie de página con código, versión y paginación
+☐ Sección de firmas con espacio para sello
+☐ Campos de matrícula profesional incluidos
+☐ Nº de Historia Clínica en todas las páginas
+
+
+============================================================
+PARTE IV: FLUJO DOCUMENTAL DEL EXPEDIENTE
+============================================================
+
+1. ORDEN DE DOCUMENTOS EN EL EXPEDIENTE
+-----------------------------------
+
+El expediente clínico debe organizarse en el siguiente orden:
+
+PORTADA (siempre visible):
+  └── F001 - Hoja Frontal del Expediente
+
+SECCIÓN 1: DOCUMENTOS ADMINISTRATIVOS
+  ├── F002 - Hoja de Ingreso
+  ├── F003 - Datos Familiares
+  ├── F004 - Consentimiento Informado
+  └── F005 - Contrato de Servicios
+
+SECCIÓN 2: DOCUMENTOS MÉDICOS DE INGRESO
+  ├── F007 - Nota de Ingreso Médica
+  ├── F006 - Historia Clínica
+  └── F008 - Evaluación Psicofísica
+
+SECCIÓN 3: DOCUMENTOS DE SEGUIMIENTO
+  ├── F009 - Hojas de Signos Vitales
+  ├── F010 - Kardex de Enfermería
+  ├── F011 - Hojas de Medicamentos
+  └── F014 - Hojas de Evolución (A, B, C, D)
+
+SECCIÓN 4: DOCUMENTOS DE PSICOTRÓPICOS
+  └── F012 - Recetas Archivadas (copias)
+
+SECCIÓN 5: DOCUMENTOS DE EGRESO
+  ├── F015 - Epicrisis / Nota de Egreso
+  └── F016 - Informe Psicológico Final
+
+
+2. SECUENCIA TEMPORAL DE LLENADO
+-----------------------------------
+
+AL INGRESO (Día 0):
+                        
+  1. F001 - Hoja Frontal ────────────────────┐
+  2. F002 - Hoja de Ingreso                  │
+  3. F003 - Datos Familiares                 ├── Admisión
+  4. F004 - Consentimiento Informado         │
+  5. F005 - Contrato de Servicios ───────────┘
+                        │
+                        ▼
+  6. F007 - Nota de Ingreso Médica ──────────── Médico (inmediato)
+                        │
+                        ▼ (dentro de 24 horas)
+  7. F006 - Historia Clínica ────────────────── Médico
+  8. F008 - Evaluación Psicofísica ──────────── Médico/Psicólogo
+
+DURANTE LA INTERNACIÓN:
+
+  F009 - Signos Vitales ─────────── Enfermería (3 veces/día)
+  F010 - Kardex ─────────────────── Enfermería (continuo)
+  F011 - Hoja de Medicamentos ───── Enfermería (por medicamento)
+  F012 - Receta Psicotrópicos ───── Médico (cada prescripción)
+  F014-A - Evolución Médica ─────── Médico (mínimo 1 vez/semana)
+  F014-B - Evolución Enfermería ─── Enfermería (cada turno)
+  F014-C - Evolución Psicología ─── Psicólogo (cada sesión)
+  F014-D - Psicología Operativa ─── Psicólogo (cada actividad)
+
+AL EGRESO:
+
+  F015 - Epicrisis ──────────────── Médico
+  F016 - Informe Psicológico ────── Psicólogo
+
+
+3. RESPONSABILIDADES POR ÁREA
+-----------------------------------
+
+ADMISIÓN:
+- F001, F002, F003 (llenado)
+- F004, F005 (apoyo al llenado)
+- Verificación de documentos de identidad
+- Asignación de número de historia clínica
+
+MÉDICO:
+- F004 (información y obtención de consentimiento)
+- F006, F007, F008 (llenado completo)
+- F012 (prescripción de psicotrópicos)
+- F014-A (evolución médica)
+- F015 (epicrisis)
+
+PSICÓLOGO:
+- F008 (colaboración en evaluación)
+- F014-C, F014-D (evolución psicológica)
+- F016 (informe psicológico)
+
+ENFERMERÍA:
+- F009 (signos vitales)
+- F010 (kardex)
+- F011 (administración de medicamentos)
+- F014-B (reporte de enfermería)
+
+FARMACIA/REGENTE:
+- F012 (dispensación)
+- F013 (libro de control de psicotrópicos)
+
+
+============================================================
+PARTE V: REQUISITOS PARA CONTROL DE PSICOTRÓPICOS
+============================================================
+
+1. LIBRO DE CONTROL (F013)
+-----------------------------------
+
+REQUISITOS PREVIOS:
+- Libro FOLIADO (páginas numeradas)
+- SELLADO por SEDES antes de usar
+- UNA página por CADA medicamento diferente
+
+CONTENIDO OBLIGATORIO POR PÁGINA:
+- Identificación del establecimiento
+- Datos del medicamento (nombre, concentración, lista)
+- Registro de TODOS los movimientos:
+  * Fecha
+  * Número de documento
+  * Tipo de movimiento (ingreso/egreso)
+  * Lote y fecha de vencimiento
+  * Cantidad
+  * Saldo actualizado
+  * Nombre del paciente/proveedor
+  * Firma del responsable
+
+
+2. INFORME TRIMESTRAL A SEDES
+-----------------------------------
+
+PLAZO: Primeros 5 días hábiles del trimestre siguiente
+
+CONTENIDO:
+- Stock inicial del período
+- Ingresos del período (compras, donaciones)
+- Egresos del período (prescripciones, bajas)
+- Stock final del período
+- Detalle de movimientos por medicamento
+- Firma del regente responsable
+
+
+3. RECETA ARCHIVADA (F012)
+-----------------------------------
+
+RESTRICCIONES:
+- UN solo medicamento por receta
+- Duración máxima: 20 días
+- Validez de la receta: 72 horas
+- Solo médico autorizado puede prescribir
+
+ARCHIVADO:
+- Mínimo 5 años
+- Orden cronológico
+- Accesible para auditoría SEDES
+
+
+============================================================
+PARTE VI: GLOSARIO NORMATIVO
+============================================================
+
+AGEMED: Agencia Estatal de Medicamentos y Tecnologías en Salud.
+        Entidad reguladora de medicamentos en Bolivia.
+
+CIE-10: Clasificación Internacional de Enfermedades, 10ª revisión.
+        Sistema de codificación diagnóstica de la OMS, reconocido
+        por D.S. 25235 Art. 1.
+
+Consentimiento Informado: Manifestación de voluntad del paciente o
+        representante legal, expresada libremente después de
+        información completa sobre el tratamiento (D.S. 28562 Art. 14).
+
+DSM-IV: Manual Diagnóstico y Estadístico de Trastornos Mentales,
+        4ª edición. Clasificación de la APA, reconocida por D.S. 25235.
+
+Expediente Clínico: Conjunto de documentos que contienen el registro
+        de la atención médica (D.S. 28562 Art. 12).
+
+Historia Clínica: Documento fundamental del expediente que registra
+        toda la información médica del paciente.
+
+Libro de Control: Registro obligatorio foliado y sellado por SEDES
+        para control de psicotrópicos (D.S. 25235 Art. 85-86).
+
+Matrícula Profesional: Registro oficial que habilita al profesional
+        de salud para ejercer (Ley 3131 Art. 4, D.S. 28562 Art. 9).
+
+Psicotrópico: Sustancia que actúa sobre el sistema nervioso central.
+        Clasificados en Listas II, III y IV según peligrosidad.
+
+Receta Archivada: Tipo de receta obligatoria para psicotrópicos,
+        que debe conservarse por mínimo 5 años (D.S. 25235 Art. 91).
+
+Receta Valorada: Tipo de receta para estupefacientes, con valor
+        económico y control estricto (D.S. 25235 Art. 80).
+
+SEDES: Servicio Departamental de Salud. Autoridad sanitaria
+        departamental responsable de habilitación y fiscalización.
+
+
+================================================================================
+FIN DEL DOCUMENTO 3
+================================================================================
+Documento generado: Enero 2026
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos SEDES
+================================================================================

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F004 Consentimiento Informado</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .doc-title {
+            text-align: center;
+            font-weight: bold;
+            font-size: 14pt;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            background-color: #f5f5f5;
+            padding: 5px;
+            border: 1px solid #000;
+        }
+        .legal-body { flex-grow: 1; }
+        .clause { margin-bottom: 8px; font-size: 9pt; text-align: justify; }
+        .clause-title { font-weight: bold; text-decoration: underline; }
+        .auth-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+            font-size: 9pt;
+        }
+        .auth-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            vertical-align: middle;
+        }
+        .col-check { width: 8%; text-align: center; background-color: #f0f0f0; }
+        .col-text { width: 92%; }
+        .check-square {
+            width: 16px;
+            height: 16px;
+            border: 2px solid #333;
+            background: #fff;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F004 v1.1
+            </div>
+        </div>
+
+        <div class="doc-title">CONSENTIMIENTO INFORMADO DE INTERNACIÓN</div>
+
+        <div class="legal-body">
+            <div class="grid-container">
+                <div class="cell span-12 bold bg-light-gray small">A. DATOS DEL PACIENTE</div>
+                <div class="cell span-3 small">Nº Historia Clínica:</div>
+                <div class="cell span-3"></div>
+                <div class="cell span-3 small">Nombre completo:</div>
+                <div class="cell span-3"></div>
+                <div class="cell span-2 small">Cédula de Identidad:</div>
+                <div class="cell span-2"></div>
+                <div class="cell span-1 small">Ext.:</div>
+                <div class="cell span-2"></div>
+                <div class="cell span-2 small">Fecha de Nacimiento:</div>
+                <div class="cell span-2 center">___/___/______</div>
+                <div class="cell span-1 small">Edad:</div>
+                <div class="cell span-2"></div>
+
+                <div class="cell span-12 bold bg-light-gray small">B. DATOS DEL REPRESENTANTE LEGAL</div>
+                <div class="cell span-3 small">Nombre completo:</div>
+                <div class="cell span-9"></div>
+                <div class="cell span-2 small">Cédula de Identidad:</div>
+                <div class="cell span-2"></div>
+                <div class="cell span-1 small">Ext.:</div>
+                <div class="cell span-2"></div>
+                <div class="cell span-2 small">Parentesco:</div>
+                <div class="cell span-3"></div>
+                <div class="cell span-2 small">Dirección:</div>
+                <div class="cell span-10"></div>
+                <div class="cell span-2 small">Teléfono:</div>
+                <div class="cell span-10"></div>
+
+                <div class="cell span-12 bold bg-light-gray small">C. INFORMACIÓN DEL TRATAMIENTO</div>
+                <div class="cell span-3 small bold">Diagnóstico presuntivo:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                    <div class="guide-line"></div>
+                    <div class="guide-line"></div>
+                </div>
+                <div class="cell span-3 small bold">Tratamiento propuesto:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                    <div class="guide-line"></div>
+                    <div class="guide-line"></div>
+                </div>
+                <div class="cell span-3 small bold">Duración estimada:</div>
+                <div class="cell span-9"></div>
+                <div class="cell span-3 small bold">Riesgos del tratamiento:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                    <div class="guide-line"></div>
+                    <div class="guide-line"></div>
+                </div>
+                <div class="cell span-3 small bold">Beneficios esperados:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                    <div class="guide-line"></div>
+                    <div class="guide-line"></div>
+                </div>
+                <div class="cell span-3 small bold">Alternativas de tratamiento:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.5cm;">
+                    <div class="guide-line"></div>
+                    <div class="guide-line"></div>
+                </div>
+
+                <div class="cell span-12 bold bg-light-gray small">D. DECLARACIONES Y AUTORIZACIONES</div>
+                <div class="cell span-12" style="padding: 10px;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 9pt;">
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>Autorizo la internación</b> en este centro de rehabilitación.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>Autorizo el tratamiento médico y psicológico</b> según el plan terapéutico establecido.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>Autorizo la administración de medicamentos</b> prescritos por el médico tratante.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>Autorizo la realización de pruebas diagnósticas</b> necesarias para el tratamiento.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>He comprendido la información</b> proporcionada sobre el tratamiento.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 5px;">
+                                <span class="checkbox"></span>
+                            </td>
+                            <td style="border: 1px solid #000; padding: 8px;">
+                                <b>He tenido la oportunidad de hacer preguntas</b> y se me han aclarado las dudas.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F004 v1.1</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 12pt; font-weight: bold;">CONSENTIMIENTO INFORMADO (Parte II)</div>
+            <div style="font-size: 10pt;">ANEXO: AUTORIZACIONES ESPECIALES</div>
+        </div>
+
+        <p style="margin-bottom: 10px; font-size: 9pt;">Para garantizar la seguridad de la comunidad terapéutica, marque con una (X) si <b>AUTORIZA</b> los siguientes procedimientos:</p>
+
+        <table class="auth-table">
+            <tr>
+                <td class="col-check"><div class="check-square"></div></td>
+                <td class="col-text">
+                    <b>1. REVISIÓN DE PERTENENCIAS Y CORPORAL</b><br>
+                    Autorizo al personal a revisar minuciosamente equipaje, ropa, correspondencia y realizar revisiones corporales superficiales para evitar el ingreso de sustancias controladas u objetos peligrosos.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-check"><div class="check-square"></div></td>
+                <td class="col-text">
+                    <b>2. MANEJO DE CRISIS Y CONTENCIÓN</b><br>
+                    Autorizo el uso de contención física o farmacológica (sujeción mecánica o sedación) EXCLUSIVAMENTE en situaciones de emergencia donde exista riesgo inminente de daño, según protocolo médico.
+                </td>
+            </tr>
+            <tr>
+                <td class="col-check"><div class="check-square"></div></td>
+                <td class="col-text">
+                    <b>3. TRASLADOS DE EMERGENCIA</b><br>
+                    Autorizo el traslado del paciente a un Hospital de 3er Nivel en caso de urgencia médica que supere la capacidad resolutiva del centro, asumiendo la familia los costos externos.
+                </td>
+            </tr>
+        </table>
+
+        <div style="margin-top: 10px; border: 1px solid #000; padding: 10px; background-color: #f0f0f0;">
+            <div style="text-align: center; font-weight: bold; margin-bottom: 5px;">DECLARACIÓN FINAL DE ADHESIÓN</div>
+            <p style="margin: 0; font-size: 9pt; text-align: justify;">
+                He leído (o se me ha leído) y comprendido el contenido íntegro de este consentimiento informado en sus dos páginas. He tenido la oportunidad de hacer preguntas y se me han aclarado las dudas. Firmo libre de coacción en la ciudad de Cochabamba, a los ____ días del mes de _____________ del año ______.
+            </p>
+        </div>
+
+        <div style="font-size: 8pt; margin-top: 15px; margin-bottom: 5px; font-weight: bold;">SUSCRIPCIÓN DEL CONSENTIMIENTO:</div>
+        
+        <div class="signatures-container-3">
+            <div class="signature-paciente">
+                <div class="signature-title">FIRMA</div>
+                <div class="signature-subtitle">PACIENTE</div>
+                <div class="signature-note">(Si tiene capacidad legal)</div>
+                <div class="signature-fields">
+                    <div class="fingerprint-box"></div>
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                    </div>
+                </div>
+            </div>
+            <div class="signature-tutor">
+                <div class="signature-title">FIRMA</div>
+                <div class="signature-subtitle">TUTOR / RESPONSABLE LEGAL</div>
+                <div class="signature-fields">
+                    <div class="fingerprint-box"></div>
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">C.I.: _____________________________</div>
+                    </div>
+                </div>
+            </div>
+            <div class="signature-medico">
+                <div class="signature-title">FIRMA Y SELLO</div>
+                <div class="signature-subtitle">MÉDICO</div>
+                <div class="signature-fields">
+                    <div class="signature-line">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F004 v1.1</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F012 Receta Médica Archivada para Psicotrópicos</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.0cm 2.0cm 1.0cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 25.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 2px 5px;
+            font-weight: bold;
+            font-size: 8pt;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+        .alert-box {
+            background-color: #ffebee;
+            border: 2px solid #d32f2f;
+            padding: 2px;
+            margin: 2px 0;
+            text-align: center;
+            font-weight: bold;
+            font-size: 7.5pt;
+            color: #d32f2f;
+        }
+        .prescription-box {
+            border: 2px solid #000;
+            padding: 4px;
+            margin: 3px 0;
+        }
+        .prescription-rp {
+            font-weight: bold;
+            font-size: 9pt;
+            margin-bottom: 2px;
+        }
+        .compact-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 2px;
+            font-size: 7.5pt;
+        }
+        .compact-cell {
+            padding: 1px 2px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!-- FRENTE -->
+    <div class="page">
+        <div class="header" style="height: 1.0cm;">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right" style="font-size: 7pt;">
+                <b>CÓDIGO:</b> PGB-F012 v1.0<br>
+                <b>Nº Receta:</b> _______________
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 11pt; margin: 2px 0; padding: 2px; background-color: #f5f5f5; border: 2px solid #000; text-transform: uppercase;">
+            RECETA MÉDICA ARCHIVADA PARA PSICOTRÓPICOS
+        </div>
+
+        <div class="alert-box">
+            ⚠️ SOLO UN MEDICAMENTO POR RECETA | DURACIÓN MÁXIMA: 20 DÍAS | VÁLIDA: 72 HORAS
+        </div>
+
+        <div class="section-title">A. DATOS DE LA INSTITUCIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-12 small" style="font-size: 7.5pt;">Proyecto Gilead Bolivia - Programa Hombres Nuevos</div>
+            <div class="cell span-12 small" style="font-size: 7.5pt;">Calle Antofagasta Nº 333, Zona Cruce Taquiña, Cochabamba</div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">Teléfono:</div>
+            <div class="cell span-3" style="font-size: 7.5pt;">(4) 1234567</div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">NIT:</div>
+            <div class="cell span-5" style="font-size: 7.5pt;"></div>
+        </div>
+
+        <div class="section-title">B. DATOS DEL PRESCRIPTOR</div>
+        <div class="grid-container">
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Nombre completo:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Matrícula profesional:</div>
+            <div class="cell span-3" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Especialidad:</div>
+            <div class="cell span-3" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Nº Registro SEDES:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+        </div>
+
+        <div class="section-title">C. DATOS DEL PACIENTE</div>
+        <div class="grid-container">
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Nombre completo:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">C.I.:</div>
+            <div class="cell span-2" style="font-size: 7.5pt;"></div>
+            <div class="cell span-1 small" style="font-size: 7.5pt;">Edad:</div>
+            <div class="cell span-1" style="font-size: 7.5pt;"></div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">Sexo:</div>
+            <div class="cell span-4 small" style="font-size: 7.5pt;"><span class="checkbox"></span>M <span class="checkbox"></span>F</div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Domicilio:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">Teléfono:</div>
+            <div class="cell span-4" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Nº Historia Clínica:</div>
+            <div class="cell span-3" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Diagnóstico:</div>
+            <div class="cell span-6" style="font-size: 7.5pt;"></div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">CIE-10:</div>
+            <div class="cell span-1" style="font-size: 7.5pt;"></div>
+        </div>
+
+        <div class="section-title">D. PRESCRIPCIÓN (SOLO UN MEDICAMENTO)</div>
+        <div class="prescription-box">
+            <div class="prescription-rp">Rp/</div>
+            <div class="grid-container">
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Medicamento:</div>
+                <div class="cell span-9" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Presentación:</div>
+                <div class="cell span-4" style="font-size: 7.5pt;"></div>
+                <div class="cell span-2 small" style="font-size: 7.5pt;">Concentración:</div>
+                <div class="cell span-3" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Lista:</div>
+                <div class="cell span-9 small" style="font-size: 7.5pt;"><span class="checkbox"></span>II <span class="checkbox"></span>III <span class="checkbox"></span>IV</div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Cantidad (en letras):</div>
+                <div class="cell span-9" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Cantidad (en números):</div>
+                <div class="cell span-2" style="font-size: 7.5pt;"></div>
+                <div class="cell span-2 small" style="font-size: 7.5pt;">Dosis:</div>
+                <div class="cell span-5" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Frecuencia:</div>
+                <div class="cell span-9" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Duración (máx. 20 días):</div>
+                <div class="cell span-9" style="font-size: 7.5pt;"></div>
+                <div class="cell span-3 small" style="font-size: 7.5pt;">Indicaciones adicionales:</div>
+                <div class="cell span-9 text-area" style="min-height: 1.0cm; font-size: 7.5pt;"></div>
+            </div>
+        </div>
+
+        <div class="section-title">E. FECHA Y FIRMAS</div>
+        <div class="grid-container">
+            <div class="cell span-2 small" style="font-size: 7.5pt;">Lugar:</div>
+            <div class="cell span-4" style="font-size: 7.5pt;">Cochabamba</div>
+            <div class="cell span-2 small" style="font-size: 7.5pt;">Fecha:</div>
+            <div class="cell span-4 center" style="font-size: 7.5pt;">___/___/______</div>
+        </div>
+        <div style="margin-top: 5px;">
+            <div class="signature-medico" style="min-height: 2.0cm;">
+                <div class="signature-title" style="font-size: 8pt;">FIRMA Y SELLO</div>
+                <div class="signature-subtitle" style="font-size: 7pt;">MÉDICO PRESCRIPTOR</div>
+                <div class="signature-fields">
+                    <div class="signature-line" style="font-size: 7pt;">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Matrícula: _________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" style="height: 0.8cm; font-size: 7pt;">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F012 v1.0</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- REVERSO (DISPENSACIÓN) -->
+    <div class="page">
+        <div class="header" style="height: 1.0cm;">
+            <div style="font-size: 10pt; font-weight: bold;">RECETA MÉDICA ARCHIVADA - DISPENSACIÓN</div>
+            <div class="header-right" style="font-size: 7pt;">
+                <b>Nº Receta:</b> _______________ | <b>Página:</b> 2 / 2
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 11pt; margin: 2px 0; padding: 2px; background-color: #f5f5f5; border: 2px solid #000; text-transform: uppercase;">
+            SECCIÓN F: DISPENSACIÓN
+        </div>
+
+        <div class="section-title">DATOS DE DISPENSACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Fecha de dispensación:</div>
+            <div class="cell span-3 center" style="font-size: 7.5pt;">___/___/______</div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Cantidad dispensada:</div>
+            <div class="cell span-3" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Lote:</div>
+            <div class="cell span-4" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Fecha vencimiento:</div>
+            <div class="cell span-4 center" style="font-size: 7.5pt;">___/___/______</div>
+        </div>
+
+        <div class="section-title">RESPONSABLE DE DISPENSACIÓN</div>
+        <div class="grid-container">
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Nombre completo:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+            <div class="cell span-3 small" style="font-size: 7.5pt;">Cargo:</div>
+            <div class="cell span-9" style="font-size: 7.5pt;"></div>
+        </div>
+
+        <div style="margin-top: 5px;">
+            <div class="signature-medico" style="min-height: 2.0cm;">
+                <div class="signature-title" style="font-size: 8pt;">FIRMA Y SELLO</div>
+                <div class="signature-subtitle" style="font-size: 7pt;">REGENTE DE FARMACIA / DISPENSADOR</div>
+                <div class="signature-fields">
+                    <div class="signature-line" style="font-size: 7pt;">
+                        <div class="signature-field">Nombre: ___________________________</div>
+                        <div class="signature-field">Cargo: ____________________________</div>
+                    </div>
+                    <div class="seal-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" style="height: 0.8cm; font-size: 7pt;">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F012 v1.0</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+</body>
+</html>

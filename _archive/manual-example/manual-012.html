@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Receta Valorada - PGB-F012</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        
+        /* Header y Estilos igual al anterior para consistencia */
+        .header-box { border-bottom: 2px solid #b71c1c; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #b71c1c; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+        
+        h2 { background-color: #ffebee; padding: 5px 10px; border-left: 5px solid #b71c1c; font-size: 11pt; margin-top: 15px; }
+        
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffcdd2; padding: 2px 5px; }
+        .example { color: #1565c0; font-style: italic; }
+
+        .legal-warning {
+            border: 2px solid #b71c1c;
+            background-color: #fffaf0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 9pt;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE RECETA PSICOTRÓPICOS</div>
+            <div class="subtitle">Formulario: PGB-F012 "Receta Archivada Controlada"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-012<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="legal-warning">
+        <b>⚠ ADVERTENCIA LEGAL (LEY 1008 / LEY 1737)</b><br>
+        Este documento es una Declaración Jurada. Cualquier falsedad material o ideológica en su llenado puede conllevar sanciones penales por tráfico ilícito de sustancias controladas o ejercicio ilegal de la medicina.
+    </div>
+
+    <h2>1. DATOS OBLIGATORIOS DEL PRESCRIPTOR (MÉDICO)</h2>
+    <div class="instruction-box">
+        <div class="field-name">Matrícula Prof.</div>
+        <div class="field-desc">
+            Debe registrarse claramente el número de Matrícula Profesional del Ministerio de Salud.
+            <br><span class="alert">OBLIGATORIO: Sin matrícula, Farmacia NO puede dispensar.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Firma y Sello</div>
+        <div class="field-desc">El sello debe ser legible y contener el nombre completo y especialidad.</div>
+    </div>
+
+    <h2>2. DATOS DEL PACIENTE (CRITERIOS D.S. 25235)</h2>
+    <div class="instruction-box">
+        <div class="field-name">Cédula Identidad (C.I.)</div>
+        <div class="field-desc">
+            Requisito indispensable para sustancias controladas. Verificar documento físico antes de dispensar.
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Domicilio</div>
+        <div class="field-desc">Dirección real actual (Puede ser la dirección de la Clínica si está internado).</div>
+    </div>
+
+    <h2>3. DETALLE DE PRESCRIPCIÓN (SEGURIDAD)</h2>
+    <div class="instruction-box">
+        <div class="field-name">Nombre Genérico</div>
+        <div class="field-desc">Usar Denominación Común Internacional (DCI). <span class="example">Ej: Clonazepam (NO usar marcas comerciales como Neuryl).</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Cantidad Numeral</div>
+        <div class="field-desc">Número de unidades a dispensar (números arábigos). <span class="example">Ej: 10 comp.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">CANTIDAD LITERAL</div>
+        <div class="field-desc">
+            Escribir la cantidad en LETRAS para evitar adulteraciones (agregar ceros).
+            <br><span class="alert">Ej: "DIEZ COMPRIMIDOS" (Correcto)</span>
+        </div>
+    </div>
+
+    <h2>4. PROCESO DE DISPENSACIÓN Y ARCHIVO</h2>
+    <div class="instruction-box">
+        <div class="field-name">ORIGINAL (Arriba)</div>
+        <div class="field-desc">
+            Se recorta y queda en custodia de <b>FARMACIA</b>. Se usa para descargar en el Libro de Control (F013).
+            <br><i>Tiempo de archivo legal: 2 años.</i>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">COPIA (Abajo)</div>
+        <div class="field-desc">
+            Se adhiere al <b>EXPEDIENTE CLÍNICO</b> del paciente (Historia Clínica) como respaldo de la administración.
+        </div>
+    </div>
+
+    <div style="margin-top: 30px; font-size: 8pt; text-align: center; border-top: 1px solid #ccc; padding-top: 10px;">
+        PROYECTO GILEAD BOLIVIA - FARMACIA INTERNA<br>
+        Basado en Normativa de la Jefatura Regional de Farmacias y Laboratorios (SEDES Cochabamba).
+    </div>
+
+</body>
+</html>

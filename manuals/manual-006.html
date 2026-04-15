@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F006 Historia Clínica</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F006 "Historia Clínica"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-006<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F006</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.0</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">4</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Médico</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tiempo estimado</div>
+        <div class="field-desc">45-60 minutos</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        La Historia Clínica es el <b>documento médico más importante</b> del expediente. Registra de manera completa:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Datos de identificación</li>
+        <li>Antecedentes personales y familiares</li>
+        <li><b>HISTORIA DE CONSUMO DE SUSTANCIAS</b> (sección crítica)</li>
+        <li>Enfermedad actual</li>
+        <li>Examen físico</li>
+        <li>Diagnóstico con código CIE-10</li>
+        <li>Plan de tratamiento</li>
+    </ul>
+
+    <h2>3. SECCIÓN CRÍTICA: HISTORIA DE CONSUMO (Sección G)</h2>
+    <p style="font-size: 9pt; color: #d32f2f; font-weight: bold;">
+        ⚠️ Esta sección es OBLIGATORIA según Ley 1008 Art. 49 y D.S. 25235.
+    </p>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">G.1: DATOS GENERALES DEL CONSUMO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Edad de inicio</div>
+        <div class="field-desc">Primera vez que consumió. <span class="example">Ejemplo: 14 años</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Sustancia de inicio</div>
+        <div class="field-desc">Cuál fue la primera sustancia. <span class="example">Ejemplo: Alcohol</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Sustancia principal</div>
+        <div class="field-desc">La que causa más problemas actualmente. <span class="example">Ejemplo: Cocaína</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tiempo de consumo</div>
+        <div class="field-desc">Años de consumo problemático. <span class="example">Ejemplo: 20 años</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Última vez que consumió</div>
+        <div class="field-desc">Fecha específica. <span class="example">Ejemplo: 10/12/2025</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">G.2: SUSTANCIA PRINCIPAL</h3>
+    <div class="instruction-box">
+        <div class="field-name">Nombre de la sustancia</div>
+        <div class="field-desc">Nombre común y técnico. <span class="example">Ejemplo: Cocaína (clorhidrato)</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Vía de administración</div>
+        <div class="field-desc">Cómo la consume. <span class="example">Ejemplo: Inhalada</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Patrón de consumo</div>
+        <div class="field-desc">Diario, fin de semana, episódico. <span class="example">Ejemplo: Diario</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Frecuencia</div>
+        <div class="field-desc">Veces por día/semana. <span class="example">Ejemplo: 3-4 veces/día</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Cantidad aproximada</div>
+        <div class="field-desc">Por episodio de consumo. <span class="example">Ejemplo: 1-2 gramos/día</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">G.4: SÍNDROME DE ABSTINENCIA</h3>
+    <div class="instruction-box">
+        <div class="field-name">¿Ha experimentado?</div>
+        <div class="field-desc">Sí/No. <span class="example">Ejemplo: ☒ Sí  ☐ No</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Síntomas</div>
+        <div class="field-desc">Describir cuáles. <span class="example">Ejemplo: Ansiedad, irritabilidad, insomnio, craving intenso</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Gravedad</div>
+        <div class="field-desc">Leve/Moderado/Severo. <span class="example">Ejemplo: Moderado</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Convulsiones previas</div>
+        <div class="field-desc">Sí/No - muy importante. <span class="example">Ejemplo: ☐ Sí  ☒ No</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">G.5: TRATAMIENTOS PREVIOS</h3>
+    <div class="instruction-box">
+        <div class="field-name">Tratamientos previos</div>
+        <div class="field-desc">Cuántos y dónde. <span class="example">Ejemplo: 2 internaciones previas</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Centro</div>
+        <div class="field-desc">Nombre del centro. <span class="example">Ejemplo: Centro San Martín</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Año</div>
+        <div class="field-desc">Cuándo. <span class="example">Ejemplo: 2020, 2022</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Duración</div>
+        <div class="field-desc">Tiempo que duró. <span class="example">Ejemplo: 30 días, 60 días</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Resultado</div>
+        <div class="field-desc">Cómo terminó. <span class="example">Ejemplo: Alta, Abandono</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Recaídas</div>
+        <div class="field-desc">Número de recaídas post-tratamiento. <span class="example">Ejemplo: 3</span></div>
+    </div>
+
+    <h2>4. OTRAS SECCIONES IMPORTANTES</h2>
+    
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: ANTECEDENTES FAMILIARES</h3>
+    <p style="font-size: 9.5pt;">Registrar todos los antecedentes familiares relevantes. Cada campo es un área de texto amplia para permitir descripción detallada.</p>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN J: EXAMEN FÍSICO</h3>
+    <p style="font-size: 9.5pt;">Incluye signos vitales, examen general y examen por sistemas. Los campos de examen general y por sistemas son áreas de texto amplias para descripción detallada.</p>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN K: DIAGNÓSTICO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Diagnóstico principal</div>
+        <div class="field-desc">Con código CIE-10 obligatorio. <span class="example">Ejemplo: F14.2 - Dependencia a cocaína</span></div>
+    </div>
+
+    <h2>5. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            HISTORIA CLÍNICA<br>
+            PGB-F006 v1.0
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>PÁGINA 1 - SECCIÓN A: DATOS DE IDENTIFICACIÓN</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Fecha elaboración: <u>15/12/2025</u>   Hora: <u>15:00</u><br>
+            Apellido Paterno: <u>HUARACHI</u>     Apellido Materno: <u>APAZA</u><br>
+            Nombres: <u>Carlos Alberto</u><br>
+            Fecha Nacimiento: <u>15/03/1990</u>   Edad: <u>34 años</u><br>
+            C.I.: <u>8523614</u>  Ext.: <u>CBBA</u><br>
+            Sexo: ☒ M  ☐ F     Grupo Sanguíneo: ☐O+  ☒O-  ☐A+  ☐A-  ☐B+  ☐B-  ☐AB+  ☐AB-
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN B: ANTECEDENTES PERSONALES NO PATOLÓGICOS</b><br>
+            Lugar de nacimiento: <u>Cochabamba</u>     Escolaridad: <u>Secundaria completa</u><br>
+            Ocupación: <u>Albañil</u>     Estado civil: ☐Solt  ☒Cas  ☐Conv  ☐Div  ☐Viudo<br>
+            Religión: <u>Católica</u>
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN G: HISTORIA DE CONSUMO DE SUSTANCIAS (CRÍTICA)</b><br>
+            Edad de inicio: <u>14 años</u>     Sustancia de inicio: <u>Alcohol</u><br>
+            Sustancia principal: <u>Cocaína</u>     Tiempo de consumo: <u>16 años</u><br>
+            Última vez que consumió: <u>Hace 5 días</u><br>
+            <br>
+            <b>COCAÍNA:</b> Vía: <u>Nasal</u>     Patrón: <u>Diario</u>     Frecuencia: <u>3-4 veces/día</u><br>
+            Cantidad: <u>2-3 gramos/día</u>     ¿Ha experimentado síndrome de abstinencia?: ☒ Sí  ☐ No<br>
+            Síntomas: <u>Ansiedad, depresión, insomnio</u>     Gravedad: <u>Moderada</u><br>
+            Convulsiones previas: ☐ Sí  ☒ No<br>
+            <br>
+            <b>Tratamientos previos:</b> Centro: <u>Centro de Rehabilitación San Juan</u>     Año: <u>2020</u><br>
+            Duración: <u>60 días</u>     Resultado: <u>Alta médica</u>     Recaídas: <u>2</u>
+        </div>
+        
+        <div style="margin-top: 10px; border-top: 1px solid #000; padding-top: 8px;">
+            <b>PÁGINA 2-4: OTRAS SECCIONES</b><br>
+            (Continuación con antecedentes familiares, enfermedad actual, examen físico, diagnóstico y plan de tratamiento)
+        </div>
+        
+        <div style="margin-top: 8px;">
+            <b>SECCIÓN K: DIAGNÓSTICO</b><br>
+            Diagnóstico principal: <u>F14.2 - Dependencia a cocaína</u><br>
+            Diagnósticos secundarios: <u>F10.2 - Dependencia a alcohol</u>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F006 v1.0 | Página 4 de 4
+        </div>
+    </div>
+
+    <h2>6. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar historia de consumo completa</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Incumplimiento normativo Ley 1008</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre completar Sección G completamente</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Diagnóstico sin código CIE-10</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento incompleto, problemas estadísticos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre incluir código CIE-10</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Campos de texto muy breves</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información insuficiente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Usar espacios amplios disponibles</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar tratamientos previos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información incompleta para plan de tratamiento</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Preguntar específicamente por tratamientos anteriores</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Falta firma y sello del médico</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento inválido según normativa</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar antes de archivar</td>
+        </tr>
+    </table>
+
+    <h2>7. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Datos de identificación completos</li>
+            <li>Antecedentes personales y familiares documentados</li>
+            <li>Historia de consumo de sustancias completa (SECCIÓN CRÍTICA)</li>
+            <li>Enfermedad actual descrita</li>
+            <li>Examen físico completo</li>
+            <li>Diagnóstico con código CIE-10</li>
+            <li>Plan de tratamiento inicial establecido</li>
+            <li>Firma y sello del médico</li>
+            <li>Matrícula profesional registrada</li>
+        </ul>
+    </div>
+
+    <h2>8. BASE NORMATIVA Y LEGAL</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Ley 1008</b><br>Ley del Régimen de la Coca y Sustancias Controladas</td>
+                <td>Art. 49: Obligatoriedad de registrar historia de consumo de sustancias.</td>
+                <td>Art. 49</td>
+            </tr>
+            <tr>
+                <td><b>D.S. 25235</b><br>Reglamento Ley del Medicamento</td>
+                <td>Art. 1: Reconocimiento de clasificaciones CIE-10 para diagnósticos. Historia de consumo obligatoria.</td>
+                <td>Art. 1</td>
+            </tr>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Define estructura y contenido de la Historia Clínica.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>D.S. 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 12: Define contenido del expediente clínico.</td>
+                <td>Art. 12</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>9. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>CIE-10:</b> Clasificación Internacional de Enfermedades, 10ª revisión. Sistema de codificación diagnóstica de la OMS.</p>
+        <p><b>Craving:</b> Deseo intenso e irresistible de consumir una sustancia.</p>
+        <p><b>Síndrome de Abstinencia:</b> Conjunto de síntomas que aparecen al suspender o reducir el consumo de una sustancia de la que se es dependiente.</p>
+        <p><b>Historia Clínica:</b> Documento fundamental del expediente que registra toda la información médica del paciente.</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.0 | Enero 2026
+    </div>
+
+</body>
+</html>

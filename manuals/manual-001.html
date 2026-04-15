@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F001 Hoja Frontal del Expediente</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+        .legal-link { 
+            color: #1565C0; 
+            text-decoration: none; 
+            font-weight: bold; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F001 "Hoja Frontal del Expediente"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-001<br>
+            <b>Versión:</b> 1.1
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F001</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Formato</div>
+        <div class="field-desc">Tamaño carta (21.59 × 27.94 cm)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tipo</div>
+        <div class="field-desc">Carátula visible del expediente</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        La Hoja Frontal es la <b>CARÁTULA VISIBLE</b> que debe colocarse al frente de cada expediente clínico. Proporciona:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Identificación rápida del paciente</li>
+        <li>Datos críticos de emergencia (alergias, enfermedades crónicas)</li>
+        <li>Historial resumido de internaciones</li>
+        <li>Contacto del responsable</li>
+    </ul>
+    <p style="font-size: 9pt; color: #d32f2f; font-weight: bold;">
+        ⚠️ IMPORTANTE: Este formulario debe permanecer SIEMPRE visible en la portada y NUNCA debe archivarse en el interior.
+    </p>
+
+    <h2>3. RESPONSABLES</h2>
+    <ul style="font-size: 9.5pt;">
+        <li><b>Llenado:</b> Personal de Admisión</li>
+        <li><b>Actualización:</b> Personal de Admisión o Enfermería</li>
+        <li><b>Verificación:</b> Director Médico</li>
+    </ul>
+
+    <h2>4. CUÁNDO SE USA</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Momento</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Acción</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al crear nuevo expediente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Llenar Secciones A, B, C</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al registrar una internación</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Añadir registro en Sección D</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al producirse un egreso</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar datos de egreso en Sección D</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al actualizar datos críticos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Modificar Sección C (Alergias/Enfermedades)</td>
+        </tr>
+    </table>
+
+    <h2>5. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Asignar número único secuencial. <span class="example">Ejemplo: HC-2025-0042</span>
+            <br><span class="alert">CRÍTICO: Ver Art. 12 D.S. 28562. No puede haber duplicados.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha Apertura</div>
+        <div class="field-desc">Fecha del <u>primer contacto</u> o primera admisión del paciente. Formato: DD/MM/AAAA. <span class="example">Ejemplo: 15/12/2025</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Apellido Paterno</div>
+        <div class="field-desc">Según Cédula de Identidad, MAYÚSCULAS. <span class="example">Ejemplo: HUARACHI</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Apellido Materno</div>
+        <div class="field-desc">Según Cédula de Identidad, MAYÚSCULAS. <span class="example">Ejemplo: APAZA</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nombres</div>
+        <div class="field-desc">Según Cédula de Identidad, Inicial mayúscula. <span class="example">Ejemplo: Carlos Alberto</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">Número de carnet. <span class="example">Ejemplo: 8523614</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Extensión C.I.</div>
+        <div class="field-desc">Departamento de emisión. <span class="example">Ejemplo: CBBA (Cochabamba)</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de Nacimiento</div>
+        <div class="field-desc">Formato DD/MM/AAAA. <span class="example">Ejemplo: 15/03/1990</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Edad</div>
+        <div class="field-desc">Años cumplidos al momento. <span class="example">Ejemplo: 34 años</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Lugar de Nacimiento</div>
+        <div class="field-desc">Ciudad y departamento donde nació el paciente. <span class="example">Ejemplo: Cochabamba, Cochabamba</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Sexo</div>
+        <div class="field-desc">Marcar casilla correspondiente. <span class="example">☒ M  ☐ F</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Grupo Sanguíneo</div>
+        <div class="field-desc">
+            Si se conoce, marcar la opción correspondiente. Este campo está en una línea completa para facilitar la selección de todas las opciones disponibles.
+            <br><span class="example">Opciones: O+, O-, A+, A-, B+, B-, AB+, AB-</span>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: DATOS DEL RESPONSABLE / CONTACTO DE EMERGENCIA</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre Completo</div>
+        <div class="field-desc">
+            Persona mayor de edad que firmará el Consentimiento Informado.
+            <br><span class="example">Ejemplo: María Elena Apaza de Huarachi</span>
+            <br><span class="alert">LEGAL: Obligatorio según Ley 3131 para validar internación.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Parentesco</div>
+        <div class="field-desc">Relación con el paciente. <span class="example">Ejemplo: Madre, Padre, Cónyuge, etc.</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">C.I. del Responsable</div>
+        <div class="field-desc">Carnet del responsable con extensión. <span class="example">Ejemplo: 4512367 CBBA</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Teléfono del Responsable</div>
+        <div class="field-desc">Celular de preferencia. <span class="example">Ejemplo: 70012345</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: DATOS CRÍTICOS DE EMERGENCIA</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">⚠ ALERGIAS</div>
+        <div class="field-desc">
+            Registrar en letras GRANDES todas las alergias conocidas. Si no tiene, escribir: <b>"NIEGA ALERGIAS CONOCIDAS"</b>.
+            <br><span class="example">Ejemplo: Penicilina, AINEs</span>
+            <br><span class="alert">SEGURIDAD DEL PACIENTE: Nunca dejar en blanco.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Enfermedades Crónicas</div>
+        <div class="field-desc">Enfermedades importantes que puedan afectar el tratamiento. <span class="example">Ejemplo: Hipertensión arterial, Diabetes</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN D: REGISTRO DE INTERNACIONES</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº</div>
+        <div class="field-desc">Número correlativo de internación para este paciente. <span class="example">Ejemplo: 1, 2, 3, 4</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">INGRESO (F/H)</div>
+        <div class="field-desc">
+            <b>F:</b> Fecha de ingreso en formato DD/MM/AA. <b>H:</b> Hora de ingreso en formato 24 horas (HH:MM).
+            <br><span class="example">Ejemplo: F: 15/12/25  H: 14:30</span>
+            <br><span class="alert">Dato médico-legal para establecer inicio de custodia.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">EGRESO (F/H)</div>
+        <div class="field-desc">
+            <b>F:</b> Fecha de egreso en formato DD/MM/AA. <b>H:</b> Hora de egreso en formato 24 horas (HH:MM).
+            <br><span class="example">Ejemplo: F: 15/03/26  H: 10:00</span>
+            <br>Se completa al momento del alta o egreso del paciente.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">CIE-10</div>
+        <div class="field-desc">
+            Código internacional del diagnóstico según Clasificación Internacional de Enfermedades.
+            <br><span class="example">Ejemplo: F19.2, F14.2, F10.2</span>
+            <br>Este campo es pequeño ya que solo se registra el código. Requisito R.M. 0090/2008 para estadística SNIS.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">MOTIVO INGRESO / OBSERVACIONES</div>
+        <div class="field-desc">
+            Campo amplio para describir el motivo de la internación y observaciones relevantes. Este es un campo de texto libre.
+            <br><span class="example">Ejemplo: "Dependencia a múltiples sustancias. Paciente presenta deseo de rehabilitación voluntaria."</span>
+            <br>Incluir información relevante sobre el estado del paciente al ingreso.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">MOTIVO EGRESO</div>
+        <div class="field-desc">
+            Tipo de egreso. <span class="example">Ejemplos: Alta médica, Alta voluntaria, Abandono, Traslado, Fallecimiento</span>
+        </div>
+    </div>
+
+    <h2>6. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            HOJA FRONTAL DEL EXPEDIENTE CLÍNICO<br>
+            PGB-F001 v1.1
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Fecha Apertura: <u>15/12/2025</u><br>
+            <br>
+            Apellido Paterno: <u>HUARACHI</u>     Apellido Materno: <u>APAZA</u><br>
+            Nombres: <u>Carlos Alberto</u><br>
+            <br>
+            Fecha Nacimiento: <u>15/03/1990</u>   Edad: <u>34 años</u><br>
+            Lugar de Nacimiento: <u>Cochabamba, Cochabamba</u><br>
+            C.I.: <u>8523614</u>  Ext.: <u>CBBA</u><br>
+            Sexo: ☒ M  ☐ F     Grupo Sanguíneo: ☐O+  ☒O-  ☐A+  ☐A-  ☐B+  ☐B-  ☐AB+  ☐AB-
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN B: DATOS DE CONTACTO</b><br>
+            Domicilio: <u>Av. América #1234</u><br>
+            Zona: <u>Zona Sur</u>        Ciudad: <u>Cochabamba</u>   Departamento: <u>Cochabamba</u><br>
+            Teléfono: <u>4456789</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN C: DATOS DEL RESPONSABLE / CONTACTO DE EMERGENCIA</b><br>
+            Nombre Completo: <u>María Elena Apaza de Huarachi</u><br>
+            Parentesco: <u>Madre</u>       C.I. Responsable: <u>4512367</u>  Ext.: <u>CBBA</u><br>
+            Teléfono Responsable: <u>70012345</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN D: DATOS CRÍTICOS DE EMERGENCIA</b><br>
+            ⚠️ ALERGIAS: <u>Penicilina, AINEs</u><br>
+            Enfermedades Crónicas: <u>Hipertensión arterial</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN E: REGISTRO DE INTERNACIONES</b><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+                <tr style="background-color: #e0e0e0;">
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">Nº</th>
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">INGRESO (F/H)</th>
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">EGRESO (F/H)</th>
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">CIE-10</th>
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">MOTIVO INGRESO / OBSERVACIONES</th>
+                    <th style="border: 1px solid #000; padding: 2px; text-align: center;">MOTIVO EGRESO</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 2px; text-align: center;">1</td>
+                    <td style="border: 1px solid #000; padding: 2px;">F: <u>15/12/25</u><br>H: <u>14:30</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;">F: <u>___/___/___</u><br>H: <u>___:___</u></td>
+                    <td style="border: 1px solid #000; padding: 2px; text-align: center;"><u>F19.2</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>Dependencia a múltiples sustancias. Paciente presenta deseo de rehabilitación voluntaria.</u></td>
+                    <td style="border: 1px solid #000; padding: 2px; text-align: center;"><u>---</u></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7.5pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F001 v1.1 | Página 1 de 1
+        </div>
+    </div>
+
+    <h2>7. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No actualizar alergias</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Riesgo para el paciente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar cada ingreso</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Archivar dentro del expediente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">No visible en emergencia</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre en portada</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Datos incompletos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Identificación difícil</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Checklist de campos</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Letra ilegible</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Confusión de datos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Letra de molde</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar hora de ingreso/egreso</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Dificulta cálculo de estadías</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Registrar siempre fecha y hora</td>
+        </tr>
+    </table>
+
+    <h2>8. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Nº Historia Clínica asignado y único</li>
+            <li>Fecha de apertura correcta</li>
+            <li>Datos del paciente completos según C.I.</li>
+            <li>Datos de contacto vigentes</li>
+            <li>Responsable identificado con C.I.</li>
+            <li>Teléfonos de contacto actualizados</li>
+            <li>Alergias documentadas (o "NIEGA ALERGIAS CONOCIDAS")</li>
+            <li>Enfermedades crónicas listadas</li>
+            <li>Formulario visible en portada del expediente</li>
+            <li>Registro de internaciones con fecha y hora completa</li>
+            <li>Códigos CIE-10 registrados correctamente</li>
+        </ul>
+    </div>
+
+    <h2>9. BASE NORMATIVA Y LEGAL</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Define que el Expediente Clínico es un documento médico-legal y establece la obligatoriedad de la identificación unívoca (Sección A) y el uso de CIE-10.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 3131</b><br>Ejercicio Profesional Médico</td>
+                <td>Art. 12: Instituye el Expediente Clínico como prueba documental. Art. 9: Exige matrícula profesional en sellos.</td>
+                <td>Art. 12, Art. 9</td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 14: Regula el Consentimiento Informado (vinculado a la Sección B: Responsable Legal). Art. 12: Define contenido del expediente.</td>
+                <td>Art. 14, Art. 12</td>
+            </tr>
+            <tr>
+                <td><b>D.S. N.º 25235</b><br>Reglamento Ley del Medicamento</td>
+                <td>Art. 1: Reconocimiento de clasificaciones CIE-10 para diagnósticos.</td>
+                <td>Art. 1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>10. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>CIE-10:</b> Clasificación Internacional de Enfermedades, 10ª revisión. Sistema de codificación diagnóstica de la OMS.</p>
+        <p><b>Expediente Clínico:</b> Conjunto de documentos que contienen el registro de la atención médica de un paciente.</p>
+        <p><b>Historia Clínica:</b> Documento fundamental del expediente que registra toda la información médica del paciente.</p>
+        <p><b>SEDES:</b> Servicio Departamental de Salud. Autoridad sanitaria departamental responsable de habilitación y fiscalización.</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.1 | Enero 2026
+    </div>
+
+</body>
+</html>

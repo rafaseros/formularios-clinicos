@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios Clínicos - Proyecto Gilead Bolivia</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #1F4E79;
+        }
+        .header h1 {
+            color: #1F4E79;
+            margin: 0;
+            font-size: 28pt;
+        }
+        .header p {
+            color: #666;
+            margin: 5px 0;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section-title {
+            background-color: #1F4E79;
+            color: white;
+            padding: 10px 15px;
+            font-size: 16pt;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        .form-item {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #fafafa;
+            transition: box-shadow 0.3s;
+        }
+        .form-item:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+        .form-item h3 {
+            margin: 0 0 10px 0;
+            color: #1F4E79;
+            font-size: 14pt;
+        }
+        .form-item .code {
+            font-family: monospace;
+            color: #666;
+            font-size: 10pt;
+            margin-bottom: 5px;
+        }
+        .form-item .description {
+            font-size: 10pt;
+            color: #444;
+            margin-bottom: 10px;
+        }
+        .form-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 6px 12px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 10pt;
+            transition: background-color 0.3s;
+        }
+        .btn-form {
+            background-color: #1F4E79;
+            color: white;
+        }
+        .btn-form:hover {
+            background-color: #1565C0;
+        }
+        .btn-manual {
+            background-color: #2E7D32;
+            color: white;
+        }
+        .btn-manual:hover {
+            background-color: #388E3C;
+        }
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 4px;
+        }
+        .info-box h3 {
+            margin-top: 0;
+            color: #1976D2;
+        }
+        .version {
+            text-align: center;
+            color: #999;
+            font-size: 9pt;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>PROYECTO GILEAD BOLIVIA</h1>
+            <p><strong>Programa Hombres Nuevos</strong></p>
+            <p>Sistema de Formularios Clínicos - Expediente Clínico SEDES</p>
+            <p style="font-size: 10pt; color: #999;">Calle Antofagasta N.º 333, Zona Cruce Taquiña, Cochabamba</p>
+        </div>
+
+        <div class="info-box">
+            <h3>📋 Instrucciones de Uso</h3>
+            <p>Este sistema contiene los 16 formularios clínicos estandarizados según normativa SEDES. Cada formulario puede ser:</p>
+            <ul>
+                <li><strong>Visualizado</strong> directamente en el navegador</li>
+                <li><strong>Impreso</strong> usando la función de impresión del navegador (Ctrl+P)</li>
+                <li><strong>Exportado a PDF</strong> seleccionando "Guardar como PDF" en el diálogo de impresión</li>
+            </ul>
+            <p><strong>Nota:</strong> Los formularios están optimizados para impresión en tamaño Carta (Letter). Asegúrese de configurar el tamaño de papel correcto en la impresora.</p>
+        </div>
+
+        <div class="section">
+            <div class="section-title">FASE 1: INGRESO Y ADMINISTRATIVOS</div>
+            <div class="form-grid">
+                <div class="form-item">
+                    <div class="code">PGB-F001</div>
+                    <h3>Hoja Frontal del Expediente</h3>
+                    <div class="description">Carátula visible del expediente con identificación rápida</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-001.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-001.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F002</div>
+                    <h3>Hoja de Ingreso</h3>
+                    <div class="description">Registro administrativo de datos del paciente al ingreso (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-002.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-002.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F003</div>
+                    <h3>Datos Familiares</h3>
+                    <div class="description">Información de la red de apoyo familiar del paciente</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-003.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-003.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F004</div>
+                    <h3>Consentimiento Informado</h3>
+                    <div class="description">Autorización legal para internación y tratamiento (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-004.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-004.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F004-LEGAL</div>
+                    <h3>Consentimiento Informado (Versión Legal)</h3>
+                    <div class="description">Versión legal completa con cláusulas formales según contrato actual</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-004-legal.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/guia-rapida-004-legal.html" class="btn btn-manual" target="_blank">Guía Rápida</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F005</div>
+                    <h3>Contrato de Prestación de Servicios</h3>
+                    <div class="description">Acuerdo legal bilateral para servicios de rehabilitación (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-005.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-005.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F005-LEGAL</div>
+                    <h3>Contrato de Prestación de Servicios (Versión Legal)</h3>
+                    <div class="description">Versión legal completa con todas las cláusulas contractuales actuales</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-005-legal.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/guia-rapida-005-legal.html" class="btn btn-manual" target="_blank">Guía Rápida</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">FASE 2: MÉDICOS Y ENFERMERÍA</div>
+            <div class="form-grid">
+                <div class="form-item">
+                    <div class="code">PGB-F006</div>
+                    <h3>Historia Clínica</h3>
+                    <div class="description">Registro médico completo con énfasis en historia de consumo (4 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-006.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-006.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F007</div>
+                    <h3>Nota de Ingreso Médica</h3>
+                    <div class="description">Valoración médica inicial rápida al momento del ingreso (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-007.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-007.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F008</div>
+                    <h3>Evaluación Psicofísica</h3>
+                    <div class="description">Screening integral del estado físico y mental al ingreso (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-008.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-008.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F009</div>
+                    <h3>Hoja de Signos Vitales</h3>
+                    <div class="description">Monitoreo gráfico y tabular de signos vitales (1 página apaisada)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-009.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-009.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F010</div>
+                    <h3>Kardex de Enfermería</h3>
+                    <div class="description">Control de medicación y cuidados de enfermería (1 página)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-010.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-010.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F011</div>
+                    <h3>Hoja de Medicamentos</h3>
+                    <div class="description">Registro individual por medicamento con administraciones (1 página)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-011.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-011.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">FASE 3: PSICOTRÓPICOS Y EVOLUCIÓN</div>
+            <div class="form-grid">
+                <div class="form-item">
+                    <div class="code">PGB-F012</div>
+                    <h3>Receta Médica Archivada para Psicotrópicos</h3>
+                    <div class="description">Prescripción de medicamentos psicotrópicos (Listas II, III, IV) - 1 medicamento por receta (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-012.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-012.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F013</div>
+                    <h3>Libro de Control de Psicotrópicos</h3>
+                    <div class="description">Control de movimientos de medicamentos psicotrópicos (1 página por medicamento)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-013.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-013.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F014-A</div>
+                    <h3>Hojas de Evolución - Médica</h3>
+                    <div class="description">Registro cronológico de la atención médica (Color Azul)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-014a.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-014a.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F014-B</div>
+                    <h3>Hojas de Evolución - Enfermería</h3>
+                    <div class="description">Reporte de enfermería por turno (Color Verde)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-014b.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-014b.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F014-C</div>
+                    <h3>Hojas de Evolución - Psicología</h3>
+                    <div class="description">Evolución psicológica individual (Color Púrpura)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-014c.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-014c.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F014-D</div>
+                    <h3>Hojas de Evolución - Operativa</h3>
+                    <div class="description">Psicología área operativa (Color Naranja)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-014d.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-014d.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">FASE 4: EGRESO Y DOCUMENTACIÓN</div>
+            <div class="form-grid">
+                <div class="form-item">
+                    <div class="code">PGB-F015</div>
+                    <h3>Epicrisis / Nota de Egreso</h3>
+                    <div class="description">Resumen del tratamiento al finalizar la internación (2 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-015.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-015.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <div class="code">PGB-F016</div>
+                    <h3>Informe Psicológico</h3>
+                    <div class="description">Documentación de evaluación y evolución psicológica (2-3 páginas)</div>
+                    <div class="form-links">
+                        <a href="forms/formulario-016.html" class="btn btn-form" target="_blank">Ver Formulario</a>
+                        <a href="manuals/manual-016.html" class="btn btn-manual" target="_blank">Ver Manual</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="version">
+            <p>Versión 1.0 | Enero 2026</p>
+            <p>Proyecto Gilead Bolivia - Programa Hombres Nuevos</p>
+            <p>Sistema de Formularios Clínicos SEDES</p>
+        </div>
+    </div>
+</body>
+</html>

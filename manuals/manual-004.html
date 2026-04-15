@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F004 Consentimiento Informado</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .warning-box {
+            background-color: #FFF3E0;
+            border-left: 4px solid #FF9800;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .principles-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 9pt;
+            margin-top: 10px;
+        }
+        .principles-table th {
+            background-color: #1F4E79;
+            color: white;
+            padding: 8px;
+            text-align: left;
+        }
+        .principles-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F004 "Consentimiento Informado de Internación"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-004<br>
+            <b>Versión:</b> 1.1
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+            <li><b>Documento Legal:</b> Este es un documento legal vinculante. Debe ser completado con extremo cuidado y precisión.</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F004</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">2 (Anverso y Reverso - Dúplex)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Formato</div>
+        <div class="field-desc">Tamaño carta (21.59 × 27.94 cm)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Médico de Admisión o Personal Autorizado</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        El Consentimiento Informado es una <b>autorización legal</b> que:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Autoriza la internación y tratamiento del paciente</li>
+        <li>Protege los derechos del paciente y su familia</li>
+        <li>Documenta que el paciente/representante fue informado adecuadamente</li>
+        <li>Tiene carácter de documento legal vinculante</li>
+        <li>Establece las condiciones y límites del tratamiento</li>
+        <li>Protege al personal médico y la institución</li>
+    </ul>
+    <div class="warning-box">
+        <b>⚠️ IMPORTANTE - DOCUMENTO LEGAL:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            Este documento tiene <b>valor legal</b> y puede ser utilizado como prueba en procesos judiciales. 
+            Debe ser completado con precisión y todas las firmas deben ser auténticas.
+        </p>
+    </div>
+
+    <h2>3. PRINCIPIOS DEL CONSENTIMIENTO INFORMADO</h2>
+    <p style="font-size: 9.5pt; margin-bottom: 10px;">
+        El consentimiento informado debe cumplir con los siguientes principios fundamentales:
+    </p>
+    <table class="principles-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Principio</th>
+                <th style="width: 75%;">Descripción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Voluntariedad</b></td>
+                <td>Debe ser dado libremente, sin coacción, presión o manipulación. El paciente o representante debe tener la libertad de aceptar o rechazar.</td>
+            </tr>
+            <tr>
+                <td><b>Información</b></td>
+                <td>El firmante debe comprender completamente lo que está autorizando. La información debe ser clara, completa y en lenguaje comprensible.</td>
+            </tr>
+            <tr>
+                <td><b>Capacidad</b></td>
+                <td>El firmante debe tener capacidad legal (mayor de edad, con plenas facultades mentales) para otorgar el consentimiento.</td>
+            </tr>
+            <tr>
+                <td><b>Especificidad</b></td>
+                <td>Debe referirse a tratamientos y procedimientos concretos y específicos, no a autorizaciones generales o vagas.</td>
+            </tr>
+            <tr>
+                <td><b>Revocabilidad</b></td>
+                <td>Puede ser retirado en cualquier momento por el paciente o representante, siempre que no comprometa la seguridad del paciente.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. RESPONSABLES</h2>
+    <ul style="font-size: 9.5pt;">
+        <li><b>Explicación y Llenado:</b> Médico de Admisión o Personal Autorizado</li>
+        <li><b>Verificación:</b> Supervisor Médico</li>
+        <li><b>Firma Médica:</b> Médico responsable del caso (obligatorio con sello)</li>
+        <li><b>Firma del Paciente:</b> Si tiene capacidad legal</li>
+        <li><b>Firma del Representante:</b> Tutor o responsable legal (obligatorio)</li>
+    </ul>
+
+    <h2>5. CUÁNDO SE USA</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Momento</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Acción</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Antes de la internación</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Secciones A, B, C y D (Página 1)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Durante la explicación del tratamiento</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Leer y explicar toda la información al paciente/representante</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Al momento de la firma</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Sección de Autorizaciones Especiales y Firmas (Página 2)</td>
+        </tr>
+    </table>
+
+    <h2>6. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: DATOS DEL PACIENTE</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Debe ser el mismo número asignado en F001, F002 y F003. <span class="example">Ejemplo: HC-2025-0042</span>
+            <br><span class="alert">CRÍTICO: Verificar que coincida con otros formularios del expediente.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nombre completo</div>
+        <div class="field-desc">Nombre completo del paciente según F001. <span class="example">Ejemplo: Carlos Alberto Huarachi Apaza</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">
+            Número de carnet del paciente. El formulario incluye un campo separado "Ext." para la extensión (departamento de emisión).
+            <br><span class="example">Ejemplo: 8523614 (en campo C.I.) y CBBA (en campo Ext.)</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de Nacimiento / Edad</div>
+        <div class="field-desc">Fecha de nacimiento en formato DD/MM/AAAA y edad en años. <span class="example">Ejemplo: 15/03/1990, 34 años</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: DATOS DEL REPRESENTANTE LEGAL</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre completo</div>
+        <div class="field-desc">
+            Nombre completo del representante legal o tutor que firmará el consentimiento.
+            <br><span class="example">Ejemplo: María Elena Apaza de Huarachi</span>
+            <br><span class="alert">OBLIGATORIO: Debe ser mayor de edad y tener capacidad legal.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">
+            Número de carnet del representante. El formulario incluye un campo separado "Ext." para la extensión (departamento de emisión).
+            <br><span class="example">Ejemplo: 4512367 (en campo C.I.) y CBBA (en campo Ext.)</span>
+            <br><span class="alert">OBLIGATORIO: Verificar documento original.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Parentesco</div>
+        <div class="field-desc">Relación con el paciente. <span class="example">Ejemplo: Madre, Padre, Cónyuge, Tutor legal</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Dirección / Teléfono</div>
+        <div class="field-desc">Dirección completa y número de teléfono del representante. <span class="example">Ejemplo: Av. América #1234, 70012345</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: INFORMACIÓN DEL TRATAMIENTO</h3>
+    
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE - EXPLICACIÓN VERBAL OBLIGATORIA:</b>
+        <p style="margin-top: 5px;">
+            Esta sección DEBE ser explicada verbalmente al paciente y/o representante ANTES de solicitar la firma. 
+            No basta con que lean el documento.
+        </p>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Diagnóstico presuntivo</div>
+        <div class="field-desc">
+            Describir el diagnóstico en términos comprensibles para el paciente/familia.
+            <br><span class="example">Ejemplo: "Dependencia a múltiples sustancias (cocaína, alcohol)"</span>
+            <br>Evitar términos técnicos excesivos. Si es necesario, explicar en palabras sencillas.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Tratamiento propuesto</div>
+        <div class="field-desc">
+            Describir de manera clara y completa el programa de tratamiento que se realizará.
+            <br><span class="example">Ejemplo: "Programa de rehabilitación residencial integral que incluye: desintoxicación médica, terapia psicológica individual y grupal, actividades recreativas, talleres ocupacionales y seguimiento ambulatorio"</span>
+            <br>Ser específico sobre las actividades y terapias incluidas.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Duración estimada</div>
+        <div class="field-desc">
+            Tiempo aproximado del tratamiento. Si hay fases, especificarlas.
+            <br><span class="example">Ejemplo: "90 días (primera fase), con posible extensión a 1 año según evolución"</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Riesgos del tratamiento</div>
+        <div class="field-desc">
+            Describir los posibles riesgos y complicaciones de manera honesta y clara.
+            <br><span class="example">Ejemplo: "Síndrome de abstinencia en la primera semana (náuseas, insomnio, ansiedad), posibles cambios anímicos temporales, riesgo de recaída"</span>
+            <br><span class="alert">OBLIGATORIO: No ocultar riesgos. La transparencia es fundamental.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Beneficios esperados</div>
+        <div class="field-desc">
+            Describir los resultados esperados del tratamiento de manera realista.
+            <br><span class="example">Ejemplo: "Recuperación de la dependencia, mejora en la calidad de vida, reinserción social y laboral, restablecimiento de relaciones familiares"</span>
+            <br>Ser realista, no crear expectativas irreales.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Alternativas de tratamiento</div>
+        <div class="field-desc">
+            Mencionar otras opciones disponibles (si las hay).
+            <br><span class="example">Ejemplo: "Tratamiento ambulatorio, otro centro de rehabilitación, comunidad terapéutica, tratamiento en otro departamento"</span>
+            <br>Si no hay alternativas viables, indicarlo claramente.
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN D: DECLARACIONES Y AUTORIZACIONES</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Proceso de Marcado</div>
+        <div class="field-desc">
+            <b>PASOS OBLIGATORIOS:</b>
+            <ol style="margin-top: 5px;">
+                <li><b>Leer en voz alta</b> cada punto al firmante</li>
+                <li><b>Explicar</b> con palabras sencillas si hay dudas</li>
+                <li><b>Responder</b> todas las preguntas del firmante</li>
+                <li><b>Marcar casillas</b> solo si el firmante acepta explícitamente</li>
+                <li><b>NO marcar</b> si el firmante no está de acuerdo o tiene dudas</li>
+            </ol>
+            <span class="alert">CRÍTICO: Cada casilla debe ser marcada SOLO después de que el firmante comprenda y acepte.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Autorizaciones</div>
+        <div class="field-desc">
+            Las autorizaciones incluyen:
+            <ul style="margin-top: 5px;">
+                <li>Internación en el centro</li>
+                <li>Tratamiento médico y psicológico</li>
+                <li>Administración de medicamentos</li>
+                <li>Realización de pruebas diagnósticas</li>
+                <li>Comprensión de la información</li>
+                <li>Oportunidad de hacer preguntas</li>
+            </ul>
+            <span class="example">Todas deben estar marcadas para que el consentimiento sea válido.</span>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">PÁGINA 2: AUTORIZACIONES ESPECIALES</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Autorizaciones Especiales</div>
+        <div class="field-desc">
+            Esta sección incluye autorizaciones específicas para:
+            <ul style="margin-top: 5px;">
+                <li><b>Revisión de pertenencias y corporal:</b> Para seguridad del centro</li>
+                <li><b>Manejo de crisis y contención:</b> Solo en emergencias con riesgo inminente</li>
+                <li><b>Traslados de emergencia:</b> A hospital de 3er nivel si es necesario</li>
+            </ul>
+            <span class="alert">IMPORTANTE: Explicar claramente cada autorización y sus implicaciones.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Declaración Final de Adhesión</div>
+        <div class="field-desc">
+            El firmante debe completar manualmente:
+            <ul style="margin-top: 5px;">
+                <li>Día del mes</li>
+                <li>Mes</li>
+                <li>Año</li>
+            </ul>
+            Esta declaración confirma que ha leído y comprendido todo el documento.
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN DE FIRMAS</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Firma del Paciente</div>
+        <div class="field-desc">
+            Solo si el paciente tiene capacidad legal (mayor de edad, con plenas facultades mentales).
+            <br>Si el paciente es menor de edad o incapaz, esta firma NO es necesaria.
+            <br>Incluye espacio para huella dactilar (opcional pero recomendado).
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Firma del Tutor/Responsable</div>
+        <div class="field-desc">
+            <b>OBLIGATORIA</b> - El tutor o responsable legal debe firmar.
+            <br>Incluye: nombre, C.I. y huella dactilar.
+            <br><span class="alert">CRÍTICO: Sin esta firma, el consentimiento NO es válido.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Firma y Sello del Médico</div>
+        <div class="field-desc">
+            <b>OBLIGATORIA</b> - El médico responsable debe:
+            <ul style="margin-top: 5px;">
+                <li>Firmar el documento</li>
+                <li>Colocar su sello profesional</li>
+                <li>Registrar su nombre completo</li>
+                <li>Registrar su número de matrícula</li>
+            </ul>
+            <span class="alert">LEGAL: Según D.S. 28562 Art. 6, la firma y sello del médico son obligatorios.</span>
+        </div>
+    </div>
+
+    <h2>7. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            CONSENTIMIENTO INFORMADO DE INTERNACIÓN<br>
+            PGB-F004 v1.1
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>PÁGINA 1 - SECCIÓN A: DATOS DEL PACIENTE</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Nombre completo: <u>Carlos Alberto Huarachi Apaza</u><br>
+            Cédula de Identidad: <u>8523614</u>  Ext.: <u>CBBA</u><br>
+            Fecha de Nacimiento: <u>15/03/1990</u>   Edad: <u>34 años</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN B: DATOS DEL REPRESENTANTE LEGAL</b><br>
+            Nombre completo: <u>María Elena Apaza de Huarachi</u><br>
+            Cédula de Identidad: <u>4512367</u>  Ext.: <u>CBBA</u>     Parentesco: <u>Madre</u><br>
+            Dirección: <u>Av. América #1234</u><br>
+            Teléfono: <u>70012345</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN C: INFORMACIÓN DEL TRATAMIENTO</b><br>
+            Diagnóstico presuntivo:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Dependencia a múltiples sustancias (cocaína, alcohol) según criterios CIE-10 F19.2</u>
+            </div>
+            <br>
+            Tratamiento propuesto:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Programa de rehabilitación residencial integral que incluye: desintoxicación médica, terapia psicológica individual y grupal, actividades recreativas, talleres ocupacionales y seguimiento ambulatorio</u>
+            </div>
+            <br>
+            Duración estimada: <u>90 días (primera fase), con posible extensión a 1 año según evolución</u><br>
+            <br>
+            Riesgos del tratamiento:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Síndrome de abstinencia en la primera semana (náuseas, insomnio, ansiedad), posibles cambios anímicos temporales, riesgo de recaída</u>
+            </div>
+            <br>
+            Beneficios esperados:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Recuperación de la dependencia, mejora en la calidad de vida, reinserción social y laboral, restablecimiento de relaciones familiares</u>
+            </div>
+            <br>
+            Alternativas de tratamiento:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1cm; background-color: white;">
+                <u>Tratamiento ambulatorio, otro centro de rehabilitación, comunidad terapéutica</u>
+            </div>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN D: DECLARACIONES Y AUTORIZACIONES</b><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>Autorizo la internación</b> en este centro de rehabilitación.</td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>Autorizo el tratamiento médico y psicológico</b> según el plan terapéutico establecido.</td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>Autorizo la administración de medicamentos</b> prescritos por el médico tratante.</td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>Autorizo la realización de pruebas diagnósticas</b> necesarias para el tratamiento.</td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>He comprendido la información</b> proporcionada sobre el tratamiento.</td>
+                </tr>
+                <tr>
+                    <td style="width: 5%; text-align: center; border: 1px solid #000; background-color: #f0f0f0; padding: 3px;">☒</td>
+                    <td style="border: 1px solid #000; padding: 5px;"><b>He tenido la oportunidad de hacer preguntas</b> y se me han aclarado las dudas.</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="margin-top: 15px; border-top: 2px solid #000; padding-top: 10px;">
+            <b>PÁGINA 2 - SECCIÓN DE FIRMAS</b><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+                <tr>
+                    <td style="border: 1px solid #000; padding: 8px; width: 33%; vertical-align: top;">
+                        <b>FIRMA DEL PACIENTE</b><br>
+                        Nombre: <u>Carlos Alberto Huarachi Apaza</u><br>
+                        C.I.: <u>8523614 CBBA</u><br>
+                        Firma: ___________________<br>
+                        Huella: [HUELLA]
+                    </td>
+                    <td style="border: 1px solid #000; padding: 8px; width: 33%; vertical-align: top;">
+                        <b>FIRMA DEL TUTOR/RESPONSABLE</b><br>
+                        Nombre: <u>María Elena Apaza de Huarachi</u><br>
+                        C.I.: <u>4512367 CBBA</u><br>
+                        Firma: ___________________
+                    </td>
+                    <td style="border: 1px solid #000; padding: 8px; width: 34%; vertical-align: top;">
+                        <b>FIRMA Y SELLO DEL MÉDICO</b><br>
+                        Nombre: <u>Dr. Roberto Méndez Quiroga</u><br>
+                        Matrícula: <u>54321</u><br>
+                        Firma: ___________________<br>
+                        Sello: [SELLO]
+                    </td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7.5pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F004 v1.1 | Página 2 de 2
+        </div>
+    </div>
+
+    <h2>8. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No explicar verbalmente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Consentimiento inválido legalmente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre leer y explicar en voz alta</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Marcar casillas sin consentimiento</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento fraudulento, inválido</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Solo marcar si el firmante acepta explícitamente</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Falta firma del médico</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Documento inválido según normativa</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar que médico firme y selle</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Ocultar riesgos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Responsabilidad legal, falta de transparencia</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Ser honesto y transparente sobre todos los riesgos</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Firma bajo coacción</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Consentimiento inválido, problemas legales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Asegurar que la firma sea voluntaria</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información incompleta</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Consentimiento parcial, problemas legales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar todos los campos requeridos</td>
+        </tr>
+    </table>
+
+    <h2>9. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Nº Historia Clínica coincide con otros formularios</li>
+            <li>Datos del paciente completos y correctos</li>
+            <li>Datos del representante legal completos y verificados</li>
+            <li>C.I. del representante verificada con documento original</li>
+            <li>Información del tratamiento explicada verbalmente</li>
+            <li>Diagnóstico descrito en términos comprensibles</li>
+            <li>Tratamiento propuesto descrito completamente</li>
+            <li>Duración estimada especificada</li>
+            <li>Riesgos descritos de manera honesta y completa</li>
+            <li>Beneficios esperados descritos de manera realista</li>
+            <li>Alternativas mencionadas (si aplica)</li>
+            <li>Todas las autorizaciones marcadas con consentimiento explícito</li>
+            <li>Autorizaciones especiales explicadas y marcadas</li>
+            <li>Declaración final de adhesión completada</li>
+            <li>Firma del paciente (si tiene capacidad legal)</li>
+            <li>Firma del tutor/responsable presente</li>
+            <li>Firma y sello del médico presentes</li>
+            <li>Huellas dactilares registradas (recomendado)</li>
+            <li>Formulario impreso en dúplex (2 páginas en 1 hoja)</li>
+        </ul>
+    </div>
+
+    <h2>10. INSTRUCCIONES DE IMPRESIÓN (DÚPLEX)</h2>
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE - FORMATO DÚPLEX:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            Este formulario consta de DOS páginas diseñadas para imprimirse en <b>UNA SOLA HOJA</b> (Doble faz / Dúplex).
+        </p>
+        <ul style="margin-top: 5px;">
+            <li><b>Cara A (Anverso - Página 1):</b> Secciones A, B, C, D - Datos e información del tratamiento</li>
+            <li><b>Cara B (Reverso - Página 2):</b> Autorizaciones especiales, declaración final y firmas</li>
+        </ul>
+        <p style="margin-top: 5px; color: #d32f2f; font-weight: bold;">
+            NO IMPRIMIR EN HOJAS SEPARADAS para evitar pérdidas de información y mantener la integridad del documento legal.
+        </p>
+    </div>
+
+    <h2>11. BASE NORMATIVA Y LEGAL</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 14: Establece la obligatoriedad del consentimiento informado para internación y tratamiento. Define el contenido mínimo que debe incluir.</td>
+                <td>Art. 14</td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 3131</b><br>Ejercicio Profesional Médico</td>
+                <td>Art. 8: Establece el derecho del paciente a ser informado y a otorgar consentimiento. Art. 6: Exige firma y sello del médico.</td>
+                <td>Art. 8, 6</td>
+            </tr>
+            <tr>
+                <td><b>Código de Ética Médica</b></td>
+                <td>Establece los principios éticos del consentimiento informado: voluntariedad, información, capacidad, especificidad y revocabilidad.</td>
+                <td>Principios Éticos</td>
+            </tr>
+            <tr>
+                <td><b>Constitución Política del Estado</b></td>
+                <td>Art. 15: Derecho a la salud. Art. 21: Derecho a la información y a la integridad personal.</td>
+                <td>Art. 15, 21</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>12. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>Consentimiento Informado:</b> Autorización voluntaria, específica y documentada que otorga el paciente o su representante legal después de haber sido informado adecuadamente sobre el tratamiento.</p>
+        <p><b>Representante Legal:</b> Persona mayor de edad designada legalmente para representar al paciente (tutor, padre, madre, cónyuge, etc.).</p>
+        <p><b>Capacidad Legal:</b> Facultad de una persona para ejercer sus derechos y cumplir sus obligaciones. Requiere mayoría de edad y plenas facultades mentales.</p>
+        <p><b>Voluntariedad:</b> Característica del consentimiento que indica que fue otorgado libremente, sin coacción, presión o manipulación.</p>
+        <p><b>Revocabilidad:</b> Derecho del paciente o representante a retirar el consentimiento en cualquier momento, siempre que no comprometa la seguridad del paciente.</p>
+        <p><b>Contención:</b> Medida de seguridad física o farmacológica utilizada en situaciones de emergencia cuando existe riesgo inminente de daño.</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.1 | Enero 2026
+    </div>
+
+</body>
+</html>

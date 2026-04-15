@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F015 Epicrisis / Nota de Egreso</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #1F4E79; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #1F4E79; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+        h2 { background-color: #E0E0E0; padding: 5px 10px; border-left: 5px solid #1F4E79; font-size: 11pt; margin-top: 15px; page-break-after: avoid; }
+        h3 { font-size: 10pt; margin-top: 10px; color: #1F4E79; }
+        .instruction-box { display: grid; grid-template-columns: 150px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .field-desc { font-size: 9.5pt; }
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffebee; padding: 2px 5px; border-radius: 3px; }
+        .example { color: #1565c0; font-style: italic; font-size: 9pt; }
+        .general-rules { background-color: #fff3e0; border: 1px solid #ffe0b2; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt; }
+        .general-rules ul { margin: 5px 0 0 20px; padding: 0; }
+        .legal-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-top: 10px; }
+        .legal-table th { background-color: #1F4E79; color: white; padding: 5px; text-align: left; }
+        .legal-table td { border: 1px solid #ddd; padding: 5px; vertical-align: top; }
+        .footer { margin-top: 30px; font-size: 8pt; text-align: center; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+        .checklist { background-color: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-top: 10px; font-size: 9pt; }
+        .checklist ul { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; margin-right: 5px; }
+        .example-box { background-color: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-top: 10px; font-size: 8.5pt; font-family: 'Courier New', monospace; }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F015 "Epicrisis / Nota de Egreso"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-015<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras.</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar "---".</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F015</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.0</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">2</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Médico tratante</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tiempo estimado</div>
+        <div class="field-desc">30-45 minutos</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        La Epicrisis o Nota de Egreso es el <b>documento médico final</b> que resume todo el proceso de atención durante la internación. Este documento:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Consolida el resumen clínico completo del paciente</li>
+        <li>Documenta la evolución durante la internación</li>
+        <li>Establece el diagnóstico final con código CIE-10</li>
+        <li>Proporciona indicaciones para el seguimiento ambulatorio</li>
+        <li>Sirve como documento de referencia para futuras atenciones</li>
+        <li>Es obligatorio según normativa SEDES para todo egreso</li>
+    </ul>
+    <p style="font-size: 9pt; color: #d32f2f; font-weight: bold;">
+        ⚠️ IMPORTANTE: Este documento debe completarse ANTES del egreso del paciente y es requisito obligatorio para el alta.
+    </p>
+
+    <h2>3. CUÁNDO SE USA</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th>Momento</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alta médica programada</td>
+                <td>Completar todas las secciones A-G</td>
+            </tr>
+            <tr>
+                <td>Alta voluntaria</td>
+                <td>Completar secciones A-F, documentar motivo de egreso voluntario</td>
+            </tr>
+            <tr>
+                <td>Fuga o abandono</td>
+                <td>Completar hasta el momento del abandono, documentar circunstancias</td>
+            </tr>
+            <tr>
+                <td>Fallecimiento</td>
+                <td>Completar resumen clínico hasta el deceso, incluir causa de muerte</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. INSTRUCCIONES DE LLENADO</h2>
+
+    <h3>SECCIÓN A: IDENTIFICACIÓN</h3>
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">Mismo número que aparece en todos los formularios del expediente. <span class="example">Ejemplo: HC-2025-0042</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Nombre del paciente</div>
+        <div class="field-desc">Nombre completo según cédula de identidad. <span class="example">Ejemplo: HUARACHI APAZA, Carlos Alberto</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">C.I.</div>
+        <div class="field-desc">Número completo con extensión. <span class="example">Ejemplo: 8523614 CBBA</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Edad</div>
+        <div class="field-desc">Años cumplidos al momento del egreso. <span class="example">Ejemplo: 34 años</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Sexo</div>
+        <div class="field-desc">Marcar la casilla correspondiente. <span class="example">Ejemplo: ☒ M  ☐ F</span></div>
+    </div>
+
+    <h3>SECCIÓN B: FECHAS DE INTERNACIÓN</h3>
+    <div class="instruction-box">
+        <div class="field-name">Fecha de ingreso</div>
+        <div class="field-desc">Fecha exacta del ingreso según F002. Formato DD/MM/AAAA. <span class="example">Ejemplo: 15/12/2025</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Fecha de egreso</div>
+        <div class="field-desc">Fecha del alta o egreso. Formato DD/MM/AAAA. <span class="example">Ejemplo: 15/03/2026</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Días de internación</div>
+        <div class="field-desc">Calcular días transcurridos entre ingreso y egreso. <span class="example">Ejemplo: 90 días</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tipo de egreso</div>
+        <div class="field-desc">Marcar la casilla correspondiente:
+            <ul style="margin: 5px 0 0 20px; padding: 0; font-size: 9pt;">
+                <li><b>Alta médica:</b> Paciente completó tratamiento según criterios médicos</li>
+                <li><b>Alta voluntaria:</b> Paciente solicita retirarse antes de completar tratamiento</li>
+                <li><b>Fuga:</b> Paciente abandona sin autorización</li>
+                <li><b>Fallecimiento:</b> Paciente fallece durante la internación</li>
+            </ul>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Motivo de egreso</div>
+        <div class="field-desc">Describir brevemente el motivo específico del egreso. <span class="example">Ejemplo: Completó programa básico de rehabilitación de 90 días con evolución favorable</span></div>
+    </div>
+
+    <h3>SECCIÓN C: RESUMEN CLÍNICO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Diagnóstico de ingreso</div>
+        <div class="field-desc">Diagnóstico principal al momento del ingreso según F007 o F006. <span class="example">Ejemplo: Dependencia a cocaína</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">CIE-10 ingreso</div>
+        <div class="field-desc">Código CIE-10 del diagnóstico de ingreso. <span class="example">Ejemplo: F14.2</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Diagnóstico de egreso</div>
+        <div class="field-desc">Diagnóstico final al momento del egreso. Puede ser igual o diferente al de ingreso. <span class="example">Ejemplo: Dependencia a cocaína en remisión parcial</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">CIE-10 egreso</div>
+        <div class="field-desc">Código CIE-10 del diagnóstico final. <span class="example">Ejemplo: F14.21</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Resumen de enfermedad actual</div>
+        <div class="field-desc">Narrar de forma cronológica y resumida:
+            <ul style="margin: 5px 0 0 20px; padding: 0; font-size: 9pt;">
+                <li>Motivo de ingreso y síntomas iniciales</li>
+                <li>Evolución durante la internación</li>
+                <li>Respuesta al tratamiento</li>
+                <li>Estado actual al egreso</li>
+            </ul>
+            <span class="example">Ejemplo: Paciente ingresó por dependencia a cocaína con deseo de rehabilitación. Durante la internación presentó síndrome de abstinencia leve que se manejó con medicación. Participó activamente en programa de rehabilitación. Al egreso se encuentra estable, sin craving, con adecuada motivación para continuar tratamiento ambulatorio.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Hallazgos relevantes</div>
+        <div class="field-desc">Resultados de exámenes complementarios, evaluaciones psicológicas, o hallazgos clínicos importantes. <span class="example">Ejemplo: Evaluación psicológica muestra mejoría en áreas emocional y conductual. Exámenes de laboratorio dentro de parámetros normales.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Procedimientos realizados</div>
+        <div class="field-desc">Listar procedimientos médicos, intervenciones psicoterapéuticas, u otros procedimientos realizados. <span class="example">Ejemplo: Desintoxicación supervisada, psicoterapia individual y grupal, evaluación psicológica completa.</span></div>
+    </div>
+
+    <h3>SECCIÓN D: TRATAMIENTO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Tratamiento farmacológico</div>
+        <div class="field-desc">Listar todos los medicamentos utilizados durante la internación con dosis y duración. <span class="example">Ejemplo: Clonazepam 2mg cada 12 horas por 7 días (síndrome de abstinencia), luego reducción gradual hasta suspensión. Metformina 500mg cada 12 horas (comorbilidad).</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tratamiento psicoterapéutico</div>
+        <div class="field-desc">Describir tipo y frecuencia de intervenciones psicológicas. <span class="example">Ejemplo: Psicoterapia individual semanal (8 sesiones), terapia grupal 3 veces por semana, terapia familiar (2 sesiones).</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Evolución durante internación</div>
+        <div class="field-desc">Describir la evolución clínica:
+            <ul style="margin: 5px 0 0 20px; padding: 0; font-size: 9pt;">
+                <li>Primera semana: Síntomas iniciales y respuesta al tratamiento</li>
+                <li>Evolución intermedia: Mejoras o complicaciones</li>
+                <li>Estado final: Condición al egreso</li>
+            </ul>
+            <span class="example">Ejemplo: Primera semana con síndrome de abstinencia leve controlado. Segunda a cuarta semana: Participación activa en programa, mejoría en estado de ánimo. Quinta a doceava semana: Mantenimiento de abstinencia, desarrollo de habilidades de afrontamiento, adecuada integración grupal.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Complicaciones</div>
+        <div class="field-desc">Si hubo complicaciones, describirlas. Si no hubo, escribir "Ninguna" o "---". <span class="example">Ejemplo: Ninguna</span></div>
+    </div>
+
+    <h3>SECCIÓN E: CONDICIÓN AL EGRESO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Estado clínico al egreso</div>
+        <div class="field-desc">Describir condición física y mental actual. <span class="example">Ejemplo: Paciente estable, orientado, sin signos de abstinencia, estado de ánimo estable, adecuada higiene personal.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Medicación al egreso</div>
+        <div class="field-desc">Listar medicamentos que debe continuar tomando con dosis y frecuencia. <span class="example">Ejemplo: Metformina 500mg cada 12 horas (continuar indefinidamente).</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Indicaciones al egreso</div>
+        <div class="field-desc">Instrucciones específicas para el paciente:
+            <ul style="margin: 5px 0 0 20px; padding: 0; font-size: 9pt;">
+                <li>Actividades permitidas y restringidas</li>
+                <li>Recomendaciones dietéticas</li>
+                <li>Precauciones especiales</li>
+                <li>Recomendaciones sobre consumo de sustancias</li>
+            </ul>
+            <span class="example">Ejemplo: Continuar tratamiento ambulatorio. Asistir a grupos de apoyo. Evitar contacto con personas que consumen sustancias. Realizar ejercicio físico regular. Mantener dieta balanceada.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Signos de alarma</div>
+        <div class="field-desc">Síntomas que requieren atención médica inmediata. <span class="example">Ejemplo: Reaparición de craving intenso, ideación suicida, síntomas de recaída, malestar general severo.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Citas de seguimiento</div>
+        <div class="field-desc">Fechas y horarios de citas programadas. <span class="example">Ejemplo: Control médico: 22/03/2026 a las 10:00. Control psicológico: 25/03/2026 a las 14:00.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Referencia a</div>
+        <div class="field-desc">Si se refiere a otro servicio o especialista, indicar. Si no aplica, escribir "---". <span class="example">Ejemplo: ---</span></div>
+    </div>
+
+    <h3>SECCIÓN F: PRONÓSTICO Y RECOMENDACIONES</h3>
+    <div class="instruction-box">
+        <div class="field-name">Pronóstico</div>
+        <div class="field-desc">Evaluación del pronóstico a corto, mediano y largo plazo. <span class="example">Ejemplo: Pronóstico favorable a corto plazo si mantiene adherencia al tratamiento ambulatorio. Pronóstico reservado a largo plazo debido a historia de múltiples recaídas previas.</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Recomendaciones de seguimiento</div>
+        <div class="field-desc">Recomendaciones específicas para el seguimiento:
+            <ul style="margin: 5px 0 0 20px; padding: 0; font-size: 9pt;">
+                <li>Frecuencia de controles médicos y psicológicos</li>
+                <li>Continuación de tratamiento</li>
+                <li>Participación en grupos de apoyo</li>
+                <li>Apoyo familiar</li>
+            </ul>
+            <span class="example">Ejemplo: Controles médicos mensuales durante primeros 6 meses. Psicoterapia individual semanal mínimo 6 meses. Participación en grupos de apoyo (NA/AA) al menos 2 veces por semana. Involucrar a familia en proceso de recuperación.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Plan de prevención de recaídas</div>
+        <div class="field-desc">Estrategias específicas para prevenir recaídas identificadas durante el tratamiento. <span class="example">Ejemplo: Identificar situaciones de riesgo (contacto con usuarios, lugares asociados al consumo). Desarrollar habilidades de afrontamiento. Mantener rutina estructurada. Buscar apoyo inmediato ante craving.</span></div>
+    </div>
+
+    <h3>SECCIÓN G: FIRMAS</h3>
+    <div class="instruction-box">
+        <div class="field-name">Nombre médico tratante</div>
+        <div class="field-desc">Nombre completo del médico responsable del tratamiento. <span class="example">Ejemplo: Dr. Juan Pérez Silva</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Matrícula</div>
+        <div class="field-desc">Número de matrícula profesional. <span class="example">Ejemplo: 12345</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Especialidad</div>
+        <div class="field-desc">Especialidad médica. <span class="example">Ejemplo: Medicina General / Psiquiatría</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Fecha de elaboración</div>
+        <div class="field-desc">Fecha en que se completa la epicrisis. Formato DD/MM/AAAA. <span class="example">Ejemplo: 15/03/2026</span></div>
+    </div>
+    <p style="font-size: 9pt; color: #d32f2f; font-weight: bold; margin-top: 10px;">
+        ⚠️ OBLIGATORIO: Firma y sello del médico tratante. Sin firma y sello, el documento NO es válido.
+    </p>
+
+    <h2>5. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div class="example-box">
++------------------------------------------------------------------+
+| EPICRISIS / NOTA DE EGRESO                            PGB-F015   |
++------------------------------------------------------------------+
+| SECCIÓN A: IDENTIFICACIÓN                                         |
+| Nº Historia Clínica: HC-2025-0042                                 |
+| Nombre: HUARACHI APAZA, Carlos Alberto                           |
+| C.I.: 8523614 CBBA    Edad: 34 años    Sexo: ☒ M  ☐ F            |
++------------------------------------------------------------------+
+| SECCIÓN B: FECHAS DE INTERNACIÓN                                  |
+| Fecha de ingreso: 15/12/2025                                     |
+| Fecha de egreso: 15/03/2026                                      |
+| Días de internación: 90 días                                      |
+| Tipo de egreso: ☒ Alta médica  ☐ Alta voluntaria                  |
+|                  ☐ Fuga  ☐ Fallecimiento                          |
+| Motivo de egreso: Completó programa básico de rehabilitación    |
+|                   de 90 días con evolución favorable              |
++------------------------------------------------------------------+
+| SECCIÓN C: RESUMEN CLÍNICO                                        |
+| Diagnóstico de ingreso: Dependencia a cocaína                     |
+| CIE-10 ingreso: F14.2                                             |
+| Diagnóstico de egreso: Dependencia a cocaína en remisión parcial  |
+| CIE-10 egreso: F14.21                                             |
+|                                                                   |
+| Resumen de enfermedad actual:                                     |
+| Paciente ingresó por dependencia a cocaína con deseo de          |
+| rehabilitación. Durante la internación presentó síndrome de       |
+| abstinencia leve que se manejó con medicación. Participó         |
+| activamente en programa de rehabilitación. Al egreso se          |
+| encuentra estable, sin craving, con adecuada motivación para      |
+| continuar tratamiento ambulatorio.                                |
+|                                                                   |
+| Hallazgos relevantes:                                             |
+| Evaluación psicológica muestra mejoría en áreas emocional y       |
+| conductual. Exámenes de laboratorio dentro de parámetros         |
+| normales.                                                         |
+|                                                                   |
+| Procedimientos realizados:                                        |
+| Desintoxicación supervisada, psicoterapia individual y grupal,    |
+| evaluación psicológica completa.                                  |
++------------------------------------------------------------------+
+| SECCIÓN D: TRATAMIENTO                                            |
+| Tratamiento farmacológico:                                        |
+| Clonazepam 2mg cada 12 horas por 7 días (síndrome de            |
+| abstinencia), luego reducción gradual hasta suspensión.           |
+| Metformina 500mg cada 12 horas (comorbilidad).                   |
+|                                                                   |
+| Tratamiento psicoterapéutico:                                     |
+| Psicoterapia individual semanal (8 sesiones), terapia grupal      |
+| 3 veces por semana, terapia familiar (2 sesiones).               |
+|                                                                   |
+| Evolución durante internación:                                   |
+| Primera semana con síndrome de abstinencia leve controlado.      |
+| Segunda a cuarta semana: Participación activa en programa,       |
+| mejoría en estado de ánimo. Quinta a doceava semana:             |
+| Mantenimiento de abstinencia, desarrollo de habilidades de        |
+| afrontamiento, adecuada integración grupal.                        |
+|                                                                   |
+| Complicaciones: Ninguna                                           |
++------------------------------------------------------------------+
+| SECCIÓN E: CONDICIÓN AL EGRESO                                    |
+| Estado clínico al egreso:                                         |
+| Paciente estable, orientado, sin signos de abstinencia, estado   |
+| de ánimo estable, adecuada higiene personal.                     |
+|                                                                   |
+| Medicación al egreso:                                             |
+| Metformina 500mg cada 12 horas (continuar indefinidamente).      |
+|                                                                   |
+| Indicaciones al egreso:                                           |
+| Continuar tratamiento ambulatorio. Asistir a grupos de apoyo.   |
+| Evitar contacto con personas que consumen sustancias. Realizar   |
+| ejercicio físico regular. Mantener dieta balanceada.              |
+|                                                                   |
+| Signos de alarma:                                                 |
+| Reaparición de craving intenso, ideación suicida, síntomas de     |
+| recaída, malestar general severo.                                |
+|                                                                   |
+| Citas de seguimiento:                                             |
+| Control médico: 22/03/2026 a las 10:00. Control psicológico:     |
+| 25/03/2026 a las 14:00.                                           |
+|                                                                   |
+| Referencia a: ---                                                 |
++------------------------------------------------------------------+
+| SECCIÓN F: PRONÓSTICO Y RECOMENDACIONES                           |
+| Pronóstico:                                                       |
+| Pronóstico favorable a corto plazo si mantiene adherencia al     |
+| tratamiento ambulatorio. Pronóstico reservado a largo plazo        |
+| debido a historia de múltiples recaídas previas.                  |
+|                                                                   |
+| Recomendaciones de seguimiento:                                   |
+| Controles médicos mensuales durante primeros 6 meses.             |
+| Psicoterapia individual semanal mínimo 6 meses. Participación    |
+| en grupos de apoyo (NA/AA) al menos 2 veces por semana.          |
+| Involucrar a familia en proceso de recuperación.                  |
+|                                                                   |
+| Plan de prevención de recaídas:                                   |
+| Identificar situaciones de riesgo (contacto con usuarios, lugares |
+| asociados al consumo). Desarrollar habilidades de afrontamiento.|
+| Mantener rutina estructurada. Buscar apoyo inmediato ante        |
+| craving.                                                          |
++------------------------------------------------------------------+
+| SECCIÓN G: FIRMAS                                                 |
+| Nombre médico tratante: Dr. Juan Pérez Silva                     |
+| Matrícula: 12345                                                  |
+| Especialidad: Medicina General                                    |
+| Fecha de elaboración: 15/03/2026                                  |
+|                                                                   |
+| Firma: ___________________    Sello: [SELLO]                     |
++------------------------------------------------------------------+
+    </div>
+
+    <h2>6. ERRORES COMUNES</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 30%;">Error</th>
+                <th style="width: 35%;">Consecuencia</th>
+                <th style="width: 35%;">Prevención</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>No completar antes del egreso</td>
+                <td>Documento incompleto, dificulta seguimiento</td>
+                <td>Iniciar epicrisis 2-3 días antes del egreso programado</td>
+            </tr>
+            <tr>
+                <td>Diagnóstico de egreso igual al de ingreso sin justificación</td>
+                <td>No refleja evolución real del paciente</td>
+                <td>Revisar evolución completa y ajustar diagnóstico según estado actual</td>
+            </tr>
+            <tr>
+                <td>Indicaciones al egreso incompletas o poco claras</td>
+                <td>Paciente no sabe qué hacer después del alta</td>
+                <td>Proporcionar indicaciones específicas, claras y por escrito</td>
+            </tr>
+            <tr>
+                <td>No documentar medicación al egreso</td>
+                <td>Riesgo de interrupción de tratamiento necesario</td>
+                <td>Listar todos los medicamentos con dosis y frecuencia exactas</td>
+            </tr>
+            <tr>
+                <td>Falta de firma y sello</td>
+                <td>Documento inválido legalmente</td>
+                <td>Verificar firma y sello antes de archivar</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>7. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Datos de identificación completos y correctos</li>
+            <li>Fechas de ingreso y egreso registradas</li>
+            <li>Días de internación calculados correctamente</li>
+            <li>Tipo de egreso marcado correctamente</li>
+            <li>Diagnóstico de ingreso y egreso con códigos CIE-10</li>
+            <li>Resumen de enfermedad actual completo y cronológico</li>
+            <li>Hallazgos relevantes documentados</li>
+            <li>Tratamiento farmacológico completo con dosis</li>
+            <li>Tratamiento psicoterapéutico documentado</li>
+            <li>Evolución durante internación descrita</li>
+            <li>Complicaciones documentadas (o "Ninguna" si no hubo)</li>
+            <li>Estado clínico al egreso descrito</li>
+            <li>Medicación al egreso especificada con dosis</li>
+            <li>Indicaciones al egreso claras y completas</li>
+            <li>Signos de alarma documentados</li>
+            <li>Citas de seguimiento programadas</li>
+            <li>Pronóstico evaluado</li>
+            <li>Recomendaciones de seguimiento específicas</li>
+            <li>Plan de prevención de recaídas documentado</li>
+            <li>Nombre, matrícula y especialidad del médico</li>
+            <li>Fecha de elaboración registrada</li>
+            <li>Firma y sello del médico tratante presentes</li>
+        </ul>
+    </div>
+
+    <h2>8. BASE NORMATIVA Y LEGAL</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>D.S. 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 6: Responsabilidad del médico tratante. Art. 12: Contenido del expediente clínico, incluyendo epicrisis.</td>
+                <td>Art. 6, 12</td>
+            </tr>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Define estructura y contenido obligatorio de la nota de egreso o epicrisis.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>D.S. 25235</b><br>Reglamento Ley del Medicamento</td>
+                <td>Art. 1: Uso de códigos CIE-10 para diagnósticos. Registro de tratamiento farmacológico.</td>
+                <td>Art. 1</td>
+            </tr>
+            <tr>
+                <td><b>Ley 1008</b><br>Ley del Régimen de la Coca y Sustancias Controladas</td>
+                <td>Art. 49: Obligatoriedad de documentar tratamiento de dependencia a sustancias.</td>
+                <td>Art. 49</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.0 | Enero 2026
+    </div>
+</body>
+</html>

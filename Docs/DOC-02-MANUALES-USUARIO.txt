@@ -1,0 +1,891 @@
+================================================================================
+DOCUMENTO 2: MANUALES DE USUARIO - GUÍAS DE LLENADO
+================================================================================
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos - Expediente Clínico SEDES
+================================================================================
+Fecha: Enero 2026
+Versión: 1.0
+================================================================================
+
+
+============================================================
+ESTRUCTURA GENERAL DE LOS MANUALES
+============================================================
+
+Cada manual de usuario incluye las siguientes secciones:
+1. Información del documento
+2. Propósito y alcance
+3. Marco normativo
+4. Responsables
+5. Instrucciones de llenado por sección
+6. Ejemplos de llenado completos
+7. Errores comunes y cómo evitarlos
+8. Checklist de verificación
+9. Preguntas frecuentes
+10. Glosario
+
+
+================================================================================
+MANUAL F001: HOJA FRONTAL DEL EXPEDIENTE
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F001
+Versión: 1.1
+Páginas: 1
+Formato: Tamaño carta (21.59 × 27.94 cm)
+Tipo: Carátula visible del expediente
+
+2. PROPÓSITO
+-----------------------------------
+La Hoja Frontal es la CARÁTULA VISIBLE que debe colocarse al frente de 
+cada expediente clínico. Proporciona:
+- Identificación rápida del paciente
+- Datos críticos de emergencia (alergias, enfermedades crónicas)
+- Historial resumido de internaciones
+- Contacto del responsable
+
+⚠️ IMPORTANTE: Este formulario debe permanecer SIEMPRE visible en la 
+portada y NUNCA debe archivarse en el interior.
+
+3. RESPONSABLES
+-----------------------------------
+- Llenado: Personal de Admisión
+- Actualización: Personal de Admisión o Enfermería
+- Verificación: Director Médico
+
+4. CUÁNDO SE USA
+-----------------------------------
+| Momento                        | Acción                              |
+|--------------------------------|-------------------------------------|
+| Al crear nuevo expediente      | Llenar Secciones A, B, C y E        |
+| Al registrar una internación   | Añadir registro en Sección D        |
+| Al producirse un egreso        | Completar datos de egreso           |
+| Al actualizar datos críticos   | Modificar Sección E                 |
+
+5. INSTRUCCIONES DE LLENADO
+-----------------------------------
+
+SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Nº Historia Clínica      Asignar número único secuencial    HC-2025-0042
+Fecha de Apertura        Fecha de creación del expediente   15/12/2025
+Apellido Paterno         Según C.I., MAYÚSCULAS             HUARACHI
+Apellido Materno         Según C.I., MAYÚSCULAS             APAZA
+Nombres                  Según C.I., Inicial mayúscula      Carlos Alberto
+Fecha de Nacimiento      Formato DD/MM/AAAA                 15/03/1990
+Edad                     Años cumplidos al momento          34 años
+C.I.                     Número de carnet                   8523614
+Extensión                Departamento de emisión            CBBA
+Sexo                     Marcar casilla correspondiente     ☒ M  ☐ F
+Grupo Sanguíneo          Si se conoce, marcar               ☐ O+  ☒ O-
+
+SECCIÓN B: DATOS DE CONTACTO
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Dirección                Calle y número                     Av. América #1234
+Zona/Barrio              Zona o barrio                      Zona Sur
+Ciudad                   Ciudad de residencia               Cochabamba
+Departamento             Departamento                       Cochabamba
+Teléfono                 Número de contacto                 4456789
+
+SECCIÓN C: RESPONSABLE/CONTACTO DE EMERGENCIA
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Nombre                   Nombre completo del responsable    María Elena Apaza
+Parentesco               Relación con el paciente           Madre
+C.I. del Responsable     Carnet del responsable             4512367 CBBA
+Teléfono                 Celular de preferencia             70012345
+
+SECCIÓN D: REGISTRO DE INTERNACIONES (Tabla)
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Nº                       Número correlativo de internación  1
+Ingreso                  Fecha de ingreso                   15/12/2025
+Egreso                   Fecha de egreso (al alta)          15/03/2026
+Diagnóstico/CIE-10       Diagnóstico principal con código   F19.2 - Dep. múlt.
+Motivo Egreso            Tipo de egreso                     Alta médica
+
+SECCIÓN E: DATOS CRÍTICOS DE EMERGENCIA
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Alergias                 Listar todas las alergias conocidas Penicilina, AINEs
+Enfermedades Crónicas    Enfermedades importantes           Hipertensión
+
+
+6. EJEMPLO DE LLENADO COMPLETO
+-----------------------------------
+
++------------------------------------------------------------------+
+|  [LOGO]    PROYECTO GILEAD BOLIVIA                     PGB-F001  |
+|            Programa Hombres Nuevos                               |
+|            HOJA FRONTAL DEL EXPEDIENTE CLÍNICO                   |
++------------------------------------------------------------------+
+| SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE                           |
++------------------------------------------------------------------+
+| Nº Historia Clínica: HC-2025-0042    Fecha Apertura: 15/12/2025  |
+|                                                                  |
+| Apellido Paterno: HUARACHI     Apellido Materno: APAZA           |
+| Nombres: Carlos Alberto                                          |
+|                                                                  |
+| Fecha Nacimiento: 15/03/1990   Edad: 34 años                     |
+| C.I.: 8523614  Ext.: CBBA                                        |
+| Sexo: ☒ M  ☐ F     Grupo Sanguíneo: ☐O+  ☒O-  ☐A+  ☐B+          |
++------------------------------------------------------------------+
+| SECCIÓN B: DATOS DE CONTACTO                                     |
++------------------------------------------------------------------+
+| Dirección: Av. América #1234                                     |
+| Zona: Zona Sur        Ciudad: Cochabamba   Depto.: Cochabamba    |
+| Teléfono: 4456789     Celular: 70012345                          |
++------------------------------------------------------------------+
+| SECCIÓN C: RESPONSABLE / CONTACTO DE EMERGENCIA                  |
++------------------------------------------------------------------+
+| Nombre: María Elena Apaza de Huarachi                            |
+| Parentesco: Madre       C.I.: 4512367 CBBA                       |
+| Teléfono: 70012345      Dirección: Av. América #1234             |
++------------------------------------------------------------------+
+| SECCIÓN D: REGISTRO DE INTERNACIONES                             |
++------------------------------------------------------------------+
+| Nº | INGRESO    | EGRESO     | DIAGNÓSTICO / CIE-10  | MOTIVO   |
+|----|------------|------------|------------------------|----------|
+| 1  | 15/12/2025 | ___/___/___|F19.2 - Dep. múltiple  |          |
+| 2  | ___/___/___|___/___/___|_______________________|__________|
++------------------------------------------------------------------+
+| SECCIÓN E: DATOS CRÍTICOS DE EMERGENCIA                          |
++------------------------------------------------------------------+
+| ⚠️ ALERGIAS: Penicilina, AINEs                                   |
+| ENFERMEDADES CRÓNICAS: Hipertensión arterial                     |
++------------------------------------------------------------------+
+| PGB-F001 v1.1           Aprobación: Dic 2025          Página 1/1 |
++------------------------------------------------------------------+
+
+
+7. ERRORES COMUNES
+-----------------------------------
+| Error                      | Consecuencia              | Prevención           |
+|----------------------------|---------------------------|----------------------|
+| No actualizar alergias     | Riesgo para el paciente   | Verificar cada ingreso|
+| Archivar dentro del exp.   | No visible en emergencia  | Siempre en portada   |
+| Datos incompletos          | Identificación difícil    | Checklist de campos  |
+| Letra ilegible             | Confusión de datos        | Letra de molde       |
+
+8. CHECKLIST DE VERIFICACIÓN
+-----------------------------------
+☐ Nº Historia Clínica asignado y único
+☐ Fecha de apertura correcta
+☐ Datos del paciente completos según C.I.
+☐ Datos de contacto vigentes
+☐ Responsable identificado con C.I.
+☐ Teléfonos de contacto actualizados
+☐ Alergias documentadas (o "NIEGA")
+☐ Enfermedades crónicas listadas
+☐ Formulario visible en portada del expediente
+
+
+================================================================================
+MANUAL F002: HOJA DE INGRESO
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F002
+Versión: 1.0
+Páginas: 1
+Responsable: Personal de Admisión
+
+2. PROPÓSITO
+-----------------------------------
+Registrar los datos administrativos completos del paciente al momento 
+del ingreso. Es el documento administrativo principal que:
+- Establece la identidad legal del paciente
+- Registra al responsable/tutor
+- Documenta el motivo de ingreso
+- Inicia formalmente el expediente clínico
+
+3. INSTRUCCIONES DE LLENADO
+-----------------------------------
+
+SECCIÓN A: IDENTIFICACIÓN
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Nº Historia Clínica      Mismo número que F001               HC-2025-0042
+Fecha de Ingreso         Fecha actual DD/MM/AAAA             15/12/2025
+Hora de Ingreso          Formato 24 horas                    14:30
+Nº de Internación        Correlativo para este paciente      1
+Datos personales         Según cédula de identidad           (ver arriba)
+
+4. EJEMPLO DE LLENADO COMPLETO
+-----------------------------------
+
++------------------------------------------------------------------+
+|  [LOGO]    PROYECTO GILEAD BOLIVIA                     PGB-F002  |
+|            HOJA DE INGRESO                                       |
++------------------------------------------------------------------+
+| Nº Historia Clínica: HC-2025-0042    Nº Internación: 1           |
+| Fecha de Ingreso: 15/12/2025         Hora: 14:30                 |
++------------------------------------------------------------------+
+| DATOS DEL PACIENTE                                               |
++------------------------------------------------------------------+
+| Apellido Paterno: HUARACHI           Apellido Materno: APAZA     |
+| Nombres: Carlos Alberto                                          |
+| Fecha Nacimiento: 15/03/1990    Edad: 34 años    Lugar: Cbba     |
+| C.I.: 8523614  Ext.: CBBA       Sexo: ☒ M  ☐ F                   |
+| Estado Civil: ☐Solt. ☐Casado ☒Conv. ☐Div. ☐Viudo                 |
+| Ocupación: Albañil              Instrucción: Secundaria incompleta|
++------------------------------------------------------------------+
+| DIRECCIÓN DEL PACIENTE                                           |
++------------------------------------------------------------------+
+| Calle/Av.: Av. América #1234    Zona: Zona Sur                   |
+| Ciudad: Cochabamba              Municipio: Cercado               |
+| Departamento: Cochabamba        Teléfono: 4456789                |
++------------------------------------------------------------------+
+| RESPONSABLE DEL PACIENTE                                         |
++------------------------------------------------------------------+
+| Nombre: María Elena Apaza de Huarachi                            |
+| C.I.: 4512367 CBBA              Parentesco: Madre                |
+| Dirección: Av. América #1234    Teléfono: 70012345               |
++------------------------------------------------------------------+
+| MOTIVO DE INGRESO                                                |
++------------------------------------------------------------------+
+| Dependencia a múltiples sustancias (cocaína, alcohol).           |
+| Paciente presenta deseo de rehabilitación voluntaria.            |
+| Referido por: Familiar directo                                   |
++------------------------------------------------------------------+
+| REGISTRO                                                         |
++------------------------------------------------------------------+
+| Registrado por: Ana Pérez M.    Cargo: Admisión                  |
+| Firma: ___________________      Fecha: 15/12/2025                |
++------------------------------------------------------------------+
+
+5. ERRORES COMUNES
+-----------------------------------
+| Error                      | Prevención                           |
+|----------------------------|--------------------------------------|
+| No verificar C.I.          | Siempre solicitar documento original |
+| Hora incorrecta            | Registrar inmediatamente al llegar   |
+| Responsable sin C.I.       | Es requisito legal obligatorio       |
+
+
+================================================================================
+MANUAL F004: CONSENTIMIENTO INFORMADO
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F004
+Versión: 1.0
+Páginas: 1-2
+Responsable: Médico/Admisión
+
+2. PROPÓSITO
+-----------------------------------
+El Consentimiento Informado es una autorización legal que:
+- Autoriza la internación y tratamiento
+- Protege los derechos del paciente
+- Documenta que el paciente/representante fue informado
+- Tiene carácter de documento legal vinculante
+
+3. PRINCIPIOS DEL CONSENTIMIENTO
+-----------------------------------
+| Principio       | Descripción                                      |
+|-----------------|--------------------------------------------------|
+| Voluntariedad   | Debe ser dado libremente, sin coacción           |
+| Información     | El firmante debe comprender lo que autoriza      |
+| Capacidad       | El firmante debe tener capacidad legal           |
+| Especificidad   | Debe referirse a tratamientos concretos          |
+| Revocabilidad   | Puede ser retirado en cualquier momento          |
+
+4. INSTRUCCIONES DE LLENADO
+-----------------------------------
+
+SECCIÓN D: INFORMACIÓN DEL TRATAMIENTO
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Diagnóstico presuntivo   En términos comprensibles          Dependencia a sustancias
+Tratamiento propuesto    Describir el programa              Rehabilitación integral
+Duración estimada        Tiempo aproximado                  90 días (programa básico)
+Riesgos                  Posibles complicaciones            Síndrome de abstinencia
+Beneficios               Resultados esperados               Recuperación de la adicción
+Alternativas             Otras opciones de tratamiento      Ambulatorio, otro centro
+
+SECCIÓN E: DECLARACIONES Y AUTORIZACIONES
+- Leer en voz alta cada punto al firmante
+- Explicar con palabras sencillas
+- Responder todas las preguntas
+- Marcar casillas solo si el firmante acepta
+
+5. EJEMPLO DE LLENADO
+-----------------------------------
+
++------------------------------------------------------------------+
+|  CONSENTIMIENTO INFORMADO DE INTERNACIÓN          PGB-F004       |
++------------------------------------------------------------------+
+| DATOS DEL PACIENTE                                               |
+| Nombre: Carlos Alberto Huarachi Apaza   HC: HC-2025-0042         |
+| C.I.: 8523614 CBBA    Edad: 34 años                              |
++------------------------------------------------------------------+
+| REPRESENTANTE LEGAL QUE FIRMA                                    |
+| Nombre: María Elena Apaza de Huarachi                            |
+| C.I.: 4512367 CBBA    Parentesco: Madre                          |
++------------------------------------------------------------------+
+| INFORMACIÓN DEL TRATAMIENTO                                      |
+| Diagnóstico presuntivo: Dependencia a múltiples sustancias       |
+| Tratamiento: Programa de rehabilitación residencial integral     |
+| Duración: 90 días (primera fase), posible extensión a 1 año      |
+| Riesgos: Síndrome de abstinencia en primera semana,              |
+|          posibles cambios anímicos temporales                    |
+| Beneficios: Recuperación de la dependencia, reinserción social   |
++------------------------------------------------------------------+
+| AUTORIZACIONES                                                   |
+| ☒ Autorizo la internación en este centro                         |
+| ☒ Autorizo el tratamiento médico y psicológico                   |
+| ☒ Autorizo la administración de medicamentos prescritos          |
+| ☒ He comprendido la información proporcionada                    |
+| ☒ He tenido la oportunidad de hacer preguntas                    |
++------------------------------------------------------------------+
+| FIRMAS                                                           |
+| Lugar: Cochabamba          Fecha: 15/12/2025                     |
+|                                                                  |
+| Firma del Representante: _______________ Huella: [   ]           |
+| Firma del Paciente: _______________                              |
+| Firma del Testigo: _______________                               |
+|                                                                  |
+| Médico: Dr. Juan Pérez S.   Matrícula: 12345                     |
+| Firma: _______________      Sello: [SELLO]                       |
++------------------------------------------------------------------+
+
+
+================================================================================
+MANUAL F006: HISTORIA CLÍNICA
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F006
+Versión: 1.0
+Páginas: 4
+Responsable: Médico
+Tiempo estimado: 45-60 minutos
+
+2. PROPÓSITO
+-----------------------------------
+La Historia Clínica es el documento médico más importante del expediente.
+Registra de manera completa:
+- Datos de identificación
+- Antecedentes personales y familiares
+- HISTORIA DE CONSUMO DE SUSTANCIAS (sección crítica)
+- Enfermedad actual
+- Examen físico
+- Diagnóstico con código CIE-10
+- Plan de tratamiento
+
+3. SECCIÓN CRÍTICA: HISTORIA DE CONSUMO (Sección G)
+-----------------------------------
+Esta sección es OBLIGATORIA según Ley 1008 Art. 49 y D.S. 25235.
+
+SUBSECCIÓN G.1: DATOS GENERALES DEL CONSUMO
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Edad de inicio           Primera vez que consumió            14 años
+Sustancia de inicio      Cuál fue la primera                 Alcohol
+Sustancia principal      La que causa más problemas          Cocaína
+Tiempo de consumo        Años de consumo problemático        20 años
+Última vez que consumió  Fecha específica                    10/12/2025
+
+SUBSECCIÓN G.2: SUSTANCIA PRINCIPAL
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Nombre de la sustancia   Nombre común y técnico              Cocaína (clorhidrato)
+Vía de administración    Cómo la consume                     Inhalada
+Patrón de consumo        Diario, fin de semana, episódico    Diario
+Frecuencia               Veces por día/semana                3-4 veces/día
+Cantidad aproximada      Por episodio de consumo             1-2 gramos/día
+Última vez              Fecha y hora si es reciente          10/12/2025, 22:00
+
+SUBSECCIÓN G.4: SÍNDROME DE ABSTINENCIA
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+¿Ha experimentado?       Sí/No                               ☒ Sí  ☐ No
+Síntomas                 Describir cuáles                    Ansiedad, irritabilidad,
+                                                             insomnio, craving intenso
+Gravedad                 Leve/Moderado/Severo                Moderado
+Convulsiones previas     Sí/No - muy importante              ☐ Sí  ☒ No
+
+SUBSECCIÓN G.5: TRATAMIENTOS PREVIOS
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Tratamientos previos     Cuántos y dónde                     2 internaciones previas
+Centro                   Nombre del centro                   Centro San Martín
+Año                      Cuándo                              2020, 2022
+Duración                 Tiempo que duró                     30 días, 60 días
+Resultado                Cómo terminó                        Alta, Abandono
+Recaídas                 Número de recaídas post-tratamiento 3
+
+4. EJEMPLO DE LLENADO - SECCIÓN G (HISTORIA DE CONSUMO)
+-----------------------------------
+
++------------------------------------------------------------------+
+| SECCIÓN G: HISTORIA DE CONSUMO DE SUSTANCIAS                     |
+| ⚠️ SECCIÓN CRÍTICA - OBLIGATORIA SEGÚN LEY 1008 Y D.S. 25235     |
++------------------------------------------------------------------+
+| G.1 DATOS GENERALES                                              |
++------------------------------------------------------------------+
+| Edad de inicio de consumo: 14 años                               |
+| Sustancia de inicio: Alcohol (cerveza)                           |
+| ¿Qué lo motivó a iniciar?: Presión de grupo, curiosidad          |
+| Sustancia principal actual: Cocaína                              |
+| Tiempo total de consumo problemático: 20 años                    |
+| Fecha último consumo: 10/12/2025    Hora aprox.: 22:00           |
++------------------------------------------------------------------+
+| G.2 SUSTANCIA PRINCIPAL: COCAÍNA                                 |
++------------------------------------------------------------------+
+| Vía de administración: ☒Inhalada  ☐Fumada  ☐Inyectada  ☐Oral    |
+| Patrón de consumo: ☒Diario  ☐Fines de semana  ☐Episódico        |
+| Frecuencia: 3-4 veces por día                                    |
+| Cantidad aproximada: 1-2 gramos por día                          |
+| Gasto económico diario: Bs. 200-400                              |
++------------------------------------------------------------------+
+| G.3 OTRAS SUSTANCIAS (marcar todas las que apliquen)             |
++------------------------------------------------------------------+
+| ☒ Alcohol    Frecuencia: Diario, junto con cocaína               |
+| ☒ Marihuana  Frecuencia: Ocasional, 1-2 veces/semana             |
+| ☐ Benzodiazepinas  ☐ Opiáceos  ☐ Anfetaminas  ☐ Inhalantes     |
++------------------------------------------------------------------+
+| G.4 SÍNDROME DE ABSTINENCIA                                      |
++------------------------------------------------------------------+
+| ¿Ha experimentado síntomas de abstinencia?: ☒ Sí  ☐ No           |
+| Síntomas: Ansiedad intensa, irritabilidad, insomnio,             |
+|           craving (deseo intenso), fatiga, depresión             |
+| Gravedad: ☐Leve  ☒Moderada  ☐Severa                             |
+| ¿Ha tenido convulsiones?: ☐ Sí  ☒ No                             |
+| ¿Ha requerido hospitalización por abstinencia?: ☐ Sí  ☒ No       |
++------------------------------------------------------------------+
+| G.5 TRATAMIENTOS PREVIOS                                         |
++------------------------------------------------------------------+
+| Nº | Centro          | Año  | Duración | Tipo de Alta           |
+|----|-----------------|------|----------|------------------------|
+| 1  | Centro San Mart.| 2020 | 30 días  | Alta voluntaria        |
+| 2  | Comunidad Nueva | 2022 | 60 días  | Abandono               |
+|                                                                  |
+| Tiempo máximo de abstinencia logrado: 4 meses (2022)             |
+| Motivo de recaída: Problemas familiares, contacto con usuarios   |
++------------------------------------------------------------------+
+| G.6 COMPLICACIONES Y COMORBILIDAD                                |
++------------------------------------------------------------------+
+| Complicaciones médicas por consumo:                              |
+| - Perforación del tabique nasal                                  |
+| - Hipertensión arterial                                          |
+|                                                                  |
+| Comorbilidad psiquiátrica:                                       |
+| - Episodios depresivos recurrentes                               |
+| - Ansiedad generalizada                                          |
++------------------------------------------------------------------+
+| G.7 CONSECUENCIAS DEL CONSUMO                                    |
++------------------------------------------------------------------+
+| ☒ Laborales: Pérdida de múltiples empleos                        |
+| ☒ Familiares: Separación de pareja, distanciamiento de hija      |
+| ☒ Económicas: Deudas significativas, pérdida de bienes           |
+| ☐ Legales: Sin problemas legales actuales                        |
+| ☒ Salud: Ver complicaciones médicas arriba                       |
++------------------------------------------------------------------+
+
+
+================================================================================
+MANUAL F007: NOTA DE INGRESO MÉDICA
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F007
+Versión: 1.0
+Páginas: 2
+Responsable: Médico
+Tiempo estimado: 15-30 minutos
+
+2. PROPÓSITO
+-----------------------------------
+Es el PRIMER documento médico del expediente. Se diferencia de:
+- F002: Es administrativo; F007 es valoración médica
+- F006: Es completa (4 páginas); F007 es rápida e inicial
+- F008: Es evaluación detallada; F007 es screening
+
+SECUENCIA: F007 → F006 → F008
+
+3. INSTRUCCIONES DE LLENADO
+-----------------------------------
+
+SECCIÓN B: EVALUACIÓN INICIAL
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Estado de conciencia     Evaluar nivel de alerta             Alerta
+Orientación              Tiempo, espacio, persona            Orientado x3
+Signos de intoxicación   Observar signos específicos         ☒ No presenta
+Signos de abstinencia    Temblor, sudoración, ansiedad       ☐ Leve
+Ideación suicida         Preguntar directamente              ☐ No presenta
+
+SECCIÓN G: NIVEL DE VIGILANCIA
+Opción                   Descripción                         Frecuencia control
+--------------------     ----------------------------------  -----------------
+☐ Rutina                Sin riesgos identificados            Cada 8 horas
+☒ Especial              Riesgo de abstinencia                Cada 4 horas
+☐ Intensivo             Riesgo alto (suicida/convulsivo)     Cada 1-2 horas
+
+4. EJEMPLO DE LLENADO
+-----------------------------------
+
++------------------------------------------------------------------+
+|  NOTA DE INGRESO MÉDICA                               PGB-F007   |
++------------------------------------------------------------------+
+| HC: HC-2025-0042     Fecha: 15/12/2025     Hora: 14:45           |
+| Paciente: Carlos Alberto Huarachi Apaza   Edad: 34 años          |
++------------------------------------------------------------------+
+| EVALUACIÓN INICIAL                                               |
++------------------------------------------------------------------+
+| Motivo de ingreso: Dependencia a cocaína, deseo de rehabilitación|
+| Estado de conciencia: ☒Alerta  ☐Somnoliento  ☐Estuporoso        |
+| Orientación: ☒Tiempo  ☒Espacio  ☒Persona                        |
+| Signos de intoxicación: ☐Sí  ☒No                                |
+| Signos de abstinencia: ☒Sí  ☐No  → Leves (ansiedad, craving)    |
+| Ideación suicida: ☐Sí  ☒No                                      |
++------------------------------------------------------------------+
+| SIGNOS VITALES                                                   |
++------------------------------------------------------------------+
+| PA: 140/90 mmHg    FC: 88 lpm    FR: 18 rpm    T°: 36.5°C       |
+| Sat O2: 98%        Peso: 72 kg   Talla: 1.70 m  IMC: 24.9       |
++------------------------------------------------------------------+
+| EXAMEN FÍSICO BREVE                                              |
++------------------------------------------------------------------+
+| Aspecto general: Paciente ansioso, cooperador, hidratado         |
+| Piel: Normal, sin lesiones visibles                              |
+| Tórax: Ruidos cardíacos normales, campos pulmonares limpios      |
+| Abdomen: Blando, no doloroso                                     |
+| Neurológico: Reflejos normales, no focalidad                     |
++------------------------------------------------------------------+
+| ANTECEDENTES RELEVANTES                                          |
++------------------------------------------------------------------+
+| Alergias: Penicilina                                             |
+| Medicamentos actuales: Ninguno                                   |
+| Enfermedades crónicas: Hipertensión arterial                     |
+| Última sustancia: Cocaína    Hace: 5 días                        |
++------------------------------------------------------------------+
+| DIAGNÓSTICO INICIAL                                              |
++------------------------------------------------------------------+
+| 1. F14.2 - Dependencia a cocaína                                 |
+| 2. F19.2 - Dependencia a múltiples sustancias                    |
+| 3. I10 - Hipertensión arterial esencial                          |
++------------------------------------------------------------------+
+| PLAN DE MANEJO INMEDIATO                                         |
++------------------------------------------------------------------+
+| 1. Monitoreo de signos vitales cada 4 horas                      |
+| 2. Dieta normal                                                  |
+| 3. Hidratación oral adecuada                                     |
+| 4. Observación por posible síndrome de abstinencia               |
+| 5. Completar Historia Clínica (F006) en próximas 24 horas        |
+|                                                                  |
+| Nivel de vigilancia: ☐Rutina  ☒Especial  ☐Intensivo             |
++------------------------------------------------------------------+
+| Médico: Dr. Juan Pérez Silva                                     |
+| Matrícula: 12345                                                 |
+| Firma: ___________________    Sello: [SELLO]                     |
++------------------------------------------------------------------+
+
+
+================================================================================
+MANUAL F012: RECETA MÉDICA ARCHIVADA PARA PSICOTRÓPICOS
+================================================================================
+
+1. INFORMACIÓN DEL DOCUMENTO
+-----------------------------------
+Código: PGB-F012
+Versión: 1.0
+Páginas: 1 (doble cara)
+Responsable: Médico Psiquiatra + Farmacia
+Base normativa: D.S. 25235 Art. 91
+
+2. RESTRICCIONES CRÍTICAS
+-----------------------------------
+⚠️ SOLO UN medicamento psicotrópico por receta
+⚠️ Duración MÁXIMA de tratamiento: 20 días
+⚠️ Solo médico AUTORIZADO puede prescribir
+⚠️ Receta válida MÁXIMO 72 horas
+⚠️ Archivado MÍNIMO 5 años
+⚠️ NO mezclar con medicamentos regulares
+
+3. INSTRUCCIONES DE LLENADO
+-----------------------------------
+
+SECCIÓN D: PRESCRIPCIÓN (Solo 1 medicamento)
+Campo                    Instrucción                         Ejemplo
+--------------------     ----------------------------------  -----------------
+Medicamento              Nombre genérico obligatorio         Clonazepam
+Presentación             Forma farmacéutica                  Comprimidos
+Concentración            Dosis por unidad                    2 mg
+Lista                    II, III o IV según AGEMED           Lista IV
+Cantidad en letras       SIEMPRE en letras                   Veintiún comprimidos
+Cantidad en números      Verificación                        21
+Dosis                    Por toma                            1 comprimido
+Frecuencia               Intervalo                           Cada 12 horas
+Duración                 NO mayor a 20 días                  7 días
+
+4. EJEMPLO DE LLENADO COMPLETO
+-----------------------------------
+
+FRENTE:
++------------------------------------------------------------------+
+|  RECETA MÉDICA ARCHIVADA                              PGB-F012   |
+|  PARA MEDICAMENTOS PSICOTRÓPICOS                                 |
+|  ⚠️ SOLO UN MEDICAMENTO POR RECETA                              |
++------------------------------------------------------------------+
+| INSTITUCIÓN                                                      |
+| Proyecto Gilead Bolivia - Programa Hombres Nuevos                |
+| Calle Antofagasta Nº 333, Zona Cruce Taquiña, Cochabamba         |
+| Tel: (4) 1234567                                                 |
++------------------------------------------------------------------+
+| PRESCRIPTOR                                                      |
+| Dr. Roberto Méndez Quiroga                                       |
+| Matrícula: 54321    Especialidad: Psiquiatría                    |
+| Reg. SEDES: PS-CBB-0123                                          |
++------------------------------------------------------------------+
+| PACIENTE                                                         |
+| Nombre: Carlos Alberto Huarachi Apaza                            |
+| C.I.: 8523614 CBBA    Edad: 34 años   Sexo: ☒M  ☐F              |
+| Domicilio: Av. América #1234, Zona Sur                           |
+| HC: HC-2025-0042                                                 |
+| Diagnóstico: F14.2 - Dependencia a cocaína   CIE-10: F14.2       |
++------------------------------------------------------------------+
+| PRESCRIPCIÓN                                                     |
++------------------------------------------------------------------+
+| Rp/                                                              |
+|                                                                  |
+| CLONAZEPAM 2 mg comprimidos                                      |
+| Lista: IV                                                        |
+|                                                                  |
+| Cantidad: Veintiún (21) comprimidos                              |
+|                                                                  |
+| Dosis: 1 comprimido                                              |
+| Frecuencia: Cada 12 horas (mañana y noche)                       |
+| Duración: 10 días                                                |
+|                                                                  |
+| Indicaciones: Tomar con alimentos, antes de dormir.              |
+|               No conducir vehículos durante el tratamiento.      |
+|                                                                  |
++------------------------------------------------------------------+
+| Lugar: Cochabamba        Fecha: 15/12/2025                       |
+| Receta Nº: 001-2025                                              |
+|                                                                  |
+| Firma: ___________________    Sello: [SELLO]                     |
++------------------------------------------------------------------+
+
+REVERSO (Dispensación):
++------------------------------------------------------------------+
+| DISPENSACIÓN                                                     |
++------------------------------------------------------------------+
+| Fecha de dispensación: 15/12/2025                                |
+| Cantidad dispensada: 21 comprimidos                              |
+| Lote: LOT-2024-0892                                              |
+| Fecha de vencimiento: 12/2026                                    |
+|                                                                  |
+| Dispensado por: Lic. María López R.                              |
+| Cargo: Regente de Farmacia                                       |
+|                                                                  |
+| Firma: ___________________    Sello: [SELLO]                     |
++------------------------------------------------------------------+
+
+
+================================================================================
+MANUAL F013: LIBRO DE CONTROL DE PSICOTRÓPICOS
+================================================================================
+
+1. REQUISITOS CRÍTICOS
+-----------------------------------
+⚠️ UNA página por CADA medicamento diferente
+⚠️ Libro FOLIADO y SELLADO por SEDES antes de usar
+⚠️ Informe trimestral OBLIGATORIO (primeros 5 días hábiles)
+⚠️ Guardar por 5 años mínimo
+
+2. EJEMPLO DE PÁGINA DEL LIBRO
+-----------------------------------
+
++------------------------------------------------------------------+
+| LIBRO DE CONTROL DE PSICOTRÓPICOS                  Página Nº: 05 |
++------------------------------------------------------------------+
+| Establecimiento: Proyecto Gilead Bolivia                         |
+| Regente: Lic. María López Rivera     Reg. SEDES: RF-CBB-0456     |
++------------------------------------------------------------------+
+| MEDICAMENTO: CLONAZEPAM 2 mg comprimidos                         |
+| Nombre comercial: Rivotril®           Lista: IV                  |
++------------------------------------------------------------------+
+| REGISTRO DE MOVIMIENTOS                                          |
++------------------------------------------------------------------+
+|Fecha    |Doc.Nº |Tipo |Lote      |Venc.  |Ing|Egr|Saldo|Paciente|
+|---------|-------|-----|----------|-------|---|---|-----|--------|
+|01/12/25 |Fact123|Ing  |LOT-24-089|12/2026|100| - |100  |Proveedor|
+|15/12/25 |Rec001 |Egr  |LOT-24-089|12/2026| - | 21| 79  |Huarachi|
+|20/12/25 |Rec002 |Egr  |LOT-24-089|12/2026| - | 14| 65  |Mamani  |
+|---------|-------|-----|----------|-------|---|---|-----|--------|
++------------------------------------------------------------------+
+| CIERRE DEL PERÍODO: Diciembre 2025                               |
+| Saldo inicial: 100    Ingresos: 0    Egresos: 35    Saldo: 65    |
+| Firma Regente: _______________    Fecha: 31/12/2025              |
++------------------------------------------------------------------+
+
+
+================================================================================
+MANUAL F014: HOJAS DE EVOLUCIÓN
+================================================================================
+
+1. VERSIONES DISPONIBLES
+-----------------------------------
+| Versión | Área          | Color    | Responsable    |
+|---------|---------------|----------|----------------|
+| F014-A  | Médica        | Azul     | Médico         |
+| F014-B  | Enfermería    | Verde    | Enfermería     |
+| F014-C  | Psicología    | Púrpura  | Psicólogo      |
+| F014-D  | Operativa     | Naranja  | Psic. Operativo|
+
+2. REGLAS DE LLENADO
+-----------------------------------
+| Regla        | Descripción                                     |
+|--------------|------------------------------------------------|
+| Cronología   | Registrar en orden de fecha y hora             |
+| Continuidad  | No dejar espacios en blanco entre notas        |
+| Legibilidad  | Escribir con letra clara                       |
+| Tinta        | Usar bolígrafo azul o negro                    |
+| Correcciones | Tachar con línea, escribir correcto, firmar    |
+| Firma        | Cada nota debe estar firmada y sellada         |
+
+3. FRECUENCIA DE REGISTRO
+-----------------------------------
+| Versión | Frecuencia mínima           | Siempre cuando...          |
+|---------|-----------------------------|-----------------------------|
+| A-Médica| 1 vez/semana                | Cambio medicación, alta     |
+| B-Enfer.| 3 veces/día (cada turno)    | Cada cambio de turno        |
+| C-Psico.| 1 vez/semana                | Cada sesión individual      |
+| D-Oper. | Según actividad             | Cada actividad significativa|
+
+4. EJEMPLO - EVOLUCIÓN MÉDICA (F014-A)
+-----------------------------------
+
++------------------------------------------------------------------+
+| EVOLUCIÓN MÉDICA                                      PGB-F014-A |
+| HC: HC-2025-0042    Paciente: Huarachi Apaza, Carlos A.          |
++------------------------------------------------------------------+
+| Fecha: 22/12/2025    Hora: 10:30                                 |
+|------------------------------------------------------------------|
+| S: Paciente refiere mejoría del sueño. Niega craving en las      |
+|    últimas 48 horas. Apetito conservado. Sin quejas somáticas.   |
+|                                                                  |
+| O: PA: 130/85 mmHg  FC: 76 lpm  Afebril                          |
+|    Paciente tranquilo, cooperador. Sin signos de abstinencia.    |
+|    Examen neurológico sin alteraciones.                          |
+|                                                                  |
+| A: F14.2 - Dependencia a cocaína - Evolución favorable           |
+|    I10 - HTA controlada                                          |
+|                                                                  |
+| P: - Continuar Clonazepam 2mg c/12h (quedan 3 días)              |
+|    - Iniciar reducción gradual próxima semana                    |
+|    - Mantener vigilancia especial                                |
+|    - Control médico en 7 días                                    |
+|                                                                  |
+| Dr. Juan Pérez Silva                                             |
+| Matrícula: 12345                [FIRMA]  [SELLO]                 |
++------------------------------------------------------------------+
+
+5. EJEMPLO - EVOLUCIÓN ENFERMERÍA (F014-B)
+-----------------------------------
+
++------------------------------------------------------------------+
+| REPORTE DE ENFERMERÍA                                 PGB-F014-B |
+| HC: HC-2025-0042    Paciente: Huarachi Apaza, Carlos A.          |
++------------------------------------------------------------------+
+| Fecha: 22/12/2025    Turno: Mañana (06:00-14:00)                 |
+|------------------------------------------------------------------|
+| SIGNOS VITALES (06:30):                                          |
+| PA: 125/80 mmHg   FC: 72 lpm   FR: 16 rpm   T°: 36.4°C          |
+|                                                                  |
+| ESTADO GENERAL:                                                  |
+| Paciente despierto, orientado, colaborador. Durmió toda la       |
+| noche según reporte nocturno. Desayunó completo.                 |
+|                                                                  |
+| MEDICACIÓN ADMINISTRADA:                                         |
+| - 08:00 Clonazepam 2mg VO - administrado sin novedad             |
+|                                                                  |
+| ACTIVIDADES:                                                     |
+| - Participó en gimnasia matutina                                 |
+| - Asistió a sesión grupal                                        |
+|                                                                  |
+| OBSERVACIONES:                                                   |
+| Sin incidencias durante el turno.                                |
+|                                                                  |
+| Lic. Ana Rodríguez M.            [FIRMA]                         |
+| Enfermera - Turno Mañana                                         |
++------------------------------------------------------------------+
+
+
+================================================================================
+CHECKLIST GENERAL PARA TODOS LOS FORMULARIOS
+================================================================================
+
+ANTES DE ENTREGAR AL ARCHIVO:
+
+☐ Nº de Historia Clínica correcto y legible
+☐ Nombre completo del paciente
+☐ Fecha y hora de elaboración
+☐ Todos los campos obligatorios completados
+☐ Campos condicionales completados si aplica
+☐ Sin tachones ni uso de corrector (si hay corrección, según protocolo)
+☐ Letra legible
+☐ Nombre del profesional responsable
+☐ Matrícula profesional (si aplica)
+☐ FIRMA presente
+☐ SELLO presente (si aplica)
+☐ Código del formulario visible
+☐ Versión del formulario
+☐ Paginación correcta (Hoja X de Y)
+
+
+================================================================================
+GLOSARIO DE TÉRMINOS
+================================================================================
+
+Abstinencia: Conjunto de síntomas que aparecen al suspender o reducir
+             el consumo de una sustancia de la que se es dependiente.
+
+CIE-10: Clasificación Internacional de Enfermedades, 10ª revisión.
+        Sistema de codificación diagnóstica de la OMS.
+
+Craving: Deseo intenso e irresistible de consumir una sustancia.
+
+DSM-IV: Manual Diagnóstico y Estadístico de Trastornos Mentales,
+        4ª edición. Clasificación de la APA.
+
+Epicrisis: Resumen del diagnóstico, tratamiento y evolución de un
+           paciente al momento del alta.
+
+Expediente Clínico: Conjunto de documentos que contienen el registro
+                    de la atención médica de un paciente.
+
+Historia Clínica: Documento que registra toda la información médica
+                  relevante del paciente.
+
+Matrícula Profesional: Registro oficial que habilita al profesional
+                       de salud para ejercer su profesión.
+
+Psicotrópico: Sustancia que actúa sobre el sistema nervioso central
+              modificando funciones psíquicas.
+
+SEDES: Servicio Departamental de Salud.
+
+AGEMED: Agencia Estatal de Medicamentos y Tecnologías en Salud.
+
+
+================================================================================
+FIN DEL DOCUMENTO 2
+================================================================================
+Documento generado: Enero 2026
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos SEDES
+================================================================================

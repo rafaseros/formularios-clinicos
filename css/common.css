@@ -1,0 +1,497 @@
+/* ============================================
+   ESTILOS COMUNES PARA FORMULARIOS CLÍNICOS
+   Proyecto Gilead Bolivia - Programa Hombres Nuevos
+   ============================================ */
+
+/* CONFIGURACIÓN DE PÁGINA ESTÁNDAR */
+@page {
+    size: Letter;
+    margin: 2.5cm 2.5cm 2.5cm 3.0cm; /* Margen Izq 3.0cm OBLIGATORIO para archivador SEDES */
+}
+
+/* Para formularios apaisados (F009) */
+@page landscape {
+    size: Letter landscape;
+    margin: 1.0cm 1.0cm 1.0cm 3.0cm;
+}
+
+/* TIPOGRAFÍA BASE */
+body {
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: 9.5pt;
+    margin: 0;
+    padding: 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ENCABEZADO ESTÁNDAR */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    height: 2.0cm;
+    flex-shrink: 0;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header-title {
+    font-size: 16pt;
+    font-weight: bold;
+}
+
+.header-subtitle {
+    font-size: 10pt;
+}
+
+.header-address {
+    font-size: 9pt;
+    font-style: italic;
+}
+
+.header-right {
+    text-align: right;
+    font-size: 9pt;
+}
+
+/* PIE DE PÁGINA ESTÁNDAR */
+.footer {
+    margin-top: auto;
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    font-size: 8pt;
+    display: flex;
+    justify-content: space-between;
+    flex-shrink: 0;
+    height: 1.0cm;
+}
+
+/* SISTEMA DE GRILLA 12 COLUMNAS */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    align-content: start;
+}
+
+.cell {
+    border-right: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 2px 4px;
+    display: flex;
+    align-items: center;
+    min-height: 0.65cm; /* Altura mínima para escritura manual */
+    line-height: 1.1;
+}
+
+/* ANCHOS DE COLUMNA */
+.span-1 { grid-column: span 1; }
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+.span-4 { grid-column: span 4; }
+.span-5 { grid-column: span 5; }
+.span-6 { grid-column: span 6; }
+.span-7 { grid-column: span 7; }
+.span-8 { grid-column: span 8; }
+.span-9 { grid-column: span 9; }
+.span-10 { grid-column: span 10; }
+.span-11 { grid-column: span 11; }
+.span-12 { grid-column: span 12; }
+
+/* ESTILOS DE TEXTO */
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
+.center { justify-content: center; text-align: center; }
+.small { font-size: 8pt; }
+.x-small { font-size: 7pt; }
+.large { font-size: 14pt; }
+
+/* COLORES INSTITUCIONALES */
+.bg-gray { background-color: #E0E0E0 !important; }
+.bg-light-gray { background-color: #F5F5F5 !important; }
+.bg-alert-red { background-color: #FFCDD2 !important; }
+.bg-alert-yellow { background-color: #FFF9C4 !important; }
+
+/* Colores para formularios de evolución F014 */
+.bg-blue { background-color: #1565C0 !important; color: #FFFFFF !important; }
+.bg-green { background-color: #2E7D32 !important; color: #FFFFFF !important; }
+.bg-purple { background-color: #6A1B9A !important; color: #FFFFFF !important; }
+.bg-orange { background-color: #E65100 !important; color: #FFFFFF !important; }
+
+/* CHECKBOXES */
+.checkbox {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1pt solid #000;
+    margin: 0 2px 0 6px;
+}
+
+/* CONTENEDOR DE PÁGINA */
+.page-container {
+    width: 100%;
+    height: 22.8cm; /* Altura útil para Letter con márgenes */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page {
+    width: 100%;
+    height: 24.5cm; /* Para páginas con márgenes reducidos */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.page-break {
+    page-break-before: always;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.section-title {
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 9pt;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+/* GUÍAS DE FECHA Y HORA */
+.datetime-guide {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-size: 7pt;
+    color: #444;
+}
+
+.datetime-row {
+    border-bottom: 1px dotted #ccc;
+    margin-bottom: 2px;
+    padding-bottom: 1px;
+}
+
+/* ÁREAS DE TEXTO LARGO */
+.text-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.guide-line {
+    border-bottom: 1px dotted #ccc;
+    height: 1px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9pt;
+}
+
+th {
+    background-color: #e0e0e0;
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 8pt;
+}
+
+td {
+    border: 1px solid #000;
+    height: 0.65cm;
+    padding: 0 5px;
+    text-align: center;
+}
+
+/* ============================================
+   BLOQUES ESTÁNDAR DE FIRMAS Y SELLOS
+   ============================================
+   
+   USO ESTÁNDAR:
+   
+   1. CONTENEDOR DE FIRMAS:
+      <div class="signatures-container">  <!-- Para 2 bloques -->
+      <div class="signatures-container-3"> <!-- Para 3 bloques -->
+      
+   2. BLOQUE MÉDICO (con sello obligatorio):
+      <div class="signature-medico">
+        <div class="signature-title">FIRMA Y SELLO</div>
+        <div class="signature-subtitle">MÉDICO</div>
+        <div class="signature-fields">
+          <div class="signature-line">
+            <div class="signature-field">Nombre: _______________</div>
+            <div class="signature-field">Matrícula: _____________</div>
+          </div>
+          <div class="seal-box"></div> <!-- Sin texto, solo marco -->
+        </div>
+      </div>
+      
+   3. BLOQUE PACIENTE/RESPONSABLE (con huella opcional):
+      <div class="signature-paciente">
+        <div class="signature-title">FIRMA</div>
+        <div class="signature-subtitle">PACIENTE / RESPONSABLE</div>
+        <div class="signature-note">(Nota opcional)</div>
+        <div class="signature-fields">
+          <div class="fingerprint-box"></div> <!-- Opcional, sin texto -->
+          <div class="signature-line">
+            <div class="signature-field">Nombre: _______________</div>
+            <div class="signature-field">C.I.: _________________</div>
+          </div>
+        </div>
+      </div>
+      
+   4. BLOQUE TUTOR/RESPONSABLE LEGAL (con parentesco y huella opcional):
+      <div class="signature-tutor">
+        <div class="signature-title">FIRMA</div>
+        <div class="signature-subtitle">TUTOR / RESPONSABLE LEGAL</div>
+        <div class="signature-fields">
+          <div class="fingerprint-box"></div> <!-- Opcional, sin texto -->
+          <div class="signature-line">
+            <div class="signature-field">Nombre: _______________</div>
+            <div class="signature-field">C.I.: _________________</div>
+            <div class="signature-field">Parentesco: ___________</div>
+          </div>
+        </div>
+      </div>
+      
+   5. BLOQUE REGISTRO/ADMISIÓN (sin sello ni huella):
+      <div class="signature-registro">
+        <div class="signature-title">FIRMA</div>
+        <div class="signature-subtitle">PERSONAL DE REGISTRO</div>
+        <div class="signature-fields">
+          <div class="signature-line">
+            <div class="signature-field">Nombre: _______________</div>
+            <div class="signature-field">Cargo: ________________</div>
+          </div>
+        </div>
+      </div>
+   ============================================ */
+
+/* CONTENEDOR DE FIRMAS (Grid de 2 o 3 columnas) */
+.signatures-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.signatures-container-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* BLOQUE BASE DE FIRMA */
+.signature-block {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 4.0cm;
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 9pt;
+    margin-bottom: 5px;
+}
+
+.signature-subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 8pt;
+    margin-bottom: 10px;
+}
+
+.signature-note {
+    font-size: 7pt;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.signature-fields {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.signature-line {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 8pt;
+    margin-top: 15px;
+}
+
+.signature-field {
+    text-align: center;
+    font-size: 8pt;
+    margin-bottom: 3px;
+}
+
+/* Huella dactilar (sin texto, solo marco) */
+.fingerprint-box {
+    width: 60px;
+    height: 70px;
+    border: 1px solid #999;
+    margin: 10px auto;
+    background-color: #fafafa;
+}
+
+/* Sello (sin texto, solo marco) */
+.seal-box {
+    width: 60px;
+    height: 60px;
+    border: 1px dotted #ccc;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-color: #fafafa;
+}
+
+/* VARIANTES ESPECÍFICAS */
+
+/* Bloque Médico (con nombre, matrícula, firma y sello) */
+.signature-medico {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 4.0cm;
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-medico .signature-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 9pt;
+    margin-bottom: 5px;
+}
+
+.signature-medico .signature-subtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 8pt;
+    margin-bottom: 15px;
+}
+
+.signature-medico .signature-fields {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.signature-medico .signature-line {
+    border-top: 1px solid #000;
+    padding-top: 5px;
+    text-align: center;
+    font-size: 8pt;
+}
+
+.signature-medico .seal-box {
+    margin-top: 10px;
+}
+
+/* Bloque Paciente/Responsable (con nombre, C.I., firma y opcionalmente huella) */
+.signature-paciente {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 4.0cm;
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-paciente .fingerprint-box {
+    margin-bottom: 10px;
+}
+
+/* Bloque Tutor/Responsable Legal (con nombre, C.I., parentesco, firma y opcionalmente huella) */
+.signature-tutor {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 4.0cm;
+    display: flex;
+    flex-direction: column;
+}
+
+.signature-tutor .fingerprint-box {
+    margin-bottom: 10px;
+}
+
+/* Bloque Registro/Admisión (con nombre, cargo, firma) */
+.signature-registro {
+    border: 1px solid #000;
+    padding: 10px;
+    min-height: 3.5cm;
+    display: flex;
+    flex-direction: column;
+}
+
+/* BLOQUES LEGACY (mantener compatibilidad) */
+.signature-box {
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 3.5cm;
+}
+
+.sign-line {
+    border-top: 1px solid #000;
+    width: 90%;
+    text-align: center;
+    padding-top: 3px;
+    font-weight: bold;
+    font-size: 8pt;
+    margin-top: auto;
+}
+
+/* IMPRESIÓN */
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .page-break {
+        page-break-before: always;
+    }
+    
+    .no-print {
+        display: none;
+    }
+}

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F013 Libro de Control de Psicotrópicos</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #1F4E79; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #1F4E79; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+        h2 { background-color: #E0E0E0; padding: 5px 10px; border-left: 5px solid #1F4E79; font-size: 11pt; margin-top: 15px; page-break-after: avoid; }
+        .instruction-box { display: grid; grid-template-columns: 150px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .field-desc { font-size: 9.5pt; }
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffebee; padding: 2px 5px; border-radius: 3px; }
+        .example { color: #1565c0; font-style: italic; font-size: 9pt; }
+        .general-rules { background-color: #fff3e0; border: 1px solid #ffe0b2; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt; }
+        .general-rules ul { margin: 5px 0 0 20px; padding: 0; }
+        .critical-rules { background-color: #ffebee; border: 2px solid #d32f2f; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt; }
+        .critical-rules ul { margin: 5px 0 0 20px; padding: 0; }
+        .legal-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-top: 10px; }
+        .legal-table th { background-color: #1F4E79; color: white; padding: 5px; text-align: left; }
+        .legal-table td { border: 1px solid #ddd; padding: 5px; vertical-align: top; }
+        .footer { margin-top: 30px; font-size: 8pt; text-align: center; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+        .checklist { background-color: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-top: 10px; font-size: 9pt; }
+        .checklist ul { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F013 "Libro de Control de Psicotrópicos"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-013<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="critical-rules">
+        <b>🛑 REQUISITOS CRÍTICOS (OBLIGATORIO)</b>
+        <ul>
+            <li><b>UNA página por CADA medicamento diferente</b></li>
+            <li><b>Libro FOLIADO y SELLADO</b> por SEDES antes de usar</li>
+            <li><b>Informe trimestral OBLIGATORIO</b> (primeros 5 días hábiles del trimestre siguiente)</li>
+            <li><b>Guardar por 5 años mínimo</b> después del último registro</li>
+            <li><b>NO se pueden borrar</b> registros, solo corregir según protocolo</li>
+        </ul>
+    </div>
+
+    <div class="general-rules">
+        <b>📋 REGLAS GENERALES DE LLENADO</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras.</li>
+            <li><b>Formato:</b> Formulario de 2 páginas por medicamento.</li>
+            <li><b>Registro inmediato:</b> Cada movimiento debe registrarse en el momento que ocurre.</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código:</div>
+        <div class="field-desc">PGB-F013</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión:</div>
+        <div class="field-desc">1.0</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas:</div>
+        <div class="field-desc">Variable (2 páginas por medicamento)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable:</div>
+        <div class="field-desc">Regente de Farmacia</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Base normativa:</div>
+        <div class="field-desc">D.S. 25235 Art. 85-86; Manual AGEMED</div>
+    </div>
+
+    <h2>2. PROPÓSITO Y ALCANCE</h2>
+    <p>Este libro registra todos los movimientos (ingresos y egresos) de medicamentos psicotrópicos en el establecimiento. Es un documento de control estricto que permite la trazabilidad completa de cada medicamento desde su ingreso hasta su dispensación.</p>
+
+    <h2>3. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3>SECCIÓN A: IDENTIFICACIÓN DEL ESTABLECIMIENTO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Nombre establecimiento:</div>
+        <div class="field-desc">Proyecto Gilead Bolivia - Programa Hombres Nuevos <span class="example">(Pre-llenado)</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Dirección:</div>
+        <div class="field-desc">Calle Antofagasta Nº 333, Zona Cruce Taquiña, Cochabamba <span class="example">(Pre-llenado)</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Nº Registro SEDES:</div>
+        <div class="field-desc">Número de registro del establecimiento en SEDES</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Regente responsable:</div>
+        <div class="field-desc">Nombre completo del regente de farmacia responsable</div>
+    </div>
+
+    <h3>SECCIÓN B: IDENTIFICACIÓN DEL MEDICAMENTO</h3>
+    <div class="instruction-box">
+        <div class="field-name">Nombre del medicamento:</div>
+        <div class="field-desc">Nombre genérico del medicamento <span class="example">Ej: Clonazepam</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Nombre comercial:</div>
+        <div class="field-desc">Nombre comercial si aplica <span class="example">Ej: Rivotril®</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Concentración:</div>
+        <div class="field-desc">Dosis por unidad <span class="example">Ej: 2 mg</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Presentación:</div>
+        <div class="field-desc">Forma farmacéutica <span class="example">Ej: Comprimidos</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Lista:</div>
+        <div class="field-desc">Marcar según clasificación AGEMED: II, III o IV <span class="example">Ej: ☐ II  ☐ III  ☒ IV</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Página Nº:</div>
+        <div class="field-desc">Número de página del libro (asignado por SEDES al foliar)</div>
+    </div>
+
+    <h3>SECCIÓN C: REGISTRO DE MOVIMIENTOS</h3>
+    <p>Esta sección registra cada movimiento de entrada o salida del medicamento. Cada fila representa un movimiento.</p>
+    
+    <div class="instruction-box">
+        <div class="field-name">Fecha:</div>
+        <div class="field-desc">Fecha del movimiento (DD/MM/AAAA)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Nº Doc.:</div>
+        <div class="field-desc">Número de documento que respalda el movimiento <span class="example">Ej: Fact123, Rec001</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Tipo:</div>
+        <div class="field-desc">Ing (Ingreso) o Egr (Egreso)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Lote:</div>
+        <div class="field-desc">Número de lote del medicamento</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Venc.:</div>
+        <div class="field-desc">Fecha de vencimiento (MM/AAAA)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Ing.:</div>
+        <div class="field-desc">Cantidad ingresada (solo si es ingreso)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Egr.:</div>
+        <div class="field-desc">Cantidad egresada (solo si es egreso)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Saldo:</div>
+        <div class="field-desc">Saldo después del movimiento (calcular: Saldo anterior + Ing - Egr)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Paciente/Proveedor:</div>
+        <div class="field-desc">Nombre del paciente (si egreso) o proveedor (si ingreso)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable:</div>
+        <div class="field-desc">Nombre de quien realiza el movimiento</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Firma:</div>
+        <div class="field-desc">Firma del responsable del movimiento</div>
+    </div>
+
+    <h3>SECCIÓN D: CIERRE DE PERÍODO</h3>
+    <p>Esta sección se completa al finalizar cada período (mensual o trimestral) para realizar el balance.</p>
+    
+    <div class="instruction-box">
+        <div class="field-name">Saldo inicial del período:</div>
+        <div class="field-desc">Saldo al inicio del período</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Total ingresos:</div>
+        <div class="field-desc">Suma de todos los ingresos del período</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Total egresos:</div>
+        <div class="field-desc">Suma de todos los egresos del período</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Saldo final del período:</div>
+        <div class="field-desc">Saldo inicial + Ingresos - Egresos</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Fecha de cierre:</div>
+        <div class="field-desc">Fecha en que se realiza el cierre (DD/MM/AAAA)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Firma y Sello:</div>
+        <div class="field-desc">Firma y sello del Regente de Farmacia OBLIGATORIO</div>
+    </div>
+
+    <h2>4. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 10px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px;">
+        <p><b>IDENTIFICACIÓN DEL ESTABLECIMIENTO:</b><br>
+        Nombre: Proyecto Gilead Bolivia<br>
+        Dirección: Calle Antofagasta Nº 333, Zona Cruce Taquiña, Cochabamba<br>
+        Nº Registro SEDES: EST-CBB-0456<br>
+        Regente: Lic. María López Rivera</p>
+        
+        <p><b>IDENTIFICACIÓN DEL MEDICAMENTO:</b><br>
+        Medicamento: CLONAZEPAM 2 mg comprimidos<br>
+        Nombre comercial: Rivotril®<br>
+        Lista: IV<br>
+        Página Nº: 05</p>
+        
+        <p><b>REGISTRO DE MOVIMIENTOS:</b></p>
+        <table style="width: 100%; border-collapse: collapse; font-size: 8pt; margin-top: 5px;">
+            <tr style="background-color: #f0f0f0;">
+                <th style="border: 1px solid #000; padding: 3px;">Fecha</th>
+                <th style="border: 1px solid #000; padding: 3px;">Doc.Nº</th>
+                <th style="border: 1px solid #000; padding: 3px;">Tipo</th>
+                <th style="border: 1px solid #000; padding: 3px;">Lote</th>
+                <th style="border: 1px solid #000; padding: 3px;">Venc.</th>
+                <th style="border: 1px solid #000; padding: 3px;">Ing</th>
+                <th style="border: 1px solid #000; padding: 3px;">Egr</th>
+                <th style="border: 1px solid #000; padding: 3px;">Saldo</th>
+                <th style="border: 1px solid #000; padding: 3px;">Paciente/Proveedor</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #000; padding: 3px;">01/12/25</td>
+                <td style="border: 1px solid #000; padding: 3px;">Fact123</td>
+                <td style="border: 1px solid #000; padding: 3px;">Ing</td>
+                <td style="border: 1px solid #000; padding: 3px;">LOT-24-089</td>
+                <td style="border: 1px solid #000; padding: 3px;">12/2026</td>
+                <td style="border: 1px solid #000; padding: 3px;">100</td>
+                <td style="border: 1px solid #000; padding: 3px;">-</td>
+                <td style="border: 1px solid #000; padding: 3px;">100</td>
+                <td style="border: 1px solid #000; padding: 3px;">Proveedor XYZ</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #000; padding: 3px;">15/12/25</td>
+                <td style="border: 1px solid #000; padding: 3px;">Rec001</td>
+                <td style="border: 1px solid #000; padding: 3px;">Egr</td>
+                <td style="border: 1px solid #000; padding: 3px;">LOT-24-089</td>
+                <td style="border: 1px solid #000; padding: 3px;">12/2026</td>
+                <td style="border: 1px solid #000; padding: 3px;">-</td>
+                <td style="border: 1px solid #000; padding: 3px;">21</td>
+                <td style="border: 1px solid #000; padding: 3px;">79</td>
+                <td style="border: 1px solid #000; padding: 3px;">Huarachi Apaza</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #000; padding: 3px;">20/12/25</td>
+                <td style="border: 1px solid #000; padding: 3px;">Rec002</td>
+                <td style="border: 1px solid #000; padding: 3px;">Egr</td>
+                <td style="border: 1px solid #000; padding: 3px;">LOT-24-089</td>
+                <td style="border: 1px solid #000; padding: 3px;">12/2026</td>
+                <td style="border: 1px solid #000; padding: 3px;">-</td>
+                <td style="border: 1px solid #000; padding: 3px;">14</td>
+                <td style="border: 1px solid #000; padding: 3px;">65</td>
+                <td style="border: 1px solid #000; padding: 3px;">Mamani López</td>
+            </tr>
+        </table>
+        
+        <p style="margin-top: 10px;"><b>CIERRE DEL PERÍODO: Diciembre 2025</b><br>
+        Saldo inicial: 100<br>
+        Total ingresos: 0<br>
+        Total egresos: 35<br>
+        Saldo final: 65<br>
+        Fecha de cierre: 31/12/2025<br>
+        Firma Regente: _______________ | Sello: [SELLO]</p>
+    </div>
+
+    <h2>5. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table class="legal-table">
+        <tr>
+            <th style="width: 30%;">Error</th>
+            <th>Consecuencia</th>
+            <th>Solución</th>
+        </tr>
+        <tr>
+            <td>No registrar movimiento inmediatamente</td>
+            <td>Pérdida de trazabilidad, discrepancias en inventario</td>
+            <td>Registrar en el momento que ocurre el movimiento</td>
+        </tr>
+        <tr>
+            <td>Error en cálculo de saldo</td>
+            <td>Discrepancia en inventario físico</td>
+            <td>Verificar cálculo: Saldo anterior + Ing - Egr</td>
+        </tr>
+        <tr>
+            <td>No completar datos de lote y vencimiento</td>
+            <td>Falta de trazabilidad del medicamento</td>
+            <td>Siempre registrar lote y fecha de vencimiento</td>
+        </tr>
+        <tr>
+            <td>Falta de firma del responsable</td>
+            <td>Registro inválido</td>
+            <td>Verificar firma antes de cerrar el registro</td>
+        </tr>
+        <tr>
+            <td>No realizar cierre de período</td>
+            <td>Violación normativa, problemas en auditoría</td>
+            <td>Realizar cierre mensual o trimestral según protocolo</td>
+        </tr>
+    </table>
+
+    <h2>6. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Libro foliado y sellado por SEDES</li>
+            <li>Página Nº asignada</li>
+            <li>Datos del establecimiento completos</li>
+            <li>Regente responsable identificado</li>
+            <li>Identificación del medicamento completa (nombre genérico, comercial, concentración, presentación, lista)</li>
+            <li>Cada movimiento registrado con fecha, documento, tipo, lote, vencimiento</li>
+            <li>Cantidades de ingreso/egreso registradas</li>
+            <li>Saldo calculado correctamente después de cada movimiento</li>
+            <li>Paciente/Proveedor identificado</li>
+            <li>Responsable del movimiento identificado</li>
+            <li>Firma del responsable presente</li>
+            <li>Cierre de período realizado (mensual o trimestral)</li>
+            <li>Firma y sello del Regente en el cierre</li>
+            <li>Informe trimestral enviado a SEDES (primeros 5 días hábiles)</li>
+        </ul>
+    </div>
+
+    <h2>7. MARCO NORMATIVO</h2>
+    <table class="legal-table">
+        <tr>
+            <th>Normativa</th>
+            <th>Artículo</th>
+            <th>Descripción</th>
+        </tr>
+        <tr>
+            <td>D.S. 25235</td>
+            <td>Art. 85</td>
+            <td>Obligatoriedad del libro de control de psicotrópicos</td>
+        </tr>
+        <tr>
+            <td>D.S. 25235</td>
+            <td>Art. 86</td>
+            <td>Requisitos de registro y reporte</td>
+        </tr>
+        <tr>
+            <td>Manual AGEMED</td>
+            <td>-</td>
+            <td>Procedimientos de control y reporte trimestral</td>
+        </tr>
+        <tr>
+            <td>D.S. 28562</td>
+            <td>Art. 6</td>
+            <td>Requisitos de firma y sello profesional</td>
+        </tr>
+    </table>
+
+    <h2>8. INFORMES TRIMESTRALES</h2>
+    <p>El Regente de Farmacia debe enviar un informe trimestral a SEDES durante los primeros 5 días hábiles del trimestre siguiente. El informe debe incluir:</p>
+    <ul>
+        <li>Resumen de movimientos del trimestre</li>
+        <li>Saldos iniciales y finales</li>
+        <li>Total de ingresos y egresos</li>
+        <li>Cualquier incidencia o discrepancia</li>
+    </ul>
+
+    <div class="footer">
+        <p><b>PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS</b></p>
+        <p>Manual Técnico de Llenado - PGB-F013 | Versión 1.0 | Enero 2026</p>
+        <p>Este documento es propiedad del Proyecto Gilead Bolivia y está sujeto a actualizaciones periódicas.</p>
+    </div>
+</body>
+</html>

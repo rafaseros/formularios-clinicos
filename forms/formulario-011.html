@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>PGB-F011 Hoja de Medicamentos</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page {
+            size: Letter;
+            margin: 1.5cm 2.0cm 1.5cm 3.0cm;
+        }
+        .page {
+            width: 100%;
+            height: 24.5cm;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .section-title {
+            background-color: #e0e0e0;
+            border: 1px solid #000;
+            padding: 2px 5px;
+            font-weight: bold;
+            font-size: 8.5pt;
+            margin-top: 3px;
+            text-transform: uppercase;
+        }
+        .admin-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 7.5pt;
+            margin-top: 3px;
+        }
+        .admin-table th {
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            padding: 2px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 7.5pt;
+        }
+        .admin-table td {
+            border: 1px solid #000;
+            padding: 1px;
+            text-align: center;
+            height: 0.4cm;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="header-left">
+                <img src="../logo.png" alt="Logo" class="header-logo">
+                <div>
+                    <div class="header-title">PROYECTO GILEAD BOLIVIA</div>
+                    <div class="header-subtitle">PROGRAMA HOMBRES NUEVOS</div>
+                </div>
+            </div>
+            <div class="header-right">
+                <b>CÓDIGO:</b> PGB-F011 v1.0<br>
+                <b>Nº Historia Clínica:</b> ___________<br>
+                <b>Hoja:</b> 1 / 2
+            </div>
+        </div>
+
+        <div style="text-align: center; font-weight: bold; font-size: 13pt; margin: 3px 0; padding: 2px; background-color: #f5f5f5; border: 1px solid #000; text-transform: uppercase;">HOJA DE MEDICAMENTOS</div>
+
+        <div class="section-title">A. IDENTIFICACIÓN DEL PACIENTE</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Nombre:</div>
+            <div class="cell span-5"></div>
+            <div class="cell span-1 small">C.I.:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-1 small">Edad:</div>
+            <div class="cell span-1"></div>
+            <div class="cell span-2 small">Diagnóstico:</div>
+            <div class="cell span-5"></div>
+            <div class="cell span-2 small">CIE-10:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small bold bg-alert-yellow">ALERGIAS:</div>
+            <div class="cell span-10 bg-alert-yellow"></div>
+        </div>
+
+        <div class="section-title">B. DATOS DEL MEDICAMENTO</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Medicamento:</div>
+            <div class="cell span-10"></div>
+            <div class="cell span-2 small">Presentación:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Concentración:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Vía:</div>
+            <div class="cell span-12 small"><span class="checkbox"></span>Oral <span class="checkbox"></span>IM <span class="checkbox"></span>IV <span class="checkbox"></span>SC <span class="checkbox"></span>Inhalatoria <span class="checkbox"></span>Otra: ___________</div>
+            <div class="cell span-2 small">Dosis:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Frecuencia:</div>
+            <div class="cell span-3"></div>
+            <div class="cell span-2 small">Horarios:</div>
+            <div class="cell span-10"></div>
+            <div class="cell span-2 small">Inicio:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-2 small">Fin:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-2 small">Médico:</div>
+            <div class="cell span-4"></div>
+            <div class="cell span-2 small">Matrícula:</div>
+            <div class="cell span-2"></div>
+        </div>
+
+        <div class="section-title">C. MEDICAMENTOS CONTROLADOS</div>
+        <div class="grid-container">
+            <div class="cell span-3 small">Tipo:</div>
+            <div class="cell span-9 small"><span class="checkbox"></span>Lista II <span class="checkbox"></span>Lista III <span class="checkbox"></span>Lista IV <span class="checkbox"></span>No controlado</div>
+            <div class="cell span-3 small">Nº Receta:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-2 small">Lote:</div>
+            <div class="cell span-2"></div>
+            <div class="cell span-3 small">Vencimiento:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-2 small">Cantidad:</div>
+            <div class="cell span-2"></div>
+        </div>
+
+        <div class="section-title">D. REGISTRO DE ADMINISTRACIÓN</div>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th style="width: 8%;">Fecha</th>
+                    <th style="width: 7%;">H. Prog.</th>
+                    <th style="width: 7%;">H. Real</th>
+                    <th style="width: 8%;">Dosis</th>
+                    <th style="width: 20%;">Administrador</th>
+                    <th style="width: 8%;">Firma</th>
+                    <th style="width: 42%;">Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div class="section-title" style="margin-top: 3px;">E. SUSPENSIÓN (si aplica)</div>
+        <div class="grid-container">
+            <div class="cell span-2 small">Fecha:</div>
+            <div class="cell span-2 center">___/___/______</div>
+            <div class="cell span-2 small">Motivo:</div>
+            <div class="cell span-6"></div>
+            <div class="cell span-3 small">Médico:</div>
+            <div class="cell span-5"></div>
+            <div class="cell span-4" style="min-height: 1.0cm; border: 1px solid #000; margin-top: 3px;">
+                <div style="text-align: center; font-size: 7.5pt; padding-top: 3px;">Firma</div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F011 v1.0</div>
+            <div>Página 1 de 2</div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- PÁGINA 2 -->
+    <div class="page">
+        <div class="header" style="height: 1.5cm;">
+            <div style="font-size: 11pt; font-weight: bold;">HOJA DE MEDICAMENTOS (Continuación)</div>
+            <div class="header-right">
+                <b>PACIENTE:</b> ____________________________________<br>
+                <b>Nº EXP:</b> ___________ | <b>Hoja:</b> 2 / 2
+            </div>
+        </div>
+
+        <div class="section-title" style="margin-top: 3px;">D. REGISTRO DE ADMINISTRACIÓN (Continuación)</div>
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th style="width: 8%;">Fecha</th>
+                    <th style="width: 7%;">H. Prog.</th>
+                    <th style="width: 7%;">H. Real</th>
+                    <th style="width: 8%;">Dosis</th>
+                    <th style="width: 20%;">Administrador</th>
+                    <th style="width: 8%;">Firma</th>
+                    <th style="width: 42%;">Observaciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <div>PROYECTO GILEAD BOLIVIA</div>
+            <div>PGB-F011 v1.0</div>
+            <div>Página 2 de 2</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1128 @@
+================================================================================
+DOCUMENTO 1: ESPECIFICACIÓN DE FORMULARIOS Y CAMPOS
+================================================================================
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos - Expediente Clínico SEDES
+================================================================================
+Fecha: Enero 2026
+Versión: 1.0
+Total de Formularios: 16
+================================================================================
+
+
+============================================================
+ÍNDICE DE FORMULARIOS
+============================================================
+
+FASE 1: INGRESO Y ADMINISTRATIVOS (F001-F005)
+  PGB-F001 - Hoja Frontal del Expediente
+  PGB-F002 - Hoja de Ingreso
+  PGB-F003 - Datos Familiares
+  PGB-F004 - Consentimiento Informado
+  PGB-F005 - Contrato de Prestación de Servicios
+
+FASE 2: MÉDICOS Y ENFERMERÍA (F006-F011)
+  PGB-F006 - Historia Clínica
+  PGB-F007 - Nota de Ingreso Médica
+  PGB-F008 - Evaluación Psicofísica
+  PGB-F009 - Hoja de Signos Vitales
+  PGB-F010 - Kardex de Enfermería
+  PGB-F011 - Hoja de Medicamentos
+
+FASE 3: PSICOTRÓPICOS Y EVOLUCIÓN (F012-F014)
+  PGB-F012 - Receta Médica Archivada para Psicotrópicos
+  PGB-F013 - Libro de Control de Psicotrópicos
+  PGB-F014 - Hojas de Evolución (4 versiones: A, B, C, D)
+
+FASE 4: EGRESO Y DOCUMENTACIÓN (F015-F016)
+  PGB-F015 - Epicrisis / Nota de Egreso
+  PGB-F016 - Informe Psicológico
+
+
+================================================================================
+FORMULARIO PGB-F001: HOJA FRONTAL DEL EXPEDIENTE
+================================================================================
+Páginas: 1 | Estado: CREAR | Responsable: Admisión
+Propósito: Carátula visible del expediente con identificación rápida
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008 Art. 5.1
+
+SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Fecha de Apertura        | Fecha     | SÍ          | R.M. 0090/2008
+3 | Apellido Paterno         | Texto     | SÍ          | R.M. 0090/2008
+4 | Apellido Materno         | Texto     | SÍ          | R.M. 0090/2008
+5 | Nombres                  | Texto     | SÍ          | R.M. 0090/2008
+6 | Fecha de Nacimiento      | Fecha     | SÍ          | R.M. 0090/2008
+7 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+8 | Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 12
+9 | Extensión C.I.           | Selección | SÍ          | D.S. 28562 Art. 12
+10| Sexo                     | Selección | SÍ          | R.M. 0090/2008
+11| Grupo Sanguíneo          | Selección | Recomendado | R.M. 0090/2008
+
+SECCIÓN B: DATOS DE CONTACTO
+---------------------------------------
+12| Dirección                | Texto     | SÍ          | R.M. 0090/2008
+13| Zona/Barrio              | Texto     | SÍ          | R.M. 0090/2008
+14| Ciudad                   | Texto     | SÍ          | R.M. 0090/2008
+15| Departamento             | Texto     | SÍ          | R.M. 0090/2008
+16| Teléfono                 | Número    | SÍ          | R.M. 0090/2008
+
+SECCIÓN C: RESPONSABLE/CONTACTO DE EMERGENCIA
+---------------------------------------
+17| Nombre del Responsable   | Texto     | SÍ          | D.S. 28562 Art. 14
+18| Parentesco               | Texto     | SÍ          | D.S. 28562 Art. 14
+19| C.I. del Responsable     | Texto     | SÍ          | D.S. 28562 Art. 14
+20| Teléfono del Responsable | Número    | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN D: REGISTRO DE INTERNACIONES
+---------------------------------------
+21| Número de Internación    | Número    | SÍ          | R.M. 0090/2008
+22| Fecha de Ingreso         | Fecha     | SÍ          | D.S. 28562 Art. 12
+23| Fecha de Egreso          | Fecha     | SÍ          | D.S. 28562 Art. 12
+24| Diagnóstico / CIE-10     | Texto     | SÍ          | D.S. 25235 Art. 1
+25| Motivo de Egreso         | Selección | SÍ          | R.M. 0090/2008
+
+SECCIÓN E: DATOS CRÍTICOS DE EMERGENCIA
+---------------------------------------
+26| Alergias                 | Texto     | SÍ          | R.M. 0090/2008
+27| Enfermedades Crónicas    | Texto     | Recomendado | R.M. 0090/2008
+
+
+================================================================================
+FORMULARIO PGB-F002: HOJA DE INGRESO
+================================================================================
+Páginas: 1 | Estado: CORREGIR | Responsable: Admisión
+Propósito: Registro administrativo de datos del paciente al ingreso
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008 Art. 5.1
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Fecha de Ingreso         | Fecha     | SÍ          | R.M. 0090/2008
+3 | Hora de Ingreso          | Hora      | SÍ          | R.M. 0090/2008
+4 | Nº de Internación        | Número    | SÍ          | R.M. 0090/2008
+5 | Apellido Paterno         | Texto     | SÍ          | R.M. 0090/2008
+6 | Apellido Materno         | Texto     | SÍ          | R.M. 0090/2008
+7 | Nombres                  | Texto     | SÍ          | R.M. 0090/2008
+8 | Fecha de Nacimiento      | Fecha     | SÍ          | R.M. 0090/2008
+9 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+10| Lugar de Nacimiento      | Texto     | SÍ          | R.M. 0090/2008
+11| Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 12
+12| Extensión C.I.           | Selección | SÍ          | D.S. 28562 Art. 12
+13| Sexo                     | Selección | SÍ          | R.M. 0090/2008
+14| Estado Civil             | Selección | SÍ          | R.M. 0090/2008
+15| Grupo Sanguíneo          | Selección | Recomendado | R.M. 0090/2008
+16| Ocupación                | Texto     | Recomendado | R.M. 0090/2008
+17| Nivel de Instrucción     | Selección | Recomendado | R.M. 0090/2008
+
+SECCIÓN B: DATOS DE CONTACTO
+---------------------------------------
+18| Dirección                | Texto     | SÍ          | R.M. 0090/2008
+19| Zona/Barrio              | Texto     | SÍ          | R.M. 0090/2008
+20| Localidad/Ciudad         | Texto     | SÍ          | R.M. 0090/2008
+21| Municipio                | Texto     | Recomendado | R.M. 0090/2008
+22| Departamento             | Texto     | SÍ          | R.M. 0090/2008
+23| Teléfono                 | Número    | SÍ          | R.M. 0090/2008
+24| Celular                  | Número    | Recomendado | R.M. 0090/2008
+
+SECCIÓN C: RESPONSABLE DEL PACIENTE
+---------------------------------------
+25| Nombre del Responsable   | Texto     | SÍ          | D.S. 28562 Art. 14
+26| C.I. del Responsable     | Texto     | SÍ          | D.S. 28562 Art. 14
+27| Parentesco               | Texto     | SÍ          | D.S. 28562 Art. 14
+28| Teléfono del Responsable | Número    | SÍ          | D.S. 28562 Art. 14
+29| Dirección del Responsable| Texto     | Recomendado | D.S. 28562 Art. 14
+
+SECCIÓN D: MOTIVO DE INGRESO
+---------------------------------------
+30| Motivo de Internación    | Texto     | SÍ          | R.M. 0090/2008
+31| Referido por             | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN E: REGISTRO
+---------------------------------------
+32| Nombre de quien registra | Texto     | SÍ          | D.S. 28562 Art. 6
+33| Cargo                    | Texto     | SÍ          | D.S. 28562 Art. 6
+34| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F003: DATOS FAMILIARES
+================================================================================
+Páginas: 1 | Estado: CORREGIR | Responsable: Admisión
+Propósito: Información de la red de apoyo familiar del paciente
+Base normativa: D.S. 28562 Art. 12, 14; R.M. 0090/2008
+
+SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre del Paciente      | Texto     | SÍ          | R.M. 0090/2008
+3 | Fecha de llenado         | Fecha     | SÍ          | D.S. 28562 Art. 12
+
+SECCIÓN B: RESPONSABLE LEGAL/TUTOR
+---------------------------------------
+4 | Nombre completo          | Texto     | SÍ          | D.S. 28562 Art. 14
+5 | Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 14
+6 | Extensión C.I.           | Selección | SÍ          | D.S. 28562 Art. 14
+7 | Parentesco               | Texto     | SÍ          | D.S. 28562 Art. 14
+8 | Fecha de Nacimiento      | Fecha     | Recomendado | R.M. 0090/2008
+9 | Estado Civil             | Selección | Recomendado | R.M. 0090/2008
+10| Ocupación                | Texto     | Recomendado | R.M. 0090/2008
+11| Dirección                | Texto     | SÍ          | D.S. 28562 Art. 14
+12| Teléfono Fijo            | Número    | SÍ          | D.S. 28562 Art. 14
+13| Celular                  | Número    | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN C: CONTACTOS SECUNDARIOS
+---------------------------------------
+14| Nombre Contacto 1        | Texto     | Recomendado | R.M. 0090/2008
+15| Parentesco               | Texto     | Recomendado | R.M. 0090/2008
+16| Teléfono                 | Número    | Recomendado | R.M. 0090/2008
+17| Nombre Contacto 2        | Texto     | Recomendado | R.M. 0090/2008
+18| Parentesco               | Texto     | Recomendado | R.M. 0090/2008
+19| Teléfono                 | Número    | Recomendado | R.M. 0090/2008
+
+SECCIÓN D: COMPOSICIÓN FAMILIAR
+---------------------------------------
+20| Padre vive               | Selección | Recomendado | R.M. 0090/2008
+21| Madre vive               | Selección | Recomendado | R.M. 0090/2008
+22| Número de hermanos       | Número    | Recomendado | R.M. 0090/2008
+23| Lugar que ocupa          | Número    | Recomendado | R.M. 0090/2008
+24| Tiene hijos              | Selección | Recomendado | R.M. 0090/2008
+25| Número de hijos          | Número    | Condicional | R.M. 0090/2008
+26| Con quién vive           | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN E: DINÁMICA FAMILIAR
+---------------------------------------
+27| Relación familiar        | Selección | Recomendado | R.M. 0090/2008
+28| Apoyo familiar           | Selección | Recomendado | R.M. 0090/2008
+29| Observaciones            | Texto     | Recomendado | R.M. 0090/2008
+
+
+================================================================================
+FORMULARIO PGB-F004: CONSENTIMIENTO INFORMADO
+================================================================================
+Páginas: 1-2 | Estado: CORREGIR | Responsable: Médico/Admisión
+Propósito: Autorización legal para internación y tratamiento
+Base normativa: D.S. 28562 Art. 14; Ley 3131 Art. 8
+
+SECCIÓN A: DATOS DE LA INSTITUCIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nombre de la Institución | Fijo      | SÍ          | D.S. 28562 Art. 14
+2 | Dirección                | Fijo      | SÍ          | D.S. 28562 Art. 14
+3 | Teléfono                 | Fijo      | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN B: DATOS DEL PACIENTE
+---------------------------------------
+4 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+5 | Nombre completo          | Texto     | SÍ          | D.S. 28562 Art. 14
+6 | Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 14
+7 | Fecha de Nacimiento      | Fecha     | SÍ          | D.S. 28562 Art. 14
+8 | Edad                     | Número    | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN C: DATOS DEL REPRESENTANTE LEGAL
+---------------------------------------
+9 | Nombre completo          | Texto     | SÍ          | D.S. 28562 Art. 14
+10| Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 14
+11| Parentesco               | Texto     | SÍ          | D.S. 28562 Art. 14
+12| Dirección                | Texto     | SÍ          | D.S. 28562 Art. 14
+13| Teléfono                 | Número    | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN D: INFORMACIÓN DEL TRATAMIENTO
+---------------------------------------
+14| Diagnóstico presuntivo   | Texto     | SÍ          | Ley 3131 Art. 8.a
+15| Tratamiento propuesto    | Texto     | SÍ          | Ley 3131 Art. 8.a
+16| Duración estimada        | Texto     | SÍ          | Ley 3131 Art. 8.a
+17| Riesgos del tratamiento  | Texto     | SÍ          | Ley 3131 Art. 8.a
+18| Beneficios esperados     | Texto     | SÍ          | Ley 3131 Art. 8.a
+19| Alternativas             | Texto     | Recomendado | Ley 3131 Art. 8.a
+
+SECCIÓN E: DECLARACIONES Y AUTORIZACIONES
+---------------------------------------
+20| Autoriza tratamiento     | Checkbox  | SÍ          | D.S. 28562 Art. 14
+21| Autoriza medicación      | Checkbox  | SÍ          | D.S. 28562 Art. 14
+22| Autoriza pruebas         | Checkbox  | Recomendado | D.S. 28562 Art. 14
+23| Declara comprensión      | Checkbox  | SÍ          | D.S. 28562 Art. 14
+
+SECCIÓN F: FIRMAS
+---------------------------------------
+24| Lugar                    | Texto     | SÍ          | D.S. 28562 Art. 14
+25| Fecha                    | Fecha     | SÍ          | D.S. 28562 Art. 14
+26| Firma del paciente       | Espacio   | Condicional | D.S. 28562 Art. 14
+27| Firma del representante  | Espacio   | SÍ          | D.S. 28562 Art. 14
+28| Firma del testigo        | Espacio   | Recomendado | D.S. 28562 Art. 14
+29| Nombre del médico        | Texto     | SÍ          | D.S. 28562 Art. 6
+30| Matrícula del médico     | Texto     | SÍ          | D.S. 28562 Art. 6
+31| Firma del médico         | Espacio   | SÍ          | D.S. 28562 Art. 6
+32| Sello del médico         | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F005: CONTRATO DE PRESTACIÓN DE SERVICIOS
+================================================================================
+Páginas: 2 | Estado: CORREGIR | Responsable: Administración
+Propósito: Acuerdo legal bilateral para servicios de rehabilitación
+Base normativa: Código Civil Boliviano Art. 519; D.S. 28562
+
+SECCIÓN A: IDENTIFICACIÓN DE LAS PARTES
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nombre del Proyecto      | Fijo      | SÍ          | Código Civil
+2 | Representante legal      | Texto     | SÍ          | Código Civil
+3 | Dirección                | Fijo      | SÍ          | Código Civil
+4 | NIT                      | Texto     | Recomendado | Código Civil
+
+SECCIÓN B: DATOS DEL CONTRATANTE
+---------------------------------------
+5 | Nombre completo          | Texto     | SÍ          | Código Civil
+6 | Cédula de Identidad      | Texto     | SÍ          | Código Civil
+7 | Parentesco con paciente  | Texto     | SÍ          | Código Civil
+8 | Dirección                | Texto     | SÍ          | Código Civil
+9 | Teléfono                 | Número    | SÍ          | Código Civil
+
+SECCIÓN C: DATOS DEL BENEFICIARIO (PACIENTE)
+---------------------------------------
+10| Nombre completo          | Texto     | SÍ          | Código Civil
+11| Cédula de Identidad      | Texto     | SÍ          | Código Civil
+12| Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+
+SECCIÓN D: OBJETO DEL CONTRATO
+---------------------------------------
+13| Descripción del servicio | Texto     | SÍ          | Código Civil
+14| Duración del tratamiento | Texto     | SÍ          | Código Civil
+15| Fecha de inicio          | Fecha     | SÍ          | Código Civil
+
+SECCIÓN E: ASPECTOS ECONÓMICOS
+---------------------------------------
+16| Costo mensual            | Número    | SÍ          | Código Civil
+17| Costo total              | Número    | SÍ          | Código Civil
+18| Forma de pago            | Texto     | SÍ          | Código Civil
+19| Fecha de pago            | Texto     | SÍ          | Código Civil
+20| Depósito de garantía     | Número    | Condicional | Código Civil
+
+SECCIÓN F: OBLIGACIONES DE LAS PARTES
+---------------------------------------
+21| Obligaciones del Proyecto| Texto     | SÍ          | Código Civil
+22| Obligaciones del Contratante | Texto | SÍ          | Código Civil
+23| Causales de rescisión    | Texto     | SÍ          | Código Civil
+
+SECCIÓN G: FIRMAS
+---------------------------------------
+24| Lugar                    | Texto     | SÍ          | Código Civil
+25| Fecha                    | Fecha     | SÍ          | Código Civil
+26| Firma del contratante    | Espacio   | SÍ          | Código Civil
+27| Huella digital           | Espacio   | Recomendado | Código Civil
+28| Firma del representante  | Espacio   | SÍ          | Código Civil
+29| Firma del testigo        | Espacio   | Recomendado | Código Civil
+
+
+================================================================================
+FORMULARIO PGB-F006: HISTORIA CLÍNICA
+================================================================================
+Páginas: 4 | Estado: CORREGIR | Responsable: Médico
+Propósito: Registro médico completo con énfasis en historia de consumo
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008; Ley 1008 Art. 49
+
+SECCIÓN A: DATOS DE IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Fecha de elaboración     | Fecha     | SÍ          | D.S. 28562 Art. 12
+3 | Hora                     | Hora      | SÍ          | R.M. 0090/2008
+4 | Nº Hoja / de             | Paginación| SÍ          | R.M. 0090/2008
+5 | Apellido Paterno         | Texto     | SÍ          | R.M. 0090/2008
+6 | Apellido Materno         | Texto     | SÍ          | R.M. 0090/2008
+7 | Nombres                  | Texto     | SÍ          | R.M. 0090/2008
+8 | Fecha de Nacimiento      | Fecha     | SÍ          | R.M. 0090/2008
+9 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+10| Cédula de Identidad      | Texto     | SÍ          | D.S. 28562 Art. 12
+11| Sexo                     | Selección | SÍ          | R.M. 0090/2008
+12| Grupo Sanguíneo          | Selección | Recomendado | R.M. 0090/2008
+
+SECCIÓN B: ANTECEDENTES PERSONALES NO PATOLÓGICOS
+---------------------------------------
+13| Lugar de nacimiento      | Texto     | SÍ          | R.M. 0090/2008
+14| Escolaridad              | Texto     | SÍ          | R.M. 0090/2008
+15| Ocupación                | Texto     | SÍ          | R.M. 0090/2008
+16| Estado civil             | Selección | SÍ          | R.M. 0090/2008
+17| Religión                 | Texto     | Recomendado | R.M. 0090/2008
+18| Vivienda                 | Texto     | Recomendado | R.M. 0090/2008
+19| Alimentación             | Texto     | Recomendado | R.M. 0090/2008
+20| Sueño                    | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN C: ANTECEDENTES FAMILIARES
+---------------------------------------
+21| Padre - patologías       | Texto     | SÍ          | R.M. 0090/2008
+22| Madre - patologías       | Texto     | SÍ          | R.M. 0090/2008
+23| Hermanos - patologías    | Texto     | Recomendado | R.M. 0090/2008
+24| Abuelos - patologías     | Texto     | Recomendado | R.M. 0090/2008
+25| Antec. adicciones familia| Texto     | SÍ          | Ley 1008 Art. 49
+26| Antec. psiquiátricos fam | Texto     | SÍ          | R.M. 0090/2008
+27| Antec. suicidio familia  | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN D: ANTECEDENTES PATOLÓGICOS
+---------------------------------------
+28| Enfermedades previas     | Texto     | SÍ          | R.M. 0090/2008
+29| Cirugías                 | Texto     | SÍ          | R.M. 0090/2008
+30| Hospitalizaciones        | Texto     | SÍ          | R.M. 0090/2008
+31| Traumatismos             | Texto     | Recomendado | R.M. 0090/2008
+32| Alergias                 | Texto     | SÍ          | R.M. 0090/2008
+33| Transfusiones            | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN E: MEDICAMENTOS Y ENFERMEDADES CRÓNICAS
+---------------------------------------
+34| Enfermedades crónicas    | Texto     | SÍ          | R.M. 0090/2008
+35| Medicamentos actuales    | Texto     | SÍ          | D.S. 25235
+
+SECCIÓN F: FACTORES DE RIESGO
+---------------------------------------
+36| Tabaquismo               | Checkbox  | SÍ          | R.M. 0090/2008
+37| Alcoholismo              | Checkbox  | SÍ          | R.M. 0090/2008
+38| Drogas                   | Checkbox  | SÍ          | Ley 1008 Art. 49
+39| Sedentarismo             | Checkbox  | Recomendado | R.M. 0090/2008
+
+SECCIÓN G: HISTORIA DE CONSUMO DE SUSTANCIAS (CRÍTICA)
+---------------------------------------
+40| Edad de inicio           | Número    | SÍ          | D.S. 25235; Ley 1008
+41| Sustancia de inicio      | Texto     | SÍ          | D.S. 25235; Ley 1008
+42| Sustancia principal      | Texto     | SÍ          | D.S. 25235; Ley 1008
+43| Vía de administración    | Selección | SÍ          | D.S. 25235; Ley 1008
+44| Patrón de consumo        | Texto     | SÍ          | DSM-IV/CIE-10
+45| Frecuencia               | Texto     | SÍ          | DSM-IV/CIE-10
+46| Cantidad                 | Texto     | SÍ          | DSM-IV/CIE-10
+47| Última vez que consumió  | Fecha     | SÍ          | D.S. 25235
+48| Tiempo de consumo        | Texto     | SÍ          | D.S. 25235
+49| Sínd. de abstinencia     | Checkbox  | SÍ          | DSM-IV/CIE-10
+50| Descripción abstinencia  | Texto     | Condicional | DSM-IV/CIE-10
+51| Tratamientos previos     | Texto     | SÍ          | Ley 1008 Art. 49
+52| Número de recaídas       | Número    | SÍ          | DSM-IV/CIE-10
+53| Complicaciones médicas   | Texto     | SÍ          | R.M. 0090/2008
+54| Otras sustancias         | Texto     | SÍ          | D.S. 25235
+
+SECCIÓN H: MOTIVO DE INTERNACIÓN
+---------------------------------------
+55| Motivo de consulta       | Texto     | SÍ          | R.M. 0090/2008
+56| Referido por             | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN I: ENFERMEDAD ACTUAL
+---------------------------------------
+57| Descripción              | TextoLargo| SÍ          | R.M. 0090/2008
+
+SECCIÓN J: EXAMEN FÍSICO
+---------------------------------------
+58| Signos vitales           | Tabla     | SÍ          | R.M. 0090/2008
+59| Examen general           | Texto     | SÍ          | R.M. 0090/2008
+60| Examen por sistemas      | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN K: DIAGNÓSTICO E IMPRESIÓN CLÍNICA
+---------------------------------------
+61| Diagnóstico principal    | Texto     | SÍ          | D.S. 25235 Art. 1
+62| Código CIE-10            | Texto     | SÍ          | D.S. 25235 Art. 1
+63| Diagnósticos secundarios | Texto     | Recomendado | D.S. 25235 Art. 1
+
+SECCIÓN L: PLAN DE TRATAMIENTO INICIAL
+---------------------------------------
+64| Tratamiento farmacológico| Texto     | SÍ          | D.S. 28562 Art. 6
+65| Indicaciones generales   | Texto     | SÍ          | R.M. 0090/2008
+66| Interconsultas           | Texto     | Condicional | R.M. 0090/2008
+67| Exámenes solicitados     | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN M: REGISTRO Y VALIDACIÓN
+---------------------------------------
+68| Nombre del médico        | Texto     | SÍ          | D.S. 28562 Art. 6
+69| Matrícula profesional    | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+70| Especialidad             | Texto     | SÍ          | D.S. 28562 Art. 6
+71| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+72| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F007: NOTA DE INGRESO MÉDICA
+================================================================================
+Páginas: 2 | Estado: CREAR | Responsable: Médico
+Propósito: Valoración médica inicial rápida al momento del ingreso
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Fecha de ingreso         | Fecha     | SÍ          | R.M. 0090/2008
+3 | Hora de ingreso          | Hora      | SÍ          | R.M. 0090/2008
+4 | Nombre del paciente      | Texto     | SÍ          | R.M. 0090/2008
+5 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+6 | C.I.                     | Texto     | SÍ          | D.S. 28562 Art. 12
+
+SECCIÓN B: EVALUACIÓN INICIAL
+---------------------------------------
+7 | Motivo de ingreso        | Texto     | SÍ          | R.M. 0090/2008
+8 | Estado de conciencia     | Selección | SÍ          | R.M. 0090/2008
+9 | Orientación              | Selección | SÍ          | R.M. 0090/2008
+10| Signos de intoxicación   | Checkbox  | SÍ          | D.S. 25235
+11| Signos de abstinencia    | Checkbox  | SÍ          | D.S. 25235
+12| Ideación suicida         | Checkbox  | SÍ          | R.M. 0090/2008
+
+SECCIÓN C: SIGNOS VITALES
+---------------------------------------
+13| Presión arterial         | Texto     | SÍ          | R.M. 0090/2008
+14| Frecuencia cardíaca      | Número    | SÍ          | R.M. 0090/2008
+15| Frecuencia respiratoria  | Número    | SÍ          | R.M. 0090/2008
+16| Temperatura              | Número    | SÍ          | R.M. 0090/2008
+17| Saturación O2            | Número    | Recomendado | R.M. 0090/2008
+18| Peso                     | Número    | SÍ          | R.M. 0090/2008
+19| Talla                    | Número    | SÍ          | R.M. 0090/2008
+20| IMC                      | Número    | Recomendado | R.M. 0090/2008
+
+SECCIÓN D: EXAMEN FÍSICO BREVE
+---------------------------------------
+21| Aspecto general          | Texto     | SÍ          | R.M. 0090/2008
+22| Piel y mucosas           | Texto     | SÍ          | R.M. 0090/2008
+23| Cabeza y cuello          | Texto     | Recomendado | R.M. 0090/2008
+24| Tórax                    | Texto     | SÍ          | R.M. 0090/2008
+25| Abdomen                  | Texto     | SÍ          | R.M. 0090/2008
+26| Extremidades             | Texto     | SÍ          | R.M. 0090/2008
+27| Neurológico breve        | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN E: ANTECEDENTES RELEVANTES
+---------------------------------------
+28| Alergias                 | Texto     | SÍ          | R.M. 0090/2008
+29| Medicamentos actuales    | Texto     | SÍ          | D.S. 25235
+30| Enfermedades crónicas    | Texto     | SÍ          | R.M. 0090/2008
+31| Última sustancia         | Texto     | SÍ          | D.S. 25235
+32| Tiempo desde último uso  | Texto     | SÍ          | D.S. 25235
+
+SECCIÓN F: DIAGNÓSTICO INICIAL
+---------------------------------------
+33| Diagnóstico presuntivo   | Texto     | SÍ          | D.S. 25235 Art. 1
+34| Código CIE-10            | Texto     | SÍ          | D.S. 25235 Art. 1
+
+SECCIÓN G: PLAN DE MANEJO INMEDIATO
+---------------------------------------
+35| Indicaciones             | Texto     | SÍ          | R.M. 0090/2008
+36| Medicación inicial       | Texto     | Condicional | D.S. 28562 Art. 6
+37| Nivel de vigilancia      | Selección | SÍ          | R.M. 0090/2008
+38| Interconsultas           | Texto     | Condicional | R.M. 0090/2008
+
+SECCIÓN H: FIRMA
+---------------------------------------
+39| Nombre del médico        | Texto     | SÍ          | D.S. 28562 Art. 6
+40| Matrícula profesional    | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+41| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+42| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F008: EVALUACIÓN PSICOFÍSICA
+================================================================================
+Páginas: 2 | Estado: CORREGIR | Responsable: Médico/Psicólogo
+Propósito: Screening integral del estado físico y mental al ingreso
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008; D.S. 25235 Art. 1
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Fecha                    | Fecha     | SÍ          | D.S. 28562 Art. 12
+3 | Hora                     | Hora      | SÍ          | R.M. 0090/2008
+4 | Nº Hoja                  | Paginación| SÍ          | R.M. 0090/2008
+5 | Apellidos y Nombres      | Texto     | SÍ          | R.M. 0090/2008
+6 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+7 | Sexo                     | Selección | SÍ          | R.M. 0090/2008
+
+SECCIÓN B: EVALUACIÓN FÍSICA - ANTECEDENTES (Checkboxes SÍ/NO)
+---------------------------------------
+8 | ¿Tiene alguna enfermedad?| Checkbox  | SÍ          | R.M. 0090/2008
+9 | ¿Toma medicamentos?      | Checkbox  | SÍ          | D.S. 25235
+10| ¿Tiene alergias?         | Checkbox  | SÍ          | R.M. 0090/2008
+11| ¿Ha sido operado?        | Checkbox  | SÍ          | R.M. 0090/2008
+12| ¿Ha tenido convulsiones? | Checkbox  | SÍ          | R.M. 0090/2008
+13| ¿Tiene diabetes?         | Checkbox  | SÍ          | R.M. 0090/2008
+14| ¿Tiene hipertensión?     | Checkbox  | SÍ          | R.M. 0090/2008
+15| ¿Tiene VIH/SIDA?         | Checkbox  | SÍ          | R.M. 0090/2008
+16| ¿Tiene hepatitis?        | Checkbox  | SÍ          | R.M. 0090/2008
+17| ¿Tiene tuberculosis?     | Checkbox  | SÍ          | R.M. 0090/2008
+18| Detalle si SÍ            | Texto     | Condicional | R.M. 0090/2008
+
+SECCIÓN C: EXAMEN DEL ESTADO MENTAL
+---------------------------------------
+19| Apariencia               | Selección | SÍ          | DSM-IV/CIE-10
+20| Actitud                  | Selección | SÍ          | DSM-IV/CIE-10
+21| Psicomotricidad          | Selección | SÍ          | DSM-IV/CIE-10
+22| Lenguaje                 | Selección | SÍ          | DSM-IV/CIE-10
+23| Afecto                   | Selección | SÍ          | DSM-IV/CIE-10
+24| Pensamiento - curso      | Selección | SÍ          | DSM-IV/CIE-10
+25| Pensamiento - contenido  | Selección | SÍ          | DSM-IV/CIE-10
+26| Percepción               | Selección | SÍ          | DSM-IV/CIE-10
+27| Orientación              | Selección | SÍ          | DSM-IV/CIE-10
+28| Memoria                  | Selección | SÍ          | DSM-IV/CIE-10
+29| Atención                 | Selección | SÍ          | DSM-IV/CIE-10
+30| Inteligencia             | Selección | SÍ          | DSM-IV/CIE-10
+31| Juicio                   | Selección | SÍ          | DSM-IV/CIE-10
+32| Introspección            | Selección | SÍ          | DSM-IV/CIE-10
+
+SECCIÓN D: EVALUACIÓN DE RIESGO
+---------------------------------------
+33| Ideas suicidas           | Checkbox  | SÍ          | R.M. 0090/2008
+34| Intentos previos         | Checkbox  | SÍ          | R.M. 0090/2008
+35| Ideas de daño a otros    | Checkbox  | SÍ          | R.M. 0090/2008
+36| Riesgo de convulsiones   | Checkbox  | SÍ          | R.M. 0090/2008
+
+SECCIÓN E: OBSERVACIONES
+---------------------------------------
+37| Observaciones            | TextoLargo| Recomendado | R.M. 0090/2008
+38| Impresión general        | Selección | SÍ          | R.M. 0090/2008
+
+SECCIÓN F: DECLARACIÓN JURADA (CRÍTICA)
+---------------------------------------
+39| Texto de declaración     | Fijo      | SÍ          | Código Civil
+40| Firma del paciente       | Espacio   | SÍ          | Código Civil
+41| Firma del familiar       | Espacio   | SÍ          | Código Civil
+
+SECCIÓN G: FIRMA DEL EVALUADOR
+---------------------------------------
+42| Nombre                   | Texto     | SÍ          | D.S. 28562 Art. 6
+43| Profesión                | Texto     | SÍ          | D.S. 28562 Art. 6
+44| Matrícula                | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+45| Hora de cierre           | Hora      | SÍ          | R.M. 0090/2008
+46| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+47| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F009: HOJA DE SIGNOS VITALES
+================================================================================
+Páginas: 1 (apaisada) | Estado: CORREGIR | Responsable: Enfermería
+Propósito: Monitoreo gráfico y tabular de signos vitales
+Base normativa: D.S. 28562 Art. 12; R.M. 0090/2008 Art. 5.1
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Apellido Paterno         | Texto     | SÍ          | R.M. 0090/2008
+3 | Apellido Materno         | Texto     | SÍ          | R.M. 0090/2008
+4 | Nombres                  | Texto     | SÍ          | R.M. 0090/2008
+5 | Nº Hoja                  | Paginación| SÍ          | R.M. 0090/2008
+
+SECCIÓN B: DATOS ANTROPOMÉTRICOS (1 vez)
+---------------------------------------
+6 | Talla                    | Número    | SÍ          | R.M. 0090/2008
+7 | Peso al ingreso          | Número    | SÍ          | R.M. 0090/2008
+8 | IMC                      | Número    | Recomendado | R.M. 0090/2008
+9 | Alergias                 | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN C: GRÁFICA DE TEMPERATURA
+---------------------------------------
+10| Escala 35-41°C           | Gráfica   | SÍ          | R.M. 0090/2008
+11| Días 1-9                 | Gráfica   | SÍ          | R.M. 0090/2008
+12| Turnos M/T/N             | Gráfica   | SÍ          | R.M. 0090/2008
+
+SECCIÓN D: GRÁFICA DE PULSO
+---------------------------------------
+13| Escala 40-160 lpm        | Gráfica   | SÍ          | R.M. 0090/2008
+
+SECCIÓN E: GRÁFICA DE PRESIÓN ARTERIAL
+---------------------------------------
+14| Escala 60-200 mmHg       | Gráfica   | SÍ          | R.M. 0090/2008
+
+SECCIÓN F: GRÁFICA DE FRECUENCIA RESPIRATORIA
+---------------------------------------
+15| Escala 10-40 rpm         | Gráfica   | SÍ          | R.M. 0090/2008
+
+SECCIÓN G: TABLA DE DATOS ADICIONALES
+---------------------------------------
+16| Peso diario              | Número    | Recomendado | R.M. 0090/2008
+17| Saturación O2            | Número    | Recomendado | R.M. 0090/2008
+18| Glucemia                 | Número    | Condicional | R.M. 0090/2008
+
+SECCIÓN H: OBSERVACIONES
+---------------------------------------
+19| Observaciones            | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN I: RESPONSABLES
+---------------------------------------
+20| Responsable turno M      | Iniciales | SÍ          | D.S. 28562 Art. 6
+21| Responsable turno T      | Iniciales | SÍ          | D.S. 28562 Art. 6
+22| Responsable turno N      | Iniciales | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F010: KARDEX DE ENFERMERÍA
+================================================================================
+Páginas: 1 (doble cara) | Estado: CORREGIR | Responsable: Enfermería
+Propósito: Control de medicación y cuidados de enfermería
+Base normativa: D.S. 28562 Art. 12, 6; D.S. 25235; Manual AGEMED
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre del paciente      | Texto     | SÍ          | R.M. 0090/2008
+3 | C.I.                     | Texto     | SÍ          | D.S. 28562 Art. 12
+4 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+5 | Nº Hoja                  | Paginación| SÍ          | R.M. 0090/2008
+6 | Diagnóstico              | Texto     | SÍ          | D.S. 25235 Art. 1
+7 | Dieta                    | Texto     | SÍ          | R.M. 0090/2008
+8 | ALERGIAS (destacado)     | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN B: REGISTRO DE MEDICAMENTOS
+---------------------------------------
+9 | Fecha inicio             | Fecha     | SÍ          | D.S. 28562 Art. 12
+10| Medicamento              | Texto     | SÍ          | D.S. 25235 Art. 6
+11| Dosis                    | Texto     | SÍ          | D.S. 25235 Art. 6
+12| Vía                      | Selección | SÍ          | D.S. 25235 Art. 6
+13| Horario                  | Texto     | SÍ          | D.S. 25235
+14| Fecha suspensión         | Fecha     | Condicional | D.S. 25235
+15| Prescriptor (iniciales)  | Texto     | SÍ          | D.S. 28562 Art. 6
+16| Observaciones            | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN C: GRILLA DE ADMINISTRACIÓN
+---------------------------------------
+17| Día                      | Número    | SÍ          | D.S. 28562 Art. 12
+18| Hora                     | Hora      | SÍ          | D.S. 28562 Art. 12
+19| Iniciales administrador  | Iniciales | SÍ          | D.S. 28562 Art. 6
+
+SECCIÓN D: LEYENDA DE SÍMBOLOS
+---------------------------------------
+20| ✓ Administrado           | Símbolo   | SÍ          | Estandarización
+21| O Omitido                | Símbolo   | SÍ          | Estandarización
+22| R Rechazado              | Símbolo   | SÍ          | Estandarización
+23| H Hospitalizado          | Símbolo   | SÍ          | Estandarización
+
+SECCIÓN E: RESPONSABLES POR TURNO
+---------------------------------------
+24| Nombre turno M           | Texto     | SÍ          | D.S. 28562 Art. 6
+25| Firma turno M            | Espacio   | SÍ          | D.S. 28562 Art. 6
+26| Nombre turno T           | Texto     | SÍ          | D.S. 28562 Art. 6
+27| Firma turno T            | Espacio   | SÍ          | D.S. 28562 Art. 6
+28| Nombre turno N           | Texto     | SÍ          | D.S. 28562 Art. 6
+29| Firma turno N            | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F011: HOJA DE MEDICAMENTOS
+================================================================================
+Páginas: 1 por medicamento | Estado: RECREAR | Responsable: Enfermería
+Propósito: Registro individual por medicamento con administraciones
+Base normativa: D.S. 28562 Art. 12, 6; D.S. 25235 Art. 85-86; Manual AGEMED
+
+SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre del paciente      | Texto     | SÍ          | R.M. 0090/2008
+3 | C.I.                     | Texto     | SÍ          | D.S. 28562 Art. 12
+4 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+5 | Diagnóstico              | Texto     | SÍ          | D.S. 25235 Art. 1
+6 | Código CIE-10            | Texto     | SÍ          | D.S. 25235 Art. 1
+7 | Alergias                 | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN B: DATOS DEL MEDICAMENTO
+---------------------------------------
+8 | Nombre del medicamento   | Texto     | SÍ          | D.S. 25235 Art. 6
+9 | Presentación             | Texto     | SÍ          | D.S. 25235 Art. 6
+10| Concentración            | Texto     | SÍ          | D.S. 25235 Art. 6
+11| Vía de administración    | Selección | SÍ          | D.S. 25235 Art. 6
+12| Dosis                    | Texto     | SÍ          | D.S. 25235 Art. 6
+13| Frecuencia               | Texto     | SÍ          | D.S. 25235 Art. 6
+14| Horarios programados     | Texto     | SÍ          | D.S. 25235
+15| Fecha inicio             | Fecha     | SÍ          | D.S. 28562 Art. 12
+16| Fecha fin                | Fecha     | Condicional | D.S. 28562 Art. 12
+17| Nombre médico prescriptor| Texto     | SÍ          | D.S. 28562 Art. 6
+18| Matrícula                | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+19| Firma prescriptor        | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+SECCIÓN C: DATOS PARA MEDICAMENTOS CONTROLADOS
+---------------------------------------
+20| Tipo de medicamento      | Selección | SÍ          | D.S. 25235 Art. 112
+21| Nº Receta Archivada      | Texto     | SÍ (control)| D.S. 25235 Art. 91
+22| Lote                     | Texto     | SÍ (control)| D.S. 25235 Art. 85
+23| Fecha vencimiento        | Fecha     | SÍ (control)| D.S. 25235 Art. 85
+24| Cantidad total           | Número    | SÍ (control)| D.S. 25235 Art. 85
+
+SECCIÓN D: REGISTRO DE ADMINISTRACIÓN (Tabla de 20 filas)
+---------------------------------------
+25| Fecha                    | Fecha     | SÍ          | D.S. 28562 Art. 12
+26| Hora programada          | Hora      | SÍ          | Manual AGEMED
+27| Hora real                | Hora      | SÍ          | Manual AGEMED
+28| Dosis administrada       | Texto     | SÍ          | Manual AGEMED
+29| Nombre administrador     | Texto     | SÍ          | D.S. 28562 Art. 6
+30| Firma/Iniciales          | Espacio   | SÍ          | D.S. 28562 Art. 6
+31| Observaciones            | Texto     | Recomendado | Manual AGEMED
+
+SECCIÓN E: SUSPENSIÓN (si aplica)
+---------------------------------------
+32| Fecha de suspensión      | Fecha     | Condicional | D.S. 28562 Art. 12
+33| Motivo de suspensión     | Texto     | Condicional | R.M. 0090/2008
+34| Nombre médico            | Texto     | Condicional | D.S. 28562 Art. 6
+35| Firma médico             | Espacio   | Condicional | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F012: RECETA MÉDICA ARCHIVADA PARA PSICOTRÓPICOS
+================================================================================
+Páginas: 1 (doble cara) | Estado: CREAR | Responsable: Médico + Farmacia
+Propósito: Prescripción de medicamentos psicotrópicos (Listas II, III, IV)
+Base normativa: D.S. 25235 Art. 91, 133; Manual AGEMED
+
+⚠️ RESTRICCIONES CRÍTICAS:
+- Solo UN medicamento psicotrópico por receta
+- Duración máxima de tratamiento: 20 días
+- Solo médico autorizado puede prescribir
+- Receta válida máximo 72 horas
+- Archivado mínimo 5 años
+
+SECCIÓN A: DATOS DE LA INSTITUCIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nombre institución       | Fijo      | SÍ          | D.S. 25235 Art. 91
+2 | Dirección                | Fijo      | SÍ          | D.S. 25235 Art. 91
+3 | Teléfono                 | Fijo      | SÍ          | D.S. 25235 Art. 91
+4 | NIT                      | Fijo      | Recomendado | D.S. 25235 Art. 91
+
+SECCIÓN B: DATOS DEL PRESCRIPTOR
+---------------------------------------
+5 | Nombre completo médico   | Texto     | SÍ          | D.S. 28562 Art. 6
+6 | Matrícula profesional    | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+7 | Especialidad             | Texto     | SÍ          | D.S. 25235 Art. 91
+8 | Nº Registro SEDES        | Texto     | SÍ          | D.S. 25235 Art. 91
+
+SECCIÓN C: DATOS DEL PACIENTE
+---------------------------------------
+9 | Nombre completo          | Texto     | SÍ          | D.S. 25235 Art. 91
+10| Cédula de Identidad      | Texto     | SÍ          | D.S. 25235 Art. 91
+11| Edad                     | Número    | SÍ          | D.S. 25235 Art. 91
+12| Sexo                     | Selección | SÍ          | D.S. 25235 Art. 91
+13| Domicilio                | Texto     | SÍ          | D.S. 25235 Art. 91
+14| Teléfono                 | Número    | Recomendado | D.S. 25235 Art. 91
+15| Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+16| Diagnóstico              | Texto     | SÍ          | D.S. 25235 Art. 1
+17| Código CIE-10            | Texto     | SÍ          | D.S. 25235 Art. 1
+
+SECCIÓN D: PRESCRIPCIÓN (Solo 1 medicamento)
+---------------------------------------
+18| Nombre del medicamento   | Texto     | SÍ          | D.S. 25235 Art. 91
+19| Presentación             | Texto     | SÍ          | D.S. 25235 Art. 91
+20| Concentración            | Texto     | SÍ          | D.S. 25235 Art. 91
+21| Lista (II, III, IV)      | Selección | SÍ          | D.S. 25235
+22| Cantidad en letras       | Texto     | SÍ          | D.S. 25235 Art. 91
+23| Cantidad en números      | Número    | SÍ          | D.S. 25235 Art. 91
+24| Dosis                    | Texto     | SÍ          | D.S. 25235 Art. 91
+25| Frecuencia               | Texto     | SÍ          | D.S. 25235 Art. 91
+26| Duración (máx 20 días)   | Texto     | SÍ          | D.S. 25235 Art. 91
+27| Indicaciones adicionales | Texto     | Recomendado | D.S. 25235 Art. 91
+
+SECCIÓN E: FECHA Y FIRMAS
+---------------------------------------
+28| Lugar                    | Texto     | SÍ          | D.S. 25235 Art. 91
+29| Fecha de prescripción    | Fecha     | SÍ          | D.S. 25235 Art. 91
+30| Firma del médico         | Espacio   | SÍ          | D.S. 28562 Art. 6
+31| Sello del médico         | Espacio   | SÍ          | D.S. 28562 Art. 6
+32| Nº de receta             | Número    | SÍ          | Manual AGEMED
+
+SECCIÓN F: DISPENSACIÓN (REVERSO)
+---------------------------------------
+33| Fecha de dispensación    | Fecha     | SÍ          | D.S. 25235 Art. 85
+34| Cantidad dispensada      | Número    | SÍ          | D.S. 25235 Art. 85
+35| Lote                     | Texto     | SÍ          | D.S. 25235 Art. 85
+36| Fecha vencimiento        | Fecha     | SÍ          | D.S. 25235 Art. 85
+37| Nombre dispensador       | Texto     | SÍ          | D.S. 28562 Art. 6
+38| Firma dispensador        | Espacio   | SÍ          | D.S. 28562 Art. 6
+39| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F013: LIBRO DE CONTROL DE PSICOTRÓPICOS
+================================================================================
+Páginas: Variable | Estado: CREAR | Responsable: Regente Farmacia
+Propósito: Control de movimientos de medicamentos psicotrópicos
+Base normativa: D.S. 25235 Art. 85-86; Manual AGEMED
+
+⚠️ REQUISITOS CRÍTICOS:
+- UNA página por CADA medicamento
+- Libro FOLIADO y SELLADO por SEDES
+- Informe trimestral obligatorio (5 días hábiles)
+
+SECCIÓN A: IDENTIFICACIÓN DEL ESTABLECIMIENTO
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nombre establecimiento   | Fijo      | SÍ          | D.S. 25235 Art. 85
+2 | Dirección                | Fijo      | SÍ          | D.S. 25235 Art. 85
+3 | Nº Registro SEDES        | Texto     | SÍ          | D.S. 25235 Art. 85
+4 | Regente responsable      | Texto     | SÍ          | D.S. 25235 Art. 85
+
+SECCIÓN B: IDENTIFICACIÓN DEL MEDICAMENTO
+---------------------------------------
+5 | Nombre del medicamento   | Texto     | SÍ          | D.S. 25235 Art. 85
+6 | Nombre comercial         | Texto     | Recomendado | D.S. 25235 Art. 85
+7 | Concentración            | Texto     | SÍ          | D.S. 25235 Art. 85
+8 | Presentación             | Texto     | SÍ          | D.S. 25235 Art. 85
+9 | Lista (II, III, IV)      | Selección | SÍ          | D.S. 25235
+10| Página Nº                | Número    | SÍ          | D.S. 25235 Art. 85
+
+SECCIÓN C: REGISTRO DE MOVIMIENTOS (Tabla)
+---------------------------------------
+11| Fecha                    | Fecha     | SÍ          | D.S. 25235 Art. 85
+12| Nº de Documento          | Texto     | SÍ          | D.S. 25235 Art. 85
+13| Tipo movimiento          | Selección | SÍ          | Manual AGEMED
+14| Lote                     | Texto     | SÍ          | D.S. 25235 Art. 85
+15| Fecha vencimiento        | Fecha     | SÍ          | D.S. 25235 Art. 85
+16| Ingreso (cantidad)       | Número    | Condicional | D.S. 25235 Art. 85
+17| Egreso (cantidad)        | Número    | Condicional | D.S. 25235 Art. 85
+18| Saldo                    | Número    | SÍ          | D.S. 25235 Art. 85
+19| Nombre paciente/proveedor| Texto     | SÍ          | D.S. 25235 Art. 85
+20| Responsable              | Texto     | SÍ          | D.S. 28562 Art. 6
+21| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+22| Observaciones            | Texto     | Recomendado | Manual AGEMED
+
+SECCIÓN D: CIERRE DE PERÍODO
+---------------------------------------
+23| Saldo inicial período    | Número    | SÍ          | Manual AGEMED
+24| Total ingresos           | Número    | SÍ          | Manual AGEMED
+25| Total egresos            | Número    | SÍ          | Manual AGEMED
+26| Saldo final período      | Número    | SÍ          | Manual AGEMED
+27| Fecha de cierre          | Fecha     | SÍ          | Manual AGEMED
+28| Firma regente            | Espacio   | SÍ          | D.S. 28562 Art. 6
+29| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+FORMULARIO PGB-F014: HOJAS DE EVOLUCIÓN (4 VERSIONES)
+================================================================================
+Páginas: Variables | Estado: CORREGIR | Responsables: Varios
+Propósito: Registro cronológico de la atención y evolución del paciente
+Base normativa: D.S. 28562 Art. 6, 12; R.M. 0090/2008
+
+VERSION A: EVOLUCIÓN MÉDICA - Color Azul (#1565C0)
+VERSION B: REPORTE DE ENFERMERÍA - Color Verde (#2E7D32)
+VERSION C: EVOLUCIÓN PSICOLOGÍA - Color Púrpura (#6A1B9A)
+VERSION D: PSICOLOGÍA ÁREA OPERATIVA - Color Naranja (#E65100)
+
+SECCIÓN A: IDENTIFICACIÓN (Común a todas las versiones)
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre del paciente      | Texto     | SÍ          | R.M. 0090/2008
+3 | Nº Hoja                  | Paginación| SÍ          | R.M. 0090/2008
+
+SECCIÓN B: REGISTRO DE NOTAS (Tabla)
+---------------------------------------
+4 | Fecha                    | Fecha     | SÍ          | D.S. 28562 Art. 12
+5 | Hora                     | Hora      | SÍ          | D.S. 28562 Art. 12
+6 | Nota de evolución        | TextoLargo| SÍ          | R.M. 0090/2008
+7 | Firma y Sello            | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+CAMPOS ESPECÍFICOS POR VERSIÓN:
+
+VERSION A - EVOLUCIÓN MÉDICA:
+- Estado actual del paciente
+- Cambios en medicación
+- Resultados de exámenes
+- Plan de tratamiento
+- Diagnóstico actual (CIE-10)
+
+VERSION B - REPORTE DE ENFERMERÍA:
+- Signos vitales del turno
+- Medicación administrada
+- Estado general
+- Incidencias del turno
+- Entrega de turno
+
+VERSION C - EVOLUCIÓN PSICOLOGÍA:
+- Técnicas aplicadas
+- Estado emocional
+- Avances terapéuticos
+- Plan de siguiente sesión
+
+VERSION D - PSICOLOGÍA ÁREA OPERATIVA:
+- Actividad realizada
+- Participación del paciente
+- Interacción grupal
+- Observaciones conductuales
+
+
+================================================================================
+FORMULARIO PGB-F015: EPICRISIS / NOTA DE EGRESO
+================================================================================
+Páginas: 2 | Estado: CREAR | Responsable: Médico tratante
+Propósito: Resumen del tratamiento al finalizar la internación
+Base normativa: D.S. 28562 Art. 6, 12; R.M. 0090/2008; Ley 1008 Art. 49
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre del paciente      | Texto     | SÍ          | R.M. 0090/2008
+3 | C.I.                     | Texto     | SÍ          | D.S. 28562 Art. 12
+4 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+5 | Sexo                     | Selección | SÍ          | R.M. 0090/2008
+
+SECCIÓN B: FECHAS DE INTERNACIÓN
+---------------------------------------
+6 | Fecha de ingreso         | Fecha     | SÍ          | D.S. 28562 Art. 12
+7 | Fecha de egreso          | Fecha     | SÍ          | D.S. 28562 Art. 12
+8 | Días de internación      | Número    | SÍ          | R.M. 0090/2008
+9 | Tipo de egreso           | Selección | SÍ          | R.M. 0090/2008
+10| Motivo de egreso         | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN C: RESUMEN CLÍNICO
+---------------------------------------
+11| Diagnóstico de ingreso   | Texto     | SÍ          | D.S. 25235 Art. 1
+12| Código CIE-10 ingreso    | Texto     | SÍ          | D.S. 25235 Art. 1
+13| Diagnóstico de egreso    | Texto     | SÍ          | D.S. 25235 Art. 1
+14| Código CIE-10 egreso     | Texto     | SÍ          | D.S. 25235 Art. 1
+15| Resumen enfermedad actual| TextoLargo| SÍ          | R.M. 0090/2008
+16| Hallazgos relevantes     | Texto     | SÍ          | R.M. 0090/2008
+17| Procedimientos realizados| Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN D: TRATAMIENTO
+---------------------------------------
+18| Tratamiento farmacológico| TextoLargo| SÍ          | D.S. 25235
+19| Tratamiento psicoterapéutico | Texto| SÍ          | R.M. 0090/2008
+20| Evolución durante intern.| TextoLargo| SÍ          | R.M. 0090/2008
+21| Complicaciones           | Texto     | Condicional | R.M. 0090/2008
+
+SECCIÓN E: CONDICIÓN AL EGRESO
+---------------------------------------
+22| Estado clínico al egreso | Texto     | SÍ          | R.M. 0090/2008
+23| Medicación al egreso     | Texto     | SÍ          | D.S. 25235
+24| Indicaciones al egreso   | TextoLargo| SÍ          | D.S. 28562 Art. 12
+25| Signos de alarma         | Texto     | SÍ          | R.M. 0090/2008
+26| Citas de seguimiento     | Texto     | SÍ          | R.M. 0090/2008
+27| Referencia a             | Texto     | Condicional | D.S. 28562 Art. 12
+
+SECCIÓN F: PRONÓSTICO Y RECOMENDACIONES
+---------------------------------------
+28| Pronóstico               | Texto     | SÍ          | R.M. 0090/2008
+29| Recomendaciones seguim.  | TextoLargo| SÍ          | R.M. 0090/2008
+30| Plan prevención recaídas | Texto     | Recomendado | Ley 1008 Art. 49
+
+SECCIÓN G: FIRMAS
+---------------------------------------
+31| Nombre médico tratante   | Texto     | SÍ          | D.S. 28562 Art. 6
+32| Matrícula                | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+33| Especialidad             | Texto     | SÍ          | D.S. 28562 Art. 6
+34| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+35| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+36| Fecha de elaboración     | Fecha     | SÍ          | D.S. 28562 Art. 12
+
+
+================================================================================
+FORMULARIO PGB-F016: INFORME PSICOLÓGICO
+================================================================================
+Páginas: 2-3 | Estado: CREAR | Responsable: Psicólogo/a
+Propósito: Documentación de evaluación y evolución psicológica
+Base normativa: D.S. 28562 Art. 6, 12; R.M. 0090/2008; DSM-IV/CIE-10
+
+SECCIÓN A: IDENTIFICACIÓN
+---------------------------------------
+# | Campo                    | Tipo      | Obligatorio | Normativa
+--|--------------------------|-----------|-------------|------------------
+1 | Nº Historia Clínica      | Texto     | SÍ          | D.S. 28562 Art. 12
+2 | Nombre completo paciente | Texto     | SÍ          | R.M. 0090/2008
+3 | Fecha de nacimiento      | Fecha     | SÍ          | R.M. 0090/2008
+4 | Edad                     | Número    | SÍ          | R.M. 0090/2008
+5 | Escolaridad              | Texto     | Recomendado | R.M. 0090/2008
+6 | Ocupación                | Texto     | Recomendado | R.M. 0090/2008
+7 | Fecha de evaluación      | Fecha     | SÍ          | D.S. 28562 Art. 12
+8 | Tipo de informe          | Selección | SÍ          | R.M. 0090/2008
+
+SECCIÓN B: MOTIVO DE EVALUACIÓN
+---------------------------------------
+9 | Motivo de consulta       | Texto     | SÍ          | R.M. 0090/2008
+10| Referido por             | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN C: HISTORIA RELEVANTE
+---------------------------------------
+11| Historia del problema    | TextoLargo| SÍ          | R.M. 0090/2008
+12| Antecedentes relevantes  | Texto     | SÍ          | R.M. 0090/2008
+13| Historia consumo (resumen)| Texto    | SÍ          | D.S. 25235; Ley 1008
+14| Situación familiar       | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN D: EVALUACIÓN REALIZADA
+---------------------------------------
+15| Técnicas/Instrumentos    | Texto     | SÍ          | D.S. 28562 Art. 12
+16| Fecha de aplicación      | Fecha     | SÍ          | D.S. 28562 Art. 12
+
+SECCIÓN E: RESULTADOS
+---------------------------------------
+17| Área cognitiva           | Texto     | SÍ          | DSM-IV/CIE-10
+18| Área emocional/afectiva  | Texto     | SÍ          | DSM-IV/CIE-10
+19| Área conductual          | Texto     | SÍ          | DSM-IV/CIE-10
+20| Área social              | Texto     | SÍ          | DSM-IV/CIE-10
+21| Rasgos de personalidad   | Texto     | Recomendado | DSM-IV/CIE-10
+22| Motivación para cambio   | Texto     | SÍ          | R.M. 0090/2008
+23| Recursos y fortalezas    | Texto     | Recomendado | R.M. 0090/2008
+24| Factores de riesgo       | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN F: DIAGNÓSTICO PSICOLÓGICO
+---------------------------------------
+25| Impresión diagnóstica    | Texto     | SÍ          | DSM-IV/CIE-10
+26| Código CIE-10            | Texto     | SÍ          | D.S. 25235 Art. 1
+27| Pronóstico               | Texto     | Recomendado | R.M. 0090/2008
+
+SECCIÓN G: RECOMENDACIONES
+---------------------------------------
+28| Intervención sugerida    | TextoLargo| SÍ          | R.M. 0090/2008
+29| Plan de tratamiento      | Texto     | SÍ          | R.M. 0090/2008
+
+SECCIÓN H: FIRMAS
+---------------------------------------
+30| Nombre del psicólogo     | Texto     | SÍ          | D.S. 28562 Art. 6
+31| Matrícula profesional    | Texto     | SÍ          | D.S. 28562 Art. 6, 9
+32| Especialidad/Enfoque     | Texto     | Recomendado | D.S. 28562 Art. 6
+33| Firma                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+34| Sello                    | Espacio   | SÍ          | D.S. 28562 Art. 6
+
+
+================================================================================
+RESUMEN DE CAMPOS POR FORMULARIO
+================================================================================
+
+Formulario   | Código   | Campos | Páginas | Responsable
+-------------|----------|--------|---------|------------------
+Hoja Frontal | PGB-F001 |   27   |    1    | Admisión
+Hoja Ingreso | PGB-F002 |   34   |    1    | Admisión
+Datos Famil. | PGB-F003 |   29   |    1    | Admisión
+Consentim.   | PGB-F004 |   32   |   1-2   | Médico/Admisión
+Contrato     | PGB-F005 |   29   |    2    | Administración
+Historia Clín| PGB-F006 |   72   |    4    | Médico
+Nota Ingreso | PGB-F007 |   42   |    2    | Médico
+Eval. Psicof.| PGB-F008 |   47   |    2    | Médico/Psicólogo
+Signos Vital.| PGB-F009 |   22   |    1    | Enfermería
+Kardex       | PGB-F010 |   29   |    1    | Enfermería
+Hoja Medicam.| PGB-F011 |   35   |    1    | Enfermería
+Receta Psico.| PGB-F012 |   39   |    1    | Médico+Farmacia
+Libro Control| PGB-F013 |   29   |  Var.   | Regente
+Hojas Evol.  | PGB-F014 |    7   |  Var.   | Varios
+Epicrisis    | PGB-F015 |   36   |    2    | Médico
+Inf. Psicol. | PGB-F016 |   34   |   2-3   | Psicólogo
+-------------|----------|--------|---------|------------------
+TOTAL        |    16    |  ~555  |  ~30    | Múltiples
+
+
+================================================================================
+FIN DEL DOCUMENTO 1
+================================================================================
+Documento generado: Enero 2026
+Proyecto Gilead Bolivia - Programa Hombres Nuevos
+Sistema de Formularios Clínicos SEDES
+================================================================================

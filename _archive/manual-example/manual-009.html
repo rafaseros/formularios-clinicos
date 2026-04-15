@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Signos Vitales - PGB-F009</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        
+        .header-box { border-bottom: 2px solid #006064; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #006064; text-transform: uppercase; }
+        
+        h2 { background-color: #e0f7fa; padding: 5px 10px; border-left: 5px solid #006064; font-size: 11pt; margin-top: 15px; }
+        
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .example { color: #006064; font-style: italic; }
+        
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 9pt; }
+        .data-table th, .data-table td { border: 1px solid #ccc; padding: 4px; text-align: center; }
+        .data-table th { background-color: #f5f5f5; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL HOJA SIGNOS VITALES</div>
+            <div class="subtitle">Formulario: PGB-F009 "Registro Tabular"</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-009</div>
+    </div>
+
+    <h2>1. CRITERIOS DE REGISTRO</h2>
+    <div style="background-color: #f1f8e9; padding: 10px; border: 1px solid #c5e1a5;">
+        El registro debe ser <b>OBJETIVO</b> y <b>CRONOLÓGICO</b>. No se admiten borrones.<br>
+        <b>Frecuencia Estándar:</b> Mínimo cada 6 horas (Turno Mañana, Tarde, Noche x2) o según criterio médico.
+    </div>
+
+    <h2>2. PARÁMETROS FISIOLÓGICOS (EJEMPLOS)</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">Tº (Temperatura)</div>
+        <div class="field-desc">
+            Registrar en grados Celsius con un decimal. <span class="example">Ej: 36.5</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">P.A. (Presión)</div>
+        <div class="field-desc">
+            Registrar Sistólica/Diastólica en mmHg. <span class="example">Ej: 120/80</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">F.C. (Frec. Cardíaca)</div>
+        <div class="field-desc">
+            Latidos por minuto. <span class="example">Ej: 78</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">F.R. (Frec. Respiratoria)</div>
+        <div class="field-desc">
+            Respiraciones por minuto. <span class="example">Ej: 18</span>
+        </div>
+    </div>
+
+    <h2>3. CONTROL DE LÍQUIDOS Y ELIMINACIÓN</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">DIURESIS</div>
+        <div class="field-desc">
+            Volumen de orina en mililitros (ml) si se recolecta, o estimación: <br>
+            <span class="example">(+) Poca cantidad, (++) Normal, (+++) Abundante.</span>
+        </div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">CATARSIS</div>
+        <div class="field-desc">
+            Número de deposiciones o característica. <span class="example">Ej: 1 (Normal), 2 (Líquida).</span>
+        </div>
+    </div>
+
+    <h2>4. EJEMPLO DE LLENADO CORRECTO</h2>
+    <table class="data-table">
+        <thead>
+            <tr><th>FECHA</th><th>HORA</th><th>Tº</th><th>F.C.</th><th>P.A.</th><th>SatO2</th><th>OBSERVACIONES</th></tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>12/12</td><td>08:00</td><td>36.5</td><td>80</td><td>110/70</td><td>98%</td>
+                <td style="text-align: left;">Paciente afebril, hemodinámicamente estable.</td>
+            </tr>
+            <tr>
+                <td>12/12</td><td>14:00</td><td>37.2</td><td>85</td><td>120/80</td><td>97%</td>
+                <td style="text-align: left;">Refiere leve cefalea.</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Libro - PGB-F013</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        
+        .header-box { border-bottom: 2px solid #1a237e; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #1a237e; text-transform: uppercase; }
+        
+        h2 { background-color: #e8eaf6; padding: 5px 10px; border-left: 5px solid #1a237e; font-size: 11pt; margin-top: 15px; }
+        
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; background: #ffcdd2; padding: 2px 5px; }
+        
+        .step { background: #fffde7; padding: 10px; border: 1px dashed #fbc02d; margin: 10px 0; border-radius: 5px; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE APERTURA Y LLENADO</div>
+            <div class="subtitle">Libro de Control de Psicotrópicos (PGB-F013)</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-013</div>
+    </div>
+
+    <h2>1. PROCEDIMIENTO DE APERTURA (VITAL)</h2>
+    <div class="step">
+        El Libro NO tiene valor legal si son hojas sueltas. Siga estos pasos:
+        <ol>
+            <li>Imprimir <b>100 copias</b> del Formulario F013.</li>
+            <li>Llevar a una imprenta para <b>EMPASTADO</b> (Tapa Dura).</li>
+            <li>Numerar (Foliar) cada página del 1 al 100 en el recuadro "FOLIO Nº".</li>
+            <li>Llevar a la <b>Jefatura Regional de Farmacias (SEDES)</b> junto con una carta de solicitud para la <b>APERTURA DE LIBRO</b>. El notario sellará la primera hoja.</li>
+        </ol>
+    </div>
+
+    <h2>2. INSTRUCCIONES DE LLENADO DIARIO</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº FACTURA / RECETA</div>
+        <div class="field-desc">
+            Este es el campo de auditoría. <br>
+            - Para entradas: Anotar Nº Factura de compra.<br>
+            - Para salidas: Anotar Nº Receta Valorada (F012). <span class="alert">Sin receta no hay salida.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">COLUMNAS DE SALDO</div>
+        <div class="field-desc">
+            El cálculo es matemático estricto:<br>
+            <b>[Saldo Anterior] + [Entrada] - [Salida] = [Nuevo Saldo]</b>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">CIERRE DIARIO</div>
+        <div class="field-desc">
+            Al finalizar el día, se debe trazar una línea debajo del último movimiento. No dejar espacios en blanco grandes entre días.
+        </div>
+    </div>
+
+    <h2>3. ERRORES COMUNES (A EVITAR)</h2>
+    <ul>
+        <li><b>Uso de Corrector:</b> PROHIBIDO. Si se equivoca, escriba "ANULADO" en la columna de observaciones y repita en la siguiente fila.</li>
+        <li><b>Mezclar Medicamentos:</b> Cada medicamento tiene sus propias páginas asignadas. No mezclar Diazepam con Clonazepam en la misma hoja.</li>
+    </ul>
+
+</body>
+</html>

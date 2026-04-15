@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Administración Meds - PGB-F011</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #5d4037; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #5d4037; text-transform: uppercase; }
+        h2 { background-color: #efebe9; padding: 5px 10px; border-left: 5px solid #5d4037; font-size: 11pt; margin-top: 15px; }
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE ADMINISTRACIÓN DE MEDICAMENTOS</div>
+            <div class="subtitle">Formulario: PGB-F011</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-011</div>
+    </div>
+
+    <h2>1. SIMBOLOGÍA UNIVERSAL</h2>
+    <div style="background-color: #fff3e0; padding: 10px; border: 1px solid #ffe0b2;">
+        Para garantizar la claridad en el registro, utilice los siguientes códigos en la casilla correspondiente al turno:
+        <ul>
+            <li><b>Iniciales / Firma Corta:</b> Medicamento administrado correctamente.</li>
+            <li><b>Círculo Rojo (⭕):</b> Medicamento NO administrado (especificar motivo al dorso).</li>
+            <li><b>Línea Horizontal (-):</b> No corresponde dosis en ese horario.</li>
+        </ul>
+    </div>
+
+    <h2>2. INSTRUCCIONES DE LLENADO</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">COLUMNA FECHAS</div>
+        <div class="field-desc">
+            Llenar la fecha de cada día de la semana (ej: 12/05) en la cabecera de la columna correspondiente.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">COLORES DE TINTA</div>
+        <div class="field-desc">
+            - <b>Turno Mañana:</b> Azul<br>
+            - <b>Turno Tarde:</b> Verde<br>
+            - <b>Turno Noche:</b> Rojo<br>
+            <span class="alert">Esto permite auditoría rápida visual por turno.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">NUEVOS MEDICAMENTOS</div>
+        <div class="field-desc">
+            Si se inicia un medicamento a mitad de semana, agréguelo en la siguiente fila vacía y marque con una línea (-) los días anteriores que no corresponden.
+        </div>
+    </div>
+
+</body>
+</html>

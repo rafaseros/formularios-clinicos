@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F010 Kardex de Enfermería</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #1F4E79; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #1F4E79; text-transform: uppercase; }
+        .subtitle { font-size: 10pt; color: #666; font-style: italic; }
+        h2 { background-color: #E0E0E0; padding: 5px 10px; border-left: 5px solid #1F4E79; font-size: 11pt; margin-top: 15px; page-break-after: avoid; }
+        .instruction-box { display: grid; grid-template-columns: 150px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; page-break-inside: avoid; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .field-desc { font-size: 9.5pt; }
+        .alert { color: #d32f2f; font-weight: bold; font-size: 9pt; background: #ffebee; padding: 2px 5px; border-radius: 3px; }
+        .example { color: #1565c0; font-style: italic; font-size: 9pt; }
+        .general-rules { background-color: #fff3e0; border: 1px solid #ffe0b2; padding: 10px; border-radius: 4px; margin-bottom: 20px; font-size: 9pt; }
+        .general-rules ul { margin: 5px 0 0 20px; padding: 0; }
+        .legal-table { width: 100%; border-collapse: collapse; font-size: 8.5pt; margin-top: 10px; }
+        .legal-table th { background-color: #1F4E79; color: white; padding: 5px; text-align: left; }
+        .legal-table td { border: 1px solid #ddd; padding: 5px; vertical-align: top; }
+        .footer { margin-top: 30px; font-size: 8pt; text-align: center; color: #888; border-top: 1px solid #ddd; padding-top: 10px; }
+        .checklist { background-color: #f5f5f5; border: 1px solid #ddd; padding: 10px; margin-top: 10px; font-size: 9pt; }
+        .checklist ul { list-style: none; padding-left: 0; }
+        .checklist li:before { content: "☐ "; margin-right: 5px; }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F010 "Kardex de Enfermería"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-010<br>
+            <b>Versión:</b> 1.0
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras.</li>
+            <li><b>Símbolos:</b> Usar los símbolos estándar: ✓ (Administrado), O (Omitido), R (Rechazado), H (Hospitalizado).</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F010</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.0</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">1 (doble cara)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Enfermería</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        Control de medicación y cuidados de enfermería. Permite:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Registro de medicamentos prescritos</li>
+        <li>Grilla de administración diaria</li>
+        <li>Control de dosis, vía y horarios</li>
+        <li>Seguimiento de omisiones, rechazos o hospitalizaciones</li>
+    </ul>
+
+    <h2>3. INSTRUCCIONES DE LLENADO</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: IDENTIFICACIÓN</h3>
+    <div class="instruction-box">
+        <div class="field-name">ALERGIAS</div>
+        <div class="field-desc">Campo destacado. Si no tiene, escribir "NINGUNA". <span class="example">Ejemplo: Penicilina</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Dieta</div>
+        <div class="field-desc">Tipo de dieta prescrita. <span class="example">Ejemplo: Normal, Blanda, Líquida</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: REGISTRO DE MEDICAMENTOS</h3>
+    <p style="font-size: 9.5pt;">Registrar cada medicamento prescrito con sus datos completos.</p>
+    <div class="instruction-box">
+        <div class="field-name">Medicamento</div>
+        <div class="field-desc">Nombre del medicamento. <span class="example">Ejemplo: Clonazepam</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Dosis</div>
+        <div class="field-desc">Cantidad por toma. <span class="example">Ejemplo: 2mg</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Vía</div>
+        <div class="field-desc">Vía de administración. <span class="example">Ejemplo: VO (vía oral), IM, IV</span></div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Horario</div>
+        <div class="field-desc">Horarios programados. <span class="example">Ejemplo: 08:00, 20:00</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: GRILLA DE ADMINISTRACIÓN</h3>
+    <p style="font-size: 9.5pt;">Marcar con símbolos estándar cada administración:</p>
+    <ul style="font-size: 9.5pt;">
+        <li><b>✓</b> = Administrado</li>
+        <li><b>O</b> = Omitido</li>
+        <li><b>R</b> = Rechazado</li>
+        <li><b>H</b> = Hospitalizado</li>
+    </ul>
+    <div class="instruction-box">
+        <div class="field-name">Iniciales administrador</div>
+        <div class="field-desc">Registrar iniciales del personal que administra. <span class="example">Ejemplo: AR (Ana Rodríguez)</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN E: RESPONSABLES POR TURNO</h3>
+    <p style="font-size: 9.5pt;">Registrar nombre y firma del responsable de cada turno (Mañana, Tarde, Noche).</p>
+
+    <h2>4. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            KARDEX DE ENFERMERÍA<br>
+            PGB-F010 v1.0
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN A: IDENTIFICACIÓN</b><br>
+            Nombre del paciente: <u>Carlos Alberto Huarachi Apaza</u>     C.I.: <u>8523614</u>     Edad: <u>34</u><br>
+            Diagnóstico: <u>F14.2 - Dependencia a cocaína</u>     Dieta: <u>Normal</u><br>
+            ALERGIAS: <u>Penicilina, AINEs</u>
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN B: REGISTRO DE MEDICAMENTOS</b><br>
+            <table style="width: 100%; border-collapse: collapse; font-size: 7pt; margin-top: 5px;">
+                <tr style="background-color: #e0e0e0;">
+                    <th style="border: 1px solid #000; padding: 2px;">F. Inicio</th>
+                    <th style="border: 1px solid #000; padding: 2px;">Medicamento</th>
+                    <th style="border: 1px solid #000; padding: 2px;">Dosis</th>
+                    <th style="border: 1px solid #000; padding: 2px;">Vía</th>
+                    <th style="border: 1px solid #000; padding: 2px;">Horario</th>
+                    <th style="border: 1px solid #000; padding: 2px;">F. Susp.</th>
+                </tr>
+                <tr>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>15/12/25</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>Clonazepam 2mg</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>1 comp</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>Oral</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>08:00, 20:00</u></td>
+                    <td style="border: 1px solid #000; padding: 2px;"><u>---</u></td>
+                </tr>
+            </table>
+        </div>
+        
+        <div style="margin-bottom: 6px;">
+            <b>SECCIÓN C-D: GRÁFICAS DE ADMINISTRACIÓN</b><br>
+            (Se marcan con ✓ en las casillas correspondientes a cada horario de administración)
+        </div>
+        
+        <div style="margin-top: 8px;">
+            <b>SECCIÓN E: RESPONSABLES POR TURNO</b><br>
+            Mañana: <u>Lic. Ana María López</u>     Firma: ___________________<br>
+            Tarde: <u>Lic. Juan Pérez</u>     Firma: ___________________<br>
+            Noche: <u>Lic. María González</u>     Firma: ___________________
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F010 v1.0 | Página 1 de 1
+        </div>
+    </div>
+
+    <h2>5. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar alergias</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Riesgo para el paciente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre registrar en sección A</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Marcas incorrectas en gráficas</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Confusión sobre administración</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Usar símbolos estándar (✓, X, R)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Falta iniciales del administrador</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">No se puede identificar responsable</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre registrar iniciales</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar suspensión de medicamentos</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Continuación indebida</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre registrar fecha de suspensión</td>
+        </tr>
+    </table>
+
+    <h2>6. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Datos de identificación completos</li>
+            <li>Alergias documentadas (o "NINGUNA")</li>
+            <li>Dieta registrada</li>
+            <li>Medicamentos registrados con dosis, vía y horarios</li>
+            <li>Grilla de administración completa con símbolos correctos</li>
+            <li>Iniciales del administrador en cada registro</li>
+            <li>Responsables por turno registrados y firmados</li>
+        </ul>
+    </div>
+
+    <h2>7. BASE NORMATIVA Y LEGAL</h2>
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>D.S. 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 12, 6: Define registro de administración de medicamentos.</td>
+                <td>Art. 12, 6</td>
+            </tr>
+            <tr>
+                <td><b>D.S. 25235</b><br>Reglamento Ley del Medicamento</td>
+                <td>Define control de medicamentos y administración.</td>
+                <td>Art. 85-86</td>
+            </tr>
+            <tr>
+                <td><b>Manual AGEMED</b></td>
+                <td>Estándares de administración de medicamentos.</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.0 | Enero 2026
+    </div>
+</body>
+</html>

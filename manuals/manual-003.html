@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual de Llenado - PGB-F003 Datos Familiares</title>
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 10pt;
+            line-height: 1.4;
+            color: #333;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .header-box { 
+            border-bottom: 2px solid #1F4E79; 
+            margin-bottom: 20px; 
+            padding-bottom: 10px; 
+            display: flex; 
+            align-items: center; 
+        }
+        .title-main { 
+            font-size: 16pt; 
+            font-weight: bold; 
+            color: #1F4E79; 
+            text-transform: uppercase; 
+        }
+        .subtitle { 
+            font-size: 10pt; 
+            color: #666; 
+            font-style: italic; 
+        }
+
+        h2 { 
+            background-color: #E0E0E0; 
+            padding: 5px 10px; 
+            border-left: 5px solid #1F4E79; 
+            font-size: 11pt; 
+            margin-top: 15px; 
+            page-break-after: avoid; 
+        }
+        
+        .instruction-box {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 15px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+            page-break-inside: avoid;
+        }
+
+        .field-name { 
+            font-weight: bold; 
+            font-size: 9pt; 
+            color: #444; 
+            text-align: right; 
+        }
+        .field-desc { 
+            font-size: 9.5pt; 
+        }
+        
+        .alert { 
+            color: #d32f2f; 
+            font-weight: bold; 
+            font-size: 9pt; 
+            background: #ffebee; 
+            padding: 2px 5px; 
+            border-radius: 3px; 
+        }
+        .example { 
+            color: #1565c0; 
+            font-style: italic; 
+            font-size: 9pt; 
+        }
+
+        .general-rules {
+            background-color: #fff3e0;
+            border: 1px solid #ffe0b2;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 9pt;
+        }
+        .general-rules ul { 
+            margin: 5px 0 0 20px; 
+            padding: 0; 
+        }
+
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 8.5pt;
+            margin-top: 10px;
+        }
+        .legal-table th { 
+            background-color: #1F4E79; 
+            color: white; 
+            padding: 5px; 
+            text-align: left; 
+        }
+        .legal-table td { 
+            border: 1px solid #ddd; 
+            padding: 5px; 
+            vertical-align: top; 
+        }
+
+        .footer { 
+            margin-top: 30px; 
+            font-size: 8pt; 
+            text-align: center; 
+            color: #888; 
+            border-top: 1px solid #ddd; 
+            padding-top: 10px; 
+        }
+
+        .checklist {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 9pt;
+        }
+        .checklist ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .checklist li:before {
+            content: "☐ ";
+            margin-right: 5px;
+        }
+
+        .info-box {
+            background-color: #E3F2FD;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL TÉCNICO DE LLENADO</div>
+            <div class="subtitle">Formulario: PGB-F003 "Datos Familiares"</div>
+        </div>
+        <div style="text-align: right; font-size: 9pt;">
+            <b>Cód:</b> PGB-MAN-003<br>
+            <b>Versión:</b> 1.1
+        </div>
+    </div>
+
+    <div class="general-rules">
+        <b>🛑 REGLAS GENERALES DE AUDITORÍA (OBLIGATORIO)</b>
+        <ul>
+            <li><b>Color de Tinta:</b> Llenar <u>exclusivamente</u> con bolígrafo AZUL (para distinguir original de copia) o NEGRO.</li>
+            <li><b>Legibilidad:</b> Usar LETRA DE IMPRENTA MAYÚSCULA y clara.</li>
+            <li><b>Prohibiciones:</b> Queda terminantemente prohibido el uso de corrector, tachaduras, enmiendas o raspaduras (Art. 5 Norma Técnica Expediente Clínico).</li>
+            <li><b>Espacios Vacíos:</b> Ningún campo debe quedar vacío. Si no aplica, colocar una línea horizontal "---".</li>
+            <li><b>Confidencialidad:</b> Esta información es confidencial y debe manejarse con estricto respeto a la privacidad del paciente y su familia.</li>
+        </ul>
+    </div>
+
+    <h2>1. INFORMACIÓN DEL DOCUMENTO</h2>
+    <div class="instruction-box">
+        <div class="field-name">Código</div>
+        <div class="field-desc">PGB-F003</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Versión</div>
+        <div class="field-desc">1.1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Páginas</div>
+        <div class="field-desc">1</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Formato</div>
+        <div class="field-desc">Tamaño carta (21.59 × 27.94 cm)</div>
+    </div>
+    <div class="instruction-box">
+        <div class="field-name">Responsable</div>
+        <div class="field-desc">Personal de Admisión o Trabajo Social</div>
+    </div>
+
+    <h2>2. PROPÓSITO</h2>
+    <p style="font-size: 9.5pt; text-align: justify;">
+        El formulario de Datos Familiares recopila información sobre la red de apoyo familiar y social del paciente. Este documento:
+    </p>
+    <ul style="font-size: 9.5pt;">
+        <li>Identifica al responsable legal/tutor del paciente</li>
+        <li>Registra contactos secundarios para emergencias</li>
+        <li>Documenta la composición familiar</li>
+        <li>Evalúa la dinámica y el apoyo familiar disponible</li>
+        <li>Proporciona contexto para el plan de tratamiento y seguimiento</li>
+    </ul>
+    <div class="info-box">
+        <b>⚠️ IMPORTANTE:</b> Esta información es fundamental para:
+        <ul style="margin-top: 5px;">
+            <li>Planificar el alta y seguimiento ambulatorio</li>
+            <li>Identificar recursos de apoyo para el paciente</li>
+            <li>Comunicar con la familia sobre el progreso del tratamiento</li>
+            <li>Gestionar situaciones de emergencia</li>
+        </ul>
+    </div>
+
+    <h2>3. RESPONSABLES</h2>
+    <ul style="font-size: 9.5pt;">
+        <li><b>Llenado:</b> Personal de Admisión o Trabajo Social</li>
+        <li><b>Verificación:</b> Supervisor de Admisión</li>
+        <li><b>Actualización:</b> Trabajo Social (cuando hay cambios en la situación familiar)</li>
+    </ul>
+
+    <h2>4. CUÁNDO SE USA</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Momento</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Acción</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Durante el proceso de admisión</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Secciones A, B y C (datos básicos)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">En la primera semana de internación</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Completar Secciones D y E (composición y dinámica familiar)</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Cuando hay cambios en la situación familiar</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Actualizar secciones correspondientes</td>
+        </tr>
+    </table>
+
+    <h2>5. INSTRUCCIONES DE LLENADO POR SECCIÓN</h2>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nº Historia Clínica</div>
+        <div class="field-desc">
+            Debe ser el mismo número asignado en F001 y F002. <span class="example">Ejemplo: HC-2025-0042</span>
+            <br><span class="alert">CRÍTICO: Verificar que coincida con otros formularios del expediente.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Nombre del Paciente</div>
+        <div class="field-desc">Nombre completo del paciente según F001. <span class="example">Ejemplo: Carlos Alberto Huarachi Apaza</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de llenado</div>
+        <div class="field-desc">Fecha en que se completa este formulario en formato DD/MM/AAAA. <span class="example">Ejemplo: 15/12/2025</span></div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN B: RESPONSABLE LEGAL / TUTOR</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Nombre completo</div>
+        <div class="field-desc">
+            Nombre completo del responsable legal o tutor del paciente.
+            <br><span class="example">Ejemplo: María Elena Apaza de Huarachi</span>
+            <br><span class="alert">OBLIGATORIO: Debe ser mayor de edad y tener capacidad legal.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Cédula de Identidad</div>
+        <div class="field-desc">
+            Número de carnet del responsable. El formulario incluye un campo separado "Ext." para la extensión (departamento de emisión).
+            <br><span class="example">Ejemplo: 4512367 (en campo C.I.) y CBBA (en campo Ext.)</span>
+            <br><span class="alert">OBLIGATORIO: Verificar documento original.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Parentesco</div>
+        <div class="field-desc">Relación con el paciente. <span class="example">Ejemplo: Madre, Padre, Cónyuge, Hermano/a, Tutor legal</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Fecha de Nacimiento</div>
+        <div class="field-desc">Fecha de nacimiento del responsable en formato DD/MM/AAAA. <span class="example">Ejemplo: 20/05/1970</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Estado Civil</div>
+        <div class="field-desc">
+            Estado civil del responsable. Este campo tiene espacio amplio para todas las opciones.
+            <br><span class="example">Opciones: Soltero, Casado, Conviviente, Divorciado, Viudo</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Ocupación</div>
+        <div class="field-desc">Ocupación actual del responsable. <span class="example">Ejemplo: Ama de casa, Comerciante, Empleado público</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Dirección</div>
+        <div class="field-desc">Dirección completa del responsable (si es diferente a la del paciente). <span class="example">Ejemplo: Av. América #1234, Zona Sur, Cochabamba</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Teléfono Fijo / Celular</div>
+        <div class="field-desc">
+            Números de contacto del responsable. Preferentemente incluir celular.
+            <br><span class="example">Ejemplo: 4456789 (fijo), 70012345 (celular)</span>
+            <br><span class="alert">IMPORTANTE: Verificar que los números estén activos.</span>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN C: CONTACTOS SECUNDARIOS</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Contacto 1 y Contacto 2</div>
+        <div class="field-desc">
+            Registrar al menos dos contactos adicionales para situaciones de emergencia o cuando no se pueda contactar al responsable principal.
+            <br><span class="example">Ejemplo: Hermano/a, Tío/a, Amigo cercano, Vecino</span>
+            <br>Para cada contacto registrar:
+            <ul style="margin-top: 5px;">
+                <li><b>Nombre:</b> Nombre completo</li>
+                <li><b>Parentesco:</b> Relación con el paciente</li>
+                <li><b>Teléfono:</b> Número de contacto (preferentemente celular)</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN D: COMPOSICIÓN FAMILIAR</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Padre vive / Madre vive</div>
+        <div class="field-desc">
+            Indicar si los padres del paciente están vivos o fallecidos.
+            <br><span class="example">☒ Sí  ☐ No</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Número de hermanos</div>
+        <div class="field-desc">Total de hermanos (incluyendo al paciente). <span class="example">Ejemplo: 3 (si el paciente tiene 2 hermanos)</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Lugar que ocupa</div>
+        <div class="field-desc">
+            Posición del paciente entre sus hermanos (orden de nacimiento).
+            <br><span class="example">Ejemplo: 1 (primogénito), 2 (segundo), 3 (tercero), etc.</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Tiene hijos</div>
+        <div class="field-desc">Indicar si el paciente tiene hijos. <span class="example">☒ Sí  ☐ No</span></div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Número de hijos</div>
+        <div class="field-desc">
+            Total de hijos del paciente (solo si tiene hijos).
+            <br><span class="example">Ejemplo: 2</span>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Con quién vive</div>
+        <div class="field-desc">
+            Describir con quién convive el paciente habitualmente.
+            <br><span class="example">Ejemplo: "Con su madre y dos hermanos", "Solo", "Con su cónyuge e hijos"</span>
+        </div>
+    </div>
+
+    <h3 style="font-size: 10pt; margin-top: 10px; color: #1F4E79;">SECCIÓN E: DINÁMICA FAMILIAR</h3>
+    
+    <div class="instruction-box">
+        <div class="field-name">Relación familiar</div>
+        <div class="field-desc">
+            Evaluar la calidad de las relaciones familiares del paciente.
+            <br><span class="example">Opciones: Buena, Regular, Mala, Sin relación</span>
+            <br>Esta información se obtiene mediante entrevista con el paciente y/o familia.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Apoyo familiar</div>
+        <div class="field-desc">
+            Evaluar el nivel de apoyo que la familia proporciona al paciente.
+            <br><span class="example">Opciones: Total, Parcial, Mínimo, Ninguno</span>
+            <br>Considerar apoyo emocional, económico, logístico, etc.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">Observaciones</div>
+        <div class="field-desc">
+            Campo de texto libre para registrar información adicional relevante sobre la dinámica familiar.
+            <br>Puede incluir:
+            <ul style="margin-top: 5px;">
+                <li>Conflictos familiares relevantes</li>
+                <li>Historial de adicciones en la familia</li>
+                <li>Recursos familiares disponibles</li>
+                <li>Barreras para el tratamiento</li>
+                <li>Cualquier otra información relevante</li>
+            </ul>
+            <span class="example">Ejemplo: "Familia con historial de alcoholismo. Madre muy comprometida con el tratamiento. Padre ausente."</span>
+        </div>
+    </div>
+
+    <h2>6. EJEMPLO DE LLENADO COMPLETO</h2>
+    <div style="background-color: #f5f5f5; padding: 15px; border: 1px solid #ddd; font-size: 8.5pt; margin-top: 10px; font-family: 'Courier New', monospace;">
+        <div style="text-align: center; font-weight: bold; margin-bottom: 10px; border-bottom: 2px solid #000; padding-bottom: 5px;">
+            PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+            DATOS FAMILIARES<br>
+            PGB-F003 v1.1
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN A: IDENTIFICACIÓN DEL PACIENTE</b><br>
+            Nº Historia Clínica: <u>HC-2025-0042</u>    Nombre del Paciente: <u>Carlos Alberto Huarachi Apaza</u><br>
+            Fecha de llenado: <u>15/12/2025</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN B: RESPONSABLE LEGAL / TUTOR</b><br>
+            Nombre completo: <u>María Elena Apaza de Huarachi</u><br>
+            C.I.: <u>4512367</u>  Ext.: <u>CBBA</u>     Parentesco: <u>Madre</u><br>
+            Fecha de Nacimiento: <u>20/05/1970</u>     Estado Civil: ☐Solt  ☒Cas  ☐Conv  ☐Div  ☐Viudo<br>
+            Ocupación: <u>Ama de casa</u><br>
+            Dirección: <u>Av. América #1234</u><br>
+            Teléfono Fijo: <u>4456789</u>     Celular: <u>70012345</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN C: CONTACTOS SECUNDARIOS</b><br>
+            <b>Contacto 1:</b><br>
+            Nombre: <u>Juan Carlos Huarachi Apaza</u>     Parentesco: <u>Hermano</u><br>
+            Teléfono: <u>70054321</u><br>
+            <br>
+            <b>Contacto 2:</b><br>
+            Nombre: <u>Elena López de Apaza</u>     Parentesco: <u>Tía</u><br>
+            Teléfono: <u>70098765</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN D: COMPOSICIÓN FAMILIAR</b><br>
+            Padre vive: ☒ Sí  ☐ No     Madre vive: ☒ Sí  ☐ No<br>
+            Número de hermanos: <u>3</u>     Lugar que ocupa: <u>2</u> (segundo hijo)<br>
+            Tiene hijos: ☒ Sí  ☐ No     Número de hijos: <u>1</u><br>
+            Con quién vive: <u>Con su madre y su hija de 8 años</u>
+        </div>
+        
+        <div style="margin-bottom: 8px;">
+            <b>SECCIÓN E: DINÁMICA FAMILIAR</b><br>
+            Relación familiar: ☐Buena  ☒Regular  ☐Mala  ☐Sin relación<br>
+            Apoyo familiar: ☐Total  ☒Parcial  ☐Mínimo  ☐Ninguno<br>
+            Observaciones:<br>
+            <div style="border: 1px solid #000; padding: 5px; min-height: 1.5cm; background-color: white;">
+                <u>Familia con historial de alcoholismo en el padre. Madre muy comprometida con el tratamiento del paciente. Relación distante con hermanos. Tiene una hija de 8 años con quien mantiene contacto esporádico debido a su consumo.</u>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 10px; font-size: 7.5pt; color: #666;">
+            PROYECTO GILEAD BOLIVIA | PGB-F003 v1.1 | Página 1 de 1
+        </div>
+    </div>
+
+    <h2>7. ERRORES COMUNES Y CÓMO EVITARLOS</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 9pt; margin-top: 10px;">
+        <tr style="background-color: #f5f5f5;">
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Error</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Consecuencia</th>
+            <th style="border: 1px solid #ddd; padding: 5px; text-align: left;">Prevención</th>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No verificar C.I. del responsable</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Responsable no identificado correctamente</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre verificar documento original</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Teléfonos incorrectos o desactualizados</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Imposibilidad de contactar en emergencias</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Verificar números durante la entrevista</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No registrar contactos secundarios</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Dificultad para contactar en emergencias</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Siempre solicitar al menos 2 contactos adicionales</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información incompleta sobre composición familiar</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Contexto insuficiente para tratamiento</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Hacer preguntas específicas y claras</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">No actualizar cuando hay cambios</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Información obsoleta</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Revisar y actualizar periódicamente</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 5px;">Violar confidencialidad al compartir información</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Problemas éticos y legales</td>
+            <td style="border: 1px solid #ddd; padding: 5px;">Manejar información con estricta confidencialidad</td>
+        </tr>
+    </table>
+
+    <h2>8. CHECKLIST DE VERIFICACIÓN</h2>
+    <div class="checklist">
+        <ul>
+            <li>Nº Historia Clínica coincide con F001 y F002</li>
+            <li>Nombre del paciente correcto</li>
+            <li>Fecha de llenado registrada</li>
+            <li>Nombre completo del responsable registrado</li>
+            <li>C.I. del responsable verificada con documento original</li>
+            <li>Parentesco del responsable registrado</li>
+            <li>Fecha de nacimiento del responsable (si disponible)</li>
+            <li>Estado civil del responsable marcado</li>
+            <li>Ocupación del responsable registrada</li>
+            <li>Dirección del responsable completa</li>
+            <li>Teléfonos del responsable verificados y actualizados</li>
+            <li>Al menos 2 contactos secundarios registrados</li>
+            <li>Composición familiar completa</li>
+            <li>Relación y apoyo familiar evaluados</li>
+            <li>Observaciones relevantes registradas</li>
+            <li>Información manejada con confidencialidad</li>
+        </ul>
+    </div>
+
+    <h2>9. CONSIDERACIONES ÉTICAS Y DE CONFIDENCIALIDAD</h2>
+    <div class="info-box">
+        <b>⚠️ CONFIDENCIALIDAD:</b>
+        <p style="margin-top: 5px; margin-bottom: 5px;">
+            La información familiar es <b>estrictamente confidencial</b> y debe:
+        </p>
+        <ul style="margin-top: 5px;">
+            <li>Ser compartida solo con el equipo de tratamiento autorizado</li>
+            <li>No ser divulgada a terceros sin autorización del paciente o responsable</li>
+            <li>Ser almacenada de forma segura en el expediente clínico</li>
+            <li>Respetar la privacidad de los miembros de la familia mencionados</li>
+        </ul>
+    </div>
+
+    <h2>10. BASE NORMATIVA Y LEGAL</h2>
+    <p style="font-size: 9pt;">Este formulario ha sido diseñado cumpliendo estrictamente la siguiente normativa vigente en Bolivia:</p>
+
+    <table class="legal-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Norma / Ley</th>
+                <th style="width: 45%;">Aplicación en este Formulario</th>
+                <th style="width: 30%;">Referencia</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>D.S. N.º 28562</b><br>Reglamento Ley 3131</td>
+                <td>Art. 14: Regula la identificación del responsable legal/tutor y sus datos de contacto. Establece obligatoriedad de registrar responsable para menores o incapaces.</td>
+                <td>Art. 14</td>
+            </tr>
+            <tr>
+                <td><b>R.M. 0090/2008</b><br>Norma Técnica del Expediente Clínico</td>
+                <td>Art. 5.1: Establece la obligatoriedad de registrar datos familiares y de contacto para el seguimiento y comunicación.</td>
+                <td>Art. 5.1</td>
+            </tr>
+            <tr>
+                <td><b>Ley N.º 2631</b><br>Ley de Protección de Datos Personales</td>
+                <td>Establece el derecho a la privacidad y protección de datos personales. La información familiar debe manejarse con estricta confidencialidad.</td>
+                <td>Art. 1, 2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>11. GLOSARIO</h2>
+    <div style="font-size: 9pt;">
+        <p><b>Responsable Legal:</b> Persona mayor de edad que asume la responsabilidad legal del paciente, generalmente familiar directo.</p>
+        <p><b>Tutor:</b> Persona designada legalmente para representar a un menor de edad o persona declarada incapaz.</p>
+        <p><b>Contacto Secundario:</b> Persona adicional de confianza que puede ser contactada en caso de emergencia o cuando no se pueda contactar al responsable principal.</p>
+        <p><b>Composición Familiar:</b> Estructura y miembros de la familia del paciente, incluyendo padres, hermanos e hijos.</p>
+        <p><b>Dinámica Familiar:</b> Patrones de interacción, comunicación y relaciones dentro de la familia del paciente.</p>
+        <p><b>Red de Apoyo:</b> Conjunto de personas (familia, amigos, comunidad) que proporcionan apoyo emocional, económico o logístico al paciente.</p>
+    </div>
+
+    <div class="footer">
+        PROYECTO GILEAD BOLIVIA - PROGRAMA HOMBRES NUEVOS<br>
+        Este manual es parte integrante del Protocolo de Gestión Documental Clínica.<br>
+        Versión 1.1 | Enero 2026
+    </div>
+
+</body>
+</html>

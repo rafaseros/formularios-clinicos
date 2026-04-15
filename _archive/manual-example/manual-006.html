@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Historia Clínica - PGB-F006</title>
+    <style>
+        @page { size: Letter; margin: 2.5cm 2.5cm 2.5cm 3.0cm; }
+        body { font-family: 'Arial', sans-serif; font-size: 10pt; line-height: 1.4; color: #333; -webkit-print-color-adjust: exact; }
+        .header-box { border-bottom: 2px solid #37474f; margin-bottom: 20px; padding-bottom: 10px; display: flex; align-items: center; }
+        .title-main { font-size: 16pt; font-weight: bold; color: #37474f; text-transform: uppercase; }
+        h2 { background-color: #eceff1; padding: 5px 10px; border-left: 5px solid #37474f; font-size: 11pt; margin-top: 15px; }
+        .instruction-box { display: grid; grid-template-columns: 140px 1fr; gap: 15px; margin-bottom: 8px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .field-name { font-weight: bold; font-size: 9pt; color: #444; text-align: right; }
+        .alert { color: #d32f2f; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <div class="header-box">
+        <div style="flex-grow: 1;">
+            <div class="title-main">MANUAL DE HISTORIA CLÍNICA GENERAL</div>
+            <div class="subtitle">Formulario: PGB-F006</div>
+        </div>
+        <div style="text-align: right;"><b>Cód:</b> PGB-MAN-006</div>
+    </div>
+
+    <h2>1. ENFOQUE EN ADICCIONES</h2>
+    <div style="padding: 10px; border: 1px solid #ccc;">
+        Esta historia clínica debe poner énfasis en las patologías orgánicas derivadas del consumo. 
+        <br>No se limite a llenar casillas; investigue activamente signos de daño hepático, respiratorio o neurológico.
+    </div>
+
+    <h2>2. SECCIONES CRÍTICAS (ANTECEDENTES)</h2>
+    
+    <div class="instruction-box">
+        <div class="field-name">PATOLÓGICOS</div>
+        <div class="field-desc">
+            Interrogar específicamente sobre:
+            <ul>
+                <li><b>Hepatitis / VIH:</b> Por uso de jeringas o conductas de riesgo.</li>
+                <li><b>Epilepsia:</b> Convulsiones previas por abstinencia o intoxicación.</li>
+                <li><b>Tuberculosis:</b> Común en población de calle o hacinamiento.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">FAMILIARES</div>
+        <div class="field-desc">
+            Indagar antecedentes de <b>Alcoholismo o Suicidio</b> en padres o hermanos, ya que son factores de riesgo genético/ambiental importantes.
+        </div>
+    </div>
+
+    <h2>3. EXAMEN FÍSICO</h2>
+    <div class="instruction-box">
+        <div class="field-name">SEGMENTARIO</div>
+        <div class="field-desc">
+            <span class="alert">Neurológico:</span> Evaluar temblor distal, marcha, reflejos (signos de abstinencia alcohólica o daño neurológico).
+            <br><span class="alert">Piel:</span> Buscar estigmas de inyección, abscesos o infecciones cutáneas.
+        </div>
+    </div>
+
+    <div class="instruction-box">
+        <div class="field-name">LABORATORIOS</div>
+        <div class="field-desc">
+            En el plan, solicitar siempre perfil hepático y serología viral (VIH/VDRL) como protocolo de ingreso.
+        </div>
+    </div>
+
+</body>
+</html>
