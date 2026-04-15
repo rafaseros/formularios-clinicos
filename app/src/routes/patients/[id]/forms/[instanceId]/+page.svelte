@@ -83,6 +83,14 @@
 					</form>
 				{/if}
 				<a
+					href="/api/forms/{instance.templateId}/pdf"
+					target="_blank"
+					rel="noopener"
+					class="btn btn-pdf"
+				>
+					Descargar PDF
+				</a>
+				<a
 					href="/forms/{instance.templateId}/print"
 					target="_blank"
 					rel="noopener"
@@ -257,6 +265,15 @@
 		font-family: inherit;
 		transition: background-color 0.15s;
 		white-space: nowrap;
+	}
+
+	.btn-pdf {
+		background-color: #2E7D32;
+		color: white;
+	}
+
+	.btn-pdf:hover {
+		background-color: #1B5E20;
 	}
 
 	.btn-print {
