@@ -10,27 +10,35 @@
 
 <div class="page-container">
 	<div class="form-card">
-		<h1>Mi Cuenta</h1>
-
-		<div class="info-row">
-			<span class="label">Usuario:</span>
-			<span class="value">{data.username}</span>
-		</div>
-		<div class="info-row">
-			<span class="label">Nombre:</span>
-			<span class="value">{data.displayName || '—'}</span>
+		<div class="card-header">
+			<div class="avatar">{(data.displayName || data.username || '?')[0].toUpperCase()}</div>
+			<div>
+				<h1>Mi Cuenta</h1>
+				<p class="account-subtitle">Configuración de perfil</p>
+			</div>
 		</div>
 
-		<hr />
+		<div class="info-section">
+			<div class="info-row">
+				<span class="label">Usuario</span>
+				<span class="value mono">{data.username}</span>
+			</div>
+			<div class="info-row">
+				<span class="label">Nombre</span>
+				<span class="value">{data.displayName || '—'}</span>
+			</div>
+		</div>
 
-		<h2>Cambiar Contraseña</h2>
+		<div class="section-divider">
+			<span>Cambiar Contraseña</span>
+		</div>
 
 		{#if form?.error}
-			<div class="error-box">{form.error}</div>
+			<div class="error-box" role="alert">{form.error}</div>
 		{/if}
 
 		{#if form?.success}
-			<div class="success-box">Contraseña actualizada correctamente.</div>
+			<div class="success-box" role="status">Contraseña actualizada correctamente.</div>
 		{/if}
 
 		<form method="POST" use:enhance>
@@ -46,7 +54,9 @@
 			</div>
 
 			<div class="field">
-				<label for="newPassword">Nueva contraseña <span class="optional">(mínimo 4 caracteres)</span></label>
+				<label for="newPassword"
+					>Nueva contraseña <span class="optional">mínimo 4 caracteres</span></label
+				>
 				<input
 					id="newPassword"
 					name="newPassword"
@@ -80,115 +90,195 @@
 	}
 
 	.form-card {
-		background: white;
-		border-radius: 8px;
-		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+		background: var(--color-surface);
+		border-radius: var(--radius-lg);
+		box-shadow: var(--shadow-md);
+		border: 1px solid var(--color-border);
 		padding: 32px;
 	}
 
+	.card-header {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		margin-bottom: 24px;
+	}
+
+	.avatar {
+		width: 44px;
+		height: 44px;
+		background: var(--color-primary);
+		color: white;
+		border-radius: var(--radius-md);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 18px;
+		font-weight: 700;
+		flex-shrink: 0;
+	}
+
 	h1 {
-		color: #1F4E79;
-		font-size: 20px;
-		margin: 0 0 20px;
+		color: var(--color-primary);
+		font-size: 18px;
+		font-weight: 700;
+		margin: 0 0 2px;
 	}
 
-	h2 {
-		color: #333;
-		font-size: 16px;
-		margin: 0 0 16px;
+	.account-subtitle {
+		color: var(--color-text-muted);
+		font-size: 13px;
+		margin: 0;
 	}
 
-	hr {
-		border: none;
-		border-top: 1px solid #eee;
-		margin: 20px 0;
+	/* ─── Info section ────────────────────────────────── */
+	.info-section {
+		background: var(--color-bg);
+		border-radius: var(--radius-md);
+		padding: 16px;
+		margin-bottom: 24px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
 	}
 
 	.info-row {
 		display: flex;
-		gap: 8px;
-		margin-bottom: 8px;
-		font-size: 14px;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 13px;
 	}
 
-	.info-row .label {
-		color: #888;
-		min-width: 80px;
-	}
-
-	.info-row .value {
-		color: #333;
+	.label {
+		color: var(--color-text-muted);
 		font-weight: 500;
 	}
 
+	.value {
+		color: var(--color-text);
+		font-weight: 500;
+	}
+
+	.mono {
+		font-family: var(--font-mono);
+		font-size: 12px;
+	}
+
+	/* ─── Section divider ─────────────────────────────── */
+	.section-divider {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 20px;
+		color: var(--color-text-muted);
+		font-size: 13px;
+		font-weight: 600;
+	}
+
+	.section-divider::before,
+	.section-divider::after {
+		content: '';
+		flex: 1;
+		height: 1px;
+		background: var(--color-border);
+	}
+
+	/* ─── Feedback boxes ──────────────────────────────── */
 	.error-box {
-		background: #FFEBEE;
-		border-left: 4px solid #E53935;
-		color: #B71C1C;
-		font-size: 14px;
+		background: var(--color-error-bg);
+		border: 1px solid var(--color-error-border);
+		border-left-width: 3px;
+		color: var(--color-error-text);
+		font-size: 13px;
 		padding: 10px 14px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		margin-bottom: 16px;
 	}
 
 	.success-box {
-		background: #E8F5E9;
-		border-left: 4px solid #4CAF50;
-		color: #1B5E20;
-		font-size: 14px;
+		background: var(--color-success-bg);
+		border: 1px solid var(--color-success-border);
+		border-left-width: 3px;
+		color: var(--color-success-text);
+		font-size: 13px;
 		padding: 10px 14px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		margin-bottom: 16px;
 	}
 
+	/* ─── Form fields ─────────────────────────────────── */
 	.field {
-		margin-bottom: 18px;
+		margin-bottom: 16px;
 	}
 
 	.field label {
 		display: block;
-		font-size: 13px;
+		font-size: 12px;
 		font-weight: 600;
-		color: #444;
+		color: var(--color-text-muted);
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
 		margin-bottom: 6px;
 	}
 
 	.optional {
 		font-weight: 400;
-		color: #999;
-		font-size: 12px;
+		color: var(--color-text-subtle);
+		font-size: 11px;
+		text-transform: none;
+		letter-spacing: 0;
 	}
 
 	.field input {
 		width: 100%;
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		padding: 9px 12px;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		padding: 10px 12px;
 		font-size: 14px;
+		font-family: var(--font-system);
 		box-sizing: border-box;
-		transition: border-color 0.15s;
+		transition: var(--transition);
+		background: var(--color-bg);
+		color: var(--color-text);
 	}
 
 	.field input:focus {
 		outline: none;
-		border-color: #1F4E79;
-		box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.15);
+		border-color: var(--color-primary);
+		background: var(--color-surface);
+		box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.1);
 	}
 
 	.btn-primary {
 		width: 100%;
-		background: #1F4E79;
+		background: var(--color-primary);
 		color: white;
 		border: none;
-		border-radius: 4px;
-		padding: 10px;
-		font-size: 15px;
+		border-radius: var(--radius-sm);
+		padding: 11px;
+		font-size: 14px;
 		font-weight: 600;
+		font-family: var(--font-system);
 		cursor: pointer;
-		transition: background-color 0.15s;
+		transition: var(--transition);
+		margin-top: 4px;
 	}
 
 	.btn-primary:hover {
-		background: #1565C0;
+		background: var(--color-primary-light);
+	}
+
+	.btn-primary:active {
+		background: var(--color-primary-dark);
+	}
+
+	@media (max-width: 768px) {
+		.page-container {
+			padding: 20px 16px;
+		}
+
+		.form-card {
+			padding: 24px 18px;
+		}
 	}
 </style>

@@ -1,0 +1,1 @@
+ALTER TABLE `users` ADD `can_print` integer DEFAULT false NOT NULL;

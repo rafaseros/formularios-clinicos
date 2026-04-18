@@ -42,6 +42,7 @@
 					<th>Usuario</th>
 					<th>Nombre</th>
 					<th>Rol</th>
+					<th>Imprimir</th>
 					<th>Registrado</th>
 					<th>Acciones</th>
 				</tr>
@@ -83,6 +84,28 @@
 								{user.role === 'admin' ? 'Administrador' : 'Usuario'}
 							</span>
 						</td>
+						<td>
+							<form
+								method="POST"
+								action="?/togglePrint"
+								use:enhance={() => {
+									return ({ update }) => {
+										update();
+									};
+								}}
+								style="display:inline"
+							>
+								<input type="hidden" name="userId" value={user.id} />
+								<button
+									type="submit"
+									class="badge-print-btn"
+									class:badge-print-on={user.canPrint}
+									class:badge-print-off={!user.canPrint}
+								>
+									{user.canPrint ? 'Habilitado' : 'Deshabilitado'}
+								</button>
+							</form>
+						</td>
 						<td class="date">{new Date(user.createdAt).toLocaleDateString('es-BO')}</td>
 						<td class="actions">
 							{#if editingId !== user.id}
@@ -111,7 +134,7 @@
 
 <style>
 	.page-container {
-		max-width: 900px;
+		max-width: 1000px;
 		margin: 0 auto;
 		padding: 32px 24px;
 	}
@@ -120,101 +143,123 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-bottom: 20px;
+		margin-bottom: 24px;
 	}
 
 	h1 {
-		color: #1F4E79;
+		color: var(--color-primary);
 		font-size: 22px;
+		font-weight: 700;
 		margin: 0;
+		letter-spacing: -0.2px;
 	}
 
 	.btn-primary {
-		background: #1F4E79;
+		background: var(--color-primary);
 		color: white;
 		text-decoration: none;
-		padding: 8px 16px;
-		border-radius: 4px;
-		font-size: 14px;
-		transition: background-color 0.15s;
+		padding: 9px 16px;
+		border-radius: var(--radius-sm);
+		font-size: 13px;
+		font-weight: 600;
+		transition: var(--transition);
+		white-space: nowrap;
 	}
 
 	.btn-primary:hover {
-		background: #1565C0;
+		background: var(--color-primary-light);
 	}
 
 	.success-box {
-		background: #E8F5E9;
-		border-left: 4px solid #4CAF50;
-		color: #1B5E20;
-		font-size: 14px;
+		background: var(--color-success-bg);
+		border: 1px solid var(--color-success-border);
+		border-left-width: 3px;
+		color: var(--color-success-text);
+		font-size: 13px;
 		padding: 10px 14px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		margin-bottom: 16px;
 	}
 
 	.error-box {
-		background: #FFEBEE;
-		border-left: 4px solid #E53935;
-		color: #B71C1C;
-		font-size: 14px;
+		background: var(--color-error-bg);
+		border: 1px solid var(--color-error-border);
+		border-left-width: 3px;
+		color: var(--color-error-text);
+		font-size: 13px;
 		padding: 10px 14px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		margin-bottom: 16px;
 	}
 
 	.table-wrapper {
-		background: white;
-		border-radius: 8px;
-		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-		overflow: hidden;
+		background: var(--color-surface);
+		border-radius: var(--radius-md);
+		box-shadow: var(--shadow-md);
+		border: 1px solid var(--color-border);
+		overflow-x: auto;
 	}
 
 	table {
 		width: 100%;
 		border-collapse: collapse;
+		min-width: 580px;
 	}
 
 	th {
-		background: #f8f9fa;
-		padding: 10px 16px;
+		background: var(--color-bg);
+		padding: 11px 16px;
 		text-align: left;
-		font-size: 12px;
+		font-size: 11px;
 		font-weight: 600;
-		color: #666;
+		color: var(--color-text-muted);
 		text-transform: uppercase;
-		letter-spacing: 0.5px;
-		border-bottom: 1px solid #eee;
+		letter-spacing: 0.6px;
+		border-bottom: 1px solid var(--color-border);
+		white-space: nowrap;
 	}
 
 	td {
-		padding: 12px 16px;
-		font-size: 14px;
-		border-bottom: 1px solid #f0f0f0;
-		color: #333;
+		padding: 13px 16px;
+		font-size: 13px;
+		border-bottom: 1px solid var(--color-border);
+		color: var(--color-text);
+		vertical-align: middle;
+	}
+
+	tbody tr:last-child td {
+		border-bottom: none;
+	}
+
+	tbody tr:hover td {
+		background: var(--color-bg);
 	}
 
 	.username {
-		font-family: monospace;
+		font-family: var(--font-mono);
 		font-weight: 600;
+		font-size: 12px;
 	}
 
 	.date {
-		color: #888;
-		font-size: 13px;
+		color: var(--color-text-subtle);
+		font-size: 12px;
 	}
 
 	.badge {
 		font-size: 11px;
-		padding: 3px 8px;
-		border-radius: 3px;
-		background: #e8e8e8;
-		color: #555;
+		font-weight: 600;
+		padding: 3px 9px;
+		border-radius: 20px;
+		background: var(--color-bg);
+		color: var(--color-text-muted);
+		border: 1px solid var(--color-border);
 	}
 
 	.badge-admin {
-		background: #E3F2FD;
-		color: #1565C0;
+		background: var(--color-info-bg);
+		color: var(--color-info-text);
+		border-color: var(--color-info-border);
 	}
 
 	.actions {
@@ -225,70 +270,126 @@
 
 	.btn-action {
 		background: none;
-		border: 1px solid #ccc;
-		color: #555;
+		border: 1px solid var(--color-border);
+		color: var(--color-text-muted);
 		font-size: 12px;
+		font-family: var(--font-system);
 		padding: 4px 10px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		cursor: pointer;
-		transition: all 0.15s;
+		transition: var(--transition);
 		white-space: nowrap;
 	}
 
 	.btn-action:hover {
-		border-color: #1F4E79;
-		color: #1F4E79;
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+		background: var(--color-info-bg);
 	}
 
 	.btn-reset:hover {
-		border-color: #E53935;
-		color: #E53935;
+		border-color: var(--color-error-border);
+		color: var(--color-error-text);
+		background: var(--color-error-bg);
 	}
 
 	.edit-form {
 		display: flex;
 		gap: 6px;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.edit-input {
-		border: 1px solid #ccc;
-		border-radius: 4px;
-		padding: 4px 8px;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		padding: 5px 9px;
 		font-size: 13px;
-		width: 160px;
+		font-family: var(--font-system);
+		width: 150px;
+		transition: var(--transition);
+		background: var(--color-bg);
 	}
 
 	.edit-input:focus {
 		outline: none;
-		border-color: #1F4E79;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.1);
+		background: var(--color-surface);
 	}
 
 	.btn-save {
-		background: #1F4E79;
+		background: var(--color-primary);
 		color: white;
 		border: none;
 		font-size: 12px;
-		padding: 4px 10px;
-		border-radius: 4px;
+		font-family: var(--font-system);
+		font-weight: 600;
+		padding: 5px 11px;
+		border-radius: var(--radius-sm);
 		cursor: pointer;
+		transition: var(--transition);
 	}
 
 	.btn-save:hover {
-		background: #1565C0;
+		background: var(--color-primary-light);
 	}
 
 	.btn-cancel {
 		background: none;
-		border: 1px solid #ccc;
-		color: #666;
+		border: 1px solid var(--color-border);
+		color: var(--color-text-muted);
 		font-size: 12px;
-		padding: 4px 10px;
-		border-radius: 4px;
+		font-family: var(--font-system);
+		padding: 5px 11px;
+		border-radius: var(--radius-sm);
 		cursor: pointer;
+		transition: var(--transition);
 	}
 
 	.btn-cancel:hover {
-		border-color: #999;
+		border-color: var(--color-text-subtle);
+		color: var(--color-text);
+	}
+
+	.badge-print-btn {
+		font-size: 11px;
+		font-weight: 600;
+		font-family: var(--font-system);
+		padding: 3px 9px;
+		border-radius: 20px;
+		border: 1px solid;
+		cursor: pointer;
+		transition: var(--transition);
+	}
+
+	.badge-print-on {
+		background: var(--color-success-bg);
+		color: var(--color-success-text);
+		border-color: var(--color-success-border);
+	}
+
+	.badge-print-on:hover {
+		opacity: 0.8;
+	}
+
+	.badge-print-off {
+		background: var(--color-bg);
+		color: var(--color-text-muted);
+		border-color: var(--color-border);
+	}
+
+	.badge-print-off:hover {
+		opacity: 0.8;
+	}
+
+	@media (max-width: 768px) {
+		.page-container {
+			padding: 20px 16px;
+		}
+
+		.table-wrapper {
+			border-radius: var(--radius-sm);
+		}
 	}
 </style>

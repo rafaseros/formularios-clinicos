@@ -1,9 +1,16 @@
 import { db, schema } from '$lib/server/db';
 import { eq } from 'drizzle-orm';
 import { error } from '@sveltejs/kit';
+import { getUserFromSession } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 
-export const GET: RequestHandler = async ({ params }) => {
+export const GET: RequestHandler = async ({ params, cookies }) => {
+	const token = cookies.get('session');
+	const user = getUserFromSession(token);
+	if (!user || (!user.canPrint && user.role !== 'admin')) {
+		throw error(403, 'No tenés permisos para imprimir.');
+	}
+
 	const form = db
 		.select()
 		.from(schema.formTemplates)

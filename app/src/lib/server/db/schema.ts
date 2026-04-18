@@ -33,6 +33,7 @@ export const users = sqliteTable('users', {
   passwordHash: text('password_hash').notNull(),
   displayName: text('display_name').notNull().default(''),
   role: text('role', { enum: ['user', 'admin'] }).notNull().default('user'),
+  canPrint: integer('can_print', { mode: 'boolean' }).notNull().default(false),
   createdAt: text('created_at').notNull().$defaultFn(() => new Date().toISOString()),
 }, (table) => [
   uniqueIndex('idx_users_username').on(table.username),

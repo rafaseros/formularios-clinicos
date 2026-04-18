@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let props: {
 		formId: number;
 		orientation?: string;
@@ -31,40 +33,86 @@
 	// The iframe content area is the paper minus margins
 	const contentWidth = $derived(paperWidth - marginLeft - marginRight);
 	const contentHeight = $derived(paperHeight - marginTop - marginBottom);
+
+	// Responsive scaling
+	let containerEl: HTMLDivElement | undefined = $state();
+	let scale = $state(1);
+
+	function updateScale() {
+		if (!containerEl) return;
+		const available = containerEl.clientWidth;
+		if (available <= 0) return;
+		const padding = 32; // 16px each side within the outer viewer-body
+		const maxWidth = available - padding;
+		const newScale = Math.min(1, maxWidth / paperWidth);
+		scale = newScale;
+	}
+
+	let resizeObserver: ResizeObserver | undefined;
+
+	onMount(() => {
+		resizeObserver = new ResizeObserver(updateScale);
+		if (containerEl) {
+			resizeObserver.observe(containerEl);
+		}
+		updateScale();
+
+		return () => {
+			resizeObserver?.disconnect();
+		};
+	});
+
+	const scaledHeight = $derived(paperHeight * scale);
 </script>
 
-<div class="paper-wrapper">
+<div class="paper-outer" bind:this={containerEl}>
 	<div
-		class="paper"
-		style="width: {paperWidth}px; height: {paperHeight}px;"
+		class="paper-scaler"
+		style="width: {paperWidth}px; height: {paperHeight}px; transform: scale({scale}); transform-origin: top left;"
 	>
 		<div
-			class="paper-margins"
-			style="
-				padding: {marginTop}px {marginRight}px {marginBottom}px {marginLeft}px;
-				width: {paperWidth}px;
-				height: {paperHeight}px;
-			"
+			class="paper"
+			style="width: {paperWidth}px; height: {paperHeight}px;"
 		>
-			<iframe
-				src="/forms/{props.formId}/print"
-				title="Formulario"
-				style="width: {contentWidth}px; height: {contentHeight}px;"
-			></iframe>
+			<div
+				class="paper-margins"
+				style="
+					padding: {marginTop}px {marginRight}px {marginBottom}px {marginLeft}px;
+					width: {paperWidth}px;
+					height: {paperHeight}px;
+				"
+			>
+				<iframe
+					src="/forms/{props.formId}/print"
+					title="Formulario"
+					style="width: {contentWidth}px; height: {contentHeight}px;"
+				></iframe>
+			</div>
 		</div>
 	</div>
+	<!-- Spacer so container respects scaled height -->
+	<div class="paper-spacer" style="height: {scaledHeight}px;"></div>
 </div>
 
 <style>
-	.paper-wrapper {
-		display: flex;
-		justify-content: center;
-		align-items: flex-start;
+	.paper-outer {
+		width: 100%;
+		position: relative;
+	}
+
+	.paper-scaler {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	.paper-spacer {
+		width: 100%;
 	}
 
 	.paper {
 		background: white;
-		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.18), 0 1px 4px rgba(0, 0, 0, 0.08);
 		overflow: hidden;
 		flex-shrink: 0;
 	}

@@ -2,9 +2,16 @@ import { generatePdf } from '$lib/server/pdf';
 import { db, schema } from '$lib/server/db';
 import { eq } from 'drizzle-orm';
 import { error } from '@sveltejs/kit';
+import { getUserFromSession } from '$lib/server/auth';
 import type { RequestHandler } from './$types';
 
-export const GET: RequestHandler = async ({ params, url }) => {
+export const GET: RequestHandler = async ({ params, url, cookies }) => {
+	const token = cookies.get('session');
+	const user = getUserFromSession(token);
+	if (!user || (!user.canPrint && user.role !== 'admin')) {
+		throw error(403, 'No tenés permisos para descargar el PDF.');
+	}
+
 	const form = db
 		.select()
 		.from(schema.formTemplates)

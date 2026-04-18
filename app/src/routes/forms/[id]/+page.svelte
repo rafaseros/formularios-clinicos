@@ -40,7 +40,10 @@
 			</div>
 		</div>
 		<div class="header-actions">
-			<!-- Print/PDF buttons disabled for now -->
+			{#if user?.canPrint || user?.role === 'admin'}
+				<a href="/api/forms/{form.id}/pdf" target="_blank" class="btn btn-pdf">Descargar PDF</a>
+				<a href="/forms/{form.id}/print" target="_blank" class="btn btn-print">Imprimir</a>
+			{/if}
 		</div>
 	</header>
 
@@ -129,62 +132,124 @@
 
 <style>
 	.form-viewer {
-		min-height: 100vh;
-		background-color: #e8e8e8;
+		min-height: calc(100vh - 52px);
+		background-color: var(--color-bg);
 		display: flex;
 		flex-direction: column;
 	}
 
+	/* ─── Header ──────────────────────────────────────── */
 	.viewer-header {
-		background: white;
-		border-bottom: 1px solid #ddd;
-		padding: 12px 24px;
+		background: var(--color-surface);
+		border-bottom: 1px solid var(--color-border);
+		padding: 10px 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		flex-shrink: 0;
+		box-shadow: var(--shadow-sm);
+		gap: 12px;
 	}
 
 	.header-left {
 		display: flex;
 		align-items: center;
-		gap: 16px;
+		gap: 12px;
+		min-width: 0;
+		flex: 1;
 	}
 
 	.back-link {
-		color: #1F4E79;
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		color: var(--color-primary);
 		text-decoration: none;
-		font-size: 14px;
+		font-size: 13px;
+		font-weight: 500;
 		white-space: nowrap;
+		padding: 6px 10px;
+		border-radius: var(--radius-sm);
+		transition: var(--transition);
 	}
 
 	.back-link:hover {
-		text-decoration: underline;
+		background: var(--color-info-bg);
+		text-decoration: none;
 	}
 
 	.form-info {
-		border-left: 1px solid #ddd;
-		padding-left: 16px;
+		border-left: 1px solid var(--color-border);
+		padding-left: 14px;
+		min-width: 0;
 	}
 
 	.form-code {
-		font-family: monospace;
-		font-size: 12px;
-		color: #666;
+		font-family: var(--font-mono);
+		font-size: 11px;
+		color: var(--color-text-subtle);
+		display: block;
+		margin-bottom: 2px;
 	}
 
 	.form-info h1 {
-		font-size: 16px;
-		margin: 2px 0;
-		color: #1F4E79;
+		font-size: 14px;
+		font-weight: 600;
+		margin: 0 0 2px;
+		color: var(--color-primary);
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
 	.form-info p {
 		font-size: 12px;
-		color: #888;
+		color: var(--color-text-muted);
 		margin: 0;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
 	}
 
+	.header-actions {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+		flex-shrink: 0;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 7px 14px;
+		border-radius: var(--radius-sm);
+		font-size: 13px;
+		font-weight: 600;
+		font-family: var(--font-system);
+		text-decoration: none;
+		transition: var(--transition);
+		white-space: nowrap;
+	}
+
+	.btn-pdf {
+		background: var(--color-primary);
+		color: white;
+	}
+
+	.btn-pdf:hover {
+		background: var(--color-primary-light);
+	}
+
+	.btn-print {
+		background: var(--color-surface);
+		color: var(--color-primary);
+		border: 1px solid var(--color-primary);
+	}
+
+	.btn-print:hover {
+		background: var(--color-info-bg);
+	}
+
+	/* ─── Viewer body ─────────────────────────────────── */
 	.viewer-body {
 		flex: 1;
 		display: flex;
@@ -194,39 +259,41 @@
 		overflow: auto;
 	}
 
-	/* Comments */
+	/* ─── Comments section ────────────────────────────── */
 	.comments-section {
-		background: white;
-		border-top: 1px solid #ddd;
+		background: var(--color-surface);
+		border-top: 1px solid var(--color-border);
 		padding: 32px 24px;
 	}
 
 	.comments-inner {
-		max-width: 800px;
+		max-width: 760px;
 		margin: 0 auto;
 	}
 
 	.comments-title {
-		font-size: 18px;
-		color: #1F4E79;
+		font-size: 16px;
+		font-weight: 600;
+		color: var(--color-primary);
 		margin: 0 0 20px;
-		padding-bottom: 10px;
-		border-bottom: 2px solid #e0e0e0;
+		padding-bottom: 12px;
+		border-bottom: 1px solid var(--color-border);
 	}
 
 	.comment-error {
-		background: #FFEBEE;
-		border-left: 4px solid #E53935;
-		color: #B71C1C;
-		font-size: 14px;
+		background: var(--color-error-bg);
+		border: 1px solid var(--color-error-border);
+		border-left-width: 3px;
+		color: var(--color-error-text);
+		font-size: 13px;
 		padding: 10px 14px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		margin-bottom: 16px;
 	}
 
 	.no-comments {
-		color: #999;
-		font-size: 14px;
+		color: var(--color-text-subtle);
+		font-size: 13px;
 		font-style: italic;
 	}
 
@@ -236,20 +303,25 @@
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 14px;
+		gap: 12px;
 	}
 
 	.comment-item {
-		border: 1px solid #e0e0e0;
-		border-radius: 6px;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-md);
 		padding: 14px 16px;
-		background: #fafafa;
+		background: var(--color-bg);
+		transition: var(--transition);
+	}
+
+	.comment-item:hover {
+		border-color: #cbd5e1;
 	}
 
 	.comment-meta {
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: 8px;
 		margin-bottom: 8px;
 		flex-wrap: wrap;
 	}
@@ -257,115 +329,160 @@
 	.comment-author {
 		font-weight: 600;
 		font-size: 13px;
-		color: #333;
+		color: var(--color-text);
 	}
 
 	.comment-date {
-		font-size: 12px;
-		color: #999;
+		font-size: 11px;
+		color: var(--color-text-subtle);
 	}
 
 	.badge {
-		font-size: 11px;
-		border-radius: 3px;
-		padding: 2px 7px;
+		font-size: 10px;
 		font-weight: 600;
+		border-radius: 20px;
+		padding: 2px 8px;
 	}
 
 	.badge-open {
-		background: #E3F2FD;
-		color: #1565C0;
-		border: 1px solid #90CAF9;
+		background: var(--color-info-bg);
+		color: var(--color-info-text);
+		border: 1px solid var(--color-info-border);
 	}
 
 	.badge-resolved {
-		background: #E8F5E9;
-		color: #2E7D32;
-		border: 1px solid #A5D6A7;
+		background: var(--color-success-bg);
+		color: var(--color-success-text);
+		border: 1px solid var(--color-success-border);
 	}
 
 	.comment-content {
-		font-size: 14px;
-		color: #333;
+		font-size: 13px;
+		color: var(--color-text);
 		margin: 0 0 10px;
 		white-space: pre-wrap;
-		line-height: 1.5;
+		line-height: 1.6;
 	}
 
 	.btn-resolve {
 		background: none;
-		border: 1px solid #2E7D32;
-		color: #2E7D32;
-		font-size: 12px;
+		border: 1px solid var(--color-success-border);
+		color: var(--color-success-text);
+		font-size: 11px;
+		font-family: var(--font-system);
+		font-weight: 600;
 		padding: 3px 10px;
-		border-radius: 4px;
+		border-radius: var(--radius-sm);
 		cursor: pointer;
-		transition: all 0.15s;
+		transition: var(--transition);
 	}
 
 	.btn-resolve:hover {
-		background: #E8F5E9;
+		background: var(--color-success-bg);
 	}
 
+	/* ─── Add comment ─────────────────────────────────── */
 	.add-comment {
-		border-top: 1px solid #e0e0e0;
+		border-top: 1px solid var(--color-border);
 		padding-top: 24px;
 	}
 
 	.add-comment h3 {
-		font-size: 15px;
-		color: #444;
-		margin: 0 0 12px;
+		font-size: 14px;
+		font-weight: 600;
+		color: var(--color-text);
+		margin: 0 0 10px;
 	}
 
 	.add-comment textarea {
 		width: 100%;
-		border: 1px solid #ccc;
-		border-radius: 4px;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
 		padding: 10px 12px;
-		font-size: 14px;
-		font-family: inherit;
+		font-size: 13px;
+		font-family: var(--font-system);
 		resize: vertical;
 		box-sizing: border-box;
-		transition: border-color 0.15s;
+		transition: var(--transition);
+		background: var(--color-bg);
+		color: var(--color-text);
+		line-height: 1.5;
 	}
 
 	.add-comment textarea:focus {
 		outline: none;
-		border-color: #1F4E79;
-		box-shadow: 0 0 0 2px rgba(31, 78, 121, 0.1);
+		border-color: var(--color-primary);
+		background: var(--color-surface);
+		box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.08);
+	}
+
+	.add-comment textarea::placeholder {
+		color: var(--color-text-subtle);
 	}
 
 	.btn-add-comment {
 		margin-top: 10px;
-		background: #1F4E79;
+		background: var(--color-primary);
 		color: white;
 		border: none;
-		border-radius: 4px;
-		padding: 8px 20px;
-		font-size: 14px;
+		border-radius: var(--radius-sm);
+		padding: 9px 20px;
+		font-size: 13px;
+		font-weight: 600;
+		font-family: var(--font-system);
 		cursor: pointer;
-		transition: background-color 0.15s;
+		transition: var(--transition);
 	}
 
 	.btn-add-comment:hover {
-		background: #1565C0;
+		background: var(--color-primary-light);
 	}
 
 	.login-prompt {
-		font-size: 14px;
-		color: #666;
-		border-top: 1px solid #e0e0e0;
+		font-size: 13px;
+		color: var(--color-text-muted);
+		border-top: 1px solid var(--color-border);
 		padding-top: 20px;
 	}
 
 	.login-prompt a {
-		color: #1F4E79;
+		color: var(--color-primary);
 		font-weight: 600;
 		text-decoration: none;
 	}
 
 	.login-prompt a:hover {
 		text-decoration: underline;
+	}
+
+	/* ─── Responsive ──────────────────────────────────── */
+	@media (max-width: 768px) {
+		.viewer-header {
+			padding: 8px 12px;
+			flex-wrap: wrap;
+		}
+
+		.header-left {
+			gap: 8px;
+			width: 100%;
+		}
+
+		.form-info {
+			padding-left: 10px;
+		}
+
+		.header-actions {
+			width: 100%;
+		}
+
+		.viewer-body {
+			padding: 12px;
+			overflow-x: auto;
+			justify-content: flex-start;
+		}
+
+		.comments-section {
+			padding: 20px 14px;
+		}
 	}
 </style>
