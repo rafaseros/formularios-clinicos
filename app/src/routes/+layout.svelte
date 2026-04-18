@@ -71,9 +71,7 @@
 					>{user.displayName || user.username}</a
 				>
 				<form method="POST" action="/logout">
-					<button type="submit" class="mobile-link mobile-logout" onclick={closeMenu}
-						>Cerrar Sesión</button
-					>
+					<button type="submit" class="mobile-link mobile-logout">Cerrar Sesión</button>
 				</form>
 			{:else}
 				<a href="/login" class="mobile-link" onclick={closeMenu}>Iniciar Sesión</a>
