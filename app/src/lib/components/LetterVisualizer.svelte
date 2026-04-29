@@ -2,7 +2,8 @@
 	import { onMount } from 'svelte';
 
 	let props: {
-		formId: number;
+		iframeSrc: string;
+		iframeTitle?: string;
 		orientation?: string;
 		margins?: { top: string; right: string; bottom: string; left: string };
 	} = $props();
@@ -37,11 +38,13 @@
 	// Responsive scaling
 	let containerEl: HTMLDivElement | undefined = $state();
 	let scale = $state(1);
+	let containerWidth = $state(0);
 
 	function updateScale() {
 		if (!containerEl) return;
 		const available = containerEl.clientWidth;
 		if (available <= 0) return;
+		containerWidth = available;
 		const padding = 32; // 16px each side within the outer viewer-body
 		const maxWidth = available - padding;
 		const newScale = Math.min(1, maxWidth / paperWidth);
@@ -62,13 +65,16 @@
 		};
 	});
 
+	const scaledWidth = $derived(paperWidth * scale);
 	const scaledHeight = $derived(paperHeight * scale);
+	// Center the scaled paper horizontally when the container has slack.
+	const offsetX = $derived(Math.max(0, (containerWidth - scaledWidth) / 2));
 </script>
 
 <div class="paper-outer" bind:this={containerEl}>
 	<div
 		class="paper-scaler"
-		style="width: {paperWidth}px; height: {paperHeight}px; transform: scale({scale}); transform-origin: top left;"
+		style="width: {paperWidth}px; height: {paperHeight}px; transform: scale({scale}); transform-origin: top left; left: {offsetX}px;"
 	>
 		<div
 			class="paper"
@@ -83,8 +89,8 @@
 				"
 			>
 				<iframe
-					src="/forms/{props.formId}/print"
-					title="Formulario"
+					src={props.iframeSrc}
+					title={props.iframeTitle ?? 'Documento'}
 					style="width: {contentWidth}px; height: {contentHeight}px;"
 				></iframe>
 			</div>

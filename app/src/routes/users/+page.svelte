@@ -42,7 +42,8 @@
 					<th>Usuario</th>
 					<th>Nombre</th>
 					<th>Rol</th>
-					<th>Imprimir</th>
+					<th>Imprimir form.</th>
+					<th>Imprimir man.</th>
 					<th>Registrado</th>
 					<th>Acciones</th>
 				</tr>
@@ -103,6 +104,28 @@
 									class:badge-print-off={!user.canPrint}
 								>
 									{user.canPrint ? 'Habilitado' : 'Deshabilitado'}
+								</button>
+							</form>
+						</td>
+						<td>
+							<form
+								method="POST"
+								action="?/togglePrintManuals"
+								use:enhance={() => {
+									return ({ update }) => {
+										update();
+									};
+								}}
+								style="display:inline"
+							>
+								<input type="hidden" name="userId" value={user.id} />
+								<button
+									type="submit"
+									class="badge-print-btn"
+									class:badge-print-on={user.canPrintManuals}
+									class:badge-print-off={!user.canPrintManuals}
+								>
+									{user.canPrintManuals ? 'Habilitado' : 'Deshabilitado'}
 								</button>
 							</form>
 						</td>

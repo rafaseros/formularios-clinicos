@@ -16,6 +16,7 @@ export const load: PageServerLoad = async ({ locals }) => {
 			displayName: schema.users.displayName,
 			role: schema.users.role,
 			canPrint: schema.users.canPrint,
+			canPrintManuals: schema.users.canPrintManuals,
 			createdAt: schema.users.createdAt,
 		})
 		.from(schema.users)
@@ -101,6 +102,38 @@ export const actions: Actions = {
 		return {
 			success: true,
 			message: next ? 'Permiso de impresión habilitado.' : 'Permiso de impresión deshabilitado.',
+		};
+	},
+
+	togglePrintManuals: async ({ request, locals }) => {
+		if (!locals.user || locals.user.role !== 'admin') {
+			return fail(403, { error: 'No tenés permisos.' });
+		}
+
+		const data = await request.formData();
+		const userId = Number(data.get('userId'));
+
+		const target = db
+			.select({ canPrintManuals: schema.users.canPrintManuals })
+			.from(schema.users)
+			.where(eq(schema.users.id, userId))
+			.get();
+
+		if (!target) {
+			return fail(404, { error: 'Usuario no encontrado.' });
+		}
+
+		db.update(schema.users)
+			.set({ canPrintManuals: !target.canPrintManuals })
+			.where(eq(schema.users.id, userId))
+			.run();
+
+		const next = !target.canPrintManuals;
+		return {
+			success: true,
+			message: next
+				? 'Permiso de impresión de manuales habilitado.'
+				: 'Permiso de impresión de manuales deshabilitado.',
 		};
 	},
 };

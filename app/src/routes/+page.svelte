@@ -34,7 +34,7 @@
 				{#each phase.forms as form}
 					<a href="/forms/{form.id}" class="form-card">
 						<div class="card-top">
-							<span class="form-code">{form.code}</span>
+							<span class="form-code">{form.code} v{form.version}</span>
 							<div class="form-badges">
 								{#if (form.pageConfig as any)?.orientation === 'landscape'}
 									<span class="badge badge-landscape">Apaisado</span>

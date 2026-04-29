@@ -9,33 +9,36 @@ import type { RequestHandler } from './$types';
 export const GET: RequestHandler = async ({ params, cookies }) => {
 	const token = cookies.get('session');
 	const user = getUserFromSession(token);
-	if (!user || (!user.canPrint && user.role !== 'admin')) {
-		throw error(403, 'No tenés permisos para descargar el PDF.');
+	if (!user || (!user.canPrintManuals && user.role !== 'admin')) {
+		throw error(403, 'No tenés permisos para descargar el manual.');
 	}
 
-	const form = db
+	const manual = db
 		.select()
-		.from(schema.formTemplates)
-		.where(eq(schema.formTemplates.id, Number(params.id)))
+		.from(schema.manualTemplates)
+		.where(eq(schema.manualTemplates.formTemplateId, Number(params.id)))
 		.get();
 
-	if (!form) throw error(404, 'Formulario no encontrado');
+	if (!manual) throw error(404, 'Manual no disponible para este formulario');
 
-	const pageConfig = form.pageConfig as {
+	const pageConfig = manual.pageConfig as {
 		orientation: string;
 		size: string;
 		margins: { top: string; right: string; bottom: string; left: string };
 	};
 
-	const html = buildPrintableHtml(form);
+	const html = buildPrintableHtml(manual);
 	const pdf = await generatePdfFromHtml(html, pageConfig);
 
-	const filename = `${form.code}-${form.name}.pdf`;
+	const filename = `${manual.code}-${manual.name}.pdf`;
+	// Per RFC 5987: ASCII fallback + UTF-8 encoded for non-ASCII chars (e.g. em-dash).
+	const asciiFallback = filename.replace(/[^\x20-\x7E]/g, '_');
+	const encoded = encodeURIComponent(filename);
 
 	return new Response(pdf, {
 		headers: {
 			'Content-Type': 'application/pdf',
-			'Content-Disposition': `inline; filename="${filename}"`
+			'Content-Disposition': `inline; filename="${asciiFallback}"; filename*=UTF-8''${encoded}`
 		}
 	});
 };

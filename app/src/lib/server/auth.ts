@@ -35,6 +35,7 @@ export function getUserFromSession(token: string | undefined) {
 				displayName: schema.users.displayName,
 				role: schema.users.role,
 				canPrint: schema.users.canPrint,
+				canPrintManuals: schema.users.canPrintManuals,
 			})
 			.from(schema.users)
 			.where(eq(schema.users.id, session.userId))

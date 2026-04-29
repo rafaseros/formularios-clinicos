@@ -6,26 +6,26 @@ import { buildPrintableHtml } from '$lib/server/print-html';
 import type { RequestHandler } from './$types';
 
 export const GET: RequestHandler = async ({ params, cookies }) => {
-	// Any logged-in user can view the raw form HTML — it's the iframe content
-	// of the visualizer. Print/PDF *actions* are gated separately in the UI
-	// and in the PDF endpoint.
+	// Any logged-in user can fetch the raw manual HTML — it's the iframe content
+	// of the manual visualizer. The "Imprimir manual" button is gated in the UI
+	// by canPrintManuals, mirroring the form's print flow.
 	const token = cookies.get('session');
 	const user = getUserFromSession(token);
 	if (!user) {
 		throw error(401, 'Iniciá sesión.');
 	}
 
-	const form = db
+	const manual = db
 		.select()
-		.from(schema.formTemplates)
-		.where(eq(schema.formTemplates.id, Number(params.id)))
+		.from(schema.manualTemplates)
+		.where(eq(schema.manualTemplates.formTemplateId, Number(params.id)))
 		.get();
 
-	if (!form) {
-		throw error(404, 'Formulario no encontrado');
+	if (!manual) {
+		throw error(404, 'Manual no disponible para este formulario');
 	}
 
-	return new Response(buildPrintableHtml(form), {
+	return new Response(buildPrintableHtml(manual), {
 		headers: {
 			'Content-Type': 'text/html; charset=utf-8'
 		}

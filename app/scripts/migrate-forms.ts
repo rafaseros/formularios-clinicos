@@ -99,6 +99,18 @@ function parsePageConfig(cssText: string, commonCss: string): {
   return defaults;
 }
 
+// Extract version from HTML content.
+// Accepts both "v1.1" and "Versión 1.1" formats.
+// Throws if no version is found — migration must fail loud, not silently.
+function extractVersion(html: string, filename: string): { version: string; versionMajor: number; versionMinor: number } {
+  const match = html.match(/v(\d+)\.(\d+)|Versi[oó]n\s+(\d+)\.(\d+)/i);
+  if (!match) throw new Error(`No version found in ${filename}`);
+  // Groups 1,2 are for "vN.N"; groups 3,4 for "Versión N.N"
+  const major = parseInt(match[1] ?? match[3], 10);
+  const minor = parseInt(match[2] ?? match[4], 10);
+  return { version: `${major}.${minor}`, versionMajor: major, versionMinor: minor };
+}
+
 // Count pages
 function countPages(htmlBody: string): number {
   const pageBreaks = (htmlBody.match(/page-break/g) || []).length;
@@ -125,15 +137,16 @@ async function main() {
   db.pragma('journal_mode = WAL');
   db.pragma('foreign_keys = ON');
 
-  // We need a unique index for the upsert to work
-  db.exec(`CREATE UNIQUE INDEX IF NOT EXISTS idx_form_templates_code_version ON form_templates(code, version)`);
+  // Unique index for the upsert — keyed on (code, version_major, version_minor)
+  db.exec(`CREATE UNIQUE INDEX IF NOT EXISTS idx_form_templates_code_version ON form_templates(code, version_major, version_minor)`);
 
   // Prepare upsert statement
   const upsert = db.prepare(`
-    INSERT INTO form_templates (code, name, version, html_body, inline_css, common_css, logo_base64, page_config, phase, phase_name, description, page_count, created_at, updated_at)
-    VALUES (@code, @name, @version, @htmlBody, @inlineCss, @commonCss, @logoBase64, @pageConfig, @phase, @phaseName, @description, @pageCount, @createdAt, @updatedAt)
-    ON CONFLICT(code, version) DO UPDATE SET
+    INSERT INTO form_templates (code, name, version, version_major, version_minor, html_body, inline_css, common_css, logo_base64, page_config, phase, phase_name, description, page_count, created_at, updated_at)
+    VALUES (@code, @name, @version, @versionMajor, @versionMinor, @htmlBody, @inlineCss, @commonCss, @logoBase64, @pageConfig, @phase, @phaseName, @description, @pageCount, @createdAt, @updatedAt)
+    ON CONFLICT(code, version_major, version_minor) DO UPDATE SET
       name = @name,
+      version = @version,
       html_body = @htmlBody,
       inline_css = @inlineCss,
       common_css = @commonCss,
@@ -177,6 +190,9 @@ async function main() {
       htmlBody = htmlBody.replace(/src="\.\.\/logo\.png"/g, `src="${logoBase64}"`);
       htmlBody = htmlBody.replace(/src='\.\.\/logo\.png'/g, `src='${logoBase64}'`);
 
+      // Extract version from HTML — throws if not found (fail loud)
+      const { version, versionMajor, versionMinor } = extractVersion(html, file);
+
       // Parse page config
       const pageConfig = parsePageConfig(inlineCss, commonCss);
 
@@ -188,7 +204,9 @@ async function main() {
       upsert.run({
         code,
         name: meta.name,
-        version: 1,
+        version,
+        versionMajor,
+        versionMinor,
         htmlBody,
         inlineCss,
         commonCss,
@@ -202,7 +220,7 @@ async function main() {
         updatedAt: now,
       });
 
-      console.log(`✓ ${code} — ${meta.name} (${pageCount}p, ${pageConfig.orientation})`);
+      console.log(`✓ ${code} v${version} — ${meta.name} (${pageCount}p, ${pageConfig.orientation})`);
       success++;
     } catch (err) {
       console.error(`✗ ${file}: ${(err as Error).message}`);

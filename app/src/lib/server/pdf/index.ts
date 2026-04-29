@@ -12,8 +12,8 @@ async function getBrowser(): Promise<Browser> {
 	return browser;
 }
 
-export async function generatePdf(
-	printUrl: string,
+export async function generatePdfFromHtml(
+	html: string,
 	pageConfig: {
 		orientation: string;
 		size: string;
@@ -23,7 +23,9 @@ export async function generatePdf(
 	const b = await getBrowser();
 	const page = await b.newPage();
 	try {
-		await page.goto(printUrl, { waitUntil: 'networkidle0' });
+		// Render the HTML directly inside the headless browser. No HTTP round-trip,
+		// no auth dependency: assets like the logo are already inlined as base64.
+		await page.setContent(html, { waitUntil: 'networkidle0' });
 		const pdf = await page.pdf({
 			format: 'Letter',
 			landscape: pageConfig.orientation === 'landscape',

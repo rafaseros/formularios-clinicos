@@ -1,11 +1,15 @@
 <script lang="ts">
 	import LetterVisualizer from '$lib/components/LetterVisualizer.svelte';
 	import { enhance } from '$app/forms';
+	import { goto } from '$app/navigation';
 
 	let { data, form: actionForm } = $props();
 	const form = $derived(data.form);
 	const user = $derived(data.user);
 	const comments = $derived(data.comments);
+	const allVersions = $derived(data.allVersions);
+	const isLatest = $derived(data.isLatest);
+	const latestId = $derived(data.latestId);
 	const pageConfig = $derived(form.pageConfig as {
 		orientation: string;
 		size: string;
@@ -23,10 +27,19 @@
 	}
 
 	let commentText = $state('');
+	let replyOpenFor = $state<number | null>(null);
+	let replyText = $state('');
+
+	function onVersionChange(e: Event) {
+		const select = e.target as HTMLSelectElement;
+		if (select.value && Number(select.value) !== form.id) {
+			goto(`/forms/${select.value}`);
+		}
+	}
 </script>
 
 <svelte:head>
-	<title>{form.code} — {form.name}</title>
+	<title>{form.code} v{form.version} — {form.name}</title>
 </svelte:head>
 
 <div class="form-viewer">
@@ -34,12 +47,20 @@
 		<div class="header-left">
 			<a href="/" class="back-link">← Volver</a>
 			<div class="form-info">
-				<span class="form-code">{form.code}</span>
+				<span class="form-code">{form.code} v{form.version}</span>
 				<h1>{form.name}</h1>
 				<p>{form.description}</p>
 			</div>
 		</div>
 		<div class="header-actions">
+			{#if allVersions.length > 1}
+				<select class="version-select" value={form.id} onchange={onVersionChange} title="Cambiar versión">
+					{#each allVersions as v}
+						<option value={v.id}>v{v.version}{v.id === latestId ? ' (actual)' : ''}</option>
+					{/each}
+				</select>
+			{/if}
+			<a href="/forms/{form.id}/manual" class="btn btn-manual">Ver manual</a>
 			{#if user?.canPrint || user?.role === 'admin'}
 				<a href="/api/forms/{form.id}/pdf" target="_blank" class="btn btn-pdf">Descargar PDF</a>
 				<a href="/forms/{form.id}/print" target="_blank" class="btn btn-print">Imprimir</a>
@@ -47,9 +68,22 @@
 		</div>
 	</header>
 
+	{#if !isLatest}
+		<div class="historic-banner">
+			<svg class="banner-icon" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+				<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+			</svg>
+			<span>
+				Estás viendo una versión histórica (v{form.version}).
+				<a href="/forms/{latestId}">Ver versión actual →</a>
+			</span>
+		</div>
+	{/if}
+
 	<div class="viewer-body">
 		<LetterVisualizer
-			formId={form.id}
+			iframeSrc="/forms/{form.id}/print"
+			iframeTitle="Formulario {form.code}"
 			orientation={pageConfig.orientation}
 			margins={pageConfig.margins}
 		/>
@@ -80,15 +114,71 @@
 								{/if}
 							</div>
 							<p class="comment-content">{comment.content}</p>
-							{#if user?.role === 'admin' && comment.status === 'open'}
+							<div class="comment-actions">
+								{#if user}
+									<button
+										type="button"
+										class="btn-reply"
+										onclick={() => {
+											replyOpenFor = replyOpenFor === comment.id ? null : comment.id;
+											replyText = '';
+										}}
+									>
+										{replyOpenFor === comment.id ? 'Cancelar' : 'Responder'}
+									</button>
+								{/if}
+								{#if user?.role === 'admin' && comment.status === 'open'}
+									<form
+										method="POST"
+										action="?/resolveComment"
+										use:enhance
+										style="display:inline"
+									>
+										<input type="hidden" name="commentId" value={comment.id} />
+										<button type="submit" class="btn-resolve">Marcar como resuelto</button>
+									</form>
+								{/if}
+							</div>
+
+							{#if comment.replies.length > 0}
+								<ul class="reply-list">
+									{#each comment.replies as reply (reply.id)}
+										<li class="reply-item">
+											<div class="comment-meta">
+												<span class="comment-author">{reply.displayName || reply.username}</span>
+												<span class="comment-date">{formatDate(reply.createdAt)}</span>
+												<span class="badge badge-reply">Respuesta</span>
+											</div>
+											<p class="comment-content">{reply.content}</p>
+										</li>
+									{/each}
+								</ul>
+							{/if}
+
+							{#if replyOpenFor === comment.id && user}
 								<form
 									method="POST"
-									action="?/resolveComment"
-									use:enhance
-									style="display:inline"
+									action="?/addComment"
+									class="reply-form"
+									use:enhance={() => {
+										return ({ result, update }) => {
+											if (result.type === 'success') {
+												replyText = '';
+												replyOpenFor = null;
+											}
+											update();
+										};
+									}}
 								>
-									<input type="hidden" name="commentId" value={comment.id} />
-									<button type="submit" class="btn-resolve">Marcar como resuelto</button>
+									<input type="hidden" name="parentCommentId" value={comment.id} />
+									<textarea
+										name="content"
+										bind:value={replyText}
+										placeholder="Escribí tu respuesta..."
+										rows="2"
+										required
+									></textarea>
+									<button type="submit" class="btn-add-comment">Enviar respuesta</button>
 								</form>
 							{/if}
 						</li>
@@ -218,6 +308,61 @@
 		flex-shrink: 0;
 	}
 
+	/* ─── Version selector ────────────────────────────── */
+	.version-select {
+		padding: 6px 10px;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		font-size: 13px;
+		font-family: var(--font-system);
+		color: var(--color-text);
+		background: var(--color-surface);
+		cursor: pointer;
+		transition: var(--transition);
+	}
+
+	.version-select:hover {
+		border-color: var(--color-primary-light);
+	}
+
+	.version-select:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.08);
+	}
+
+	/* ─── Historic version banner ─────────────────────── */
+	.historic-banner {
+		background: #fffbeb;
+		border-bottom: 1px solid #fcd34d;
+		border-left: 3px solid #f59e0b;
+		padding: 10px 20px;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 13px;
+		color: #92400e;
+		flex-shrink: 0;
+	}
+
+	.banner-icon {
+		width: 16px;
+		height: 16px;
+		color: #d97706;
+		flex-shrink: 0;
+	}
+
+	.historic-banner a {
+		color: #92400e;
+		font-weight: 600;
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+
+	.historic-banner a:hover {
+		color: #78350f;
+	}
+
 	.btn {
 		display: inline-block;
 		padding: 7px 14px;
@@ -247,6 +392,17 @@
 
 	.btn-print:hover {
 		background: var(--color-info-bg);
+	}
+
+	.btn-manual {
+		background: var(--color-surface);
+		color: var(--color-text);
+		border: 1px solid var(--color-border);
+	}
+
+	.btn-manual:hover {
+		background: var(--color-bg);
+		border-color: var(--color-text-muted);
 	}
 
 	/* ─── Viewer body ─────────────────────────────────── */
@@ -381,6 +537,92 @@
 		background: var(--color-success-bg);
 	}
 
+	.comment-actions {
+		display: flex;
+		gap: 8px;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	.btn-reply {
+		background: none;
+		border: 1px solid var(--color-border);
+		color: var(--color-text-muted);
+		font-size: 11px;
+		font-family: var(--font-system);
+		font-weight: 600;
+		padding: 3px 10px;
+		border-radius: var(--radius-sm);
+		cursor: pointer;
+		transition: var(--transition);
+	}
+
+	.btn-reply:hover {
+		border-color: var(--color-primary);
+		color: var(--color-primary);
+		background: var(--color-info-bg);
+	}
+
+	.reply-list {
+		list-style: none;
+		margin: 12px 0 0;
+		padding: 0 0 0 20px;
+		border-left: 2px solid var(--color-border);
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.reply-item {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		padding: 10px 12px;
+	}
+
+	.badge-reply {
+		background: var(--color-bg);
+		color: var(--color-text-muted);
+		border: 1px solid var(--color-border);
+	}
+
+	.reply-form {
+		margin-top: 12px;
+		padding-left: 20px;
+		border-left: 2px dashed var(--color-border);
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.reply-form textarea {
+		width: 100%;
+		border: 1px solid var(--color-border);
+		border-radius: var(--radius-sm);
+		padding: 8px 10px;
+		font-size: 13px;
+		font-family: var(--font-system);
+		resize: vertical;
+		box-sizing: border-box;
+		background: var(--color-bg);
+		color: var(--color-text);
+		line-height: 1.5;
+	}
+
+	.reply-form textarea:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		background: var(--color-surface);
+		box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.08);
+	}
+
+	.reply-form .btn-add-comment {
+		align-self: flex-start;
+		margin-top: 0;
+		padding: 6px 14px;
+		font-size: 12px;
+	}
+
 	/* ─── Add comment ─────────────────────────────────── */
 	.add-comment {
 		border-top: 1px solid var(--color-border);
@@ -473,6 +715,7 @@
 
 		.header-actions {
 			width: 100%;
+			flex-wrap: wrap;
 		}
 
 		.viewer-body {
@@ -483,6 +726,10 @@
 
 		.comments-section {
 			padding: 20px 14px;
+		}
+
+		.historic-banner {
+			padding: 10px 12px;
 		}
 	}
 </style>
