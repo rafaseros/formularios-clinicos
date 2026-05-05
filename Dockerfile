@@ -5,6 +5,7 @@ WORKDIR /build
 
 # Copy form source files (needed for migration)
 COPY forms/ ./forms/
+COPY manuals/ ./manuals/
 COPY css/ ./css/
 COPY logo.png ./
 
@@ -52,6 +53,7 @@ COPY --from=builder /build/app/tsconfig.json ./
 
 # Form source files for migration script
 COPY --from=builder /build/forms /source/forms
+COPY --from=builder /build/manuals /source/manuals
 COPY --from=builder /build/css /source/css
 COPY --from=builder /build/logo.png /source/logo.png
 
