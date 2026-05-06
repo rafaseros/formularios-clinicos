@@ -43,18 +43,11 @@ const FORM_META: Record<string, { name: string; description: string; phase: numb
   'PGB-F016': { name: 'Informe Psicológico', description: 'Documentación de evaluación y evolución psicológica (2-3 páginas)', phase: 4, phaseName: 'EGRESO Y DOCUMENTACIÓN' },
 };
 
-// Map filename to code
-function filenameToCode(filename: string): string {
-  const base = filename.replace('.html', '');
-  // formulario-004-legal → PGB-F004-LEGAL
-  // formulario-014a → PGB-F014-A
-  // formulario-001 → PGB-F001
-  const match = base.match(/^formulario-(\d+)([a-d])?(-legal)?$/);
-  if (!match) throw new Error(`Cannot parse filename: ${filename}`);
-  const num = match[1];
-  const suffix = match[2] ? `-${match[2].toUpperCase()}` : '';
-  const legal = match[3] ? '-LEGAL' : '';
-  return `PGB-F${num}${suffix}${legal}`;
+// Parse version from filename — directory/v<major>.<minor>.html
+function parseVersionFromFilename(filename: string): { version: string; versionMajor: number; versionMinor: number } {
+  const m = filename.match(/^v(\d+)\.(\d+)\.html$/);
+  if (!m) throw new Error(`Filename does not match v<major>.<minor>.html: ${filename}`);
+  return { version: `${m[1]}.${m[2]}`, versionMajor: +m[1], versionMinor: +m[2] };
 }
 
 // Parse @page rules from CSS text
@@ -99,22 +92,34 @@ function parsePageConfig(cssText: string, commonCss: string): {
   return defaults;
 }
 
-// Extract version from HTML content.
-// Accepts both "v1.1" and "Versión 1.1" formats.
-// Throws if no version is found — migration must fail loud, not silently.
-function extractVersion(html: string, filename: string): { version: string; versionMajor: number; versionMinor: number } {
-  const match = html.match(/v(\d+)\.(\d+)|Versi[oó]n\s+(\d+)\.(\d+)/i);
-  if (!match) throw new Error(`No version found in ${filename}`);
-  // Groups 1,2 are for "vN.N"; groups 3,4 for "Versión N.N"
-  const major = parseInt(match[1] ?? match[3], 10);
-  const minor = parseInt(match[2] ?? match[4], 10);
-  return { version: `${major}.${minor}`, versionMajor: major, versionMinor: minor };
-}
-
 // Count pages
 function countPages(htmlBody: string): number {
   const pageBreaks = (htmlBody.match(/page-break/g) || []).length;
   return Math.max(1, pageBreaks + 1);
+}
+
+// Discover all form files: forms/<code>/v<major>.<minor>.html
+// Returns entries sorted by (code, version)
+function discoverFormFiles(formsDir: string): Array<{ code: string; filename: string; filePath: string }> {
+  const entries: Array<{ code: string; filename: string; filePath: string }> = [];
+
+  const codeDirs = readdirSync(formsDir, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name)
+    .sort();
+
+  for (const code of codeDirs) {
+    const codeDir = join(formsDir, code);
+    const htmlFiles = readdirSync(codeDir)
+      .filter(f => /^v\d+\.\d+\.html$/.test(f))
+      .sort();
+
+    for (const filename of htmlFiles) {
+      entries.push({ code, filename, filePath: join(codeDir, filename) });
+    }
+  }
+
+  return entries;
 }
 
 async function main() {
@@ -128,9 +133,9 @@ async function main() {
   const logoBase64 = `data:image/png;base64,${logoBuffer.toString('base64')}`;
   console.log(`✓ Read logo.png → base64 (${logoBase64.length} chars)`);
 
-  // Read form files
-  const files = readdirSync(FORMS_DIR).filter(f => f.endsWith('.html')).sort();
-  console.log(`\nFound ${files.length} form files\n`);
+  // Discover form files from subdirectory layout
+  const formFiles = discoverFormFiles(FORMS_DIR);
+  console.log(`\nFound ${formFiles.length} form files\n`);
 
   // Open DB
   const db = new Database(DB_PATH);
@@ -162,17 +167,14 @@ async function main() {
   let success = 0;
   let failed = 0;
 
-  for (const file of files) {
+  for (const { code, filename, filePath } of formFiles) {
     try {
-      const filePath = join(FORMS_DIR, file);
       const html = readFileSync(filePath, 'utf-8');
       const $ = load(html);
 
-      // Extract code from filename
-      const code = filenameToCode(file);
       const meta = FORM_META[code];
       if (!meta) {
-        console.log(`⚠ No metadata for ${code} (${file}) — skipping`);
+        console.log(`⚠ No metadata for ${code} (${filename}) — skipping`);
         failed++;
         continue;
       }
@@ -186,12 +188,11 @@ async function main() {
       // Extract body innerHTML
       let htmlBody = $('body').html() || '';
 
-      // Replace logo relative paths with base64
-      htmlBody = htmlBody.replace(/src="\.\.\/logo\.png"/g, `src="${logoBase64}"`);
-      htmlBody = htmlBody.replace(/src='\.\.\/logo\.png'/g, `src='${logoBase64}'`);
+      // Replace logo relative paths with base64 — matches any number of ../ segments
+      htmlBody = htmlBody.replace(/src=["'](?:\.\.\/)+logo\.png["']/g, `src="${logoBase64}"`);
 
-      // Extract version from HTML — throws if not found (fail loud)
-      const { version, versionMajor, versionMinor } = extractVersion(html, file);
+      // Parse version from filename — source of truth, no HTML parsing needed
+      const { version, versionMajor, versionMinor } = parseVersionFromFilename(filename);
 
       // Parse page config
       const pageConfig = parsePageConfig(inlineCss, commonCss);
@@ -223,7 +224,7 @@ async function main() {
       console.log(`✓ ${code} v${version} — ${meta.name} (${pageCount}p, ${pageConfig.orientation})`);
       success++;
     } catch (err) {
-      console.error(`✗ ${file}: ${(err as Error).message}`);
+      console.error(`✗ ${code}/${filename}: ${(err as Error).message}`);
       failed++;
     }
   }

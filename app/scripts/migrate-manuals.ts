@@ -16,26 +16,11 @@ const DB_PATH = resolve(import.meta.dirname, '..', 'data', 'forms.db');
 const dataDir = resolve(import.meta.dirname, '..', 'data');
 if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });
 
-// Map manual filename to its corresponding form code.
-function filenameToFormCode(filename: string): string {
-  const base = filename.replace('.html', '');
-
-  // guia-rapida-004-legal → PGB-F004-LEGAL
-  const legalMatch = base.match(/^guia-rapida-(\d+)-legal$/);
-  if (legalMatch) {
-    return `PGB-F${legalMatch[1]}-LEGAL`;
-  }
-
-  // manual-014a → PGB-F014-A
-  // manual-001 → PGB-F001
-  const stdMatch = base.match(/^manual-(\d+)([a-d])?$/);
-  if (stdMatch) {
-    const num = stdMatch[1];
-    const suffix = stdMatch[2] ? `-${stdMatch[2].toUpperCase()}` : '';
-    return `PGB-F${num}${suffix}`;
-  }
-
-  throw new Error(`Cannot parse manual filename: ${filename}`);
+// Parse version from filename — directory/v<major>.<minor>.html
+function parseVersionFromFilename(filename: string): { version: string; versionMajor: number; versionMinor: number } {
+  const m = filename.match(/^v(\d+)\.(\d+)\.html$/);
+  if (!m) throw new Error(`Filename does not match v<major>.<minor>.html: ${filename}`);
+  return { version: `${m[1]}.${m[2]}`, versionMajor: +m[1], versionMinor: +m[2] };
 }
 
 function parsePageConfig(cssText: string): {
@@ -77,16 +62,29 @@ function countPages(htmlBody: string): number {
   return Math.max(1, pageBreaks + 1);
 }
 
-// Extract version from HTML content.
-// Accepts both "v1.1" and "Versión 1.1" formats.
-// Throws if no version is found — migration must fail loud, not silently.
-function extractVersion(html: string, filename: string): { version: string; versionMajor: number; versionMinor: number } {
-  const match = html.match(/v(\d+)\.(\d+)|Versi[oó]n\s+(\d+)\.(\d+)/i);
-  if (!match) throw new Error(`No version found in ${filename}`);
-  // Groups 1,2 are for "vN.N"; groups 3,4 for "Versión N.N"
-  const major = parseInt(match[1] ?? match[3], 10);
-  const minor = parseInt(match[2] ?? match[4], 10);
-  return { version: `${major}.${minor}`, versionMajor: major, versionMinor: minor };
+// Discover all manual files: manuals/<code>/v<major>.<minor>.html
+// The directory name IS the form code (e.g. PGB-F014-A).
+// Returns entries sorted by (code, version).
+function discoverManualFiles(manualsDir: string): Array<{ code: string; filename: string; filePath: string }> {
+  const entries: Array<{ code: string; filename: string; filePath: string }> = [];
+
+  const codeDirs = readdirSync(manualsDir, { withFileTypes: true })
+    .filter(d => d.isDirectory())
+    .map(d => d.name)
+    .sort();
+
+  for (const code of codeDirs) {
+    const codeDir = join(manualsDir, code);
+    const htmlFiles = readdirSync(codeDir)
+      .filter(f => /^v\d+\.\d+\.html$/.test(f))
+      .sort();
+
+    for (const filename of htmlFiles) {
+      entries.push({ code, filename, filePath: join(codeDir, filename) });
+    }
+  }
+
+  return entries;
 }
 
 async function main() {
@@ -99,8 +97,9 @@ async function main() {
   const logoBase64 = `data:image/png;base64,${logoBuffer.toString('base64')}`;
   console.log(`✓ Read logo.png → base64 (${logoBase64.length} chars)`);
 
-  const files = readdirSync(MANUALS_DIR).filter((f) => f.endsWith('.html')).sort();
-  console.log(`\nFound ${files.length} manual files\n`);
+  // Discover manual files from subdirectory layout
+  const manualFiles = discoverManualFiles(MANUALS_DIR);
+  console.log(`\nFound ${manualFiles.length} manual files\n`);
 
   const db = new Database(DB_PATH);
   db.pragma('journal_mode = WAL');
@@ -130,16 +129,16 @@ async function main() {
   let success = 0;
   const errors: string[] = [];
 
-  for (const file of files) {
+  for (const { code, filename, filePath } of manualFiles) {
     try {
-      const filePath = join(MANUALS_DIR, file);
       const html = readFileSync(filePath, 'utf-8');
       const $ = load(html);
 
-      const formCode = filenameToFormCode(file);
+      // The directory name IS the form code — no filename parsing needed
+      const formCode = code;
 
-      // Extract version from manual HTML — throws if not found (fail loud)
-      const { version, versionMajor, versionMinor } = extractVersion(html, file);
+      // Parse version from filename — source of truth
+      const { version, versionMajor, versionMinor } = parseVersionFromFilename(filename);
 
       // Lookup matching form by (code, major, minor) — lockstep enforcement
       const form = lookupForm.get(formCode, versionMajor, versionMinor) as
@@ -159,8 +158,8 @@ async function main() {
       });
 
       let htmlBody = $('body').html() || '';
-      htmlBody = htmlBody.replace(/src="\.\.\/logo\.png"/g, `src="${logoBase64}"`);
-      htmlBody = htmlBody.replace(/src='\.\.\/logo\.png'/g, `src='${logoBase64}'`);
+      // Replace logo relative paths with base64 — matches any number of ../ segments
+      htmlBody = htmlBody.replace(/src=["'](?:\.\.\/)+logo\.png["']/g, `src="${logoBase64}"`);
 
       const pageConfig = parsePageConfig(inlineCss);
       const pageCount = countPages(htmlBody);
@@ -190,10 +189,10 @@ async function main() {
         updatedAt: now,
       });
 
-      console.log(`✓ ${file} → ${formCode} v${version} (form id=${form.id}, ${pageCount}p, ${pageConfig.orientation})`);
+      console.log(`✓ ${code}/${filename} → ${formCode} v${version} (form id=${form.id}, ${pageCount}p, ${pageConfig.orientation})`);
       success++;
     } catch (err) {
-      const msg = `${file}: ${(err as Error).message}`;
+      const msg = `${code}/${filename}: ${(err as Error).message}`;
       console.error(`✗ ${msg}`);
       errors.push(msg);
     }

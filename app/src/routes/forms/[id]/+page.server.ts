@@ -67,12 +67,24 @@ export const load: PageServerLoad = async ({ params, locals }) => {
 			replies: repliesByParent.get(root.id) ?? [],
 		}));
 
+	// Default comparison target:
+	// - If current is the latest → compare against previous (index 1)
+	// - If current is historical → compare against the latest (index 0)
+	// allVersions is sorted newest-first, so index 0 = latest, index 1 = previous.
+	const compareDefaultId: number | null =
+		allVersions.length > 1
+			? isLatest
+				? (allVersions[1]?.id ?? null)
+				: (allVersions[0]?.id ?? null)
+			: null;
+
 	return {
 		form,
 		comments,
 		allVersions,
 		isLatest,
 		latestId,
+		compareDefaultId,
 		user: locals.user,
 	};
 };

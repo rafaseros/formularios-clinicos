@@ -10,6 +10,7 @@
 	const allVersions = $derived(data.allVersions);
 	const isLatest = $derived(data.isLatest);
 	const latestId = $derived(data.latestId);
+	const compareDefaultId = $derived(data.compareDefaultId);
 	const pageConfig = $derived(form.pageConfig as {
 		orientation: string;
 		size: string;
@@ -59,6 +60,9 @@
 						<option value={v.id}>v{v.version}{v.id === latestId ? ' (actual)' : ''}</option>
 					{/each}
 				</select>
+				{#if compareDefaultId}
+					<a href="/forms/{form.id}/compare/{compareDefaultId}" class="btn btn-compare">Comparar versiones</a>
+				{/if}
 			{/if}
 			<a href="/forms/{form.id}/manual" class="btn btn-manual">Ver manual</a>
 			{#if user?.canPrint || user?.role === 'admin'}
@@ -403,6 +407,18 @@
 	.btn-manual:hover {
 		background: var(--color-bg);
 		border-color: var(--color-text-muted);
+	}
+
+	.btn-compare {
+		background: var(--color-surface);
+		color: var(--color-text);
+		border: 1px solid var(--color-border);
+	}
+
+	.btn-compare:hover {
+		background: var(--color-info-bg);
+		border-color: var(--color-primary-light);
+		color: var(--color-primary);
 	}
 
 	/* ─── Viewer body ─────────────────────────────────── */
